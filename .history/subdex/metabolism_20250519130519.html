@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summary tables</title>
     <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css">
-    <link rel="icon" href="/STEVEL-1-Summaries/static/">>
+    <link rel="icon" href="/STEVEL-1-Summaries/subdex/metabolism.html">
 </head>
 
 <body>
-<nav href="/STEVEL-1-Summaries/static/nav.html"></nav>
+<nav style="margin: 20px 0; text-align: center;">
+  <a href="subdex/metabolism.html" class="nav-link">Metabolism Summary</a> |
+  <a href="subdex/hemeonc.html" class="nav-link">Heme-Onc Table</a> |
+  <a href="subdex/autoantibodies.html" class="nav-link">Autoantibodies</a>
+</nav>
 
 
 <div class="table-responsive">
@@ -114,5 +118,80 @@
   </tbody>
 </table>
 </div>
+
+
+
+<div class="table-responsive">
+  <table border="2" frame="box" rules="all" cellspacing="1" cellpadding="5" style="width:100%; font-family:Arial, sans-serif; font-size:14px;">
+    <thead>
+      <tr>
+        <th colspan="3" style="background-color:#d0e5f5; text-align:center;"><strong>Protein Mutations with Disease Associations</strong></th>
+      </tr>
+      <tr style="background-color:#f0f8ff;">
+        <th>Gene / Protein</th>
+        <th>Condition</th>
+        <th>Pathophysiology</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>HMGB1</td><td>BPTAS</td><td>Frameshift; disrupts nucleolar phase separation via arginine-rich tails</td></tr>
+      <tr><td>SERPINA1</td><td>Alpha-1 Antitrypsin Deficiency</td><td>Loss of protease inhibition → lung & liver damage</td></tr>
+      <tr><td>ATM</td><td>Ataxia-Telangiectasia</td><td>Defective DNA repair → neurodegeneration, malignancy</td></tr>
+      <tr><td>PEX genes</td><td>Zellweger Spectrum</td><td>Peroxisomal biogenesis defects</td></tr>
+      <tr><td>HGD</td><td>Alkaptonuria</td><td>Homogentisate oxidase deficiency → ochronosis</td></tr>
+      <tr><td>BTD</td><td>Biotinidase Deficiency</td><td>Impaired biotin recycling → metabolic acidosis</td></tr>
+      <tr><td>GALT</td><td>Classic Galactosemia</td><td>Galactose-1-P uridylyltransferase deficiency</td></tr>
+      <tr><td>PHKA2</td><td>GSD Type IXa</td><td>Phosphorylase kinase deficiency</td></tr>
+      <tr><td>PYGL</td><td>GSD Type VI</td><td>Liver glycogen phosphorylase deficiency</td></tr>
+      <tr><td>G6PC</td><td>GSD Type Ia (von Gierke)</td><td>Glucose-6-phosphatase deficiency</td></tr>
+      <tr><td>MLH1 / MSH6 / PMS2</td><td>Lynch Syndrome</td><td>Mismatch repair deficiency → colon/endometrial cancer</td></tr>
+    </tbody>
+
+    <thead>
+      <tr>
+        <th colspan="3" style="background-color:#d0e5f5; text-align:center;"><strong>Lysosomal Storage Disorders</strong></th>
+      </tr>
+      <tr style="background-color:#f0f8ff;">
+        <th>Deficient Enzyme</th>
+        <th>Disease</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>IDUA</td><td>MPS I (Hurler)</td><td>α-L-iduronidase deficiency</td></tr>
+      <tr><td>IDS</td><td>MPS II (Hunter)</td><td>Iduronate sulfatase deficiency</td></tr>
+      <tr><td>Heparan Sulfamidase</td><td>MPS III (Sanfilippo)</td><td>Heparan sulfate degradation defect</td></tr>
+      <tr><td>GALNS</td><td>MPS IV (Morquio)</td><td>N-acetylgalactosamine-6-sulfatase deficiency</td></tr>
+      <tr><td>ARSB</td><td>MPS VI (Maroteaux-Lamy)</td><td>Arylsulfatase B deficiency</td></tr>
+      <tr><td>GUSB</td><td>MPS VII (Sly)</td><td>β-glucuronidase deficiency</td></tr>
+      <tr><td>SMPD1</td><td>Niemann-Pick A/B</td><td>Acid sphingomyelinase deficiency</td></tr>
+      <tr><td>GALC</td><td>Krabbe Disease</td><td>Galactocerebrosidase deficiency</td></tr>
+      <tr><td>ARSA</td><td>Metachromatic Leukodystrophy</td><td>Arylsulfatase A deficiency</td></tr>
+      <tr><td>GLB1</td><td>GM1 Gangliosidosis</td><td>β-galactosidase deficiency</td></tr>
+      <tr><td>HYAL1</td><td>MPS IX</td><td>Hyaluronidase deficiency</td></tr>
+    </tbody>
+
+    <thead>
+      <tr>
+        <th colspan="3" style="background-color:#d0e5f5; text-align:center;"><strong>Other Enzyme Deficiencies</strong></th>
+      </tr>
+      <tr style="background-color:#f0f8ff;">
+        <th>Enzyme</th>
+        <th>Disorder</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>NAGS</td><td>NAGS Deficiency</td><td>Hyperammonemia due to loss of urea cycle activation</td></tr>
+      <tr><td>ASS1</td><td>Citrullinemia Type I</td><td>Argininosuccinate synthetase deficiency</td></tr>
+      <tr><td>PCCA / PCCB</td><td>Propionic Acidemia</td><td>Propionyl-CoA carboxylase deficiency</td></tr>
+      <tr><td>MUT</td><td>Methylmalonic Acidemia</td><td>Methylmalonyl-CoA mutase deficiency</td></tr>
+      <tr><td>IVD</td><td>Isovaleric Acidemia</td><td>Isovaleryl-CoA dehydrogenase deficiency</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
 </body>
-    <script src="./static/table_utils.js"></script>
+
+
