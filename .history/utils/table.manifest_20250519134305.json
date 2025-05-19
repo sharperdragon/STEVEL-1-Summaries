@@ -1,0 +1,32 @@
+
+import os
+import json
+
+SUBDEX_PATH = './subdex'
+NAV_OUTPUT_PATH = './static/nav.html'
+MANIFEST_OUTPUT = './static/table.manifest.json'
+
+# Helper function to convert filenames into clean labels
+def clean_label(filename):
+    name = filename.replace('.html', '')
+    return name.replace('_', ' ').replace('-', ' ').title()
+
+# Collect all .html files except unwanted ones
+entries = sorted(
+    f for f in os.listdir(SUBDEX_PATH)
+    if f.endswith('.html') and not f.startswith('template')
+)
+
+# Generate nav.html
+with open(NAV_OUTPUT_PATH, 'w') as f:
+    f.write('<nav style="margin: 10px 0; text-align: center;">\n')
+    f.write('  <a href="./index.html" class="nav-link"> HOME </a> | \n')
+    for name in entries:
+        label = clean_label(name)
+        f.write(f'  <a href="./subdex/{name}" class="nav-link">{label}</a> | \n')
+    f.write('</nav>\n')
+
+# Generate manifest
+manifest_data = [{"name": clean_label(name), "file": name} for name in entries]
+with open(MANIFEST_OUTPUT, 'w') as mf:
+    json.dump(manifest_data, mf, indent=2)

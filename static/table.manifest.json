@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Base",
+    "file": "Base.html"
+  },
+  {
+    "name": "Autoantibodies",
+    "file": "autoantibodies.html"
+  },
+  {
+    "name": "Chromosomes",
+    "file": "chromosomes.html"
+  },
+  {
+    "name": "Hemeonc",
+    "file": "hemeonc.html"
+  },
+  {
+    "name": "Metabolism",
+    "file": "metabolism.html"
+  }
+]

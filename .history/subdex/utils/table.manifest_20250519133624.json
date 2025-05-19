@@ -1,0 +1,16 @@
+import json
+
+NAV_OUTPUT = './subdex/utils/nav.html'
+entries = ['index.html', 'about.html', 'contact.html']
+
+with open(NAV_OUTPUT, 'w') as nav_file:
+    nav_file.write('<ul>\n')
+    for name in entries:
+        nav_file.write(f'  <li><a href="{name}">{name.replace(".html", "").capitalize()}</a></li>\n')
+    nav_file.write('</ul>\n')
+
+MANIFEST_OUTPUT = './subdex/utils/table.manifest.json'
+manifest_data = [{"name": name.replace('.html', '').capitalize(), "file": name} for name in entries]
+
+with open(MANIFEST_OUTPUT, 'w') as mf:
+    json.dump(manifest_data, mf, indent=2)
