@@ -24,7 +24,7 @@ def annotate_table_columns(soup: BeautifulSoup):
         cells = row.find_all(["td", "th"])
         for idx, cell in enumerate(cells):
             cell["data-col"] = str(idx)
-            if cell.name == "th" and not cell.has_attr("colspan"):
+            if cell.name == "th":
                 # Extract clean header text before modifying
                 clean_text = cell.get_text(strip=True)
                 # Clear the cell before inserting the menu
