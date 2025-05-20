@@ -71,17 +71,15 @@ def build_all():
 
         print(f"📄 Processing: {table_file.name}")
 
-        # Build improved navigation bar
-        home_link = '<div style="text-align: left;"><a href="../index.html" class="nav-link">🏠 Home</a></div>'
-        other_links = []
+        # Build navigation bar
+        nav_links = ['  <a href="../index.html" class="nav-link"> HOME </a> |']
         for other in table_files:
-            if other.name == table_file.name:
+            if other == table_file:
                 continue
             other_name = normalize_name(other.name)
             other_label = labelize_name(other.name)
-            other_links.append(f'<a href="../pages/{other_name}.html" class="nav-link">{other_label}</a>')
-        centered_links = '<div style="text-align: center;">' + ' | '.join(other_links) + '</div>'
-        nav_html = f"<nav style='margin: 10px 0;'>\n{home_link}\n{centered_links}\n</nav>\n"
+            nav_links.append(f'  <a href="../pages/{other_name}.html" class="nav-link">{other_label}</a> |')
+        nav_html = "<nav style='margin: 10px 0; text-align: center;'>\n" + "\n".join(nav_links) + "\n</nav>\n"
 
         nav_path = NAV_DIR / f"nav_{name}.html"
         nav_path.write_text(nav_html)

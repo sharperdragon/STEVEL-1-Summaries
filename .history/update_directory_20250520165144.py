@@ -75,7 +75,7 @@ def build_all():
         home_link = '<div style="text-align: left;"><a href="../index.html" class="nav-link">🏠 Home</a></div>'
         other_links = []
         for other in table_files:
-            if other.name == table_file.name:
+            if other == table_file:
                 continue
             other_name = normalize_name(other.name)
             other_label = labelize_name(other.name)
