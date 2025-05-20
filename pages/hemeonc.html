@@ -25,46 +25,46 @@
 
   <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
     <div class="table-container">
-<table class="autoantibody-table">
+<table class="table1">
 <thead>
 <tr>
-<th class="quiz-answer" colspan="6" style="text-align: center; background-color: #d0e5f5;">
+<th class="quiz-answer" colspan="6" data-col="0" style="text-align: center; background-color: #d0e5f5;"><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button>
 <strong>Heme-Onc Gene Mutations Summary</strong>
 </th>
 </tr>
 <tr>
-<th style="background-color: #f7f9fa;">Disease</th>
-<th style="background-color: #f7f9fa;">Gene / Mutation</th>
-<th style="background-color: #f7f9fa;">Cytogenetics</th>
-<th style="background-color: #f7f9fa;">Mechanism</th>
-<th style="background-color: #f7f9fa;">Category</th>
-<th class="quiz-answer" style="background-color: #f7f9fa;">Lineage</th>
+<th data-col="0" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button>Disease</th>
+<th data-col="1" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(1)">✖</button><button class="hide-col-btn" onclick="toggleColumn(1)">✖</button>Gene / Mutation</th>
+<th data-col="2" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(2)">✖</button><button class="hide-col-btn" onclick="toggleColumn(2)">✖</button>Cytogenetics</th>
+<th data-col="3" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(3)">✖</button><button class="hide-col-btn" onclick="toggleColumn(3)">✖</button>Mechanism</th>
+<th data-col="4" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(4)">✖</button><button class="hide-col-btn" onclick="toggleColumn(4)">✖</button>Category</th>
+<th class="quiz-answer" data-col="5" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(5)">✖</button><button class="hide-col-btn" onclick="toggleColumn(5)">✖</button>Lineage</th>
 </tr>
 </thead>
 <tbody>
-<tr><td>Chronic Myeloid Leukemia (CML)</td><td>BCR-ABL fusion</td><td>t(9;22), Philadelphia chromosome</td><td>Oncogene activation</td><td>Oncogene</td><td class="quiz-answer">Myeloid</td></tr>
-<tr><td>Acute Promyelocytic Leukemia (APL)</td><td>PML-RARA fusion</td><td>t(15;17)</td><td>Oncogene activation</td><td>Oncogene</td><td class="quiz-answer">Myeloid</td></tr>
-<tr><td>Burkitt Lymphoma</td><td>MYC translocation</td><td>t(8;14)</td><td>Oncogene activation</td><td>Oncogene</td><td class="quiz-answer">Lymphoid</td></tr>
-<tr><td>Mantle Cell Lymphoma</td><td>Cyclin D1 (CCND1) translocation</td><td>t(11;14)</td><td>Oncogene activation</td><td>Oncogene</td><td class="quiz-answer">Lymphoid</td></tr>
-<tr><td>Follicular Lymphoma</td><td>BCL2 translocation</td><td>t(14;18)</td><td>Apoptosis inhibition</td><td>Non-Oncogenic</td><td class="quiz-answer">Lymphoid</td></tr>
-<tr><td>Diffuse Large B-Cell Lymphoma</td><td>BCL6 mutations</td><td>various</td><td>Oncogene activation</td><td>Oncogene</td><td class="quiz-answer">Lymphoid</td></tr>
-<tr><td>Hairy Cell Leukemia</td><td>BRAF V600E mutation</td><td>point mutation</td><td>MAPK pathway activation</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Acute Lymphoblastic Leukemia (ALL)</td><td>TEL-AML1, BCR-ABL</td><td>various</td><td>Fusion oncogenes</td><td>Oncogene</td><td class="quiz-answer">Lymphoid</td></tr>
-<tr><td>T-ALL</td><td>NOTCH1 gain-of-function</td><td>point mutation</td><td>T-cell proliferation</td><td>Non-Oncogenic</td><td class="quiz-answer">Lymphoid</td></tr>
-<tr><td>Chronic Lymphocytic Leukemia (CLL)</td><td>Deletion 13q14</td><td>del(13q)</td><td>Tumor suppressor loss</td><td>Tumor Suppressor</td><td class="quiz-answer">Lymphoid</td></tr>
-<tr><td>Multiple Myeloma</td><td>Deletion 17p (TP53)</td><td>del(17p)</td><td>Tumor suppressor loss</td><td>Tumor Suppressor</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Myelodysplastic Syndromes (MDS)</td><td>Deletion 5q</td><td>del(5q)</td><td>Tumor suppressor loss</td><td>Tumor Suppressor</td><td class="quiz-answer">Myeloid</td></tr>
-<tr><td>Polycythemia Vera</td><td><b>JAK2</b> V617F</td><td>point mutation</td><td>Tyrosine kinase activation</td><td>Non-Oncogenic</td><td class="quiz-answer">Myeloid</td></tr>
-<tr><td>Essential Thrombocythemia</td><td><b>JAK2</b>, CALR, MPL</td><td>point mutations</td><td>Signal transduction</td><td>Non-Oncogenic</td><td class="quiz-answer">Myeloid</td></tr>
-<tr><td>Primary Myelofibrosis</td><td><b>JAK2</b>, CALR, MPL</td><td>point mutations</td><td>Signal transduction</td><td>Non-Oncogenic</td><td class="quiz-answer">Myeloid</td></tr>
-<tr><td>Hemochromatosis</td><td>HFE mutation</td><td>Chromosome 6p21.3</td><td>Iron overload disorder (non-oncogenic)</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Sickle Cell Disease</td><td>HBB gene mutation (Glu6Val)</td><td>Chromosome 11p15.5</td><td>Structural hemoglobinopathy</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Thalassemia (alpha)</td><td>HBA1, HBA2 deletions</td><td>Chromosome 16</td><td>Reduced alpha-globin synthesis</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Thalassemia (beta)</td><td>HBB point mutations</td><td>Chromosome 11</td><td>Reduced beta-globin synthesis</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>G6PD Deficiency</td><td>G6PD mutation</td><td>Xq28</td><td>Enzymopathy – hemolytic anemia</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Hereditary Spherocytosis</td><td>ANK1, SPTB, SPTA1, EPB42</td><td>Various</td><td>Membrane defect (non-oncogenic)</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Fanconi Anemia</td><td>FANC genes</td><td>Various</td><td>DNA repair defect – pancytopenia, ↑ cancer risk</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
-<tr><td>Paroxysmal Nocturnal Hemoglobinuria</td><td>PIGA mutation</td><td>X chromosome</td><td>Complement regulation defect</td><td>Non-Oncogenic</td><td class="quiz-answer">Other</td></tr>
+<tr><td data-col="0">Chronic Myeloid Leukemia (CML)</td><td data-col="1">BCR-ABL fusion</td><td data-col="2">t(9;22), Philadelphia chromosome</td><td data-col="3">Oncogene activation</td><td data-col="4">Oncogene</td><td class="quiz-answer" data-col="5">Myeloid</td></tr>
+<tr><td data-col="0">Acute Promyelocytic Leukemia (APL)</td><td data-col="1">PML-RARA fusion</td><td data-col="2">t(15;17)</td><td data-col="3">Oncogene activation</td><td data-col="4">Oncogene</td><td class="quiz-answer" data-col="5">Myeloid</td></tr>
+<tr><td data-col="0">Burkitt Lymphoma</td><td data-col="1">MYC translocation</td><td data-col="2">t(8;14)</td><td data-col="3">Oncogene activation</td><td data-col="4">Oncogene</td><td class="quiz-answer" data-col="5">Lymphoid</td></tr>
+<tr><td data-col="0">Mantle Cell Lymphoma</td><td data-col="1">Cyclin D1 (CCND1) translocation</td><td data-col="2">t(11;14)</td><td data-col="3">Oncogene activation</td><td data-col="4">Oncogene</td><td class="quiz-answer" data-col="5">Lymphoid</td></tr>
+<tr><td data-col="0">Follicular Lymphoma</td><td data-col="1">BCL2 translocation</td><td data-col="2">t(14;18)</td><td data-col="3">Apoptosis inhibition</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Lymphoid</td></tr>
+<tr><td data-col="0">Diffuse Large B-Cell Lymphoma</td><td data-col="1">BCL6 mutations</td><td data-col="2">various</td><td data-col="3">Oncogene activation</td><td data-col="4">Oncogene</td><td class="quiz-answer" data-col="5">Lymphoid</td></tr>
+<tr><td data-col="0">Hairy Cell Leukemia</td><td data-col="1">BRAF V600E mutation</td><td data-col="2">point mutation</td><td data-col="3">MAPK pathway activation</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Acute Lymphoblastic Leukemia (ALL)</td><td data-col="1">TEL-AML1, BCR-ABL</td><td data-col="2">various</td><td data-col="3">Fusion oncogenes</td><td data-col="4">Oncogene</td><td class="quiz-answer" data-col="5">Lymphoid</td></tr>
+<tr><td data-col="0">T-ALL</td><td data-col="1">NOTCH1 gain-of-function</td><td data-col="2">point mutation</td><td data-col="3">T-cell proliferation</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Lymphoid</td></tr>
+<tr><td data-col="0">Chronic Lymphocytic Leukemia (CLL)</td><td data-col="1">Deletion 13q14</td><td data-col="2">del(13q)</td><td data-col="3">Tumor suppressor loss</td><td data-col="4">Tumor Suppressor</td><td class="quiz-answer" data-col="5">Lymphoid</td></tr>
+<tr><td data-col="0">Multiple Myeloma</td><td data-col="1">Deletion 17p (TP53)</td><td data-col="2">del(17p)</td><td data-col="3">Tumor suppressor loss</td><td data-col="4">Tumor Suppressor</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Myelodysplastic Syndromes (MDS)</td><td data-col="1">Deletion 5q</td><td data-col="2">del(5q)</td><td data-col="3">Tumor suppressor loss</td><td data-col="4">Tumor Suppressor</td><td class="quiz-answer" data-col="5">Myeloid</td></tr>
+<tr><td data-col="0">Polycythemia Vera</td><td data-col="1"><b>JAK2</b> V617F</td><td data-col="2">point mutation</td><td data-col="3">Tyrosine kinase activation</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Myeloid</td></tr>
+<tr><td data-col="0">Essential Thrombocythemia</td><td data-col="1"><b>JAK2</b>, CALR, MPL</td><td data-col="2">point mutations</td><td data-col="3">Signal transduction</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Myeloid</td></tr>
+<tr><td data-col="0">Primary Myelofibrosis</td><td data-col="1"><b>JAK2</b>, CALR, MPL</td><td data-col="2">point mutations</td><td data-col="3">Signal transduction</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Myeloid</td></tr>
+<tr><td data-col="0">Hemochromatosis</td><td data-col="1">HFE mutation</td><td data-col="2">Chromosome 6p21.3</td><td data-col="3">Iron overload disorder (non-oncogenic)</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Sickle Cell Disease</td><td data-col="1">HBB gene mutation (Glu6Val)</td><td data-col="2">Chromosome 11p15.5</td><td data-col="3">Structural hemoglobinopathy</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Thalassemia (alpha)</td><td data-col="1">HBA1, HBA2 deletions</td><td data-col="2">Chromosome 16</td><td data-col="3">Reduced alpha-globin synthesis</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Thalassemia (beta)</td><td data-col="1">HBB point mutations</td><td data-col="2">Chromosome 11</td><td data-col="3">Reduced beta-globin synthesis</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">G6PD Deficiency</td><td data-col="1">G6PD mutation</td><td data-col="2">Xq28</td><td data-col="3">Enzymopathy – hemolytic anemia</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Hereditary Spherocytosis</td><td data-col="1">ANK1, SPTB, SPTA1, EPB42</td><td data-col="2">Various</td><td data-col="3">Membrane defect (non-oncogenic)</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Fanconi Anemia</td><td data-col="1">FANC genes</td><td data-col="2">Various</td><td data-col="3">DNA repair defect – pancytopenia, ↑ cancer risk</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
+<tr><td data-col="0">Paroxysmal Nocturnal Hemoglobinuria</td><td data-col="1">PIGA mutation</td><td data-col="2">X chromosome</td><td data-col="3">Complement regulation defect</td><td data-col="4">Non-Oncogenic</td><td class="quiz-answer" data-col="5">Other</td></tr>
 </tbody>
 </table>
 </div>
@@ -73,3 +73,11 @@
 
 <script src="/STEVEL-1-Summaries/static/table.utils.js"></script>
 </html>
+
+<script>
+function toggleColumn(colIndex) {
+  document.querySelectorAll('[data-col="' + colIndex + '"]').forEach(el => {
+    el.style.display = (el.style.display === 'none') ? '' : 'none';
+  });
+}
+</script>

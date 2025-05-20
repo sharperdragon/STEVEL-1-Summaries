@@ -480,6 +480,19 @@ button:active {
   box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
 }
 
+.quiz-mode table .quiz-answer {
+  color: transparent;
+  background: none;
+  text-shadow: none;
+  user-select: none;
+}
+
+.quiz-mode table .quiz-answer:hover {
+  color: black;
+  background: none;
+  text-shadow: none;
+  user-select: text;
+}
 
 .table1 tbody tr:nth-child(odd) {
   background-color: #ffffff;
@@ -489,17 +502,4 @@ button:active {
 }
 .table1-table tbody tr {
   transition: background-color 0.25s ease;
-}
-
-.hide-col-btn {
-  float: right;
-  font-size: 0.8em;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #999;
-  margin-left: 6px;
-}
-.hide-col-btn:hover {
-  color: #333;
 }

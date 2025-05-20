@@ -11,7 +11,7 @@
 }
 body {max-width: 100vw;}
 
-.table1-table {
+.autoantibody-table {
   max-width: 94vw;
   border-collapse: collapse;
   font-family: var(--font);
@@ -24,8 +24,8 @@ body {max-width: 100vw;}
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-.table1-table th,
-.table1-table td {
+.autoantibody-table th,
+.autoantibody-table td {
   padding: 10px 14px;
   border: 1px solid var(--border-color);
   vertical-align: top;
@@ -33,7 +33,7 @@ body {max-width: 100vw;}
 }
 
 /* Header styling */
-.table1-table thead th {
+.autoantibody-table thead th {
   background-color: var(--header-bg);
   font-size: var(--header-font-size);
   font-weight: 600;
@@ -41,35 +41,35 @@ body {max-width: 100vw;}
 }
 
 /* Alternate row background */
-.table1-table tbody tr:nth-child(even) {
+.autoantibody-table tbody tr:nth-child(even) {
   background-color: var(--row-alt-bg);
 }
 
 /* Strong divider between antibody (col 2) and condition (col 3) */
-.table1-table td:nth-child(2) {
+.autoantibody-table td:nth-child(2) {
   border-right: 3px solid var(--strong-divider);
 }
 
 /* Condition columns emphasis */
-.table1-table td:nth-child(1),
-.table1-table td:nth-child(3) {
+.autoantibody-table td:nth-child(1),
+.autoantibody-table td:nth-child(3) {
   font-weight: 500;
   width: 20%;
 }
 
 /* Antibody columns can expand more */
-.table1-table td:nth-child(2),
-.table1-table td:nth-child(4) {
+.autoantibody-table td:nth-child(2),
+.autoantibody-table td:nth-child(4) {
   width: 30%;
 }
 
 /* Bullet list formatting */
-.table1-table ul {
+.autoantibody-table ul {
   margin: 0;
   padding-left: 18px;
 }
 
-.table1-table li {
+.autoantibody-table li {
   margin: 2px 0;
 }
 
@@ -480,26 +480,26 @@ button:active {
   box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
 }
 
+.quiz-mode table .quiz-answer {
+  color: transparent;
+  background: none;
+  text-shadow: none;
+  user-select: none;
+}
 
-.table1 tbody tr:nth-child(odd) {
+.quiz-mode table .quiz-answer:hover {
+  color: black;
+  background: none;
+  text-shadow: none;
+  user-select: text;
+}
+
+.autoantibody-table tbody tr:nth-child(odd) {
   background-color: #ffffff;
 }
-.table1-table tbody tr:nth-child(even) {
+.autoantibody-table tbody tr:nth-child(even) {
   background-color: #f9fcff;
 }
-.table1-table tbody tr {
+.autoantibody-table tbody tr {
   transition: background-color 0.25s ease;
-}
-
-.hide-col-btn {
-  float: right;
-  font-size: 0.8em;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #999;
-  margin-left: 6px;
-}
-.hide-col-btn:hover {
-  color: #333;
 }

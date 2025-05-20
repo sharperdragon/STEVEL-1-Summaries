@@ -50,20 +50,6 @@ def build_all():
         # Load and mutate table HTML
         soup = BeautifulSoup(table_file.read_text(), "html.parser")
         modified = apply_quiz_classes(soup)
-
-        # Annotate each cell with data-col index for column toggle
-        for row in soup.find_all("tr"):
-            cells = row.find_all(["th", "td"])
-            for idx, cell in enumerate(cells):
-                cell["data-col"] = str(idx)
-
-        # Insert hide buttons in column headers
-        for th in soup.find_all("th"):
-            idx = th.get("data-col")
-            button = soup.new_tag("button", **{"class": "hide-col-btn", "onclick": f"toggleColumn({idx})"})
-            button.string = "✖"
-            th.insert(0, button)
-
         table_html = str(soup)
 
         if modified:
@@ -85,23 +71,13 @@ def build_all():
         nav_path = NAV_DIR / f"nav_{name}.html"
         nav_path.write_text(nav_html)
 
-        script_tag = """
-<script>
-function toggleColumn(colIndex) {
-  document.querySelectorAll('[data-col="' + colIndex + '"]').forEach(el => {
-    el.style.display = (el.style.display === 'none') ? '' : 'none';
-  });
-}
-</script>
-"""
+        # Inject into base template
         final_html = (
             base_html
             .replace("{{PAGE_TITLE}}", label)
             .replace("{{NAV_CONTENT}}", nav_html)
             .replace("{{TABLE_CONTENT}}", table_html)
         )
-
-        final_html += script_tag
 
         output_file = OUTPUT_DIR / f"{name}.html"
         output_file.write_text(final_html)
