@@ -77,10 +77,6 @@ def build_all():
     manifest = []
     base_html = BASE_HTML_PATH.read_text()
     # The base HTML must include {{PAGE_TITLE}}, {{NAV_CONTENT}}, and {{TABLE_CONTENT}} placeholders
-    required_placeholders = ["{{PAGE_TITLE}}", "{{NAV_CONTENT}}", "{{TABLE_CONTENT}}"]
-    missing = [ph for ph in required_placeholders if ph not in base_html]
-    if missing:
-        raise ValueError(f"❌ Missing required placeholder(s) in BASE.html: {', '.join(missing)}")
 
     # Gather all table files to process
     table_files = sorted(TABLE_DIR.glob(f"*{TABLE_SUFFIX}"))

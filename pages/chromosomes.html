@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chromosomes</title>
   <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
-  <link rel="icon" href="/STEVEL-1-Summaries/static/" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
 </head>
 
 <body>
@@ -17,18 +17,21 @@
 
 
   <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
+    <!-- Utility Toolbar -->
+    <div class="utility-toolbar" style="margin-bottom: 15px;">
+      <input type="search" id="search-input" placeholder="Search..." />
+      <button id="reset-button">Reset</button>
+    </div>
     <div class="table-container">
 <table class="table1">
 <thead>
 <tr>
-<th colspan="3" data-col="0" style="text-align: center; background-color: #d0e5f5;"><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button>
-<strong>Genetic Disorders by Chromosome</strong>
-</th>
+<th colspan="3" data-col="0" style="text-align: center; background-color: #d0e5f5;"><div class="th-menu-wrapper"><span class="th-title">Genetic Disorders by Chromosome</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(0); return false;">Toggle Column</a></div></div></th>
 </tr>
 <tr>
-<th data-col="0" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button>Chromosome</th>
-<th data-col="1" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(1)">✖</button><button class="hide-col-btn" onclick="toggleColumn(1)">✖</button>Disease</th>
-<th data-col="2" style="background-color: #f7f9fa;"><button class="hide-col-btn" onclick="toggleColumn(2)">✖</button><button class="hide-col-btn" onclick="toggleColumn(2)">✖</button>Gene / Mutation Info</th>
+<th data-col="0" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Chromosome</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(0); return false;">Toggle Column</a></div></div></th>
+<th data-col="1" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(1); return false;">Toggle Column</a></div></div></th>
+<th data-col="2" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Gene / Mutation Info</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(2); return false;">Toggle Column</a></div></div></th>
 </tr>
 </thead>
 <tbody>
@@ -122,13 +125,5 @@
   </main>
 </body>
 
-<script src="/STEVEL-1-Summaries/static/table.utils.js"></script>
+<script src="/STEVEL-1-Summaries/static/table_page_utils.js"></script>
 </html>
-
-<script>
-function toggleColumn(colIndex) {
-  document.querySelectorAll('[data-col="' + colIndex + '"]').forEach(el => {
-    el.style.display = (el.style.display === 'none') ? '' : 'none';
-  });
-}
-</script>

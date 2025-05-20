@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Autoantibodies</title>
   <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
-  <link rel="icon" href="/STEVEL-1-Summaries/static/" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
 </head>
 
 <body>
@@ -17,20 +17,22 @@
 
 
   <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
-    
-<div class="table-responsive">
+    <!-- Utility Toolbar -->
+    <div class="utility-toolbar" style="margin-bottom: 15px;">
+      <input type="search" id="search-input" placeholder="Search..." />
+      <button id="reset-button">Reset</button>
+    </div>
+    <div class="table-responsive">
 <table border="1" cellpadding="6" cellspacing="0" class="table1" style="border-collapse: collapse; width: 100%;">
 <thead>
 <tr>
-<th colspan="5" data-col="0" style="background-color: #add8e6; text-align: center; font-size: 1.2em;"><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button>
-<strong>Disease-Associated Autoantibodies</strong>
-</th>
+<th colspan="5" data-col="0" style="background-color: #add8e6; text-align: center; font-size: 1.2em;"><div class="th-menu-wrapper"><span class="th-title">Disease-Associated Autoantibodies</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(0); return false;">Toggle Column</a></div></div></th>
 </tr>
 <tr>
-<th data-col="0" style="background-color: #f0f8ff; text-align: center;"><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button><button class="hide-col-btn" onclick="toggleColumn(0)">✖</button>Condition</th>
-<th data-col="1" style="background-color: #f0f8ff; text-align: center; border-right: 3px solid black;"><button class="hide-col-btn" onclick="toggleColumn(1)">✖</button><button class="hide-col-btn" onclick="toggleColumn(1)">✖</button>Autoantibody</th>
-<th data-col="2" style="background-color: #f0f8ff; text-align: center;"><button class="hide-col-btn" onclick="toggleColumn(2)">✖</button><button class="hide-col-btn" onclick="toggleColumn(2)">✖</button>Condition</th>
-<th data-col="3" style="background-color: #f0f8ff; text-align: center;"><button class="hide-col-btn" onclick="toggleColumn(3)">✖</button><button class="hide-col-btn" onclick="toggleColumn(3)">✖</button>Autoantibody</th>
+<th data-col="0" style="background-color: #f0f8ff; text-align: center;"><div class="th-menu-wrapper"><span class="th-title">Condition</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(0); return false;">Toggle Column</a></div></div></th>
+<th data-col="1" style="background-color: #f0f8ff; text-align: center; border-right: 3px solid black;"><div class="th-menu-wrapper"><span class="th-title">Autoantibody</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(1); return false;">Toggle Column</a></div></div></th>
+<th data-col="2" style="background-color: #f0f8ff; text-align: center;"><div class="th-menu-wrapper"><span class="th-title">Condition</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(2); return false;">Toggle Column</a></div></div></th>
+<th data-col="3" style="background-color: #f0f8ff; text-align: center;"><div class="th-menu-wrapper"><span class="th-title">Autoantibody</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(3); return false;">Toggle Column</a></div></div></th>
 </tr>
 </thead>
 <tbody>
@@ -95,6 +97,12 @@
 <td data-col="3"><ul><li>Anticardiolipin</li></ul></td>
 </tr>
 <tr>
+<td data-col="0"><strong>SLE (specific)</strong></td>
+<td data-col="1" style="border-right: 3px solid black;"><ul><li>Anti-dsDNA</li><li>Anti-Smith</li></ul></td>
+<td data-col="2"><strong>Stiff person syndrome</strong></td>
+<td data-col="3"><ul><li>Anti-GAD65</li></ul></td>
+</tr>
+<tr>
 <td data-col="0"><strong>Sjögren syndrome</strong></td>
 <td data-col="1" style="border-right: 3px solid black;"><ul><li>Anti-SSA</li><li>Anti-SSB</li></ul></td>
 <td data-col="2"><strong>Type 1 diabetes</strong></td>
@@ -123,13 +131,5 @@
   </main>
 </body>
 
-<script src="/STEVEL-1-Summaries/static/table.utils.js"></script>
+<script src="/STEVEL-1-Summaries/static/table_page_utils.js"></script>
 </html>
-
-<script>
-function toggleColumn(colIndex) {
-  document.querySelectorAll('[data-col="' + colIndex + '"]').forEach(el => {
-    el.style.display = (el.style.display === 'none') ? '' : 'none';
-  });
-}
-</script>
