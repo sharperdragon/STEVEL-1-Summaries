@@ -31,36 +31,18 @@ fetch('static/table.manifest.json')
 
 <section style="text-align: center; margin-top: 60px;">
   <h2 style="color: var(--text-h2);">🗂 Topics by Category</h2>
+  <ul style="list-style: none; padding: 0; font-size: 1em; color: #444;">
+    <li>🧠 Neuro & Psych — Seizures, Stroke, Neurotransmitters</li>
+    <li>🫀 Cardiovascular — Vascular Path, Murmurs, ECG</li>
+    <li>🫁 Pulmonary — Obstruction, Restriction, Gas Exchange</li>
+    <li>🧬 Hematology — <a href="subdex/hemeonc.html">Heme-Onc</a>, Anemias, Clotting</li>
+    <li>🧪 Immunology — <a href="subdex/autoantibodies.html">Autoantibodies</a>, Hypersensitivity</li>
+    <li>🔬 Biochemistry — <a href="subdex/metabolism.html">Metabolism</a>, Vitamins, Enzymes</li>
+    <li>🧫 Microbiology — Bacteria, Viruses, Fungi</li>
+    <li>💊 Pharmacology — Autonomics, Cardio/Respiratory Drugs</li>
+  </ul>
 </section>
 
-  <script>
-    fetch('subdex/')
-      .then(response => response.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const links = [...doc.querySelectorAll('a')];
-        const ul = document.createElement('ul');
-        ul.style.listStyle = 'none';
-        ul.style.padding = '0';
-        ul.style.fontSize = '1em';
-        ul.style.color = '#444';
-
-        links
-          .map(a => a.getAttribute('href'))
-          .filter(href => href.endsWith('.html'))
-          .forEach(href => {
-            const name = decodeURIComponent(href.replace('.html', '').replace(/[-_]/g, ' '));
-            const li = document.createElement('li');
-            li.innerHTML = `📄 <a href="subdex/${href}">${name}</a>`;
-            ul.appendChild(li);
-          });
-
-        const section = document.querySelector('section:last-of-type');
-        section.innerHTML = `<h2 style="color: var(--text-h2);">🗂 Topics by Category</h2>`;
-        section.appendChild(ul);
-      });
-  </script>
 </body>
 
 <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
