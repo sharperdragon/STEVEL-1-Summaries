@@ -1,12 +1,9 @@
 from pathlib import Path
-from subdex.table_utils import add_quiz_answer_classes  # 🧠 Auto-tag .table.html before rendering
 
 BASE_HTML_PATH = Path("subdex/Base.html")
 TABLE_DIR = Path("subdex/")
 NAV_DIR = Path("utils/navs/")
 OUTPUT_DIR = Path("subdex/")
-
-add_quiz_answer_classes()  # ✅ Ensure quiz-answer class is applied before HTML output
 
 def clean_title(name):
     return name.replace('.table.html', '').replace('_', ' ').title()
