@@ -37,7 +37,7 @@ body {
 }
 
 /* ===========================
-   Typography
+   Typography and Headers
 =========================== */
 h1 {
     text-align: center;
@@ -212,7 +212,7 @@ div#history_section > div > select {
 }
 
 /* ===========================
-   Inputs and Forms
+   Forms and Inputs
 =========================== */
 textarea {
     width: 95%;
