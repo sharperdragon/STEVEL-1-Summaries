@@ -91,30 +91,5 @@ def build_all():
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
 
-def update_index_page():
-    """Update the index.html to include up-to-date navigation."""
-    index_path = Path("index.html")
-    nav_placeholder = "{{NAV_CONTENT}}"
-    base_template = BASE_HTML_PATH.read_text()
-
-    table_files = sorted(TABLE_DIR.glob(f"*{TABLE_SUFFIX}"))
-    nav_links = []
-    for table_file in table_files:
-        name = normalize_name(table_file.name)
-        label = labelize_name(table_file.name)
-        nav_links.append(f'  <a href="pages/{name}.html" class="nav-link">{label}</a> |')
-
-    nav_html = "<nav style='margin: 10px 0; text-align: center;'>\n" + "\n".join(nav_links) + "\n</nav>\n"
-
-    if nav_placeholder in base_template:
-        updated_html = base_template.replace("{{NAV_CONTENT}}", nav_html)
-    else:
-        updated_html = nav_html + base_template  # fallback if no placeholder
-
-    index_path.write_text(updated_html)
-    print(f"🏠 Index page updated with navigation: {index_path}")
-
-
 if __name__ == "__main__":
     build_all()
-    update_index_page()
