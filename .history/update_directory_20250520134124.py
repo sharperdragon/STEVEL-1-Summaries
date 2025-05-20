@@ -2,7 +2,6 @@ import os
 import json
 from pathlib import Path
 from bs4 import BeautifulSoup
-from utils.index_utils.update_index import build_index
 
 BASE_HTML_PATH = Path("subdex/Base.html")
 TABLE_DIR = Path("subdex/")
@@ -94,4 +93,3 @@ def build_all():
 
 if __name__ == "__main__":
     build_all()
-    build_index()
