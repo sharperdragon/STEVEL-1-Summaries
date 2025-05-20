@@ -19,7 +19,7 @@ body {
     margin: 20px;
     padding: 1px;
     max-width: -webkit-fill-available;
-    background-color: #f1f1ed;
+    background-color: lab(96.74% -1.04 2.87);
     max-width: 100vw;
 }
 
@@ -158,10 +158,6 @@ div#history_section > div > select {
 
 .table1-table tbody tr {
   transition: background-color 0.25s ease;
-  cursor: pointer;
-}
-.table1-table tbody tr:hover {
-  background-color: #e6f0ff;
 }
 
 /* Strong divider between antibody (col 2) and condition (col 3) */
@@ -433,6 +429,31 @@ div#selection_buttons {
     background-color: #b9cdf9 !important;
     color: #003366;
     font-weight: bold;
+}
+
+/* Table header hover-reveal dropdown toggle styles */
+.th-hover-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.th-toggle-link {
+  visibility: hidden;
+  font-size: 0.75em;
+  color: #999;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+th:hover .th-toggle-link {
+  visibility: visible;
+}
+
+.th-toggle-link:hover {
+  color: #333;
+  text-decoration: underline;
 }
 
 /* Column header dropdown toggle (Keyword-to-Search style) */

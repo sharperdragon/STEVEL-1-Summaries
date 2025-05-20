@@ -60,14 +60,4 @@ document.addEventListener("DOMContentLoaded", () => {
       filterCards();
     });
   }
-
-  document.querySelectorAll("table tbody tr").forEach(row => {
-    row.addEventListener("click", () => {
-      row.querySelectorAll("td").forEach(cell => {
-        if (cell.style.display === "none") {
-          cell.style.display = "";
-        }
-      });
-    });
-  });
 });
