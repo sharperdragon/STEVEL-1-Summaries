@@ -7,7 +7,7 @@
   --text-color: #2a2a2a;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --base-font-size: 17px;
-  --header-font-size: 22px;
+  --header-font-size: 18px;
 }
 
 /* ===========================
@@ -145,11 +145,11 @@ div#history_section > div > select {
 
 /* Alternate row background */
 .table1-table tbody tr:nth-child(even) {
-  background-color: var(--row-alt-bg-1);
+  background-color: var(--row-alt-bg);
 }
 
 .table1 tbody tr:nth-child(odd) {
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 .table1-table tbody tr:nth-child(even) {
   background-color: #f9fcff;
@@ -269,9 +269,9 @@ textarea {
 }
 
 #history_select:focus {
-    border-color: #479efb;
+    border-color: #007bff;
     outline: none;
-    box-shadow: 0 0 5px rgba(58, 153, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
 }
 
 /* ===========================
@@ -279,7 +279,7 @@ textarea {
 =========================== */
 /* Button Styles */
 button {
-    background-color: #3572b3;
+    background-color: #007bff;
     display: inline-flex;
     gap: 10px;
     color: white;
@@ -298,7 +298,7 @@ button {
 
 /* Hover effect without shifting elements */
 button:hover {
-    background-color: #2165ad;
+    background-color: #0c66c6;
     color: offwhite;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(2px); /* Hover effect without affecting layout */
