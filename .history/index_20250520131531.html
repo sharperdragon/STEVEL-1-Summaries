@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicksheet Summaries</title>
+    <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css">
+    <link rel="icon" href="/STEVEL-1-Summaries/subdex/metabolism.html">
+</head>
+<body>
+
+<header style="text-align: center; margin-top: 40px;">
+  <h1 style="font-size: 2.2em; color: var(--text-h1);">Quicksheet Summaries</h1>
+  <p style="color: #657c7b; font-size: 1.1em;">Board-style tables and diagrams for high-yield review</p>
+</header>
+<div style="text-align: center; margin-top: 30px;">
+  <input type="text" id="searchInput" placeholder="Search summaries..." onkeyup="filterCards()" style="padding: 10px; width: 60%; max-width: 400px; border: 1px solid #ccc; border-radius: 6px;">
+</div>
+<section id="summaryCards" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 30px; gap: 20px;"></section>
+
+<script>
+fetch('static/table.manifest.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("summaryCards");
+    container.innerHTML = data.map(d => `
+      <a href="subdex/${d.file}" class="summary-card">${d.name}</a>
+    `).join("");
+  });
+</script>
+
+<section style="text-align: center; margin-top: 60px;">
+  <h2 style="color: var(--text-h2);">🗂 Topics by Category</h2>
+</section>
+
+  <script>
+    fetch('pages/')
+      .then(response => response.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const links = [...doc.querySelectorAll('a')];
+        const ul = document.createElement('ul');
+        ul.style.listStyle = 'none';
+        ul.style.padding = '0';
+        ul.style.fontSize = '1em';
+        ul.style.color = '#444';
+
+        links
+          .map(a => a.getAttribute('href'))
+          .filter(href => href.endsWith('.html'))
+          .forEach(href => {
+            const name = decodeURIComponent(href.replace('.html', '').replace(/[-_]/g, ' '));
+            const li = document.createElement('li');
+            li.innerHTML = `📄 <a href="subdex/${href}">${name}</a>`;
+            ul.appendChild(li);
+          });
+
+        const section = document.querySelector('section:last-of-type');
+        section.innerHTML = `<h2 style="color: var(--text-h2);">🗂 Topics by Category</h2>`;
+        section.appendChild(ul);
+      });
+  </script>
+</body>
+
+<footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+  Last updated May 2025 
+</footer>
+
+    <script src="./static/script.js"></script>
