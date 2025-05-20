@@ -36,7 +36,7 @@ for entry in entries:
         f.write('</nav>\n')
 
 manifest_data = [
-    {"name": clean_label(e), "file": f"{strip_table_suffix(e)}.table.html"}
+    {"name": clean_label(e), "file": f"{strip_table_suffix(e)}.html"}
     for e in entries
 ]
 
