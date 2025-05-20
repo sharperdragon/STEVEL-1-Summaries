@@ -1,10 +1,10 @@
 :root {
-  --header-bg-1: #d0e5f5;
-  --subheader-bg-1: #f7f9fa;
+  --header-bg: #d0e5f5;
+  --subheader-bg: #f7f9fa;
   --border-color: #ccd9e0;
   --strong-divider: #6c8ca3;
-  --row-alt-bg-1: #99c8f8;
-  --row-bg-1: #fbfcfd;
+  --row-alt-bg-1: #fbfcfd;
+  --row-bg-1: 
   --text-color: #2a2a2a;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --base-font-size: 17px;
@@ -138,7 +138,7 @@ div#history_section > div > select {
 
 /* Header styling */
 .table1-table thead th {
-  background-color: var(--header-bg-1);
+  background-color: var(--header-bg);
   font-size: var(--header-font-size);
   font-weight: 600;
   text-align: center;
