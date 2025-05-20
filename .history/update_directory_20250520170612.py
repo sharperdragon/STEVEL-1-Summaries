@@ -1,19 +1,3 @@
-def annotate_table_columns(soup: BeautifulSoup):
-    """
-    Adds data-col attributes to <th> and <td> cells,
-    and inserts toggle buttons into each <th> for column visibility.
-    """
-    for row in soup.find_all("tr"):
-        cells = row.find_all(["td", "th"])
-        for idx, cell in enumerate(cells):
-            cell["data-col"] = str(idx)
-            if cell.name == "th":
-                button = soup.new_tag("button", **{
-                    "class": "hide-col-btn",
-                    "onclick": f"toggleColumn({idx})"
-                })
-                button.string = "✖"
-                cell.insert(0, button)
 """Module to update HTML pages by processing table files, annotating columns for toggling, generating navigation bars, and building a manifest."""
 
 import os
@@ -77,8 +61,19 @@ def build_all():
         # Load and parse table HTML content
         soup = BeautifulSoup(table_file.read_text(), "html.parser")
 
-        # Annotate table columns and insert toggle buttons
-        annotate_table_columns(soup)
+        # Annotate each <td> and <th> with data-col index for column toggle functionality
+        for row in soup.find_all("tr"):
+            cells = row.find_all(["td", "th"])
+            for idx, cell in enumerate(cells):
+                cell["data-col"] = str(idx)
+                if cell.name == "th":
+                    # Insert a hide toggle button inside header cells
+                    button = soup.new_tag("button", **{
+                        "class": "hide-col-btn",
+                        "onclick": f"toggleColumn({idx})"
+                    })
+                    button.string = "✖"
+                    cell.insert(0, button)
 
         table_html = str(soup)
 
