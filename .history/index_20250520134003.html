@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{PAGE_TITLE}}</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/" />
+</head>
+
+<body>
+  <nav style='margin: 10px 0; text-align: center;'>
+  <a href="pages/autoantibodies.html" class="nav-link">Autoantibodies</a> |
+  <a href="pages/chromosomes.html" class="nav-link">Chromosomes</a> |
+  <a href="pages/hemeonc.html" class="nav-link">Hemeonc</a> |
+  <a href="pages/metabolism.html" class="nav-link">Metabolism</a> |
+</nav>
+
+
+  <div style="text-align: center; margin: 20px;">
+    <button onclick="toggleQuizMode()" style="padding: 10px 20px; font-weight: bold; background: #d0e5f5; border: none; border-radius: 6px;">
+      🔁 Toggle Quiz Mode
+    </button>
+  </div>
+
+  <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
+    {{TABLE_CONTENT}}
+  </main>
+</body>
+
+<script src="/STEVEL-1-Summaries/static/table.utils.js"></script>
+</html>
