@@ -1,18 +1,18 @@
 [
   {
     "name": "Autoantibodies",
-    "file": "autoantibodies.table.html"
+    "file": "autoantibodies.html"
   },
   {
     "name": "Chromosomes",
-    "file": "chromosomes.table.html"
+    "file": "chromosomes.html"
   },
   {
     "name": "Hemeonc",
-    "file": "hemeonc.table.html"
+    "file": "hemeonc.html"
   },
   {
     "name": "Metabolism",
-    "file": "metabolism.table.html"
+    "file": "metabolism.html"
   }
 ]
