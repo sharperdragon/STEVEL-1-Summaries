@@ -489,28 +489,15 @@ button:active {
   transition: background-color 0.25s ease;
 }
 
-
-/* Table header hover-reveal dropdown toggle styles */
-.th-hover-menu {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.th-toggle-link {
-  visibility: hidden;
-  font-size: 0.75em;
+.hide-col-btn {
+  float: right;
+  font-size: 0.8em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   color: #999;
-  text-decoration: none;
-  margin-left: 8px;
+  margin-left: 6px;
 }
-
-th:hover .th-toggle-link {
-  visibility: visible;
-}
-
-.th-toggle-link:hover {
+.hide-col-btn:hover {
   color: #333;
-  text-decoration: underline;
 }
