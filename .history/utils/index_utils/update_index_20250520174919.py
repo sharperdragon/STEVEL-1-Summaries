@@ -28,10 +28,10 @@ def build_index():
         summary_cards.append(f'<div class="summary-card"><a href="{href}">{label}</a></div>')
 
     nav_html = '<nav style="margin: 40px 0; text-align: center;">\n' + " | \n".join(nav_links) + "\n</nav>"
-    summary_html = "\n".join(summary_cards)
+    summary_html = '<section class="summary-cards">\n' + "\n".join(summary_cards) + "\n</section>"
 
     last_updated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    last_updated_html = last_updated
+    last_updated_html = f'<p class="last-updated">Last updated: {last_updated}</p>'
 
     final_html = base_html
     final_html = final_html.replace("{{NAV_CONTENT}}", nav_html)
