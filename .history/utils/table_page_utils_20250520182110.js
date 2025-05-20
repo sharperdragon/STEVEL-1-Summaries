@@ -30,13 +30,12 @@ function filterTableRowsByInput(inputId, tableSelector) {
   });
 }
 
-function filterRowsByInput(inputId, rowSelector) {
-  const input = document.getElementById(inputId);
-  if (!input) return;
-  const query = input.value.toLowerCase();
-  document.querySelectorAll(rowSelector).forEach(row => {
+function filterCards() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const rows = document.querySelectorAll(".autoantibody-table tbody tr");
+  rows.forEach(row => {
     const text = row.textContent.toLowerCase();
-    row.style.display = text.includes(query) ? "" : "none";
+    row.style.display = text.includes(input) ? "" : "none";
   });
 }
 
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   if (searchInput) {
     searchInput.addEventListener("input", () => {
-      filterRowsByInput("searchInput", ".autoantibody-table tbody tr");
+      filterCards();
     });
   }
 
