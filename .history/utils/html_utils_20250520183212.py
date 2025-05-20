@@ -16,7 +16,7 @@ def annotate_table_columns(soup: BeautifulSoup):
 
                 menu = soup.new_tag("div", **{"class": "th-menu-wrapper"})
                 label = soup.new_tag("span", **{"class": "th-title"})
-                label.string = clean_text
+                label.string = clean_text + " ▼"
 
                 dropdown = soup.new_tag("div", **{"class": "th-dropdown"})
                 action = soup.new_tag("a", href="#", onclick=f"toggleColumn({idx}); return false;")

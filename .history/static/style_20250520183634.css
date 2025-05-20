@@ -563,9 +563,3 @@ th:hover .th-dropdown {
 .th-menu-wrapper:hover .th-title::after {
   content: " ▶";
 }
-.th-title::after {
-  content: " ▼";
-  display: inline-block;
-  margin-left: 6px;
-  transition: transform 0.2s ease;
-}
