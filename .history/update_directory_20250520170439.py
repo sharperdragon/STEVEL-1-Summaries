@@ -1,5 +1,3 @@
-"""Module to update HTML pages by processing table files, annotating columns for toggling, generating navigation bars, and building a manifest."""
-
 import os
 import json
 from pathlib import Path
@@ -27,22 +25,14 @@ TABLE_SUFFIX = ".table.html"
 
 
 def normalize_name(filename: str):
-    """Normalize filename by removing the table suffix."""
     return filename.replace(TABLE_SUFFIX, "")
 
 
 def labelize_name(filename: str):
-    """Convert normalized filename to a human-readable title."""
     return normalize_name(filename).replace("_", " ").replace("-", " ").title()
 
 
 def build_all():
-    """
-    Main function to build all HTML pages from table files.
-    Processes tables, annotates columns for toggling, generates navigation bars,
-    writes output HTML files, and updates the manifest.
-    """
-    # Ensure output and navigation directories exist
     OUTPUT_DIR.mkdir(exist_ok=True)
     NAV_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -50,24 +40,22 @@ def build_all():
     base_html = BASE_HTML_PATH.read_text()
     # The base HTML must include {{PAGE_TITLE}}, {{NAV_CONTENT}}, and {{TABLE_CONTENT}} placeholders
 
-    # Gather all table files to process
     table_files = sorted(TABLE_DIR.glob(f"*{TABLE_SUFFIX}"))
 
-    # Loop over each table file to build individual pages
     for table_file in table_files:
         name = normalize_name(table_file.name)
         label = labelize_name(table_file.name)
 
-        # Load and parse table HTML content
+        # Load and mutate table HTML
         soup = BeautifulSoup(table_file.read_text(), "html.parser")
 
-        # Annotate each <td> and <th> with data-col index for column toggle functionality
+        # Annotate each <td> and <th> with data-col index for column toggle
         for row in soup.find_all("tr"):
             cells = row.find_all(["td", "th"])
             for idx, cell in enumerate(cells):
                 cell["data-col"] = str(idx)
                 if cell.name == "th":
-                    # Insert a hide toggle button inside header cells
+                    # Insert hide toggle button
                     button = soup.new_tag("button", **{
                         "class": "hide-col-btn",
                         "onclick": f"toggleColumn({idx})"
@@ -79,7 +67,7 @@ def build_all():
 
         print(f"📄 Processing: {table_file.name}")
 
-        # Build improved navigation bar with Home and links to other pages
+        # Build improved navigation bar
         home_link = '<div style="text-align: left;"><a href="../index.html" class="nav-link">🏠 Home</a></div>'
         other_links = []
         for other in table_files:
@@ -91,11 +79,9 @@ def build_all():
         centered_links = '<div style="text-align: center;">' + ' | '.join(other_links) + '</div>'
         nav_html = f"<nav style='margin: 10px 0;'>\n{home_link}\n{centered_links}\n</nav>\n"
 
-        # Write navigation HTML to separate file for potential reuse
         nav_path = NAV_DIR / f"nav_{name}.html"
         nav_path.write_text(nav_html)
 
-        # Compose final HTML by replacing placeholders in base template
         final_html = (
             base_html
             .replace("{{PAGE_TITLE}}", label)
@@ -104,18 +90,15 @@ def build_all():
             + TOGGLE_SCRIPT
         )
 
-        # Write the generated HTML page to output directory
         output_file = OUTPUT_DIR / f"{name}.html"
         output_file.write_text(final_html)
         print(f"📄 Built page: {output_file.name}")
 
-        # Append page info to manifest list
         manifest.append({
             "name": label,
             "file": f"{name}.html"
         })
 
-    # Write the manifest JSON file with all pages info
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2))
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
