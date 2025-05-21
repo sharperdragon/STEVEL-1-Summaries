@@ -92,7 +92,7 @@ def build_index(build_json=True):
             href = f'pages/{entry["file"]}'
         except KeyError as e:
             raise ValueError(f"Malformed entry in manifest: {entry}") from e
-        nav_links.append(f'<a href="{href}" class="nav-link">{label}</a>')
+        nav_links.append(f'<a href="{href}" class="home-nav-link">{label}</a>')
         desc = card_descriptions.get(label, f"A high-yield summary table for {label.lower()}.")
         summary_cards.append(
             f'''<a class="summary-card" href="{href}">

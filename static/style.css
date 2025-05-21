@@ -334,22 +334,32 @@ div#selection_buttons {
 /* ===========================
    Navigation and Cards
 =========================== */
-.nav-link {
+.nav-link, .home-nav-link  {
   display: inline-block;
-  margin: 0.5vw 1vw;
-  padding: 1em 2em;
   background-color: #d0e5f5;
   text-decoration: none;
   color: #333;
-  border-radius: 6px;
-  font-weight: 500;
   font-size: clamp(0.85rem, 2vw, 1rem);
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;
   white-space: nowrap;
 }
+.nav-link {
+  margin: 0.5vw 1vw;
+  padding: 1em 2em;
+  border-radius: 6px;
+  font-weight: 500;
+}
 
-.nav-link:hover {
+.home-nav-link {
+  margin: 0.1vw 0.4vw;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-weight: 450;
+}
+
+
+.nav-link:hover, .home-nav-link:hover  {
   background-color: #add8e6;
   transform: scale(1.05);
 }
