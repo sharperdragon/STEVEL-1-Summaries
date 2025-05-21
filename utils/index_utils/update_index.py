@@ -101,7 +101,12 @@ def build_index(build_json=True):
 </a>'''
         )
 
-    nav_html = '<nav style="margin: 40px 0; text-align: center;">\n' + " | \n".join(nav_links) + "\n</nav>"
+    nav_html = (
+        '<nav style="margin: 40px 0; text-align: center; font-size: 0.9em;">\n'
+        '<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">\n'
+        + "\n".join(nav_links) +
+        '\n</div>\n</nav>'
+    )
     summary_html = "\n".join(summary_cards)
 
     buzzword_file = BASE_PATH / "Texts/buzzwords.txt"
