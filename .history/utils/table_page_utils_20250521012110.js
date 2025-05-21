@@ -3,15 +3,9 @@
  */
 function toggleColumn(colIndex) {
   const cells = document.querySelectorAll('td[data-col="' + colIndex + '"]');
-  const currentlyHidden = Array.from(cells).every(cell => cell.dataset.hidden === "true");
+  const allHidden = Array.from(cells).every(cell => cell.style.opacity === "0");
   cells.forEach(cell => {
-    if (currentlyHidden) {
-      cell.style.opacity = "";
-      delete cell.dataset.hidden;
-    } else {
-      cell.style.opacity = "0";
-      cell.dataset.hidden = "true";
-    }
+    cell.style.opacity = allHidden ? "" : "0";
   });
 }
 
@@ -21,6 +15,20 @@ function toggleColumn(colIndex) {
 function resetColumns() {
   document.querySelectorAll('td, th').forEach(cell => {
     cell.style.opacity = '';
+  });
+}
+
+/**
+ * Filter table rows based on input text (case insensitive)
+ * @param {string} inputId - The ID of the text input
+ * @param {string} tableSelector - CSS selector to target table(s)
+ */
+function filterTableRowsByInput(inputId, tableSelector) {
+  const input = document.getElementById(inputId);
+  const query = input.value.toLowerCase();
+  document.querySelectorAll(`${tableSelector} tbody tr`).forEach(row => {
+    const text = row.textContent.toLowerCase();
+    row.style.opacity = text.includes(query) ? '' : '0';
   });
 }
 
@@ -35,6 +43,13 @@ function filterRowsByInput(inputId, rowSelector) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const searchBox = document.getElementById("searchBox");
+  if (searchBox) {
+    searchBox.addEventListener("input", () => {
+      filterTableRowsByInput("searchBox", "table");
+    });
+  }
+
   const resetBtn = document.getElementById("resetButton");
   if (resetBtn) {
     resetBtn.addEventListener("click", () => {
@@ -57,10 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.querySelectorAll(".th-dropdown a").forEach(link => {
-  link.addEventListener("click", (event) => {
-    const colIndex = link.getAttribute("data-col");
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target.matches(".th-dropdown a")) {
+    const colIndex = target.getAttribute("data-col");
     if (colIndex !== null) toggleColumn(colIndex);
-    event.preventDefault();
-  });
+  }
 });
