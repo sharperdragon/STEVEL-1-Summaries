@@ -22,24 +22,11 @@ def build_index():
 
     nav_links = []
     summary_cards = []
-    card_descriptions = {
-        "Metabolism": "Includes glycolysis, glycogen storage, and fatty acid oxidation disorders.",
-        "Hemeonc": "Summarizes hematologic malignancies, anemias, and blood-related findings.",
-        "Chromosomes": "Genetic disorders and syndromes organized by chromosome number.",
-        "Autoantibodies": "Autoimmune diseases and their associated antibodies for diagnosis.",
-        "Rapid Associations": "Rapid-fire 'most common' and high-yield Step 1 associations."
-    }
     for entry in manifest_sorted:
         label = entry["name"]
         href = f'pages/{entry["file"]}'
         nav_links.append(f'<a href="{href}" class="nav-link">{label}</a>')
-        desc = card_descriptions.get(label, f"A high-yield summary table for {label.lower()}.")
-        summary_cards.append(
-            f'''<a class="summary-card" href="{href}">
-  <div class="card-title">{label}</div>
-  <div class="card-desc">{desc}</div>
-</a>'''
-        )
+        summary_cards.append(f'<div class="summary-card"><a href="{href}">{label}</a></div>')
 
     nav_html = '<nav style="margin: 40px 0; text-align: center;">\n' + " | \n".join(nav_links) + "\n</nav>"
     summary_html = "\n".join(summary_cards)
