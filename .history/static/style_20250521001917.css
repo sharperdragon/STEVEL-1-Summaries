@@ -515,7 +515,4 @@ th:hover .th-dropdown {
   100% { transform: translateX(-100%); }
 }
 
-span.assoc {
-  font-weight:500;
-  color:#2165ad
-}
+span.assoc
