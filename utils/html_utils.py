@@ -50,7 +50,6 @@ def labelize_name(filename: str) -> str:
 
 def generate_nav_html(current_file: Path, table_files: list[Path]) -> str:
     """Generate navigation HTML with Home link and all other tables except the current one."""
-    home_link = '<div style="text-align: left;"><a href="../index.html" class="nav-link">HOME</a></div>'
     other_links = []
     for other in table_files:
         if other.name == current_file.name:
@@ -59,4 +58,4 @@ def generate_nav_html(current_file: Path, table_files: list[Path]) -> str:
         label = labelize_name(other.name)
         other_links.append(f'<a href="../pages/{name}.html" class="nav-link">{label}</a>')
     centered_links = '<div style="text-align: center;">' + ' | '.join(other_links) + '</div>'
-    return f"<nav style='margin: 10px 0;'>\n{home_link}\n{centered_links}\n</nav>\n"
+    return f"<nav style='margin: 10px 0;'>\n{centered_links}\n</nav>\n"

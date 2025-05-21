@@ -10,12 +10,14 @@
 </head>
 
 <body>
-  <nav style="margin: 30px auto; text-align: center;">
-    <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px;">
-      <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
-      Home
+  <nav style="display: flex; justify-content: space-between; align-items: center; margin: 20px auto 30px; max-width: 1100px; padding: 0 20px;">
+    <a href="/STEVEL-1-Summaries/index.html" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+      <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 32px;">
+      <span style="font-weight: 600; font-size: 1.1em; color: #336699;">Home</span>
     </a>
-    {{NAV_CONTENT}}
+    <div class="section-nav">
+      {{NAV_CONTENT}}
+    </div>
   </nav>
 
 
