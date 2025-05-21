@@ -387,72 +387,22 @@ th:hover .th-dropdown {
 }
 
 .summary-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 240px;
-  min-height: 130px;
+  display: block;
+  width: 220px;
   padding: 18px;
-  background-color: #f6faff;
-  color: #222;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 500;
-  border: 1.5px solid #b8d8ef;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: left;
-}
-
-.summary-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1);
-  background-color: #eaf5ff;
-  border-color: #95c9e8;
-}
-
-/* ===========================
-   Dynamic Carousel Layout
-=========================== */
-.carousel-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin: 2rem auto;
-  max-width: 1000px;
-  padding: 0 1rem;
-}
-
-.carousel-item {
-  background-color: #fdfdff;
-  border: 1px solid #c3d5f2;
+  background-color: #f5faff;
+  color: #333;
+  text-align: center;
   border-radius: 10px;
-  padding: 16px;
-  width: 280px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease;
-}
-
-.carousel-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-.carousel-item .question {
+  text-decoration: none;
   font-weight: 600;
-  color: #2a2a2a;
-  margin-bottom: 6px;
+  border: 2px solid #d0e5f5;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-.carousel-item .answer {
-  font-style: italic;
-  color: #4a5c6a;
-  font-size: 0.95em;
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
 }
 
 /* ===========================

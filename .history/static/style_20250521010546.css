@@ -412,50 +412,6 @@ th:hover .th-dropdown {
 }
 
 /* ===========================
-   Dynamic Carousel Layout
-=========================== */
-.carousel-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin: 2rem auto;
-  max-width: 1000px;
-  padding: 0 1rem;
-}
-
-.carousel-item {
-  background-color: #fdfdff;
-  border: 1px solid #c3d5f2;
-  border-radius: 10px;
-  padding: 16px;
-  width: 280px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease;
-}
-
-.carousel-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-.carousel-item .question {
-  font-weight: 600;
-  color: #2a2a2a;
-  margin-bottom: 6px;
-}
-
-.carousel-item .answer {
-  font-style: italic;
-  color: #4a5c6a;
-  font-size: 0.95em;
-}
-
-/* ===========================
    Miscellaneous and Animations
 =========================== */
 .hidden-answer {

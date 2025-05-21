@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Autoantibodies",
+    "file": "autoantibodies.html",
+    "desc": "A high-yield summary table for autoantibodies."
+  },
+  {
+    "name": "Chromosomes",
+    "file": "chromosomes.html",
+    "desc": "A high-yield summary table for chromosomes."
+  },
+  {
+    "name": "Hemeonc",
+    "file": "hemeonc.html",
+    "desc": "A high-yield summary table for hemeonc."
+  },
+  {
+    "name": "Metabolism",
+    "file": "metabolism.html",
+    "desc": "A high-yield summary table for metabolism."
+  },
+  {
+    "name": "Rapid Associations",
+    "file": "rapid_associations.html",
+    "desc": "A high-yield summary table for rapid associations."
+  }
+]

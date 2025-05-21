@@ -17,9 +17,31 @@
   <div class="buzz-banner">
 <div class="buzz-track"></div>
   </div>
-  <!-- 🔁 Rapid Review Carousel Placeholder -->
-  <section id="rapidReviewCarousel" style="margin: 40px auto; max-width: 900px; text-align: center;">
-    <!-- Carousel content injected dynamically -->
+
+  <div style="text-align: center; margin-top: 30px;">
+    <input type="text" id="searchInput" aria-label="Search summaries or table content" placeholder="Search summaries..." 
+           style="padding: 10px; width: 60%; max-width: 400px; border: 1px solid #ccc; border-radius: 6px;">
+  </div>
+
+  <section id="summaryCards" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 30px; gap: 20px;">
+    <div class="summary-card"><a href="pages/autoantibodies.html">Autoantibodies</a></div>
+<div class="summary-card"><a href="pages/chromosomes.html">Chromosomes</a></div>
+<div class="summary-card"><a href="pages/hemeonc.html">Hemeonc</a></div>
+<div class="summary-card"><a href="pages/metabolism.html">Metabolism</a></div>
+<div class="summary-card"><a href="pages/rapid_associations.html">Rapid Associations</a></div>
+  </section>
+
+  <!-- 🔁 Navigation links injected from Python script -->
+  <nav style="margin: 40px 0; text-align: center;">
+<a href="pages/autoantibodies.html" class="nav-link">Autoantibodies</a> | 
+<a href="pages/chromosomes.html" class="nav-link">Chromosomes</a> | 
+<a href="pages/hemeonc.html" class="nav-link">Hemeonc</a> | 
+<a href="pages/metabolism.html" class="nav-link">Metabolism</a> | 
+<a href="pages/rapid_associations.html" class="nav-link">Rapid Associations</a>
+</nav>
+
+  <!-- 🔁 Rapid Review Carousel -->
+  <div id="rapidReviewCarousel" class="carousel-wrapper">
     <div class="carousel-container"><div class="carousel-item"><div class="question">Mitochondrial inheritance</div><div class="answer">Occurs in all offspring of affected females; heteroplasmy</div></div>
 <div class="carousel-item"><div class="question">Intellectual disability</div><div class="answer">Down syndrome (sporadic), fragile X syndrome (inherited)</div></div>
 <div class="carousel-item"><div class="question">Vitamin deficiency (USA)</div><div class="answer">Folate (especially in pregnancy; low body stores)</div></div>
@@ -153,29 +175,7 @@
 <div class="carousel-item"><div class="question">Most common non-Hodgkin lymphoma in adults</div><div class="answer">Diffuse large B-cell lymphoma</div></div>
 <div class="carousel-item"><div class="question">Leukemia by age</div><div class="answer">ALL: children; CLL: >60; AML: ~65; CML: 45–85</div></div>
 <div class="carousel-item"><div class="question">t(9;22)</div><div class="answer">Philadelphia chromosome → CML (BCR-ABL), also seen in ALL</div></div></div>
-  </section>
-
-  <div style="text-align: center; margin-top: 30px;">
-    <input type="text" id="searchInput" aria-label="Search summaries or table content" placeholder="Search summaries..." 
-           style="padding: 10px; width: 60%; max-width: 400px; border: 1px solid #ccc; border-radius: 6px;">
   </div>
-
-  <section id="summaryCards" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 30px; gap: 20px;">
-    <div class="summary-card"><a href="pages/autoantibodies.html">Autoantibodies</a></div>
-<div class="summary-card"><a href="pages/chromosomes.html">Chromosomes</a></div>
-<div class="summary-card"><a href="pages/hemeonc.html">Hemeonc</a></div>
-<div class="summary-card"><a href="pages/metabolism.html">Metabolism</a></div>
-<div class="summary-card"><a href="pages/rapid_associations.html">Rapid Associations</a></div>
-  </section>
-
-  <!-- 🔁 Navigation links injected from Python script -->
-  <nav style="margin: 40px 0; text-align: center;">
-<a href="pages/autoantibodies.html" class="nav-link">Autoantibodies</a> | 
-<a href="pages/chromosomes.html" class="nav-link">Chromosomes</a> | 
-<a href="pages/hemeonc.html" class="nav-link">Hemeonc</a> | 
-<a href="pages/metabolism.html" class="nav-link">Metabolism</a> | 
-<a href="pages/rapid_associations.html" class="nav-link">Rapid Associations</a>
-</nav>
 
   <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
     Last updated <time datetime="2025-05-21">May 21</time>
