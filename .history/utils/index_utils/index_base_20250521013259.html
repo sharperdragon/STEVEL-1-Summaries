@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quicksheet Summaries</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css">
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png">
+</head>
+<body>
+
+  <header style="text-align: center; margin-top: 40px;">
+    <h1 style="font-size: 2.2em; color: var(--text-h1);">Quicksheet Summaries</h1>
+    <p style="color: #657c7b; font-size: 1.1em;">Board-style tables and diagrams for high-yield review</p>
+  </header>
+
+  <div class="buzz-banner">
+<div class="buzz-track">{{BUZZWORDS}}</div>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <input type="text" id="searchInput" aria-label="Search summaries or table content" placeholder="Search summaries..." 
+           style="padding: 10px; width: 60%; max-width: 400px; border: 1px solid #ccc; border-radius: 6px;">
+  </div>
+  <!-- 🔁 Navigation links injected from Python script -->
+  {{NAV_CONTENT}}
+
+  <div id="summaryCards" class="carousel-wrapper">
+    {{SUMMARY_CARDS}}
+  </div>
+
+  <!-- 🔁 Rapid Review Carousel -->
+  <div id="rapidReviewCarousel" class="carousel-wrapper">
+    {{RAPID_REVIEW_CAROUSEL}}
+  </div>
+
+  <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+    Last updated {{LAST_UPDATED}}
+  </footer>
+
+  <script src="/STEVEL-1-Summaries/static/script.js"></script>
+</body>
+</html>
