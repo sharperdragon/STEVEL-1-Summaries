@@ -115,7 +115,7 @@ document.querySelectorAll(".th-menu-wrapper").forEach(wrapper => {
   const hideDropdown = () => {
     hideTimeout = setTimeout(() => {
       dropdown.style.display = "none";
-    }, 1000); // 1 second delay
+    }, 500); // 1 second delay
   };
 
   wrapper.addEventListener("mouseenter", showDropdown);
