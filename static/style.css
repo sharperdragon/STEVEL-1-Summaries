@@ -488,21 +488,19 @@ div#selection_buttons {
   overflow: hidden;
   white-space: nowrap;
   background-color: #f0f4f9;
-  padding: 8px 0;
+  padding: 6px 0;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
 .buzz-track {
   display: inline-block;
-  overflow: hidden;
-  object-fit: contain;
-  padding-left: 100%;
-  animation: scroll-buzz var(--scroll-duration, 40s) steps(1, end) infinite;
+  white-space: nowrap;
+  min-width: 100%;
+  animation: scroll-buzz var(--scroll-duration, 40s) linear infinite;
 }
 
 .buzz-track:hover {
-  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.1);
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
