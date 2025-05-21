@@ -14,22 +14,12 @@ def annotate_table_columns(soup: BeautifulSoup):
                 clean_text = cell.get_text(strip=True)
                 cell.clear()
 
-                parent_table = cell.find_parent("table")
-                table_class = ""
-                if parent_table and parent_table.has_attr("class"):
-                    for cls in parent_table["class"]:
-                        if cls in {"table1", "table2", "table3"}:
-                            table_class = cls
-                            break
-
                 menu = soup.new_tag("div", **{"class": "th-menu-wrapper"})
                 label = soup.new_tag("span", **{"class": "th-title"})
                 label.string = clean_text
 
                 dropdown = soup.new_tag("div", **{"class": "th-dropdown"})
                 action = soup.new_tag("a", href="#", onclick=f"toggleColumn({idx}); return false;")
-                if table_class:
-                    action["class"] = f"col-toggle {table_class}"
                 action.string = "Hide Column"
                 dropdown.append(action)
 
