@@ -503,6 +503,7 @@ div#selection_buttons {
 
 .buzz-track:hover {
   animation-play-state: paused;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* Buzzword and Assoc Styles */
@@ -528,7 +529,6 @@ div#selection_buttons {
 .buzzword:hover {
   background-color: #eef4fa;
   border-radius: 4px;
-  padding: 2px 6px;
 }
 
 
