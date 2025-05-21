@@ -55,8 +55,7 @@
 .table1, .table2, .table3 {
   width: 96%;
   margin: 2vh auto;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   font-family: var(--font);
   color: var(--text-color);
   font-size: var(--base-font-size);
