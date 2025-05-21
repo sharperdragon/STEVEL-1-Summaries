@@ -16,7 +16,7 @@ BASE_HTML_PATH = Path("pages/BASE.html")
 TABLE_DIR = Path("subdex/")
 NAV_DIR = Path("utils/navs/")
 OUTPUT_DIR = Path("pages/")
-MANIFEST_PATH = Path("static/data/table.manifest.json")
+MANIFEST_PATH = Path("static/table.manifest.json")
 
 TABLE_SUFFIX = ".table.html"
 
@@ -115,14 +115,11 @@ def build_all():
             "desc": f"A high-yield summary table for {label.lower()}."  # Placeholder, can be customized later
         })
 
-    # Ensure manifest parent directories exist
-    MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     # Write the manifest JSON file with all pages info
     write_if_changed(MANIFEST_PATH, json.dumps(manifest, indent=2))
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
-    card_manifest_path = Path("static/data/summary_cards.json")
-    card_manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    card_manifest_path = Path("static/summary_cards.json")
     write_if_changed(card_manifest_path, json.dumps(card_manifest, indent=2))
     print(f"🧾 Summary cards written to: {card_manifest_path}")
 

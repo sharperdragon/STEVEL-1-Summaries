@@ -3,7 +3,7 @@ from pathlib import Path
 
 def convert_buzzwords_to_json(
     input_path=Path("utils/Texts/buzzwords.txt"),
-    output_path=Path("static/data/buzzwords.json"),
+    output_path=Path("static/T/buzzwords.json"),
     verbose=True,
 ):
     buzzwords = []

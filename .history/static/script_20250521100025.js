@@ -68,28 +68,6 @@ function loadBuzzwords() {
     });
 }
 
-function loadRapidReviewCards() {
-  const container = document.getElementById("RapidCarousel");
-  if (!container) return;
-
-  fetch("/STEVEL-1-Summaries/static/data/rapid_cards.json")
-    .then(res => res.json())
-    .then(data => {
-      const items = data.map(entry => `
-        <div class="carousel-item">
-          <div class="question">${entry.question}</div>
-          <div class="answer">${entry.answer}</div>
-        </div>
-      `).join("");
-      container.innerHTML = items;
-      setupRapidCarousel(); // initialize carousel only after loading
-    })
-    .catch(err => {
-      console.error("❌ Failed to load rapid review cards:", err);
-      container.innerHTML = "<p style='color:#777;'>Rapid Review unavailable.</p>";
-    });
-}
-
 function setupRapidCarousel() {
   const container = document.getElementById("RapidCarousel");
   if (!container) return;
@@ -136,7 +114,7 @@ function resizeCarouselFont() {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadBuzzwords();
-  loadRapidReviewCards();
+  setupRapidCarousel();
   initSearchBinding();
   resizeCarouselFont();
   window.addEventListener("resize", resizeCarouselFont);

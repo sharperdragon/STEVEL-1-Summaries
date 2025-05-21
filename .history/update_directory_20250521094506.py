@@ -10,23 +10,17 @@ from utils.html_utils import (
     labelize_name,
 )
 from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
-from datetime import datetime
+
 
 BASE_HTML_PATH = Path("pages/BASE.html")
 TABLE_DIR = Path("subdex/")
 NAV_DIR = Path("utils/navs/")
 OUTPUT_DIR = Path("pages/")
-MANIFEST_PATH = Path("static/data/table.manifest.json")
+MANIFEST_PATH = Path("static/table.manifest.json")
 
 TABLE_SUFFIX = ".table.html"
 
 """Module to update HTML pages by processing table files, annotating columns for toggling, generating navigation bars, and building a manifest."""
-
-def write_if_changed(path: Path, content: str):
-    if path.exists() and path.read_text(encoding="utf-8") == content:
-        return False
-    path.write_text(content, encoding="utf-8")
-    return True
 
 def extract_rr_associations_html(items):
     """
@@ -65,8 +59,7 @@ def build_all():
         raise ValueError(f"❌ Missing required placeholder(s) in BASE.html: {', '.join(missing)}")
 
     # Gather all table files to process
-    table_files_all = sorted(TABLE_DIR.glob("*"))
-    table_files = [f for f in table_files_all if f.name.endswith(TABLE_SUFFIX)]
+    table_files = sorted(TABLE_DIR.glob(f"*{TABLE_SUFFIX}"))
 
     # Loop over each table file to build individual pages
     for table_file in table_files:
@@ -88,7 +81,7 @@ def build_all():
 
         # Write navigation HTML to separate file for potential reuse
         nav_path = NAV_DIR / f"nav_{name}.html"
-        write_if_changed(nav_path, nav_html)
+        nav_path.write_text(nav_html)
 
         # Compose final HTML by replacing placeholders in base template
         final_html = (
@@ -100,7 +93,7 @@ def build_all():
 
         # Write the generated HTML page to output directory
         output_file = OUTPUT_DIR / f"{name}.html"
-        write_if_changed(output_file, final_html)
+        output_file.write_text(final_html)
         print(f"📄 Built page: {output_file.name}")
 
         # Append page info to manifest list
@@ -115,23 +108,14 @@ def build_all():
             "desc": f"A high-yield summary table for {label.lower()}."  # Placeholder, can be customized later
         })
 
-    # Ensure manifest parent directories exist
-    MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     # Write the manifest JSON file with all pages info
-    write_if_changed(MANIFEST_PATH, json.dumps(manifest, indent=2))
+    MANIFEST_PATH.write_text(json.dumps(manifest, indent=2))
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
-    card_manifest_path = Path("static/data/summary_cards.json")
-    card_manifest_path.parent.mkdir(parents=True, exist_ok=True)
-    write_if_changed(card_manifest_path, json.dumps(card_manifest, indent=2))
+    card_manifest_path = Path("static/summary_cards.json")
+    card_manifest_path.write_text(json.dumps(card_manifest, indent=2))
     print(f"🧾 Summary cards written to: {card_manifest_path}")
 
-    summary = {
-        "updated": datetime.now().isoformat(),
-        "pages_built": [f.name for f in table_files],
-        "manifest_count": len(manifest)
-    }
-    Path("build_summary.json").write_text(json.dumps(summary, indent=2))
 
 if __name__ == "__main__":
     convert_buzzwords_to_json()
