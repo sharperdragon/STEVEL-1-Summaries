@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cytokines</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/table.css" />
+</head>
+
+<body>
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 20px 0 10px 20px;">
+  <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
+    <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
+    Home
+  </a>
+</div>
+<nav style="text-align: center; margin-bottom: 20px;">
+  <nav style='margin: 10px 0;'>
+<div style="text-align: center;"><a href="../pages/cd-numbers.html" class="nav-link">Cd-Numbers</a> | <a href="../pages/hla.html" class="nav-link">Hla</a> | <a href="../pages/lab-tests.html" class="nav-link">Lab-Tests</a> | <a href="../pages/autoantibodies.html" class="nav-link">Autoantibodies</a> | <a href="../pages/chromosomes.html" class="nav-link">Chromosomes</a> | <a href="../pages/hemeonc.html" class="nav-link">Hemeonc</a> | <a href="../pages/metabolism.html" class="nav-link">Metabolism</a> | <a href="../pages/rapid_associations.html" class="nav-link">Rapid Associations</a> | <a href="../pages/rapid_findings.html" class="nav-link">Rapid Findings</a> | <a href="../pages/rapid_presentation.html" class="nav-link">Rapid Presentation</a></div>
+</nav>
+
+</nav>
+
+
+  <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
+    <!-- Utility Toolbar -->
+    <div class="utility-toolbar" style="margin-bottom: 15px;">
+      <button id="reset-button">Reset</button>
+      <button id="shuffle-button" style="display:none;">Shuffle Rows</button>
+    </div>
+    <div class="responsive-container">
+<table class="table1" id="Cytokine-table">
+<thead>
+<tr>
+<th class="table-title" colspan="4" data-col="0" style="text-align: center;">High-Yield Cytokines</th>
+</tr>
+<tr>
+<th data-col="0"><div class="th-menu-wrapper"><span class="th-title">Cytokine</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
+<th data-col="1"><div class="th-menu-wrapper"><span class="th-title">Source</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
+<th data-col="2"><div class="th-menu-wrapper"><span class="th-title">Functions</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
+<th data-col="3"><div class="th-menu-wrapper"><span class="th-title">Disease Importance</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(3); return false;">Hide Column</a></div></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-col="0">IL-1</td>
+<td data-col="1">Macrophages</td>
+<td data-col="2">Fever, acute inflammation, activates endothelium to express adhesion molecules, induces chemokine secretion</td>
+<td data-col="3">Sepsis, autoimmune disorders</td>
+</tr>
+<tr>
+<td data-col="0">IL-2</td>
+<td data-col="1">All T cells</td>
+<td data-col="2">Stimulates growth of helper, cytotoxic, and regulatory T cells, and NK cells</td>
+<td data-col="3">Immunotherapy (e.g. RCC, melanoma)</td>
+</tr>
+<tr>
+<td data-col="0">IL-6</td>
+<td data-col="1">Macrophages, Th cells</td>
+<td data-col="2">Fever, stimulates acute-phase protein production</td>
+<td data-col="3">Rheumatoid arthritis, Castleman disease</td>
+</tr>
+<tr>
+<td data-col="0">IL-8</td>
+<td data-col="1">Macrophages</td>
+<td data-col="2">Major chemotactic factor for neutrophils</td>
+<td data-col="3">Acute inflammation, abscesses</td>
+</tr>
+<tr>
+<td data-col="0">IL-10</td>
+<td data-col="1">Th2 cells</td>
+<td data-col="2">Anti-inflammatory; decreases expression of MHC II and Th1 cytokines; inhibits activated macrophages and dendritic cells</td>
+<td data-col="3">Chronic infections, cancer evasion</td>
+</tr>
+<tr>
+<td data-col="0">IL-12</td>
+<td data-col="1">Macrophages, dendritic cells</td>
+<td data-col="2">Induces differentiation of T cells into Th1 cells; activates NK cells</td>
+<td data-col="3">TB, intracellular infections</td>
+</tr>
+<tr>
+<td data-col="0">TNF-α</td>
+<td data-col="1">Macrophages</td>
+<td data-col="2">Mediates septic shock, activates endothelium, recruits WBCs, vascular leak</td>
+<td data-col="3">Septic shock, IBD, RA</td>
+</tr>
+<tr>
+<td data-col="0">IFN-γ</td>
+<td data-col="1">Th1 cells, NK cells</td>
+<td data-col="2">Activates macrophages and Th1 cells; suppresses Th2 cells; antiviral and antitumor properties</td>
+<td data-col="3">TB, viral infections, CGD</td>
+</tr>
+<tr>
+<td data-col="0">IL-3</td>
+<td data-col="1">T cells</td>
+<td data-col="2">Supports growth/differentiation of bone marrow stem cells (acts like GM-CSF)</td>
+<td data-col="3">Bone marrow stimulation (broad hematopoiesis)</td>
+</tr>
+<tr>
+<td data-col="0">IL-4</td>
+<td data-col="1">Th2 cells</td>
+<td data-col="2">Induces Th2 differentiation, promotes class switching to IgE and IgG</td>
+<td data-col="3">Allergy, asthma, parasitic infections</td>
+</tr>
+<tr>
+<td data-col="0">IL-5</td>
+<td data-col="1">Th2 cells</td>
+<td data-col="2">Promotes growth/differentiation of eosinophils; class switching to IgA</td>
+<td data-col="3">Eosinophilia (e.g., parasitic infections, asthma)</td>
+</tr>
+<tr>
+<td data-col="0">TGF-β</td>
+<td data-col="1">Tregs, macrophages</td>
+<td data-col="2">Anti-inflammatory, tissue remodeling, inhibits T-cell activation</td>
+<td data-col="3">Cancer progression, fibrosis, immune regulation</td>
+</tr>
+</tbody>
+</table>
+<tr>
+<td data-col="0">IFN-α</td>
+<td data-col="1">Virus-infected cells</td>
+<td data-col="2">Inhibits viral replication, activates NK cells, upregulates MHC I</td>
+<td data-col="3">Hepatitis B/C therapy, viral infections</td>
+</tr>
+<tr>
+<td data-col="0">IFN-β</td>
+<td data-col="1">Virus-infected cells</td>
+<td data-col="2">Antiviral response, upregulates MHC I, modulates immune activity</td>
+<td data-col="3">Multiple sclerosis therapy</td>
+</tr>
+<tr>
+<td data-col="0">IL-17</td>
+<td data-col="1">Th17 cells</td>
+<td data-col="2">Recruits neutrophils, promotes inflammation</td>
+<td data-col="3">Psoriasis, ankylosing spondylitis, autoimmune disease</td>
+</tr>
+
+</div>
+
+  </main>
+
+    <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+    <form id="suggestionForm" style="margin-top: 1em;">
+      <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
+            style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
+      <button type="submit" style="padding: 6px 12px;">Send</button>
+    </form>
+    <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
+  </footer>
+</body>
+
+<script src="/STEVEL-1-Summaries/utils/table_page_utils.js"></script>
+</html>

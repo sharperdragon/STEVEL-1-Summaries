@@ -70,7 +70,7 @@ function loadBuzzwords() {
 
       requestAnimationFrame(() => {
         const fullWidth = track.scrollWidth;
-        const speedPxPerSec = 45;
+        const speedPxPerSec = 60;
         const duration = Math.max(20, Math.round(fullWidth / speedPxPerSec));
         injectBuzzScrollCSS(duration);
       });

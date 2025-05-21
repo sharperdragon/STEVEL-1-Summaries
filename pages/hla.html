@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hla</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/table.css" />
+</head>
+
+<body>
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 20px 0 10px 20px;">
+  <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
+    <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
+    Home
+  </a>
+</div>
+<nav style="text-align: center; margin-bottom: 20px;">
+  <nav style='margin: 10px 0;'>
+<div style="text-align: center;"><a href="../pages/cd-numbers.html" class="nav-link">Cd-Numbers</a> | <a href="../pages/lab-tests.html" class="nav-link">Lab-Tests</a> | <a href="../pages/autoantibodies.html" class="nav-link">Autoantibodies</a> | <a href="../pages/chromosomes.html" class="nav-link">Chromosomes</a> | <a href="../pages/cytokines.html" class="nav-link">Cytokines</a> | <a href="../pages/hemeonc.html" class="nav-link">Hemeonc</a> | <a href="../pages/metabolism.html" class="nav-link">Metabolism</a> | <a href="../pages/rapid_associations.html" class="nav-link">Rapid Associations</a> | <a href="../pages/rapid_findings.html" class="nav-link">Rapid Findings</a> | <a href="../pages/rapid_presentation.html" class="nav-link">Rapid Presentation</a></div>
+</nav>
+
+</nav>
+
+
+  <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
+    <!-- Utility Toolbar -->
+    <div class="utility-toolbar" style="margin-bottom: 15px;">
+      <button id="reset-button">Reset</button>
+      <button id="shuffle-button" style="display:none;">Shuffle Rows</button>
+    </div>
+    <div class="responsive-container">
+<table class="table1" id="HLA-table">
+<thead>
+<tr>
+<th class="table-title" colspan="3" data-col="0" style="text-align: center;">
+          HLA Associations with Disease
+        </th>
+</tr>
+<tr>
+<th data-col="0"><div class="th-menu-wrapper"><span class="th-title">HLA Marker</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
+<th data-col="1"><div class="th-menu-wrapper"><span class="th-title">Associated Disease(s)</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
+<th data-col="2"><div class="th-menu-wrapper"><span class="th-title">Notes</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
+</tr>
+</thead>
+<tbody>
+<tr><td data-col="0">HLA-B27</td><td data-col="1">
+<ul>
+<li>Seronegative spondyloarthropathies</li>
+<li>Ankylosing spondylitis</li>
+<li>Reactive arthritis</li>
+<li>Psoriatic arthritis</li>
+<li>IBD-associated arthritis</li>
+</ul>
+</td><td data-col="2">MHC class I association; strongly linked to seronegative arthropathies</td></tr>
+<tr><td data-col="0">HLA-DR3</td><td data-col="1">
+<ul>
+<li>Type 1 diabetes mellitus</li>
+<li>SLE</li>
+<li>Graves disease</li>
+<li>Hashimoto thyroiditis</li>
+<li>Addison disease</li>
+</ul>
+</td><td data-col="2">Often paired with DR4 in T1DM; linked to multiple autoimmune endocrinopathies</td></tr>
+<tr><td data-col="0">HLA-DR4</td><td data-col="1">
+<ul>
+<li>Rheumatoid arthritis</li>
+<li>Type 1 diabetes mellitus</li>
+<li>Addison disease</li>
+</ul>
+</td><td data-col="2">Also associated with DR3 in T1DM; key marker in RA susceptibility</td></tr>
+<tr><td data-col="0">HLA-DR2</td><td data-col="1">
+<ul>
+<li>Multiple sclerosis</li>
+<li>Hay fever</li>
+<li>SLE</li>
+<li>Goodpasture syndrome</li>
+</ul>
+</td><td data-col="2">Mixed autoimmune + hypersensitivity conditions; MS, SLE, Goodpasture</td></tr>
+<tr><td data-col="0">HLA-DQ2 / DQ8</td><td data-col="1">
+<ul>
+<li>Celiac disease</li>
+</ul>
+</td><td data-col="2">“DQ2/DQ8 = Celiac you ate” mnemonic; screen in gluten-sensitive patients</td></tr>
+<tr><td data-col="0">HLA-DR5</td><td data-col="1">
+<ul>
+<li>Pernicious anemia</li>
+<li>Hashimoto thyroiditis</li>
+</ul>
+</td><td data-col="2">Autoimmune thyroid disease marker; also linked to B12 deficiency</td></tr>
+<tr><td data-col="0">HLA-A3</td><td data-col="1">
+<ul>
+<li>Hemochromatosis</li>
+</ul>
+</td><td data-col="2">Classic association with hemochromatosis; high yield board linkage</td></tr>
+<tr><td data-col="0">HLA-B8</td><td data-col="1">
+<ul>
+<li>Myasthenia gravis</li>
+<li>Graves disease</li>
+<li>Addison disease</li>
+</ul>
+</td><td data-col="2">Common in autoimmune polyendocrine syndromes; memory mnemonic: “8 = autoimmune great”</td></tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="3" data-col="0" style="padding-top: 12px; font-size: 90%; text-align: left; color: #555;">
+<strong>MHC Class I:</strong> HLA-A, HLA-B, HLA-C<br/>
+<strong>MHC Class II:</strong> HLA-DP, HLA-DQ, HLA-DR
+        </td>
+</tr>
+</tfoot>
+</table>
+</div>
+
+  </main>
+
+    <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+    <form id="suggestionForm" style="margin-top: 1em;">
+      <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
+            style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
+      <button type="submit" style="padding: 6px 12px;">Send</button>
+    </form>
+    <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
+  </footer>
+</body>
+
+<script src="/STEVEL-1-Summaries/utils/table_page_utils.js"></script>
+</html>

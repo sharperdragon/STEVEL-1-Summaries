@@ -1,11 +1,27 @@
 [
   {
+    "name": "Cd-Numbers",
+    "file": "cd-numbers.html"
+  },
+  {
+    "name": "Hla",
+    "file": "hla.html"
+  },
+  {
+    "name": "Lab-Tests",
+    "file": "lab-tests.html"
+  },
+  {
     "name": "Autoantibodies",
     "file": "autoantibodies.html"
   },
   {
     "name": "Chromosomes",
     "file": "chromosomes.html"
+  },
+  {
+    "name": "Cytokines",
+    "file": "cytokines.html"
   },
   {
     "name": "Hemeonc",

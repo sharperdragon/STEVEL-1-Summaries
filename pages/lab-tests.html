@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab-Tests</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/table.css" />
+</head>
+
+<body>
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 20px 0 10px 20px;">
+  <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
+    <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
+    Home
+  </a>
+</div>
+<nav style="text-align: center; margin-bottom: 20px;">
+  <nav style='margin: 10px 0;'>
+<div style="text-align: center;"><a href="../pages/cd-numbers.html" class="nav-link">Cd-Numbers</a> | <a href="../pages/hla.html" class="nav-link">Hla</a> | <a href="../pages/autoantibodies.html" class="nav-link">Autoantibodies</a> | <a href="../pages/chromosomes.html" class="nav-link">Chromosomes</a> | <a href="../pages/cytokines.html" class="nav-link">Cytokines</a> | <a href="../pages/hemeonc.html" class="nav-link">Hemeonc</a> | <a href="../pages/metabolism.html" class="nav-link">Metabolism</a> | <a href="../pages/rapid_associations.html" class="nav-link">Rapid Associations</a> | <a href="../pages/rapid_findings.html" class="nav-link">Rapid Findings</a> | <a href="../pages/rapid_presentation.html" class="nav-link">Rapid Presentation</a></div>
+</nav>
+
+</nav>
+
+
+  <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
+    <!-- Utility Toolbar -->
+    <div class="utility-toolbar" style="margin-bottom: 15px;">
+      <button id="reset-button">Reset</button>
+      <button id="shuffle-button" style="display:none;">Shuffle Rows</button>
+    </div>
+    <div class="responsive-container">
+<table class="table6 id=" lab-tests"="">
+<thead>
+<tr>
+<th class="table-title" colspan="3" data-col="0" style="text-align: center;">
+<tbody>
+<tr>
+<td data-col="0">Troponin I/T</td>
+<td data-col="1">Myocardial infarction diagnosis</td>
+<td data-col="2">Elevated within hours; peaks at 24–48h; specific for cardiac injury</td>
+</tr>
+<tr>
+<td data-col="0">Alkaline Phosphatase (ALP)</td>
+<td data-col="1">Bone and hepatobiliary pathology</td>
+<td data-col="2">↑ in bone growth, liver obstruction; check GGT for hepatic specificity</td>
+</tr>
+<tr>
+<td data-col="0">LDH (Lactate Dehydrogenase)</td>
+<td data-col="1">Marker of cell turnover or injury</td>
+<td data-col="2">Elevated in hemolysis, MI, cancers, pneumocystis pneumonia</td>
+</tr>
+<tr>
+<td data-col="0">INR / PT / PTT</td>
+<td data-col="1">Coagulation pathway evaluation</td>
+<td data-col="2">INR/PT = extrinsic (VII); PTT = intrinsic (VIII, IX, XI, XII); both ↑ in DIC</td>
+</tr>
+<tr>
+<td data-col="0">CA-125</td>
+<td data-col="1">Ovarian cancer marker</td>
+<td data-col="2">Non-specific; elevated in endometriosis, menstruation, peritonitis</td>
+</tr>
+<tr>
+<td data-col="0">AFP (Alpha-Fetoprotein)</td>
+<td data-col="1">Hepatocellular carcinoma, yolk sac tumor, NTDs</td>
+<td data-col="2">↑ in HCC, ↓ in Down syndrome; also elevated in twin pregnancy</td>
+</tr>
+<tr>
+<td data-col="0">CEA (Carcinoembryonic Antigen)</td>
+<td data-col="1">Colon cancer marker</td>
+<td data-col="2">Low specificity; used to monitor recurrence not for screening</td>
+</tr>
+<tr>
+<td data-col="0">CA 19-9</td>
+<td data-col="1">Pancreatic adenocarcinoma marker</td>
+<td data-col="2">Elevated in biliary disease too; low sensitivity in early disease</td>
+</tr>
+<tr>
+<td data-col="0">GGT (Gamma-glutamyl transferase)</td>
+<td data-col="1">Hepatic enzyme</td>
+<td data-col="2">↑ in alcohol use and cholestasis; distinguishes hepatic ALP from bone</td>
+</tr>
+<tr>
+<td data-col="0">Haptoglobin</td>
+<td data-col="1">Marker of intravascular hemolysis</td>
+<td data-col="2">↓ in intravascular hemolysis; normal in extravascular</td>
+</tr>
+<tr>
+<td data-col="0">Reticulocyte Count</td>
+<td data-col="1">Bone marrow response to anemia</td>
+<td data-col="2">↑ in hemolysis or blood loss; ↓ in aplastic anemia or marrow failure</td>
+</tr>
+<tr>
+<td data-col="0">Schilling Test</td>
+<td data-col="1">Evaluates B12 absorption</td>
+<td data-col="2">Used to distinguish dietary deficiency vs. pernicious anemia vs. malabsorption</td>
+</tr>
+<tr>
+<td data-col="0">Fractional Excretion of Sodium (FENa)</td>
+<td data-col="1">Differentiates causes of AKI</td>
+<td data-col="2">&lt;1% suggests prerenal; &gt;2% suggests intrinsic renal damage</td>
+</tr>
+<tr>
+<td data-col="0">Urine Anion Gap</td>
+<td data-col="1">Assesses cause of non-anion gap acidosis</td>
+<td data-col="2">Positive in renal tubular acidosis; negative in GI bicarb loss</td>
+</tr>
+<tr>
+<td data-col="0">Urinary Cyanide-Nitroprusside Test</td>
+<td data-col="1">Screens for cystinuria</td>
+<td data-col="2">Turns purple with cystine; confirms aminoaciduria</td>
+</tr>
+<tr>
+<td data-col="0">Urine osmolality vs. serum osmolality</td>
+<td data-col="1">Evaluates causes of hyponatremia</td>
+<td data-col="2">Helps distinguish SIADH (↑ urine osm) vs. DI (↓ urine osm)</td>
+</tr>
+<tr>
+<td data-col="0">Urine chloride</td>
+<td data-col="1">Differentiates metabolic alkalosis causes</td>
+<td data-col="2">Low in vomiting; high in Bartter/Gitelman or diuretic use</td>
+</tr>
+<tr>
+<td data-col="0">CSF PCR for HSV</td>
+<td data-col="1">Detects HSV encephalitis</td>
+<td data-col="2">Most sensitive and specific test; rapid diagnosis</td>
+</tr>
+<tr>
+<td data-col="0">Quantiferon-TB Gold / IGRA</td>
+<td data-col="1">Latent tuberculosis screening</td>
+<td data-col="2">More specific than PPD; not affected by BCG vaccine</td>
+</tr>
+<tr>
+<td data-col="0">NAAT (gonorrhea/chlamydia)</td>
+<td data-col="1">STI diagnosis</td>
+<td data-col="2">Gold standard; detects bacterial DNA/RNA</td>
+</tr>
+<tr>
+<td data-col="0">Dark-field microscopy</td>
+<td data-col="1">Treponema pallidum detection</td>
+<td data-col="2">Used for primary syphilis; visualizes spirochetes</td>
+</tr>
+<tr>
+<td data-col="0">PAS stain of intestinal biopsy</td>
+<td data-col="1">Diagnoses Whipple disease</td>
+<td data-col="2">Stains Tropheryma whipplei-laden macrophages</td>
+</tr>
+<tr>
+<td data-col="0">AFB (Acid-Fast Bacilli) stain</td>
+<td data-col="1">Tuberculosis and Nocardia detection</td>
+<td data-col="2">Ziehl-Neelsen stain highlights acid-fast organisms</td>
+</tr>
+<tr>
+<td data-col="0">CSF 14-3-3 protein</td>
+<td data-col="1">Marker for prion disease</td>
+<td data-col="2">Elevated in Creutzfeldt-Jakob disease</td>
+</tr>
+<tr>
+<td data-col="0">EEG: triphasic waves</td>
+<td data-col="1">Findings in hepatic encephalopathy</td>
+<td data-col="2">Correlates with metabolic encephalopathy</td>
+</tr>
+<tr>
+<td data-col="0">CSF albuminocytologic dissociation</td>
+<td data-col="1">Guillain-Barré syndrome</td>
+<td data-col="2">↑ protein with normal WBC count in CSF</td>
+</tr>
+<tr>
+<td data-col="0">Edrophonium (Tensilon) Test</td>
+<td data-col="1">Myasthenia gravis diagnosis (historical)</td>
+<td data-col="2">Transient symptom improvement with AChE inhibitor</td>
+</tr>
+<tr>
+<td data-col="0">Plasma Metanephrines</td>
+<td data-col="1">Pheochromocytoma screening</td>
+<td data-col="2">High sensitivity; confirmatory test after symptoms</td>
+</tr>
+<tr>
+<td data-col="0">Water Deprivation Test</td>
+<td data-col="1">Diabetes insipidus vs. psychogenic polydipsia</td>
+<td data-col="2">In central DI, desmopressin increases urine osm</td>
+</tr>
+<tr>
+<td data-col="0">Ortolani / Barlow maneuvers</td>
+<td data-col="1">Congenital hip dysplasia screening</td>
+<td data-col="2">Physical exam clicks/clunks with hip instability</td>
+</tr>
+<tr>
+<td data-col="0">Sweat Chloride Test</td>
+<td data-col="1">Diagnoses cystic fibrosis</td>
+<td data-col="2">↑ sweat chloride due to CFTR dysfunction</td>
+</tr>
+<tr>
+<td data-col="0">Ames Test</td>
+<td data-col="1">Mutagenicity screening (lab concept)</td>
+<td data-col="2">Detects DNA mutagens using bacteria; Step 1 buzzword</td>
+</tr>
+<tr>
+<td data-col="0">Carboxyhemoglobin level</td>
+<td data-col="1">Carbon monoxide poisoning</td>
+<td data-col="2">Elevated in CO exposure; falsely normal pulse ox</td>
+</tr>
+<tr>
+<td data-col="0">Urinary arsenic, lead, mercury levels</td>
+<td data-col="1">Heavy metal toxicity screening</td>
+<td data-col="2">Measured via urine; confirms exposure</td>
+</tr>
+<tr>
+<td data-col="0">D-Xylose Absorption Test</td>
+<td data-col="1">Malabsorption workup</td>
+<td data-col="2">Abnormal in celiac; normal in pancreatic insufficiency</td>
+</tr>
+<tr>
+<td data-col="0">Sudan Stain</td>
+<td data-col="1">Screening for fat malabsorption</td>
+<td data-col="2">Positive in steatorrhea (e.g., pancreatic insufficiency, celiac)</td>
+</tr>
+<tr>
+<td data-col="0">5-HIAA (5-hydroxyindoleacetic acid)</td>
+<td data-col="1">Serotonin metabolite; carcinoid tumor marker</td>
+<td data-col="2">Elevated in urine in carcinoid syndrome; avoid serotonin-rich foods before test</td>
+</tr>
+<tr>
+<td data-col="0">C1 Esterase Inhibitor Level</td>
+<td data-col="1">Hereditary angioedema diagnosis</td>
+<td data-col="2">Low levels or function confirm diagnosis; bradykinin-mediated swelling</td>
+</tr>
+<tr>
+<td data-col="0">VMA (Vanillylmandelic Acid)</td>
+<td data-col="1">Metabolite of catecholamines</td>
+<td data-col="2">Elevated in pheochromocytoma or neuroblastoma</td>
+</tr>
+<tr>
+<td data-col="0">Heterophile Antibody Test (Monospot)</td>
+<td data-col="1">Diagnosis of EBV mononucleosis</td>
+<td data-col="2">False negatives in early disease or young children; rapid bedside test</td>
+</tr>
+<tr>
+<td data-col="0">VDRL (Venereal Disease Research Laboratory)</td>
+<td data-col="1">Screening test for syphilis</td>
+<td data-col="2">Non-treponemal; false positives (e.g., SLE, pregnancy); confirm with FTA-ABS</td>
+</tr>
+<tr>
+<td data-col="0">Direct Coombs Test</td>
+<td data-col="1">Detects antibodies/complement on RBCs</td>
+<td data-col="2">Positive in autoimmune hemolysis, hemolytic disease of newborn</td>
+</tr>
+<tr>
+<td data-col="0">Indirect Coombs Test</td>
+<td data-col="1">Detects anti-RBC antibodies in serum</td>
+<td data-col="2">Used in prenatal testing and blood transfusion compatibility</td>
+</tr>
+</tbody></th></tr></thead></table></div>
+  </main>
+
+    <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+    <form id="suggestionForm" style="margin-top: 1em;">
+      <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
+            style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
+      <button type="submit" style="padding: 6px 12px;">Send</button>
+    </form>
+    <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
+  </footer>
+</body>
+
+<script src="/STEVEL-1-Summaries/utils/table_page_utils.js"></script>
+</html>

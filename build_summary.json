@@ -1,10 +1,14 @@
 {
   "generated": "index.html",
-  "updated": "2025-05-21T14:04:00.182179",
+  "updated": "2025-05-21T16:04:12.012927",
   "included_tables": [
     "Autoantibodies",
+    "Cd-Numbers",
     "Chromosomes",
+    "Cytokines",
     "Hemeonc",
+    "Hla",
+    "Lab-Tests",
     "Metabolism",
     "Rapid Associations",
     "Rapid Findings",

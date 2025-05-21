@@ -1,5 +1,20 @@
 [
   {
+    "name": "Cd-Numbers",
+    "file": "cd-numbers.html",
+    "desc": "A high-yield summary table for cd-numbers."
+  },
+  {
+    "name": "Hla",
+    "file": "hla.html",
+    "desc": "A high-yield summary table for hla."
+  },
+  {
+    "name": "Lab-Tests",
+    "file": "lab-tests.html",
+    "desc": "A high-yield summary table for lab-tests."
+  },
+  {
     "name": "Autoantibodies",
     "file": "autoantibodies.html",
     "desc": "A high-yield summary table for autoantibodies."
@@ -8,6 +23,11 @@
     "name": "Chromosomes",
     "file": "chromosomes.html",
     "desc": "A high-yield summary table for chromosomes."
+  },
+  {
+    "name": "Cytokines",
+    "file": "cytokines.html",
+    "desc": "A high-yield summary table for cytokines."
   },
   {
     "name": "Hemeonc",

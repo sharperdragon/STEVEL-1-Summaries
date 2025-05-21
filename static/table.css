@@ -20,6 +20,21 @@
   --table3-row-bg: #ffffff;
   --table3-row-alt-bg: #f5f1fb;
   --table3-divider-bg: #8b79a8;
+
+  --table4-header-bg: #ffe2cc;
+  --table4-row-bg: #ffffff;
+  --table4-row-alt-bg: #fdf4ee;
+  --table4-divider: #f0b487;
+
+  --table5-header-bg: #d6f5ff;
+  --table5-row-bg: #ffffff;
+  --table5-row-alt-bg: #edf8fb;
+  --table5-divider: #8bd4e3;
+
+  --table6-header-bg: #f9e0f0;
+  --table6-row-bg: #ffffff;
+  --table6-row-alt-bg: #faf2f7;
+  --table6-divider: #d48ab7;
 }
 
 .th-menu-wrapper {
@@ -169,6 +184,60 @@
   background-color: var(--table3-row-alt-bg);
 }
 
+.table4 {
+  border: 1px solid var(--table4-divider);
+}
+
+.table4 thead th {
+  background-color: var(--table4-header-bg);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  text-align: center;
+}
+
+.table4 tbody tr:nth-of-type(odd) {
+  background-color: var(--table4-row-bg);
+}
+.table4 tbody tr:nth-of-type(even) {
+  background-color: var(--table4-row-alt-bg);
+}
+
+.table5 {
+  border: 1px solid var(--table5-divider);
+}
+
+.table5 thead th {
+  background-color: var(--table5-header-bg);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  text-align: center;
+}
+
+.table5 tbody tr:nth-of-type(odd) {
+  background-color: var(--table5-row-bg);
+}
+.table5 tbody tr:nth-of-type(even) {
+  background-color: var(--table5-row-alt-bg);
+}
+
+.table6 {
+  border: 1px solid var(--table6-divider);
+}
+
+.table6 thead th {
+  background-color: var(--table6-header-bg);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  text-align: center;
+}
+
+.table6 tbody tr:nth-of-type(odd) {
+  background-color: var(--table6-row-bg);
+}
+.table6 tbody tr:nth-of-type(even) {
+  background-color: var(--table6-row-alt-bg);
+}
+
 /* Autoantibodies specific layout */
 #autoantibodies td:nth-child(2) {
   border-right: 3px solid var(--strong-divider);
@@ -194,11 +263,11 @@
 }
 
 /* Metabolism layout */
-.metabolism td:nth-child(1) {
+#metabolism td:nth-child(1) {
   font-weight: 500;
   width: 18%;
 }
-.metabolism td:nth-child(4) {
+#metabolism td:nth-child(4) {
   width: 32%;
 }
 
@@ -295,4 +364,13 @@ html {
 .row-divider {
   font-size: var(--small-head-font-size);
   font-weight: 550;
+}
+
+.table-title {
+  font-size: var(--header-font-size);
+  font-weight: 600;
+  text-align: center;
+  margin: 20px auto 10px auto;
+  color: var(--text-color);
+  font-family: var(--font);
 }
