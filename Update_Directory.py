@@ -71,7 +71,13 @@ def build_all():
     # Loop over each table file to build individual pages
     for table_file in table_files:
         name = normalize_name(table_file.name)
-        label = labelize_name(table_file.name)
+        # Force specific title formats for certain table types
+        if "HLA" in table_file.name:
+            label = labelize_name(table_file.name).upper()
+        elif "CD-markers" in table_file.name:
+            label = "CD Markers"
+        else:
+            label = labelize_name(table_file.name)
 
         # Load and parse table HTML content
         soup = BeautifulSoup(table_file.read_text(), "html.parser")
