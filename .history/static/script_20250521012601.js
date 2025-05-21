@@ -89,7 +89,7 @@ function setupRapidReviewCarousel() {
   };
 
   rotate();
-  setInterval(rotate, 9000); // Rotate every 9 seconds
+  setInterval(rotate, 6000); // Rotate every 6 seconds
 }
 
 function initSearchBinding() {
