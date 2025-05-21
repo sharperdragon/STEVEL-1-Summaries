@@ -23,6 +23,9 @@ def annotate_table_columns(soup: BeautifulSoup):
                 action.string = "Hide Column"
                 dropdown.append(action)
 
+                row_action = soup.new_tag("a", href="#", onclick=f"toggleColumnRow({idx}); return false;")
+                row_action.string = "Show Row Instead"
+                dropdown.append(row_action)
 
                 menu.append(label)
                 menu.append(dropdown)
