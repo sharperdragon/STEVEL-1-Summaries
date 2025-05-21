@@ -30,7 +30,6 @@ function injectBuzzScrollCSS(duration) {
     .buzz-track:hover {
       animation-play-state: paused;
     }
-    }
   `;
   document.head.appendChild(style);
 }
