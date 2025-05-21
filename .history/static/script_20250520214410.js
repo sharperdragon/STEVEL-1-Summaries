@@ -19,7 +19,7 @@ function loadBuzzwords() {
                 ? data.map(item => `<span class="buzzword" title="${item.assoc}">${item.term}</span>`)
                 : Object.entries(data).map(([term, assoc]) => `<span class="buzzword" title="${assoc}">${term}</span>`);
 
-            track.innerHTML = items.join("      ");
+            track.innerHTML = items.join("   ");
         })
         .catch(err => {
             console.error("❌ Failed to load buzzwords:", err);
