@@ -72,12 +72,17 @@ def build_all():
     for table_file in table_files:
         name = normalize_name(table_file.name)
         # Force specific title formats for certain table types
-        if "HLA" in table_file.name:
-            label = labelize_name(table_file.name).upper()
-        elif "CD-markers" in table_file.name:
+        filename = table_file.name
+        if "HLA" in filename:
+            label = labelize_name(filename).upper()
+        elif "CD-markers" in filename:
             label = "CD Markers"
+        elif "Hemeonc" in filename:
+            label = "Heme-Onc"
+        elif filename.startswith("rapid_"):
+            label = labelize_name(filename.replace("rapid_", "", 1))
         else:
-            label = labelize_name(table_file.name)
+            label = labelize_name(filename)
 
         # Load and parse table HTML content
         soup = BeautifulSoup(table_file.read_text(), "html.parser")

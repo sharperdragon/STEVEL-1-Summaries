@@ -802,5 +802,153 @@
   {
     "term": "ankle-brachial index < 0.9",
     "assoc": "Arterial insufficiency"
+  },
+  {
+    "term": "Strawberry tongue",
+    "assoc": "Scarlet fever or Kawasaki disease"
+  },
+  {
+    "term": "Painless erythematous lesions on palms and soles",
+    "assoc": "Janeway lesions (infective endocarditis)"
+  },
+  {
+    "term": "Ring-enhancing brain lesion in AIDS",
+    "assoc": "Toxoplasma gondii"
+  },
+  {
+    "term": "Grayish-white pseudomembranous pharyngitis + bull’s neck appearance",
+    "assoc": "Diphtheria"
+  },
+  {
+    "term": "Apple core lesion on barium enema",
+    "assoc": "Colorectal cancer"
+  },
+  {
+    "term": "Hyperdynamic pulses + head bobbing",
+    "assoc": "Aortic regurgitation"
+  },
+  {
+    "term": "Lead pipe appearance of colon on imaging",
+    "assoc": "Ulcerative colitis"
+  },
+  {
+    "term": "Gout + self-mutilation",
+    "assoc": "Lesch-Nyhan"
+  },
+  {
+    "term": "Upward lens dislocation",
+    "assoc": "Marfan"
+  },
+  {
+    "term": "Downward lens dislocation",
+    "assoc": "Homocystinuria"
+  },
+  {
+    "term": "Café-au-lait + precocious puberty",
+    "assoc": "McCune-Albright"
+  },
+  {
+    "term": "Gowers sign",
+    "assoc": "Duchenne"
+  },
+  {
+    "term": "Crying infant + polydactyly",
+    "assoc": "Patau"
+  },
+  {
+    "term": "High-pitched cry + microcephaly",
+    "assoc": "Cri-du-chat"
+  },
+  {
+    "term": "Ataxia + ophthalmoplegia + confusion",
+    "assoc": "Wernicke"
+  },
+  {
+    "term": "Corkscrew hairs",
+    "assoc": "Scurvy"
+  },
+  {
+    "term": "Musty odor + hypopigmentation",
+    "assoc": "PKU"
+  },
+  {
+    "term": "Janeway lesions",
+    "assoc": "Infective endocarditis"
+  },
+  {
+    "term": "Osler nodes",
+    "assoc": "Infective endocarditis"
+  },
+  {
+    "term": "Splinter hemorrhages",
+    "assoc": "Infective endocarditis"
+  },
+  {
+    "term": "Roth spots",
+    "assoc": "Infective endocarditis"
+  },
+  {
+    "term": "Beck triad",
+    "assoc": "Cardiac tamponade"
+  },
+  {
+    "term": "Head bobbing",
+    "assoc": "Aortic regurgitation"
+  },
+  {
+    "term": "Pulsus parvus et tardus",
+    "assoc": "Aortic stenosis"
+  },
+  {
+    "term": "Bounding pulses + wide PP",
+    "assoc": "Aortic regurgitation"
+  },
+  {
+    "term": "Clue cells",
+    "assoc": "Gardnerella"
+  },
+  {
+    "term": "Steeple sign",
+    "assoc": "Croup"
+  },
+  {
+    "term": "Negri bodies",
+    "assoc": "Rabies"
+  },
+  {
+    "term": "Bull’s neck",
+    "assoc": "Diphtheria"
+  },
+  {
+    "term": "Currant jelly sputum",
+    "assoc": "Klebsiella"
+  },
+  {
+    "term": "Condylomata lata",
+    "assoc": "2° syphilis"
+  },
+  {
+    "term": "Argyll Robertson pupil",
+    "assoc": "3° syphilis"
+  },
+  {
+    "term": "Tea-colored urine + sore throat",
+    "assoc": "PSGN"
+  },
+  {
+    "term": "Black liver",
+    "assoc": "Dubin-Johnson"
+  },
+  {
+    "term": "Bronze diabetes",
+    "assoc": "Hemochromatosis"
+  },
+  {
+    "term": "Apple core lesion",
+    "assoc": "Colon cancer"
+  },
+  {
+    "term": "Nutmeg liver",
+    "assoc": "Budd-Chiari"
   }
 ]

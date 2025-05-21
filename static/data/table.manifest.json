@@ -1,10 +1,10 @@
 [
   {
-    "name": "Cd-Numbers",
-    "file": "cd-numbers.html"
+    "name": "CD Markers",
+    "file": "cd-markers.html"
   },
   {
-    "name": "Hla",
+    "name": "HLA",
     "file": "hla.html"
   },
   {
@@ -32,15 +32,15 @@
     "file": "metabolism.html"
   },
   {
-    "name": "Rapid Associations",
+    "name": "Associations",
     "file": "rapid_associations.html"
   },
   {
-    "name": "Rapid Findings",
+    "name": "Findings",
     "file": "rapid_findings.html"
   },
   {
-    "name": "Rapid Presentation",
+    "name": "Presentation",
     "file": "rapid_presentation.html"
   }
 ]

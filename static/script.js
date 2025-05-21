@@ -1,25 +1,4 @@
-function filterCards() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  const cards = document.querySelectorAll(".summary-card");
-  cards.forEach(card => {
-    const text = card.textContent.toLowerCase();
-    card.style.display = text.includes(input) ? "block" : "none";
-  });
-}
-
-function enableTableSearch() {
-  const input = document.getElementById("searchInput");
-  if (!input) return;
-
-  input.addEventListener("input", () => {
-    const query = input.value.toLowerCase();
-    document.querySelectorAll("td").forEach(cell => {
-      const text = cell.textContent.toLowerCase();
-      cell.style.opacity = text.includes(query) ? "" : "0.2";
-    });
-  });
-}
-
+/*** ─── BUZZWORDS ───────────────────────────────────────────── **/
 function injectBuzzScrollCSS(duration) {
   const style = document.createElement("style");
   style.innerHTML = `
@@ -54,7 +33,7 @@ function loadBuzzwords() {
       const itemCount = items.length;
       const randomOffset = Math.floor(Math.random() * itemCount);
       const previewItems = items.slice(randomOffset).concat(items.slice(0, randomOffset));
-      track.innerHTML = previewItems.join("      ");
+      track.innerHTML = previewItems.join("    ");
       // Ensure the buzz-track is wide enough to trigger scrolling
       track.style.minWidth = `${previewItems.length * 240}px`;
       // remove inline transform so CSS animation works
@@ -81,6 +60,7 @@ function loadBuzzwords() {
     });
 }
 
+/*** ─── RAPID REVIEW CARDS ─────────────────────────────────── **/
 function loadRapidReviewCards() {
   const container = document.getElementById("RapidCarousel");
   if (!container) return;
@@ -95,6 +75,7 @@ function loadRapidReviewCards() {
         </div>
       `).join("");
       container.innerHTML = items;
+      container.querySelectorAll(".answer").forEach(a => a.style.opacity = "0");
       setupRapidCarousel(); // initialize carousel only after loading
     })
     .catch(err => {
@@ -124,7 +105,62 @@ function setupRapidCarousel() {
   };
 
   rotate();
-  setInterval(rotate, 9000); // Rotate every 9 seconds
+
+  // Automatically show answer after 8 seconds if not hovered
+  let answerShown = false;
+  const currentItem = items[index];
+  const answerDiv = currentItem.querySelector(".answer");
+
+  if (answerDiv) {
+    currentItem.addEventListener("mouseenter", () => {
+      answerShown = true;
+      answerDiv.style.opacity = "1";
+    });
+
+    currentItem.addEventListener("mouseleave", () => {
+      answerShown = false;
+    });
+
+    setTimeout(() => {
+      if (!answerShown) {
+        answerDiv.style.opacity = "1";
+      }
+    }, 8000);
+  }
+
+  setInterval(rotate, 9600); // Rotate every 9 seconds
+}
+
+function resizeCarouselFont() {
+  const container = document.getElementById("RapidCarousel");
+  if (!container) return;
+
+  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  const baseSize = Math.max(12, Math.min(22, vw * 0.018)); // clamp between 14px–18px
+  container.style.fontSize = `${baseSize}px`;
+}
+
+/*** ─── SEARCH FUNCTIONALITY ───────────────────────────────── **/
+function filterCards() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".summary-card");
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(input) ? "block" : "none";
+  });
+}
+
+function enableTableSearch() {
+  const input = document.getElementById("searchInput");
+  if (!input) return;
+
+  input.addEventListener("input", () => {
+    const query = input.value.toLowerCase();
+    document.querySelectorAll("td").forEach(cell => {
+      const text = cell.textContent.toLowerCase();
+      cell.style.opacity = text.includes(query) ? "" : "0.2";
+    });
+  });
 }
 
 function initSearchBinding() {
@@ -138,15 +174,7 @@ function initSearchBinding() {
   }
 }
 
-function resizeCarouselFont() {
-  const container = document.getElementById("RapidCarousel");
-  if (!container) return;
-
-  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-  const baseSize = Math.max(14, Math.min(18, vw * 0.012)); // clamp between 14px–18px
-  container.style.fontSize = `${baseSize}px`;
-}
-
+/*** ─── SUGGESTIONS BOX ────────────────────────────────────── **/
 function setupSuggestionBox() {
   const form = document.getElementById("suggestionForm");
   if (!form) return;
@@ -176,6 +204,7 @@ function setupSuggestionBox() {
   });
 }
 
+/*** ─── UTILS / INIT ───────────────────────────────────────── **/
 document.addEventListener("DOMContentLoaded", () => {
   loadBuzzwords();
   loadRapidReviewCards();
