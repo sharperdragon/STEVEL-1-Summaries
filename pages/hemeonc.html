@@ -21,21 +21,21 @@
     <div class="utility-toolbar" style="margin-bottom: 15px;">
       <button id="reset-button">Reset</button>
     </div>
-    <div class="table-responsive">
-<table class="table1">
+    <div class="responsive-containier">
+<table class="table1" id="HemeOnc">
 <thead>
 <tr>
-<th colspan="6" data-col="0" style="text-align: center; background-color: #d0e5f5;">
+<th class="table-title" colspan="6" data-col="0">
 <strong>Heme-Onc Gene Mutations Summary</strong>
 </th>
 </tr>
 <tr>
-<th data-col="0" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(0); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(0); return false;">Show Row Instead</a></div></div></th>
-<th data-col="1" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Gene / Mutation</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(1); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(1); return false;">Show Row Instead</a></div></div></th>
-<th data-col="2" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Cytogenetics</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(2); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(2); return false;">Show Row Instead</a></div></div></th>
-<th data-col="3" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Mechanism</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(3); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(3); return false;">Show Row Instead</a></div></div></th>
-<th data-col="4" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Category</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(4); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(4); return false;">Show Row Instead</a></div></div></th>
-<th data-col="5" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Lineage</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(5); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(5); return false;">Show Row Instead</a></div></div></th>
+<th class="soft-header" data-col="0"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a href="#" onhover="toggleColumn(0); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(0); return false;">Show Row Instead</a></div></div></th>
+<th class="soft-header" data-col="1"><div class="th-menu-wrapper"><span class="th-title">Gene / Mutation</span><div class="th-dropdown"><a href="#" onhover="toggleColumn(1); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(1); return false;">Show Row Instead</a></div></div></th>
+<th class="soft-header" data-col="2"><div class="th-menu-wrapper"><span class="th-title">Cytogenetics</span><div class="th-dropdown"><a href="#" onhover="toggleColumn(2); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(2); return false;">Show Row Instead</a></div></div></th>
+<th class="soft-header" data-col="3"><div class="th-menu-wrapper"><span class="th-title">Mechanism</span><div class="th-dropdown"><a href="#" onhover="toggleColumn(3); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(3); return false;">Show Row Instead</a></div></div></th>
+<th class="soft-header" data-col="4"><div class="th-menu-wrapper"><span class="th-title">Category</span><div class="th-dropdown"><a href="#" onhover="toggleColumn(4); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(4); return false;">Show Row Instead</a></div></div></th>
+<th class="soft-header" data-col="5"><div class="th-menu-wrapper"><span class="th-title">Lineage</span><div class="th-dropdown"><a href="#" onhover="toggleColumn(5); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(5); return false;">Show Row Instead</a></div></div></th>
 </tr>
 </thead>
 <tbody>

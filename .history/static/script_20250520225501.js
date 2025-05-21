@@ -20,11 +20,6 @@ function loadBuzzwords() {
                 : Object.entries(data).map(([term, assoc]) => `<span class="buzzword" title="${assoc}">${term}</span>`);
 
             track.innerHTML = items.join("      ");
-            // Adjust scroll speed based on number of terms and viewport width
-            const numTerms = items.length;
-            const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-            const duration = Math.max(20, Math.round((numTerms * vw) / 1000)); // e.g. 1s per 1000px*term
-            track.style.animationDuration = `${duration}s`;
         })
         .catch(err => {
             console.error("❌ Failed to load buzzwords:", err);
