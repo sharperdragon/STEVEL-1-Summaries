@@ -40,6 +40,18 @@ function filterRowsByInput(inputId, rowSelector) {
   });
 }
 
+function toggleColumnRow(colIndex) {
+  document.querySelectorAll("table tbody tr").forEach(row => {
+    const cell = row.querySelector(`td[data-col="${colIndex}"]`);
+    if (!cell) return;
+    if (cell.style.opacity === "0") {
+      row.style.opacity = "";
+    } else {
+      cell.style.opacity = "0";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const searchBox = document.getElementById("searchBox");
   if (searchBox) {

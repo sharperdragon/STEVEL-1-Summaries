@@ -30,13 +30,25 @@ function filterTableRowsByInput(inputId, tableSelector) {
   });
 }
 
-function filterRowsByInput(inputId, rowSelector) {
-  const input = document.getElementById(inputId);
-  if (!input) return;
-  const query = input.value.toLowerCase();
-  document.querySelectorAll(rowSelector).forEach(row => {
-    const text = row.textContent.toLowerCase();
-    row.style.opacity = text.includes(query) ? "" : "0";
+
+function toggleColumnRow(colIndex) {
+  document.querySelectorAll("table tbody tr").forEach(row => {
+    const cell = row.querySelector(`td[data-col="${colIndex}"]`);
+    if (!cell) return;
+
+    const isToggleCell = cell.hasAttribute("data-toggle-cell");
+    const isHidden = cell.style.opacity === "0";
+
+    // Check if the table has the autoantibodies class
+    const isAutoantibodies = row.closest("table")?.classList.contains("autoantibodies-table");
+
+    if (isAutoantibodies || isToggleCell) {
+      // Toggle just the cell
+      cell.style.opacity = isHidden ? "" : "0";
+    } else {
+      // Toggle the entire row
+      row.style.opacity = isHidden ? "" : "0";
+    }
   });
 }
 
@@ -58,7 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   if (searchInput) {
     searchInput.addEventListener("input", () => {
-      filterRowsByInput("searchInput", "tbody tr td");
+      const query = searchInput.value.toLowerCase();
+      document.querySelectorAll("td").forEach(cell => {
+        const text = cell.textContent.toLowerCase();
+        cell.style.opacity = text.includes(query) ? "" : "0.2";
+      });
     });
   }
 

@@ -40,6 +40,24 @@ function filterRowsByInput(inputId, rowSelector) {
   });
 }
 
+function toggleColumnRow(colIndex) {
+  document.querySelectorAll("table tbody tr").forEach(row => {
+    const cell = row.querySelector(`td[data-col="${colIndex}"]`);
+    if (!cell) return;
+
+    const isToggleCell = cell.hasAttribute("data-toggle-cell");
+    const isHidden = cell.style.opacity === "0";
+
+    if (isToggleCell) {
+      // Toggle just the cell
+      cell.style.opacity = isHidden ? "" : "0";
+    } else {
+      // Toggle the full row
+      row.style.opacity = isHidden ? "" : "0";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const searchBox = document.getElementById("searchBox");
   if (searchBox) {
