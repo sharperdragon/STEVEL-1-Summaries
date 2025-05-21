@@ -243,3 +243,48 @@
 html {
   font-size: clamp(15px, 1.2vw + 0.5vh, 18px);
 }
+
+
+.table1 .row-divider {
+  border-top: 3px solid var(--strong-divider);
+  background-color: var(--row-alt-bg-1);
+}
+
+.table2 .row-divider {
+  border-top: 3px solid var(--table2-divider);
+  background-color: var(--table2-row-alt-bg);
+}
+
+.table3 .row-divider {
+  border-top: 3px solid var(--table3-divider);
+  background-color: var(--table3-row-alt-bg);
+}
+
+
+/* Minimal, clean section navigation */
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #f9fbfc;
+  border-radius: 10px;
+  font-size: 0.95em;
+  max-width: 90%;
+}
+
+.section-nav a {
+  text-decoration: none;
+  color: #336699;
+  border: 1px solid #ccd9e0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.section-nav a:hover {
+  background-color: #e5eff7;
+  color: #1d4e89;
+}
