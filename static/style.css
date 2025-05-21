@@ -388,7 +388,7 @@ div#selection_buttons {
   justify-content: center;
   gap: 16px;
   margin: 2rem auto;
-  max-width: 1000px;
+  max-width: -webkit-fill-available;
   padding: 0 1rem;
 }
 

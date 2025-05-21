@@ -30,9 +30,15 @@
   </div>
 
   <!-- 🔁 Rapid Review Carousel -->
-  <div id="RapidCarousel" class="carousel-wrapper"></div>
+  <div id="RapidCarousel" class="carousel-wrapper" style="min-height: 100px; position: relative; overflow: hidden;">
+    <div class="carousel-inner" style="position: relative; height: 100%;">
+      <!-- Items will be injected by JS -->
+    </div>
+  </div>
 
+  
   <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+    <div id="suggestions"></div>
     Last updated {{LAST_UPDATED}}
   </footer>
 
