@@ -25,10 +25,12 @@ function injectBuzzScrollCSS(duration) {
   style.innerHTML = `
     .buzz-track {
       --scroll-duration: ${duration}s;
-      animation: scroll-buzz var(--scroll-duration) ease-out infinite;
+      animation: scroll-buzz var(--scroll-duration) linear infinite;
+      transition: transform 0.5s ease-in-out;
     }
-    .buzz-track:hover {
+    .buzz-track.paused {
       animation-play-state: paused;
+      transform: translateY(1px);
     }
   `;
   document.head.appendChild(style);
@@ -50,6 +52,14 @@ function loadBuzzwords() {
       const previewItems = items.slice(randomOffset).concat(items.slice(0, randomOffset));
       track.innerHTML = previewItems.join("      ");
       track.style.transform = `translateX(-${(randomOffset / itemCount) * 100}%)`;
+
+      // Add hover event listeners to toggle .paused class for smooth transition
+      track.addEventListener("mouseenter", () => {
+        track.classList.add("paused");
+      });
+      track.addEventListener("mouseleave", () => {
+        track.classList.remove("paused");
+      });
 
       requestAnimationFrame(() => {
         const fullWidth = track.scrollWidth;
