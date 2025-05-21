@@ -51,7 +51,10 @@ function loadBuzzwords() {
       const randomOffset = Math.floor(Math.random() * itemCount);
       const previewItems = items.slice(randomOffset).concat(items.slice(0, randomOffset));
       track.innerHTML = previewItems.join("      ");
-      track.style.transform = `translateX(-${(randomOffset / itemCount) * 100}%)`;
+      // Ensure the buzz-track is wide enough to trigger scrolling
+      track.style.minWidth = `${previewItems.length * 240}px`;
+      // remove inline transform so CSS animation works
+      track.style.removeProperty("transform");
 
       // Add hover event listeners to toggle .paused class for smooth transition
       track.addEventListener("mouseenter", () => {
