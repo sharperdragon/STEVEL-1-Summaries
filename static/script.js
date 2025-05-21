@@ -134,10 +134,42 @@ function resizeCarouselFont() {
   container.style.fontSize = `${baseSize}px`;
 }
 
+function setupSuggestionBox() {
+  const form = document.getElementById("suggestionForm");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const input = document.getElementById("suggestionInput");
+    const status = document.getElementById("suggestionStatus");
+    const suggestion = input.value.trim();
+    if (!suggestion) return;
+
+    try {
+      const res = await fetch("https://your-api-endpoint.com/api/suggest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ suggestion })
+      });
+      if (res.ok) {
+        status.textContent = "✅ Sent!";
+        input.value = "";
+      } else {
+        status.textContent = "❌ Error sending";
+      }
+    } catch {
+      status.textContent = "❌ Connection failed";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadBuzzwords();
   loadRapidReviewCards();
   initSearchBinding();
   resizeCarouselFont();
   window.addEventListener("resize", resizeCarouselFont);
+
+  // Suggestions box support
+  setupSuggestionBox();
 });
