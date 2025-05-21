@@ -538,8 +538,9 @@ div#selection_buttons {
 }
 
 .buzzword span.assoc {
-  font-weight:500;
-  color:#2165ad
+  color:#2165ad;
+  font-weight: 700;
+  color: #2165ad;
 }
 
 @media screen and (max-width: 600px) {
