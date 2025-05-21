@@ -30,11 +30,6 @@ function injectBuzzScrollCSS(duration) {
     .buzz-track:hover {
       animation-play-state: paused;
     }
-    @keyframes scroll-buzz {
-      0% { transform: translateX(0); }
-      10%  { transform: translateX(0); }     /* Pause at start */
-      90%  { transform: translateX(-100%); } /* Hold at end */
-      100% { transform: translateX(-100%); }
     }
   `;
   document.head.appendChild(style);
