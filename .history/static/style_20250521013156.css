@@ -392,8 +392,8 @@ div#selection_buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 215px;
-  min-height: 110px;
+  width: 220px;
+  min-height: 130px;
   padding: 18px;
   background-color: #f6faff;
   color: #222;
