@@ -146,7 +146,7 @@ function setupSuggestionBox() {
     if (!suggestion) return;
 
     try {
-      const res = await fetch("https://your-api-endpoint.com/api/suggest", {
+      const res = await fetch("http://127.0.0.1:8000/api/suggest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ suggestion })
