@@ -21,96 +21,95 @@
     <!-- Utility Toolbar -->
     <div class="utility-toolbar" style="margin-bottom: 15px;">
       <button id="reset-button">Reset</button>
-      <button id="shuffle-button">Shuffle Rows</button>
+      <button id="shuffle-button" style="display:none;">Shuffle Rows</button>
     </div>
-    <h3 class="table-section-header">Glycogen Storage Diseases</h3>
-<div class="responsive-container">
-<table class="table1" id="glycogen-table">
+    <div class="table-container">
+<table class="metabolism-table">
 <thead>
 <tr>
-<th data-col="0"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
-<th data-col="1"><div class="th-menu-wrapper"><span class="th-title">Gene</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
-<th data-col="2"><div class="th-menu-wrapper"><span class="th-title">Inheritance</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
-<th data-col="3"><div class="th-menu-wrapper"><span class="th-title">Features</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(3); return false;">Hide Column</a></div></div></th>
-<th data-col="4"><div class="th-menu-wrapper"><span class="th-title">Treatment</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(4); return false;">Hide Column</a></div></div></th>
+<th colspan="4" data-col="0" style="text-align: center; background-color: #d0e5f5;">
+<strong>Metabolic Disorders Overview</strong>
+</th>
+</tr>
+<tr style="background-color: #f7f9fa;">
+<th data-col="0"><div class="th-menu-wrapper"><span class="th-title">Condition</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
+<th data-col="1"><div class="th-menu-wrapper"><span class="th-title">Deficiency / Pathophysiology</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
+<th data-col="2"><div class="th-menu-wrapper"><span class="th-title">Key Features</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
+<th data-col="3"><div class="th-menu-wrapper"><span class="th-title">Inheritance</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(3); return false;">Hide Column</a></div></div></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-col="0">Von Gierke</td>
-<td data-col="1">G6PC</td>
-<td data-col="2">AR</td>
-<td data-col="3">Hypoglycemia, hepatomegaly</td>
-<td data-col="4">Frequent feeding, cornstarch</td>
+<td data-col="0">Phenylketonuria (PKU)</td>
+<td data-col="1">Phenylalanine hydroxylase deficiency</td>
+<td data-col="2">Musty odor, intellectual disability, fair skin</td>
+<td data-col="3">AR</td>
 </tr>
-<tr>
-<td data-col="0">Pompe</td>
-<td data-col="1">GAA</td>
-<td data-col="2">AR</td>
-<td data-col="3">Cardiomyopathy, muscle weakness</td>
-<td data-col="4">Enzyme replacement therapy</td>
-</tr>
-</tbody>
-</table>
-</div>
-<br/>
-<h3 class="table-section-header">Fatty Acid Oxidation Disorders</h3>
-<div class="responsive-container">
-<table class="table1" id="fattyacid-table">
-<thead>
-<tr>
-<th data-col="0"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
-<th data-col="1"><div class="th-menu-wrapper"><span class="th-title">Gene</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
-<th data-col="2"><div class="th-menu-wrapper"><span class="th-title">Inheritance</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
-<th data-col="3"><div class="th-menu-wrapper"><span class="th-title">Features</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(3); return false;">Hide Column</a></div></div></th>
-<th data-col="4"><div class="th-menu-wrapper"><span class="th-title">Treatment</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(4); return false;">Hide Column</a></div></div></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td data-col="0">MCAD</td>
-<td data-col="1">ACADM</td>
-<td data-col="2">AR</td>
-<td data-col="3">Hypoketotic hypoglycemia, sudden death</td>
-<td data-col="4">Frequent feeding, avoid fasting</td>
-</tr>
-<tr>
-<td data-col="0">LCHAD</td>
-<td data-col="1">HADHA</td>
-<td data-col="2">AR</td>
-<td data-col="3">Liver disease, neuropathy</td>
-<td data-col="4">Dietary management</td>
-</tr>
-</tbody>
-</table>
-</div>
-<br/>
-<h3 class="table-section-header">Miscellaneous Metabolic Conditions</h3>
-<div class="responsive-container">
-<table class="table1" id="misc-table">
-<thead>
-<tr>
-<th data-col="0"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
-<th data-col="1"><div class="th-menu-wrapper"><span class="th-title">Gene</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
-<th data-col="2"><div class="th-menu-wrapper"><span class="th-title">Inheritance</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
-<th data-col="3"><div class="th-menu-wrapper"><span class="th-title">Features</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(3); return false;">Hide Column</a></div></div></th>
-<th data-col="4"><div class="th-menu-wrapper"><span class="th-title">Treatment</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(4); return false;">Hide Column</a></div></div></th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td data-col="0">Maple Syrup Urine Disease</td>
-<td data-col="1">BCKDHA</td>
-<td data-col="2">AR</td>
-<td data-col="3">Neurological symptoms, poor feeding</td>
-<td data-col="4">Dietary restriction of branched-chain amino acids</td>
+<td data-col="1">Branched-chain α-ketoacid dehydrogenase deficiency</td>
+<td data-col="2">Sweet-smelling urine, poor feeding, lethargy</td>
+<td data-col="3">AR</td>
 </tr>
 <tr>
-<td data-col="0">Phenylketonuria</td>
-<td data-col="1">PAH</td>
-<td data-col="2">AR</td>
-<td data-col="3">Intellectual disability if untreated</td>
-<td data-col="4">Phenylalanine-restricted diet</td>
+<td data-col="0">Alkaptonuria</td>
+<td data-col="1">Homogentisate oxidase deficiency</td>
+<td data-col="2">Dark urine, ochronosis, arthritis</td>
+<td data-col="3">AR</td>
+</tr>
+<tr>
+<td data-col="0">Ornithine Transcarbamylase Deficiency</td>
+<td data-col="1">Urea cycle defect</td>
+<td data-col="2">Hyperammonemia, vomiting, no acidosis</td>
+<td data-col="3">X-linked</td>
+</tr>
+<tr>
+<td data-col="0">Galactosemia (Classic)</td>
+<td data-col="1">Galactose-1-phosphate uridyltransferase deficiency</td>
+<td data-col="2">Jaundice, hepatomegaly, cataracts, E. coli sepsis</td>
+<td data-col="3">AR</td>
+</tr>
+<tr>
+<td data-col="0">Hereditary Fructose Intolerance</td>
+<td data-col="1">Aldolase B deficiency</td>
+<td data-col="2">Vomiting, hypoglycemia after fruit intake</td>
+<td data-col="3">AR</td>
+</tr>
+<tr>
+<td data-col="0">Tay-Sachs Disease</td>
+<td data-col="1">Hexosaminidase A deficiency → GM2 buildup</td>
+<td data-col="2">Cherry-red spot, no hepatomegaly</td>
+<td data-col="3">AR</td>
+</tr>
+<tr>
+<td data-col="0">Fabry Disease</td>
+<td data-col="1">α-galactosidase A deficiency → globotriaosylceramide</td>
+<td data-col="2">Angiokeratomas, neuropathy, renal failure</td>
+<td data-col="3">X-linked</td>
+</tr>
+<tr>
+<td data-col="0">Gaucher Disease</td>
+<td data-col="1">β-glucocerebrosidase deficiency → glucocerebroside accumulation</td>
+<td data-col="2">Hepatosplenomegaly, bone crises, pancytopenia, lipid-laden macrophages</td>
+<td data-col="3">AR</td>
+</tr>
+<tr>
+<td data-col="0">Niemann-Pick Disease</td>
+<td data-col="1">Sphingomyelinase deficiency → sphingomyelin accumulation</td>
+<td data-col="2">Progressive neurodegeneration, hepatosplenomegaly, cherry-red macula</td>
+<td data-col="3">AR</td>
+</tr>
+<tr>
+<td data-col="0">Hunter Syndrome</td>
+<td data-col="1">Iduronate sulfatase deficiency → dermatan sulfate, heparan sulfate accumulation</td>
+<td data-col="2">Mild Hurler features, aggressive behavior, no corneal clouding</td>
+<td data-col="3">X-linked</td>
+</tr>
+<tr>
+<td data-col="0">Hurler Syndrome</td>
+<td data-col="1">α-L-iduronidase deficiency → dermatan sulfate, heparan sulfate accumulation</td>
+<td data-col="2">Developmental delay, gargoylism, airway obstruction, corneal clouding</td>
+<td data-col="3">AR</td>
 </tr>
 </tbody>
 </table>
