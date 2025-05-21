@@ -16,17 +16,15 @@ function loadBuzzwords() {
         .then(response => response.json())
         .then(data => {
             const items = Array.isArray(data)
-                ? data.map(item => `<span class="buzzword" title="${item.assoc}">${item.term}</span>`)
-                : Object.entries(data).map(([term, assoc]) => `<span class="buzzword" title="${assoc}">${term}</span>`);
+                ? data.map(item => `<span class="buzzword"><strong>${item.term}</strong><span class="assoc"> — ${item.assoc}</span></span>`)
+                : Object.entries(data).map(([term, assoc]) => `<span class="buzzword"><strong>${term}</strong><span class="assoc"> — ${assoc}</span></span>`);
 
             track.innerHTML = items.join("      ");
-            // Adjust scroll speed based on total pixel width of all items
-            requestAnimationFrame(() => {
-              const fullWidth = track.scrollWidth;
-              const speedPxPerSec = 50; // adjust this value to fine-tune perceived speed
-              const duration = Math.max(20, Math.round(fullWidth / speedPxPerSec));
-              track.style.animationDuration = `${duration}s`;
-            });
+            // Adjust scroll speed based on number of terms and viewport width
+            const numTerms = items.length;
+            const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            const duration = Math.max(20, Math.round((numTerms  vw) / 1000)); // e.g. 1s per 1000px*term
+            track.style.animationDuration = `${duration}s`;
         })
         .catch(err => {
             console.error("❌ Failed to load buzzwords:", err);
