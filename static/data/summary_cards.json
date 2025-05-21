@@ -50,8 +50,8 @@
     "desc": "A high-yield summary table for findings."
   },
   {
-    "name": "Presentation",
-    "file": "rapid_presentation.html",
-    "desc": "A high-yield summary table for presentation."
+    "name": "Presentations",
+    "file": "rapid_presentations.html",
+    "desc": "A high-yield summary table for presentations."
   }
 ]
