@@ -92,9 +92,4 @@ def build_all():
 if __name__ == "__main__":
     convert_buzzwords_to_json()
     build_all()
-    # The `build_index()` function is likely responsible for creating or updating an index file that
-    # organizes and provides quick access to the generated HTML pages. This index file could contain
-    # information such as the titles of the pages and their corresponding file names or URLs. It helps
-    # in efficiently navigating through the collection of HTML pages by providing a centralized
-    # location for referencing and accessing them.
     build_index()
