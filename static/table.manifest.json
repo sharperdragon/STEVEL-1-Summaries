@@ -14,5 +14,9 @@
   {
     "name": "Metabolism",
     "file": "metabolism.html"
+  },
+  {
+    "name": "Rapid Associations",
+    "file": "rapid_associations.html"
   }
 ]
