@@ -172,33 +172,3 @@
   font-style: italic;
   background-color: #f9f9f9;
 }
-
-/* Responsive container for horizontal scroll */
-.responsive-container {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Mobile-specific adjustments */
-@media screen and (max-width: 768px) {
-  .table1, .table2, .table3 {
-    font-size: 15px;
-  }
-
-  .table1 th, .table1 td,
-  .table2 th, .table2 td,
-  .table3 th, .table3 td {
-    padding: 6px 10px;
-  }
-
-  .table1 thead th,
-  .table2 thead th,
-  .table3 thead th {
-    font-size: 18px;
-  }
-
-  .th-dropdown a {
-    padding: 10px 12px;
-  }
-}
