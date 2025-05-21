@@ -1,0 +1,77 @@
+
+
+
+.table1 {
+  width: 96%;
+  margin: 2vh auto;
+  border-collapse: collapse;
+  font-family: var(--font);
+  color: var(--text-color);
+  font-size: var(--base-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.table1 th, .table1 td {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.table1 thead th {
+  background-color: var(--header-bg-1);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  text-align: center;
+}
+
+.table1 tbody tr:nth-child(odd) {
+  background-color: var(--row-bg-1);
+}
+.table1 tbody tr:nth-child(even) {
+  background-color: var(--row-alt-bg-1);
+}
+
+/* Autoantibodies specific layout */
+#autoantibodies td:nth-child(2) {
+  border-right: 3px solid var(--strong-divider);
+}
+#autoantibodies td:nth-child(4) {
+  width: 30%;
+}
+#autoantibodies td:nth-child(1),
+#autoantibodies td:nth-child(3) {
+  font-weight: 500;
+  width: 20%;
+}
+
+/* Chromosome table row dividers */
+#chromosomes tr[style*="border-bottom"] td {
+  border-bottom: 4px solid var(--strong-divider) !important;
+}
+
+/* Heme-Onc emphasis */
+#HemeOnc td:nth-child(1),
+#HemeOnc td:nth-child(2) {
+  font-weight: 500;
+}
+
+/* Metabolism layout */
+.metabolism td:nth-child(1) {
+  font-weight: 500;
+  width: 18%;
+}
+.metabolism td:nth-child(4) {
+  width: 32%;
+}
+
+/* Abbreviation footer note */
+.table1 tfoot td,
+#autoantibodies td[colspan="4"] {
+  font-size: 90%;
+  padding-top: 10px;
+  font-style: italic;
+  background-color: #f9f9f9;
+}

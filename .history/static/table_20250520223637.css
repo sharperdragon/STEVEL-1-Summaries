@@ -1,0 +1,169 @@
+
+:root {
+  --header-bg-1: #d0e5f5;
+  --subheader-bg-1: #f7f9fa;
+  --border-color: #ccd9e0;
+  --strong-divider: #6c8ca3;
+  --row-alt-bg-1: #f5f9fc;
+  --footer-note-bg: #f3f6f9;
+  --row-bg-1: #ffffff;
+  --text-color: #2a2a2a;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --base-font-size: 17px;
+  --header-font-size: 22px;
+  --table2-header-bg: #e0f2e9;
+  --table2-row-bg: #ffffff;
+  --table2-row-alt-bg: #f1f8f4;
+  --table2-divider: #7ba995;
+  --table3-header-bg: #ede9f7;
+  --table3-row-bg: #ffffff;
+  --table3-row-alt-bg: #f5f1fb;
+  --table3-divider: #8b79a8;
+}
+
+.table1 {
+  width: 96%;
+  margin: 2vh auto;
+  border-collapse: collapse;
+  font-family: var(--font);
+  color: var(--text-color);
+  font-size: var(--base-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  table-layout: auto;
+  word-wrap: break-word;
+}
+
+.table1 th, .table1 td {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.table1 thead th {
+  background-color: var(--header-bg-1);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  text-align: center;
+}
+
+.table1 tbody tr:nth-child(odd) {
+  background-color: var(--row-bg-1);
+}
+.table1 tbody tr:nth-child(even) {
+  background-color: var(--row-alt-bg-1);
+}
+
+.table2 {
+  width: 96%;
+  margin: 2vh auto;
+  border-collapse: collapse;
+  font-family: var(--font);
+  color: var(--text-color);
+  font-size: var(--base-font-size);
+  border: 1px solid var(--table2-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  table-layout: auto;
+  word-wrap: break-word;
+}
+
+.table2 th, .table2 td {
+  padding: 10px 14px;
+  border: 1px solid var(--table2-divider);
+  vertical-align: top;
+}
+
+.table2 thead th {
+  background-color: var(--table2-header-bg);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  text-align: center;
+}
+
+.table2 tbody tr:nth-child(odd) {
+  background-color: var(--table2-row-bg);
+}
+.table2 tbody tr:nth-child(even) {
+  background-color: var(--table2-row-alt-bg);
+}
+
+.table3 {
+  width: 96%;
+  margin: 2vh auto;
+  border-collapse: collapse;
+  font-family: var(--font);
+  color: var(--text-color);
+  font-size: var(--base-font-size);
+  border: 1px solid var(--table3-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  table-layout: auto;
+  word-wrap: break-word;
+}
+
+.table3 th, .table3 td {
+  padding: 10px 14px;
+  border: 1px solid var(--table3-divider);
+  vertical-align: top;
+}
+
+.table3 thead th {
+  background-color: var(--table3-header-bg);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  text-align: center;
+}
+
+.table3 tbody tr:nth-child(odd) {
+  background-color: var(--table3-row-bg);
+}
+.table3 tbody tr:nth-child(even) {
+  background-color: var(--table3-row-alt-bg);
+}
+
+/* Autoantibodies specific layout */
+#autoantibodies td:nth-child(2) {
+  border-right: 3px solid var(--strong-divider);
+}
+#autoantibodies td:nth-child(4) {
+  width: 30%;
+}
+#autoantibodies td:nth-child(1),
+#autoantibodies td:nth-child(3) {
+  font-weight: 500;
+  width: 20%;
+}
+
+/* Chromosome table row dividers */
+#chromosomes tr[style*="border-bottom"] td {
+  border-bottom: 4px solid var(--strong-divider) !important;
+}
+
+/* Heme-Onc emphasis */
+#HemeOnc td:nth-child(1),
+#HemeOnc td:nth-child(2) {
+  font-weight: 500;
+}
+
+/* Metabolism layout */
+.metabolism td:nth-child(1) {
+  font-weight: 500;
+  width: 18%;
+}
+.metabolism td:nth-child(4) {
+  width: 32%;
+}
+
+/* Abbreviation footer note */
+.table1 tfoot td,
+#autoantibodies td[colspan="4"] {
+  font-size: 90%;
+  padding-top: 10px;
+  font-style: italic;
+  background-color: #f9f9f9;
+}
