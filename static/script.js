@@ -26,11 +26,15 @@ function injectBuzzScrollCSS(duration) {
     .buzz-track {
       --scroll-duration: ${duration}s;
       animation: scroll-buzz var(--scroll-duration) linear infinite;
-      transition: transform 0.5s ease-in-out;
+      will-change: transform;
     }
     .buzz-track.paused {
       animation-play-state: paused;
       transform: translateY(1px);
+    }
+    @keyframes scroll-buzz {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
   `;
   document.head.appendChild(style);
