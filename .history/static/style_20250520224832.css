@@ -1,21 +1,16 @@
 @import url("tables.css");
 
 :root {
-  /* Fonts */
+  --header-bg-1: #d0e5f5;
+  --subheader-bg-1: #f7f9fa;
+  --border-color: #ccd9e0;
+  --strong-divider: #6c8ca3;
+  --row-alt-bg-1: #f9fcff;
+  --row-bg-1: #ffffff;
+  --text-color: #2a2a2a;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --base-font-size: 17px;
   --header-font-size: 22px;
-
-  /* Colors – Text and Layout */
-  --text-color: #2a2a2a;
-  --border-color: #ccd9e0;
-  --strong-divider: #6c8ca3;
-
-  /* Colors – Backgrounds */
-  --row-bg-1: #ffffff;
-  --row-alt-bg-1: #f5f9fc;
-  --footer-note-bg: #f3f6f9;
-  --header-bg-1: #d0e5f5;
 }
 
 /* ===========================
@@ -111,6 +106,14 @@ div#history_section > div > select {
     margin-bottom: 12px;
 }
 
+.sticky-history {
+    position: static;
+    z-index: auto;
+    background-color: white;
+    padding-top: 4px;
+    padding-bottom: 8px;
+}
+
 /* ===========================
    Inputs and Forms
 =========================== */
@@ -118,6 +121,7 @@ textarea {
     width: 95%;
     margin-bottom: 10px;
     min-height:150px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1%;
@@ -130,7 +134,7 @@ textarea {
     align-items: center;
     justify-content: flex-start;
     box-sizing: border-box;
-    padding: 8px 2px;
+    padding: 1px 2px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -139,6 +143,7 @@ textarea {
     min-width: 230px;
     word-wrap: normal; /* Break long words if necessary */
     max-height: 38px;
+    padding: 8px 2px;
 }
 #question_list label span.id {
     padding-right:4px;
