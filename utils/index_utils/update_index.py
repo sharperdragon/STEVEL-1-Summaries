@@ -102,7 +102,7 @@ def build_index(build_json=True):
         )
 
     nav_html = (
-        '<nav style="margin: 40px 0; text-align: center; font-size: 0.9em;">\n'
+        '<nav style="margin: 20px 0 40px 0; text-align: center; font-size: 0.9em;">\n'
         '<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">\n'
         + "\n".join(nav_links) +
         '\n</div>\n</nav>'
