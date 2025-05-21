@@ -25,22 +25,7 @@ function loadBuzzwords() {
               const fullWidth = track.scrollWidth;
               const speedPxPerSec = 30; // adjust this value to fine-tune perceived speed
               const duration = Math.max(20, Math.round(fullWidth / speedPxPerSec));
-              // Inject smooth scroll CSS with pause on hover
-              const style = document.createElement("style");
-              style.innerHTML = `
-                .buzz-track {
-                  animation: scroll-buzz ${duration}s ease-out infinite;
-                }
-                .buzz-track:hover {
-                  animation-play-state: paused;
-                }
-                @keyframes scroll-buzz {
-                  0% { transform: translateX(0); }
-                  100% { transform: translateX(-100%); }
-                }
-              `;
-              document.head.appendChild(style);
-              track.style.animation = `scroll-buzz ${duration}s ease-out infinite`;
+              track.style.animationDuration = `${duration}s`;
             });
         })
         .catch(err => {
