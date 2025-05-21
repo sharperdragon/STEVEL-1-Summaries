@@ -590,42 +590,11 @@ div#selection_buttons {
 }
 
 @media screen and (max-width: 600px) {
-  .nav-link {
-    display: block;
-    width: 90%;
-    margin: 6px auto;
-    padding: 0.8em 1.2em;
-    font-size: 1rem;
-  }
-
-  .carousel-wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .carousel-item {
-    width: 90%;
-    margin: 8px 0;
-  }
-
   .summary-card {
-    width: 90%;
-    padding: 16px;
+    width: 100%;
+    min-height: auto;
+    padding: 14px;
     font-size: 0.95em;
-  }
-
-  #mode_section {
-    top: 5px;
-    right: 5px;
-    width: 65px;
-    height: 22px;
-    font-size: 85%;
-  }
-
-  #question_list {
-    flex-direction: column;
-    overflow-x: hidden;
   }
 }
 
