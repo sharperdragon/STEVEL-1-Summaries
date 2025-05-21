@@ -569,12 +569,3 @@ th:hover .th-dropdown {
   font-weight:500;
   color:#2165ad
 }
-
-@media screen and (max-width: 600px) {
-  .summary-card {
-    width: 100%;
-    min-height: auto;
-    padding: 14px;
-    font-size: 0.95em;
-  }
-}
