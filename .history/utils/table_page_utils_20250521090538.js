@@ -51,13 +51,9 @@ function shuffleTableRows(table) {
       [rows[i], rows[j]] = [rows[j], rows[i]];
     }
 
-    // Hide section headers before appending
-    sectionRows.forEach(row => {
-      row.style.display = "none";
-    });
-
-    // Clear and re-append only shuffled rows
+    // Clear and re-append: section-divider(s) first, then shuffled rows
     tbody.innerHTML = "";
+    sectionRows.forEach(row => tbody.appendChild(row));
     rows.forEach(row => tbody.appendChild(row));
   });
 }

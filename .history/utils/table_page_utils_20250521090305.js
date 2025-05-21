@@ -34,44 +34,6 @@ function filterRowsByInput(inputId, rowSelector) {
   });
 }
 
-/**
- * Shuffle all rows inside all tbody sections of a table,
- * preserving section-divider rows at the start of each tbody.
- */
-function shuffleTableRows(table) {
-  const tbodies = table.querySelectorAll("tbody");
-  tbodies.forEach(tbody => {
-    const rows = Array.from(tbody.querySelectorAll("tr"))
-      .filter(row => !row.classList.contains("section-divider"));
-    const sectionRows = Array.from(tbody.querySelectorAll("tr.section-divider"));
-
-    // Fisher-Yates shuffle
-    for (let i = rows.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [rows[i], rows[j]] = [rows[j], rows[i]];
-    }
-
-    // Hide section headers before appending
-    sectionRows.forEach(row => {
-      row.style.display = "none";
-    });
-
-    // Clear and re-append only shuffled rows
-    tbody.innerHTML = "";
-    rows.forEach(row => tbody.appendChild(row));
-  });
-}
-
-// Add shuffle button listener for all tables on the page
-document.addEventListener("DOMContentLoaded", () => {
-  const shuffleBtn = document.getElementById("shuffleButton");
-  if (shuffleBtn) {
-    shuffleBtn.addEventListener("click", () => {
-      document.querySelectorAll("table").forEach(table => shuffleTableRows(table));
-    });
-  }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const resetBtn = document.getElementById("resetButton");
   if (resetBtn) {

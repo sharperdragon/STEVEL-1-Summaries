@@ -59,7 +59,7 @@
 }
 
 .th-menu-wrapper:hover .th-title::after {
-  content: " ▼";
+  content: " ";
 }
 
 .th-title::after {

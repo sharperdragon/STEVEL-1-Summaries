@@ -18,5 +18,13 @@
   {
     "name": "Rapid Associations",
     "file": "rapid_associations.html"
+  },
+  {
+    "name": "Rapid Findings",
+    "file": "rapid_findings.html"
+  },
+  {
+    "name": "Rapid Presentation",
+    "file": "rapid_presentation.html"
   }
 ]

@@ -44,10 +44,7 @@
 }
 
 .th-title {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  gap: 4px;
+  padding-right: 6px;
 }
 
 .th-dropdown {
@@ -59,11 +56,11 @@
 }
 
 .th-menu-wrapper:hover .th-title::after {
-  content: " ▼";
+  content: " ▶";
 }
 
 .th-title::after {
-  content: " ▶";
+  content: " ▼";
   display: inline-block;
   margin-left: 6px;
   transition: transform 0.2s ease;
@@ -103,7 +100,7 @@
 .table1 th, .table1 td,
 .table2 th, .table2 td,
 .table3 th, .table3 td {
-  padding: clamp(6px, 1.2vw, 12px) clamp(10px, 2vw, 18px);
+  padding: 10px 14px;
   vertical-align: top;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }

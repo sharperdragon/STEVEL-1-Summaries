@@ -23,5 +23,15 @@
     "name": "Rapid Associations",
     "file": "rapid_associations.html",
     "desc": "A high-yield summary table for rapid associations."
+  },
+  {
+    "name": "Rapid Findings",
+    "file": "rapid_findings.html",
+    "desc": "A high-yield summary table for rapid findings."
+  },
+  {
+    "name": "Rapid Presentation",
+    "file": "rapid_presentation.html",
+    "desc": "A high-yield summary table for rapid presentation."
   }
 ]
