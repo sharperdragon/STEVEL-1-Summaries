@@ -30,12 +30,9 @@ def extract_rr_associations_html(items):
     html = ['<div class="carousel-container">']
     for i, item in enumerate(items):
         if i == 0:
-            item_visible = item.replace('class="answer"', 'class="answer" style="display:none;"')
-            html.append(item_visible)
+            html.append(item.replace('class="carousel-item"', 'class="carousel-item"'))
         else:
-            item_hidden = item.replace('class="carousel-item"', 'class="carousel-item" style="display:none;"')
-            item_hidden = item_hidden.replace('class="answer"', 'class="answer" style="display:none;"')
-            html.append(item_hidden)
+            html.append(item.replace('class="carousel-item"', 'class="carousel-item" style="display:none;"'))
     html.append("</div>")
     return "\n".join(html)
 
