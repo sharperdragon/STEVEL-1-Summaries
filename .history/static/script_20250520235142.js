@@ -16,14 +16,10 @@ function loadBuzzwords() {
         .then(response => response.json())
         .then(data => {
             const items = Array.isArray(data)
-                ? data.map(item => `<span class="buzzword"><strong>${item.term}</strong><span class="assoc"> — ${item.assoc}</span></span>`)
-                : Object.entries(data).map(([term, assoc]) => `<span class="buzzword"><strong>${term}</strong><span class="assoc"> — ${assoc}</span></span>`);
+                ? data.map(item => `<span class="buzzword" title="${item.assoc}">${item.term}</span>`)
+                : Object.entries(data).map(([term, assoc]) => `<span class="buzzword" title="${assoc}">${term}</span>`);
 
-            // Randomize start position by shifting the container
-            const itemCount = items.length;
-            const randomOffset = Math.floor(Math.random() * itemCount);
-            const previewItems = items.slice(randomOffset).concat(items.slice(0, randomOffset));
-            track.innerHTML = previewItems.join("      ");
+            track.innerHTML = items.join("      ");
             // Adjust scroll speed based on total pixel width of all items
             requestAnimationFrame(() => {
               const fullWidth = track.scrollWidth;
