@@ -19,10 +19,9 @@
   <main class="table-container" style="margin: 30px auto; max-width: 1100px;">
     <!-- Utility Toolbar -->
     <div class="utility-toolbar" style="margin-bottom: 15px;">
-      <input type="search" id="search-input" placeholder="Search..." />
       <button id="reset-button">Reset</button>
     </div>
-    <div class="table-container">
+    <div class="table-responsive">
 <table class="table1">
 <thead>
 <tr>
@@ -31,9 +30,9 @@
 </th>
 </tr>
 <tr>
-<th data-col="0" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Chromosome</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
-<th data-col="1" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
-<th data-col="2" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Gene / Mutation Info</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
+<th data-col="0" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Chromosome</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(0); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(0); return false;">Show Row Instead</a></div></div></th>
+<th data-col="1" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Disease</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(1); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(1); return false;">Show Row Instead</a></div></div></th>
+<th data-col="2" style="background-color: #f7f9fa;"><div class="th-menu-wrapper"><span class="th-title">Gene / Mutation Info</span><div class="th-dropdown"><a href="#" onclick="toggleColumn(2); return false;">Hide Column</a><a href="#" onclick="toggleColumnRow(2); return false;">Show Row Instead</a></div></div></th>
 </tr>
 </thead>
 <tbody>

@@ -30,6 +30,15 @@ function filterTableRowsByInput(inputId, tableSelector) {
   });
 }
 
+function filterRowsByInput(inputId, rowSelector) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  const query = input.value.toLowerCase();
+  document.querySelectorAll(rowSelector).forEach(row => {
+    const text = row.textContent.toLowerCase();
+    row.style.opacity = text.includes(query) ? "" : "0";
+  });
+}
 
 function toggleColumnRow(colIndex) {
   document.querySelectorAll("table tbody tr").forEach(row => {

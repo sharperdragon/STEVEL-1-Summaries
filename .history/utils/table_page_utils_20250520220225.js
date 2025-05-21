@@ -30,22 +30,13 @@ function filterTableRowsByInput(inputId, tableSelector) {
   });
 }
 
-
-function toggleColumnRow(colIndex) {
-  document.querySelectorAll("table tbody tr").forEach(row => {
-    const cell = row.querySelector(`td[data-col="${colIndex}"]`);
-    if (!cell) return;
-
-    const isToggleCell = cell.hasAttribute("data-toggle-cell");
-    const isHidden = cell.style.opacity === "0";
-
-    if (isToggleCell) {
-      // Toggle just the cell
-      cell.style.opacity = isHidden ? "" : "0";
-    } else {
-      // Toggle the full row
-      row.style.opacity = isHidden ? "" : "0";
-    }
+function filterRowsByInput(inputId, rowSelector) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  const query = input.value.toLowerCase();
+  document.querySelectorAll(rowSelector).forEach(row => {
+    const text = row.textContent.toLowerCase();
+    row.style.opacity = text.includes(query) ? "" : "0";
   });
 }
 
