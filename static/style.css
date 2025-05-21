@@ -345,7 +345,7 @@ div#selection_buttons {
   white-space: nowrap;
 }
 .nav-link {
-  margin: 0.5vw 1vw;
+  margin: 0.5vw 0.8vw;
   padding: 1em 2em;
   border-radius: 6px;
   font-weight: 500;
