@@ -340,8 +340,8 @@ html {
   gap: 12px;
   margin: 20px auto;
   padding: 10px;
-  background-color: #f9fbfc;
-  border-radius: 10px;
+  background-color: #eeeeee96;
+  border-radius: 5px;
   font-size: 0.95em;
   max-width: 90%;
 }
@@ -350,8 +350,8 @@ html {
   text-decoration: none;
   color: #336699;
   border: 1px solid #ccd9e0;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 3px 6px;
+  border-radius: 4px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -364,6 +364,8 @@ html {
 .row-divider {
   font-size: var(--small-head-font-size);
   font-weight: 550;
+  align-content: center;
+  text-align: center;
 }
 
 .table-title {
