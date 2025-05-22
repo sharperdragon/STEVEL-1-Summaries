@@ -331,6 +331,20 @@ html {
   background-color: var(--table3-divider-bg);
 }
 
+.table4 .row-divider {
+  border-top: 3px solid var(--table4-divider);
+  background-color: var(--table4-divider-bg);
+}
+
+.table5 .row-divider {
+  border-top: 3px solid var(--table5-divider);
+  background-color: var(--table6-divider-bg);
+}
+
+.table6 .row-divider {
+  border-top: 3px solid var(--table6-divider);
+  background-color: var(--table5-divider-bg);
+}
 
 /* Minimal, clean section navigation */
 .section-nav {
@@ -340,7 +354,7 @@ html {
   gap: 12px;
   margin: 20px auto 5px auto;
   padding: 10px;
-  background-color: #eeeeee96;
+  background-color: #fffbfbf7;
   border-radius: 5px;
   font-size: 0.95em;
   max-width: 95%;
@@ -352,6 +366,7 @@ html {
   border: 1px solid #ccd9e0;
   padding: 3px 6px;
   border-radius: 4px;
+  min-width: 40px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
