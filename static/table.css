@@ -338,12 +338,12 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin: 20px auto;
+  margin: 20px auto 5px auto;
   padding: 10px;
   background-color: #eeeeee96;
   border-radius: 5px;
   font-size: 0.95em;
-  max-width: 90%;
+  max-width: 95%;
 }
 
 .section-nav a {
