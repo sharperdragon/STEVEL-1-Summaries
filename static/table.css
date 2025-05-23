@@ -55,10 +55,7 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-.table-container {
-  margin: 0 auto;
-  max-width: 100%;
-}
+
 .utility-toolbar {
   padding-left: 15vw;
 }
@@ -444,6 +441,10 @@ html {
     padding-top: 5px;
     padding-bottom: 5px;
   }
+  .table-container {
+  margin: 0 auto;
+  max-width: 100%;
+}
 }
 
 .table1 td, .table1 th,
