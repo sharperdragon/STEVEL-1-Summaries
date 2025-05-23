@@ -10,35 +10,44 @@
   --title-font-size: 25px;
   --small-head-font-size:19.5px;
   
+  --table1-title-bg: #7dcafd;
   --table1-header-bg: #d0e5f5;
   --table1-row-bg: #ffffff;
   --table1-row-alt-bg: #f1f5f8;
-  --table1-divider: #7dcafd;
-  --table2-header-bg: #b8ffdc;
+  --table1-divider-bg: #aedfff;
   
+  --table2-title-bg: #9acbb6;
+  --table2-header-bg: #c1ffe4;
   --table2-row-bg: #ffffff;
   --table2-row-alt-bg: #f1f8f4;
-  --table2-divider: #9acbb6;
+  --table2-divider-bg: #b2dbc9;
   
-  --table3-header-bg: #bf9ae4;
+  
+  --table3-title-bg: #c58bff;
+  --table3-header-bg: #ddcbff;
   --table3-row-bg: #ffffff;
   --table3-row-alt-bg: #f5f1fb;
-  --table3-divider-bg: #bfb5d1;
+  --table3-divider-bg: #d3a8fd;
 
+  --table4-title-bg: #f0b487;
   --table4-header-bg: #ffe2cc;
   --table4-row-bg: #ffffff;
   --table4-row-alt-bg: #fdf4ee;
-  --table4-divider-bg: #f0b487;
+  --table4-divider-bg: #ffcda7;
 
+  --table5-title-bg: #8fddec;
   --table5-header-bg: #bde2ee;
   --table5-row-bg: #ffffff;
   --table5-row-alt-bg: #edf8fb;
-  --table5-divider-bg: #8fc5d0;
+  --table5-divider-bg: #9ec7cf;
 
+
+  --table6-title-bg: #ff9d9d;
   --table6-header-bg: #fcd2d2;
   --table6-row-bg: #ffffff;
-  --table6-row-alt-bg: #fdefef;
-  --table6-divider-bg: #f08d8d;
+  --table6-row-alt-bg: #e9e9e9;
+  --table6-divider-bg: #e6a3a3;
+
 
   --inside-border: rgb(100, 100, 100, 0.2);
   --strong-border: #232323;
@@ -169,34 +178,20 @@ html {
   background-color: #f0f0f0;
 }
 
-/* Table Variants */
-.table1 {
-  border: 1px solid var(--table1-divider);
-}
-
-.table1 thead th {
-  background-color: var(--table1-header-bg);
+thead th {
   font-weight: 600;
   font-size: var(--header-font-size);
   text-align: center;
 }
+
+/* Table Variants */
+
 
 .table1 tbody tr:nth-of-type(odd) {
   background-color: var(--table1-row-bg);
 }
 .table1 tbody tr:nth-of-type(even) {
   background-color: var(--table1-row-alt-bg);
-}
-
-.table2 {
-  border: 1px solid var(--table2-divider);
-}
-
-.table2 thead th {
-  background-color: var(--table2-header-bg);
-  font-weight: 600;
-  font-size: var(--header-font-size);
-  text-align: center;
 }
 
 .table2 tbody tr:nth-of-type(odd) {
@@ -206,33 +201,11 @@ html {
   background-color: var(--table2-row-alt-bg);
 }
 
-.table3 {
-  border: 1px solid var(--table3-divider);
-}
-
-.table3 thead th {
-  background-color: var(--table3-header-bg);
-  font-weight: 600;
-  font-size: var(--header-font-size);
-  text-align: center;
-}
-
 .table3 tbody tr:nth-of-type(odd) {
   background-color: var(--table3-row-bg);
 }
 .table3 tbody tr:nth-of-type(even) {
   background-color: var(--table3-row-alt-bg);
-}
-
-.table4 {
-  border: 1px solid var(--table4-divider);
-}
-
-.table4 thead th {
-  background-color: var(--table4-header-bg);
-  font-weight: 600;
-  font-size: var(--header-font-size);
-  text-align: center;
 }
 
 .table4 tbody tr:nth-of-type(odd) {
@@ -242,33 +215,11 @@ html {
   background-color: var(--table4-row-alt-bg);
 }
 
-.table5 {
-  border: 1px solid var(--table5-divider);
-}
-
-.table5 thead th {
-  background-color: var(--table5-header-bg);
-  font-weight: 600;
-  font-size: var(--header-font-size);
-  text-align: center;
-}
-
 .table5 tbody tr:nth-of-type(odd) {
   background-color: var(--table5-row-bg);
 }
 .table5 tbody tr:nth-of-type(even) {
   background-color: var(--table5-row-alt-bg);
-}
-
-.table6 {
-  border: 1px solid var(--table6-divider);
-}
-
-.table6 thead th {
-  background-color: var(--table6-header-bg);
-  font-weight: 600;
-  font-size: var(--header-font-size);
-  text-align: center;
 }
 
 .table6 tbody tr:nth-of-type(odd) {
@@ -320,49 +271,58 @@ html {
   background-color: #f9f9f9;
 }
 
-/* Row Styling */
-.table1 .row-divider {
-  border-top: 1.5px solid var(--strong-divider);
-  border-bottom: 1.5px solid var(--strong-divider);
-  background-color: var(--table3-divider-bg);
-}
-
-.table2 .row-divider {
-  border-top: 1.5px solid var(--table2-divider);
-  border-bottom: 1.5px solid var(--table2-divider);
-  background-color: var(--table3-divider-bg);
-}
-
-.table3 .row-divider {
-  border-top: 1.5px solid var(--table3-divider);
-  border-bottom: 1.5px solid var(--table3-divider);
-  background-color: var(--table3-divider-bg);
-}
-
-.table4 .row-divider {
-  border-top: 1.5px solid var(--table4-divider);
-  border-bottom: 1.5px solid var(--table4-divider);
-  background-color: var(--table4-divider-bg);
-}
-
-.table5 .row-divider {
-  border-top: 1.5px solid var(--table5-divider);
-  border-bottom: 1.5px solid var(--table5-divider);
-  background-color: var(--table6-divider-bg);
-}
-
-.table6 .row-divider {
-  border-top: 1.5px solid var(--table6-divider);
-  border-bottom: 1.5px solid var(--table6-divider);
-  background-color: var(--table5-divider-bg);
-}
 
 .row-divider {
+  border-top: 1.5px solid var(--strong-divider);
+  border-bottom: 1.5px solid var(--strong-divider);
   font-size: var(--small-head-font-size);
   font-weight: 550;
   align-content: center;
   text-align: center;
 }
+/* Row Styling */
+.table1 .row-divider {
+  background-color: var(--table1-divider-bg);
+}
+.table1 thead {
+  background-color: var(--table1-header-bg);
+}
+
+.table2 .row-divider {
+  background-color: var(--table2-divider-bg);
+}
+.table2 thead {
+  background-color: var(--table2-header-bg);
+}
+
+.table3 .row-divider {
+  background-color: var(--table3-divider-bg);
+}
+.table3 thead {
+  background-color: var(--table3-header-bg);
+}
+
+.table4 .row-divider {
+  background-color: var(--table4-divider-bg);
+}
+.table4 thead {
+  background-color: var(--table4-header-bg);
+}
+
+.table5 .row-divider {
+  background-color: var(--table5-divider-bg);
+}
+.table5 thead {
+  background-color: var(--table5-header-bg);
+}
+
+.table6 .row-divider {
+  background-color: var(--table6-divider-bg);
+}
+.table6 thead {
+  background-color: var(--table6-header-bg);
+}
+
 
 .table-title {
   font-size: var(--title-font-size);
