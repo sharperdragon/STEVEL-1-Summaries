@@ -462,7 +462,8 @@ td:last-child, th:last-child {
   border-right: none;
 }
 
-#glossary td:first-child{
+#glossary td:first-child, #Cluster_Diff td:first-child,
+#HLA-table td:first-child, #Cytokine-table td:first-child{
   font-size: 115%;
   font-weight: 550;
 }
