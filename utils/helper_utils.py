@@ -69,9 +69,7 @@ def generate_drop_nav_html():
 
         # Build HTML
         nav_html = f'''
-<nav id="float-nav-container">
-    <span>Navigate</span>
-    <div class="nav_dropdown_container">
+<div class="nav_dropdown_container">
 '''
 
         for category, links in sorted(category_map.items()):
@@ -83,8 +81,7 @@ def generate_drop_nav_html():
                 for label, link_slug in sorted(links):
                     nav_html += f'''        <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
                 nav_html += "      </div>\n"
-        nav_html += '''    </div>
-</nav>
+        nav_html += '''</div>
 '''
 
         output_path = drop_nav_dir / f"drop_nav_{slug}.html"
