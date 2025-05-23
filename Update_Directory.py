@@ -98,7 +98,7 @@ def build_all():
         nav_html = generate_nav_html(table_file, table_files)
 
         # Write navigation HTML to separate file for potential reuse
-        nav_path = NAV_DIR / f"nav_{name}.html"
+        nav_path = NAV_DIR / f"nav_{label}.html"
         write_if_changed(nav_path, nav_html)
 
         # Compose final HTML by replacing placeholders in base template
