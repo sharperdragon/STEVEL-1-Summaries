@@ -82,7 +82,7 @@ def build_all():
         elif filename.startswith("rapid_"):
             label = labelize_name(filename.replace("rapid_", "", 1)).title()
         else:
-            label = labelize_name(filename).title()
+            label = labelize_name(filename)
 
         # Load and parse table HTML content
         soup = BeautifulSoup(table_file.read_text(), "html.parser")
