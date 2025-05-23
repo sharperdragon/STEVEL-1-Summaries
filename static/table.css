@@ -328,32 +328,38 @@ html {
 
 
 .table1 .row-divider {
-  border-top: 3px solid var(--strong-divider);
+  border-top: 1.5px solid var(--strong-divider);
+  border-bottom: 1.5px solid var(--strong-divider);
   background-color: var(--table3-divider-bg);
 }
 
 .table2 .row-divider {
-  border-top: 3px solid var(--table2-divider);
+  border-top: 1.5px solid var(--table2-divider);
+  border-bottom: 1.5px solid var(--table2-divider);
   background-color: var(--table3-divider-bg);
 }
 
 .table3 .row-divider {
-  border-top: 3px solid var(--table3-divider);
+  border-top: 1.5px solid var(--table3-divider);
+  border-bottom: 1.5px solid var(--table3-divider);
   background-color: var(--table3-divider-bg);
 }
 
 .table4 .row-divider {
-  border-top: 3px solid var(--table4-divider);
+  border-top: 1.5px solid var(--table4-divider);
+  border-bottom: 1.5px solid var(--table4-divider);
   background-color: var(--table4-divider-bg);
 }
 
 .table5 .row-divider {
-  border-top: 3px solid var(--table5-divider);
+  border-top: 1.5px solid var(--table5-divider);
+  border-bottom: 1.5px solid var(--table5-divider);
   background-color: var(--table6-divider-bg);
 }
 
 .table6 .row-divider {
-  border-top: 3px solid var(--table6-divider);
+  border-top: 1.5px solid var(--table6-divider);
+  border-bottom: 1.5px solid var(--table6-divider);
   background-color: var(--table5-divider-bg);
 }
 
