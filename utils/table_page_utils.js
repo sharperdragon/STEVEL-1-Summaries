@@ -4,8 +4,9 @@ const originalTableState = new Map();
  * Toggle visibility of a given column index across all tables
  */
 function toggleColumn(colIndex) {
-  const cells = document.querySelectorAll('td[data-col="' + colIndex + '"]');
-  const currentlyHidden = Array.from(cells).every(cell => cell.dataset.hidden === "true");
+  const cells = Array.from(document.querySelectorAll('td[data-col="' + colIndex + '"]'))
+    .filter(cell => !cell.closest("tr.row-divider"));
+  const currentlyHidden = cells.every(cell => cell.dataset.hidden === "true");
   cells.forEach(cell => {
     if (currentlyHidden) {
       cell.style.opacity = "";
