@@ -36,90 +36,24 @@
   --table6-row-alt-bg: #fdefef;
   --table6-divider: #f08d8d;
 }
+
+/* Base / Global rules */
 .body {
   all: unset;
   all: revert;
 }
-.th-menu-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  height: 100%;
+
+html {
+  font-size: clamp(15px, 1.2vw + 0.5vh, 18px);
 }
 
-.th-dropdown {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 100%;
-  transform: translateX(-100%);
-  z-index: 20;
-  min-width: 50%;
-  max-width: 80%;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  white-space: nowrap;
-  top: calc(100% + 4px);
-  left: 100%;
-  transform: translateX(-100%);
-  border-radius: 6px;
-  display:none;
-}
-.th-menu-wrapper:hover .th-dropdown {
-  display: block;
-}
-.col-title {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  gap: 0.5vw;
+.responsive-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.col-title::after {
-  content: " ▶";
-  display: inline-block;
-  width: 1em;
-  text-align: center;
-  margin-left: 6px;
-  opacity: 0.8;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.th-menu-wrapper:hover .col-title::after {
-  content: "▼";
-  opacity: 1;
-}
-
-.col::after {
-  content: " ▶";
-  display: inline-block;
-  width: 1em;
-  text-align: center;
-  margin-left: 6px;
-  opacity:0.8;
-  transition: transform 0.2s ease;
-}
-
-
-.th-dropdown a {
-  display: block;
-  padding: 5px 7px;
-  text-decoration: none;
-  color: #333;
-  font-size: 0.70em;
-  text-decoration: none;
-  color: #333;
-}
-
-.th-dropdown a:hover {
-  background-color: #f0f0f0;
-}
-
+/* Table Layout & Structure */
 .table1, .table2, .table3,
 .table4, .table5, .table6 {
   width: 96%;
@@ -145,7 +79,7 @@
 }
 
 .table1 td, .table2 td, .table3 td,
-.table4 td, .table5 td, .table6 td {
+.table4, .table5, .table6 td {
   word-break: break-word;
   hyphens: auto;
 }
@@ -153,6 +87,75 @@
 .table1, .table2, .table3,
 .table4, .table5, .table6{
   border: 1px solid var(--border-color);
+}
+
+/* Dropdown / Header Column Logic */
+.th-menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  height: 100%;
+}
+
+.th-dropdown {
+  position: absolute;
+  z-index: 20;
+  min-width: 50%;
+  max-width: 80%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  display:none;
+}
+
+.th-menu-wrapper:hover .th-dropdown {
+  display: block;
+}
+
+.col-title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.5vw;
+}
+
+.col-title::after {
+  content: " ▶";
+  display: inline-block;
+  font-size:80%;
+  width: 1em;
+  text-align: center;
+  margin-left: 6px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.th-menu-wrapper:hover .col-title::after {
+  content: "▼";
+  opacity: 1;
+  font-size:80%;
+}
+
+.th-dropdown a {
+  display: block;
+  padding: 5px 7px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.70em;
+}
+
+.th-dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Table Variants */
+.table1 {
+  border: 1px solid var(--table1-divider);
 }
 
 .table1 thead th {
@@ -259,7 +262,7 @@
   background-color: var(--table6-row-alt-bg);
 }
 
-/* Autoantibodies specific layout */
+/* Specific Table Overrides */
 #autoantibodies td:nth-child(2) {
   border-right: 3px solid var(--strong-divider);
 }
@@ -275,18 +278,15 @@
   width: 20%;
 }
 
-/* Chromosome table row dividers */
 #chromosomes tr[style*="border-bottom"] td {
   border-bottom: 4px solid var(--strong-divider) !important;
 }
 
-/* Heme-Onc emphasis */
 #HemeOnc td:nth-child(1),
 #HemeOnc td:nth-child(2) {
   font-weight: 500;
 }
 
-/* Metabolism layout */
 #metabolism td:nth-child(1) {
   font-weight: 500;
   width: 18%;
@@ -304,42 +304,7 @@
   background-color: #f9f9f9;
 }
 
-/* Responsive container for horizontal scroll */
-.responsive-container {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Mobile-specific adjustments */
-@media screen and (max-width: 768px) {
-  .table1, .table2, .table3, .table4, .table5, .table6 {
-    font-size: 15px;
-  }
-
-  .table1 th, .table1 td,
-  .table2 th, .table2 td,
-  .table3 th, .table3 td {
-    padding: 6px 10px;
-  }
-
-  .table1 thead th,
-  .table2 thead th,
-  .table3 thead th {
-    font-size: 18px;
-  }
-
-  .th-dropdown a {
-    padding: 10px 12px;
-  }
-}
-
-/* Responsive font scaling globally */
-html {
-  font-size: clamp(15px, 1.2vw + 0.5vh, 18px);
-}
-
-
+/* Row Styling */
 .table1 .row-divider {
   border-top: 1.5px solid var(--strong-divider);
   border-bottom: 1.5px solid var(--strong-divider);
@@ -376,7 +341,52 @@ html {
   background-color: var(--table5-divider-bg);
 }
 
-/* Minimal, clean section navigation */
+.row-divider {
+  font-size: var(--small-head-font-size);
+  font-weight: 550;
+  align-content: center;
+  text-align: center;
+}
+
+.table-title {
+  font-size: var(--header-font-size);
+  font-weight: 600;
+  text-align: center;
+  margin: 20px auto 10px auto;
+  color: var(--text-color);
+  font-family: var(--font);
+}
+
+/* For tables that want first column centered and nowrap */
+.row1-center td:first-child {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .table1, .table2, .table3, .table4, .table5, .table6 {
+    font-size: 15px;
+  }
+
+  .table1 th, .table1 td,
+  .table2 th, .table2 td,
+  .table3 th, .table3 td {
+    padding: 6px 10px;
+  }
+
+  .table1 thead th,
+  .table2 thead th,
+  .table3 thead th {
+    font-size: 18px;
+  }
+
+  .th-dropdown a {
+    padding: 10px 12px;
+  }
+}
+
+/* Section Navigation */
 .section-nav {
   display: flex;
   flex-wrap: wrap;
@@ -409,31 +419,4 @@ html {
   background-color: #e7f2fb;
   color: #1d4e89;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-
-.row-divider {
-  font-size: var(--small-head-font-size);
-  font-weight: 550;
-  align-content: center;
-  text-align: center;
-}
-
-.table-title {
-  font-size: var(--header-font-size);
-  font-weight: 600;
-  text-align: center;
-  margin: 20px auto 10px auto;
-  color: var(--text-color);
-  font-family: var(--font);
-}
-
-/* For tables that want first column centered and nowrap */
-.row1-center td:first-child {
-  text-align: center;
-  white-space: nowrap;
-}
-
-.row1-center {
-  font-weight: auto;
 }
