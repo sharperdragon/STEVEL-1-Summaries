@@ -1,6 +1,6 @@
 {
   "generated": "index.html",
-  "updated": "2025-05-22T16:08:05.979909",
+  "updated": "2025-05-22T21:37:00.219672",
   "included_tables": [
     "Associations",
     "Autoantibodies",
@@ -8,6 +8,7 @@
     "Chromosomes",
     "Cytokines",
     "Findings",
+    "Glossary",
     "HLA",
     "Hemeonc",
     "Lab-Tests",

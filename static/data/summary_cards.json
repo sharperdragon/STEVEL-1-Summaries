@@ -5,6 +5,11 @@
     "desc": "A high-yield summary table for cd markers."
   },
   {
+    "name": "Glossary",
+    "file": "glossary.html",
+    "desc": "A high-yield summary table for glossary."
+  },
+  {
     "name": "HLA",
     "file": "hla.html",
     "desc": "A high-yield summary table for hla."
