@@ -1,5 +1,13 @@
 const originalTableState = new Map();
 
+function attachCellClickListeners() {
+  document.querySelectorAll("td").forEach(cell => {
+    cell.addEventListener("click", () => {
+      cell.style.opacity = "";
+    });
+  });
+}
+
 /**
  * Toggle visibility of a given column index across all tables
  */
@@ -38,6 +46,7 @@ function resetColumns() {
       cachedRows[i].forEach(row => tbody.appendChild(row.cloneNode(true)));
     });
   });
+  attachCellClickListeners();
 }
 
 function filterRowsByInput(inputId, rowSelector) {
@@ -77,6 +86,7 @@ function shuffleTableRows(table) {
     tbody.innerHTML = "";
     rows.forEach(row => tbody.appendChild(row));
   });
+  attachCellClickListeners();
 }
 
 // Add shuffle button listener for all tables on the page
@@ -115,12 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Add click-to-restore on individual td cells
-  document.querySelectorAll("td").forEach(cell => {
-    cell.addEventListener("click", () => {
-      cell.style.opacity = "";
-    });
-  });
+  attachCellClickListeners();
 });
 
 document.querySelectorAll(".th-dropdown a").forEach(link => {
