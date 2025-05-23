@@ -35,6 +35,8 @@
   --table6-row-bg: #ffffff;
   --table6-row-alt-bg: #fdefef;
   --table6-divider: #f08d8d;
+
+  --inside-border: #606060b9;
 }
 
 /* Base / Global rules */
@@ -424,7 +426,26 @@ html {
   body:not(.mobile) table td {
     padding-left: 5px;
     padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
+}
 
-  
+.table1 td, .table1 th,
+.table2 td, .table2 th,
+.table3 td, .table3 th,
+.table4 td, .table4 th,
+.table5 td, .table5 th,
+.table6 td, .table6 th {
+  border-left: 1px solid var(--inside-border);
+  border-right: 1px solid var(--inside-border);
+  border-top: none;
+  border-bottom: none;
+}
+
+td:first-child, th:first-child {
+  border-left: none;
+}
+td:last-child, th:last-child {
+  border-right: none;
 }
