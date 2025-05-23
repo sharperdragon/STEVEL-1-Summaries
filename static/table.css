@@ -69,7 +69,9 @@
   border-radius: 6px;
   display:none;
 }
-
+.th-dropdown:hover {
+  display:block;
+}
 .th-title {
   position: relative;
   display: inline-flex;
@@ -102,7 +104,7 @@
 
 
 .th-dropdown a {
-  display: block;
+  display: none;
   padding: 5px 7px;
   text-decoration: none;
   color: #333;
@@ -113,6 +115,7 @@
 
 .th-dropdown a:hover {
   background-color: #f0f0f0;
+  display: block;
 }
 
 .table1, .table2, .table3,
