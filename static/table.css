@@ -251,8 +251,11 @@
 #autoantibodies td:nth-child(2) {
   border-right: 3px solid var(--strong-divider);
 }
+#autoantibodies td:nth-child(1) {
+  width: 25%;
+}
 #autoantibodies td:nth-child(4) {
-  width: 30%;
+  width: 20%;
 }
 #autoantibodies td:nth-child(1),
 #autoantibodies td:nth-child(3) {
