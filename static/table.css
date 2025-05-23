@@ -50,25 +50,23 @@
 }
 
 .th-dropdown {
-  display: show;
   position: absolute;
-  top: calc(100% - 1px);
-  right: -10px;
-  left: auto;
-  transform: translateX(0%);
-  background-color: #fff;
-  border: 1px solid #ccc;
+  top: calc(100% + 4px);
+  left: 100%;
+  transform: translateX(-100%);
   z-index: 20;
   min-width: 110px;
   max-width: 180px;
-  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   padding: 0;
-  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
 
 .th-title {
+  position: relative;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
