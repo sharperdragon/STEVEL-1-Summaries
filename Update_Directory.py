@@ -7,7 +7,7 @@ from utils.html_utils import (
     annotate_table_columns,
     generate_nav_html,
 )
-from utils.helper_utils import generate_label_and_slug
+from utils.helper_utils import generate_label_and_slug, generate_drop_nav_html
 from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
 from datetime import datetime
 
@@ -67,6 +67,9 @@ def build_all():
     table_files_all = sorted(TABLE_DIR.glob("*"))
     table_files = [f for f in table_files_all if f.name.endswith(TABLE_SUFFIX)]
 
+    # Generate all drop navs once
+    generate_drop_nav_html()
+
     # Loop over each table file to build individual pages
     for table_file in table_files:
         label, slug = generate_label_and_slug(table_file.name)
@@ -88,12 +91,17 @@ def build_all():
         nav_path = NAV_DIR / f"nav_{slug}.html"
         write_if_changed(nav_path, nav_html)
 
+        # Load corresponding drop nav HTML
+        drop_nav_path = Path(f"utils/navs/drop_navs/drop_nav_{slug}.html")
+        drop_nav_html = drop_nav_path.read_text() if drop_nav_path.exists() else ""
+
         # Compose final HTML by replacing placeholders in base template
         final_html = (
             base_html
             .replace("{{PAGE_TITLE}}", label)
             .replace("{{NAV_CONTENT}}", nav_html)
             .replace("{{TABLE_CONTENT}}", table_html)
+            .replace("{{DROP_NAV_CONTENT}}", drop_nav_html)
         )
 
         # Write the generated HTML page to output directory

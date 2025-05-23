@@ -16,21 +16,46 @@
     Home
   </a>
 </div>
+<div>
+<nav id="float-nav-container">
+  <div id="drop_nav_floating">
+  <div id="page_nav_selector">
+    <span>Navigate</span>
+    <div class="nav_dropdown_container">
+      <a class="nav_link_tab" href="../pages/glossary.html">Glossary</a>
+      <div class="nav_category_group"><div class="nav_category_title">Immune</div>
+        <a class="nav_link_tab" href="../pages/autoantibodies.html">Autoantibodies</a>
+        <a class="nav_link_tab" href="../pages/cd-markers.html">CD Markers</a>
+        <a class="nav_link_tab" href="../pages/cytokines.html">Cytokines</a>
+      </div>
+      <div class="nav_category_group"><div class="nav_category_title">Misc</div>
+        <a class="nav_link_tab" href="../pages/associations.html">Associations</a>
+        <a class="nav_link_tab" href="../pages/chromosomes.html">Chromosomes</a>
+        <a class="nav_link_tab" href="../pages/findings.html">Findings</a>
+        <a class="nav_link_tab" href="../pages/hemeonc.html">Hemeonc</a>
+        <a class="nav_link_tab" href="../pages/lab-tests.html">Lab-Tests</a>
+        <a class="nav_link_tab" href="../pages/metabolism.html">Metabolism</a>
+        <a class="nav_link_tab" href="../pages/presentations.html">Presentations</a>
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
 <nav style="text-align: center; margin-bottom: 20px;">
   <nav style='margin: 10px 0;'>
 <div style="text-align: center;"><a href="../pages/cd-markers.html" class="nav-link">CD Markers</a> | <a href="../pages/glossary.html" class="nav-link">Glossary</a> | <a href="../pages/lab-tests.html" class="nav-link">Lab-Tests</a> | <a href="../pages/autoantibodies.html" class="nav-link">Autoantibodies</a> | <a href="../pages/chromosomes.html" class="nav-link">Chromosomes</a> | <a href="../pages/cytokines.html" class="nav-link">Cytokines</a> | <a href="../pages/hemeonc.html" class="nav-link">Hemeonc</a> | <a href="../pages/metabolism.html" class="nav-link">Metabolism</a> | <a href="../pages/associations.html" class="nav-link">Associations</a> | <a href="../pages/findings.html" class="nav-link">Findings</a> | <a href="../pages/presentations.html" class="nav-link">Presentations</a></div>
 </nav>
 
 </nav>
+</div>
 
-
-  <main class="responsive-container" style="margin: 30px 40px auto;;">
-    <!-- Utility Toolbar -->
-    <div class="utility-toolbar" style="margin-bottom: 15px;">
-      <button id="reset-button">Reset</button>
-      <button id="shuffle-button">Shuffle Rows</button>
-    </div>
-    <meta content="false" name="summary-card"/>
+<main class="responsive-container" style="margin: 30px 40px auto;;">
+  <!-- Utility Toolbar -->
+  <div class="utility-toolbar" style="margin-bottom: 15px;">
+    <button id="reset-button">Reset</button>
+    <button id="shuffle-button">Shuffle Rows</button>
+  </div>
+  <meta content="false" name="summary-card"/>
 <div class="table-container">
 <table class="table1" id="HLA-table">
 <thead>
@@ -114,16 +139,16 @@
 </table>
 </div>
 
-  </main>
+</main>
 
-    <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
-    <form id="suggestionForm" style="margin-top: 1em;">
-      <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
-            style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
-      <button type="submit" style="padding: 6px 12px;">Send</button>
-    </form>
-    <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
-  </footer>
+  <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+  <form id="suggestionForm" style="margin-top: 1em;">
+    <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
+          style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
+    <button type="submit" style="padding: 6px 12px;">Send</button>
+  </form>
+  <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
+</footer>
 </body>
 
 <script src="/STEVEL-1-Summaries/utils/table_page_utils.js"></script>
