@@ -49,14 +49,14 @@
 .th-dropdown {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 2px);
   right: 0;
   left: auto;
-  transform: none;
+  transform: translateX(0%);
   background-color: #fff;
   border: 1px solid #ccc;
   z-index: 20;
-  min-width: 120px;
+  min-width: 140px;
   max-width: 180px;
   padding: 4px 0;
   border-radius: 6px;
@@ -80,12 +80,14 @@
 }
 
 .th-menu-wrapper:hover .th-title::after {
-  content: " ▼";
+  content: "▼";
 }
 
 .th-title::after {
   content: " ▶";
   display: inline-block;
+  width: 1em;
+  text-align: center;
   margin-left: 6px;
   transition: transform 0.2s ease;
 }

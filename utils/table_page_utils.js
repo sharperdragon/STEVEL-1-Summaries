@@ -143,7 +143,7 @@ document.querySelectorAll(".th-menu-wrapper").forEach(wrapper => {
   const hideDropdown = () => {
     hideTimeout = setTimeout(() => {
       dropdown.style.display = "none";
-    }, 500); // 1 second delay
+    }, 400); //
   };
 
   wrapper.addEventListener("mouseenter", showDropdown);
