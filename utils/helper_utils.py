@@ -68,21 +68,19 @@ def generate_drop_nav_html():
             category_map.setdefault(category, []).append((other_label, other_slug))
 
         # Build HTML
-        nav_html = f'''
-<div class="nav_dropdown_container">
-'''
+        nav_html = '<div class="nav_dropdown_container">\n'
 
         for category, links in sorted(category_map.items()):
             if category == "Glossary":
                 for label, link_slug in sorted(links):
-                    nav_html += f'''      <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
+                    nav_html += f'''  <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
             else:
-                nav_html += f'''      <div class="nav_dropdown_container nav_category_title">{category}\n'''
+                nav_html += f'''  <div class="nav_dropdown_container" id="category_title">{category}\n'''
                 for label, link_slug in sorted(links):
-                    nav_html += f'''        <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
-                nav_html += "      </div>\n"
-        nav_html += '''</div>
-'''
+                    nav_html += f'''    <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
+                nav_html += "  </div>\n"
+
+        nav_html += '</div>\n'
 
         output_path = drop_nav_dir / f"drop_nav_{slug}.html"
         with open(output_path, "w", encoding="utf-8") as f:

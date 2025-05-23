@@ -730,101 +730,60 @@ nav {
   font-weight: bold;
 }
 
+
+/* ===========================
+   Floating Navigation Dropdown (Refactored)
+=========================== */
 #float-nav-container {
-    position: fixed;
-    width: 100px;
-    height: auto;
-    top: 2vw;
-    right: 20px;
-    z-index: 1000;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-}
-#drop_nav_floating:hover {
-  opacity: 1;
-}
-
-
-.nav_category_group {
-  padding: 6px 0;
-  border-top: 1px solid #ddd;
-}
-
-.nav_category_title {
-  font-weight: 600;
-  padding: 6px 10px;
-  font-size: 0.9em;
-  color: #334;
-  background-color: #f0f5ff;
-}
-
-#drop_nav_floating {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 80px;
-  height: 22px;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: auto;
   background-color: #f9fbff;
   border: 2px solid #cee1fe;
   border-radius: 8px;
-  padding: 4px 6px;
+  padding: 4px 10px;
   font-size: 90%;
   opacity: 0.6;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 200;
+  z-index: 1000;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
-#drop_nav_floating:hover {
+#float-nav-container:hover {
   opacity: 1;
   background-color: #e8f0ff;
-  border-left: none;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
-#drop_nav_floating span {
-  font-weight: bold;
-  pointer-events: none;
-}
-
-.nav_dropdown_container {
+/* Dropdown container inside float-nav */
+#float-nav-container > .nav_dropdown_container {
   display: none;
   position: absolute;
-  top: -2px;
-  right: 85px;
+  top: 100%;
+  right: 0;
+  margin-top: 2px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  padding: 0px;
+  background-color: white;
+  border: 1px solid #d0e3ff;
   border-radius: 8px;
-  z-index: 300;
+  padding: 4px 0;
+  z-index: 1100;
   flex-direction: column;
-  gap: 0;
-  object-fit: contain;
+  min-width: 240px;
 }
 
-#drop_nav_floating:hover .nav_dropdown_container {
+#float-nav-container:hover > .nav_dropdown_container {
   display: flex;
-  border: 1px solid #d0e3ff;
-  border-top-right-radius: 0;
-  overflow: hidden;
 }
 
 .nav_link_tab {
-  position: relative;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: #ffffff;
+  display: block;
+  text-align: left;
   padding: 10px 14px;
-  border-radius: 0px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  box-shadow: 0 -px 8px rgba(0, 0, 0, 0.1);
-  margin: 0.2px 0;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
+  font-size: 15px;
+  background-color: #fff;
   color: #000;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .nav_link_tab:hover {
@@ -840,4 +799,74 @@ nav {
   background-color: #b9cdf9 !important;
   color: #003366;
   font-weight: bold;
+}
+
+/* Grouping */
+.nav_category_title {
+  font-weight: 600;
+  padding: 6px 10px;
+  font-size: 0.9em;
+  color: #334;
+  background-color: #f0f5ff;
+  border-top: 1px solid #ddd;
+}
+
+#float-nav-container{
+  display:flex;
+  overflow:visible;
+}
+#float-nav-button-container {
+  display:flex;
+}
+.nav_dropdown_container {
+  display: none;
+  overflow: hidden;
+}
+.nav_dropdown_container#category_title:hover {
+  display: none;
+  overflow: hidden;
+}
+.nav_dropdown_container:hover #category_title {
+  display: flex;
+  overflow: hidden;
+}
+.nav_dropdown_container .nav_link_tab {
+  display:none;
+}
+
+.nav_dropdown_container #category_title > .nav_dropdown_container #category_title > .nav_link_tab  {
+  display: flex;
+}
+
+
+#float-nav-button-container > .nav_dropdown_container  {
+  display:none
+}
+
+#float-nav-button-container:hover > .nav_dropdown_container,
+#float-nav-button-container > .nav_dropdown_container:hover{
+  display:flex
+}
+
+
+#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container  {
+  display:none
+}
+#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container #category_title  {
+  display:none
+}
+
+#float-nav-button-container > .nav_dropdown_container:hover > .nav_dropdown_container:hover #category_title  {
+  display:flex
+}
+#float-nav-button-container > .nav_dropdown_container:hover > .nav_dropdown_container:hover #category_title  {
+  display:flex
+}
+
+
+#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container #category_title > .nav_link_tab {
+  display:none
+}
+#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container#category_title:hover > .nav_link_tab {
+  display:flex
 }
