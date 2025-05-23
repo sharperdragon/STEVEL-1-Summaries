@@ -734,139 +734,61 @@ nav {
 /* ===========================
    Floating Navigation Dropdown (Refactored)
 =========================== */
-#float-nav-container {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  width: auto;
-  background-color: #f9fbff;
-  border: 2px solid #cee1fe;
-  border-radius: 8px;
-  padding: 4px 10px;
-  font-size: 90%;
-  opacity: 0.6;
-  z-index: 1000;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
+#float-nav-button-container {
+  position: relative;
 }
 
-#float-nav-container:hover {
-  opacity: 1;
-  background-color: #e8f0ff;
-}
-
-/* Dropdown container inside float-nav */
-#float-nav-container > .nav_dropdown_container {
+#float-nav-button-container > .nav_dropdown_container {
   display: none;
   position: absolute;
   top: 100%;
-  right: 0;
-  margin-top: 2px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  left: 0;
+  background: white;
+  padding: 8px;
   border: 1px solid #d0e3ff;
   border-radius: 8px;
-  padding: 4px 0;
-  z-index: 1100;
+  z-index: 999;
+  display: flex;
   flex-direction: column;
+  gap: 6px;
   min-width: 240px;
 }
 
-#float-nav-container:hover > .nav_dropdown_container {
+/* Reveal the dropdown on hover */
+#float-nav-button-container:hover > .nav_dropdown_container {
   display: flex;
 }
 
-.nav_link_tab {
-  display: block;
-  text-align: left;
-  padding: 10px 14px;
-  font-size: 15px;
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+/* Each nav_category (Immune, Misc, etc.) */
+.nav_category {
+  position: relative;
+  background-color: #eef4fb;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.nav_link_tab:hover {
-  background-color: #e0ecff;
+.nav_category:hover {
+  background-color: #d8eaff;
 }
 
-.nav_link_tab:active {
-  background-color: #d0dcf5;
-  transform: scale(0.96);
-}
-
-.selected_tab {
-  background-color: #b9cdf9 !important;
-  color: #003366;
-  font-weight: bold;
-}
-
-/* Grouping */
-.nav_category_title {
-  font-weight: 600;
-  padding: 6px 10px;
-  font-size: 0.9em;
-  color: #334;
-  background-color: #f0f5ff;
-  border-top: 1px solid #ddd;
-}
-
-#float-nav-container{
-  display:flex;
-  overflow:visible;
-}
-#float-nav-button-container {
-  display:flex;
-}
-.nav_dropdown_container {
+/* The submenu under each category */
+.nav_submenu {
   display: none;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: white;
+  border: 1px solid #d0e3ff;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 180px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
-.nav_dropdown_container#category_title:hover {
-  display: none;
-  overflow: hidden;
-}
-.nav_dropdown_container:hover #category_title {
+
+.nav_category:hover > .nav_submenu {
   display: flex;
-  overflow: hidden;
-}
-.nav_dropdown_container .nav_link_tab {
-  display:none;
-}
-
-.nav_dropdown_container #category_title > .nav_dropdown_container #category_title > .nav_link_tab  {
-  display: flex;
-}
-
-
-#float-nav-button-container > .nav_dropdown_container  {
-  display:none
-}
-
-#float-nav-button-container:hover > .nav_dropdown_container,
-#float-nav-button-container > .nav_dropdown_container:hover{
-  display:flex
-}
-
-
-#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container  {
-  display:none
-}
-#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container #category_title  {
-  display:none
-}
-
-#float-nav-button-container > .nav_dropdown_container:hover > .nav_dropdown_container:hover #category_title  {
-  display:flex
-}
-#float-nav-button-container > .nav_dropdown_container:hover > .nav_dropdown_container:hover #category_title  {
-  display:flex
-}
-
-
-#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container #category_title > .nav_link_tab {
-  display:none
-}
-#float-nav-button-container > .nav_dropdown_container > .nav_dropdown_container#category_title:hover > .nav_link_tab {
-  display:flex
 }
