@@ -437,8 +437,8 @@ html {
 .table4 td, .table4 th,
 .table5 td, .table5 th,
 .table6 td, .table6 th {
-  border-left: 1px solid var(--inside-border);
-  border-right: 1px solid var(--inside-border);
+  border-left: 0.7px solid var(--inside-border);
+  border-right: 0.7px solid var(--inside-border);
   border-top: none;
   border-bottom: none;
 }
