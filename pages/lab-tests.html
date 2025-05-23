@@ -28,14 +28,19 @@
     <!-- Utility Toolbar -->
     <div class="utility-toolbar" style="margin-bottom: 15px;">
       <button id="reset-button">Reset</button>
-      <button id="shuffle-button" style="display:none;">Shuffle Rows</button>
+      <button id="shuffle-button">Shuffle Rows</button>
     </div>
     <meta content="true" name="summary-card"/>
 <div class="responsive-container">
 <table class="table6" id="lab-tests">
 <thead>
 <tr>
-<th class="table-title" colspan="3" data-col="0" style="text-align: center;">
+<th class="table-title" colspan="3" data-col="0" style="text-align: center;"></th></tr>
+<tr>
+<th data-col="0"><div class="th-menu-wrapper"><span class="th-title">Test</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
+<th data-col="1"><div class="th-menu-wrapper"><span class="th-title">Purpose</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
+<th data-col="2"><div class="th-menu-wrapper"><span class="th-title">Notes</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Hide Column</a></div></div></th>
+</tr>
 <tbody>
 <tr>
 <td data-col="0">Troponin I/T</td>
@@ -252,7 +257,7 @@
 <td data-col="1">Detects anti-RBC antibodies in serum</td>
 <td data-col="2">Used in prenatal testing and blood transfusion compatibility</td>
 </tr>
-</tbody></th></tr></thead></table></div>
+</tbody></thead></table></div>
   </main>
 
     <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
