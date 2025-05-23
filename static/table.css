@@ -351,28 +351,34 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin: 20px auto 5px auto;
-  padding: 10px;
-  background-color: #fffbfbf7;
-  border-radius: 5px;
+  gap: 14px;
+  margin: 24px auto 8px auto;
+  padding: 14px 16px;
+  background: linear-gradient(to bottom, #fefefe, #f3f6f9);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
   font-size: 0.95em;
   max-width: 95%;
 }
 
 .section-nav a {
   text-decoration: none;
+  text-align: center;
   color: #336699;
   border: 1px solid #ccd9e0;
-  padding: 3px 6px;
-  border-radius: 4px;
-  min-width: 40px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  min-width: 44px;
+  background-color: #fff;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .section-nav a:hover {
-  background-color: #e5eff7;
+  background-color: #e7f2fb;
   color: #1d4e89;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 
