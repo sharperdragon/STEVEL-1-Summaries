@@ -110,7 +110,8 @@
   background-color: #f0f0f0;
 }
 
-.table1, .table2, .table3, .table4, .table5, .table6 {
+.table1, .table2, .table3,
+.table4, .table5, .table6 {
   width: 96%;
   margin: 2vh auto;
   border-collapse: separate;
@@ -133,12 +134,14 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.table1 td, .table2 td, .table3 td {
+.table1 td, .table2 td, .table3 td,
+.table4 td, .table5 td, .table6 td {
   word-break: break-word;
   hyphens: auto;
 }
 
-.table1 {
+.table1, .table2, .table3,
+.table4, .table5, .table6{
   border: 1px solid var(--border-color);
 }
 
