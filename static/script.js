@@ -225,6 +225,24 @@ function setupSuggestionBox() {
     }
   });
 }
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+      const answer = entry.target.querySelector('.answer');
+      if (answer && !answer.classList.contains("revealed")) {
+        answer.classList.add("revealed");
+      }
+    }
+  });
+}, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+});
+
+document.querySelectorAll('.carousel-item').forEach(item => {
+  observer.observe(item);
+});
 
 /*** ─── UTILS / INIT ───────────────────────────────────────── **/
 document.addEventListener("DOMContentLoaded", () => {
@@ -236,4 +254,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Suggestions box support
   setupSuggestionBox();
+
+  const transitionStyle = document.createElement("style");
+  transitionStyle.innerHTML = `
+    .carousel-item .answer {
+      display: inline-block;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .carousel-item .answer.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  `;
+  document.head.appendChild(transitionStyle);
 });
