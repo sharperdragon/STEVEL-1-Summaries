@@ -69,8 +69,7 @@ def generate_drop_nav_html():
 
         # Build HTML
         nav_html = f'''
-<div id="drop_nav_floating">
-  <div id="page_nav_selector">
+<div id="page_nav_selector">
     <span>Navigate</span>
     <div class="nav_dropdown_container">
 '''
@@ -86,7 +85,6 @@ def generate_drop_nav_html():
                     nav_html += f'''        <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
                 nav_html += "      </div>\n"
         nav_html += '''    </div>
-  </div>
 </div>
 '''
 
