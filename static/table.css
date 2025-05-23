@@ -72,7 +72,7 @@
 .th-dropdown:hover {
   display:block;
 }
-.th-title {
+.col-title {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -80,19 +80,19 @@
   gap: 0.5vw;
 }
 
-.th-menu-wrapper:hover .th-title::after {
+.th-menu-wrapper:hover .col-title::after {
   content: "▼";
   opacity:0.8;
   transition: opacity 0.2s ease;
 }
 
-.th-menu-wrapper:hover .th-title::after {
+.th-menu-wrapper:hover col::after {
   content: "▼";
   opacity:1;
   transition: opacity 0.2s ease;
 }
 
-.th-title::after {
+.col::after {
   content: " ▶";
   display: inline-block;
   width: 1em;

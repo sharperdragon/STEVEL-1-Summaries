@@ -3,10 +3,9 @@ from bs4 import BeautifulSoup
 def annotate_table_columns(soup: BeautifulSoup):
     """
     Adds data-col attributes to <td> and <th> elements for column-based control.
-    Injects a dropdown toggle menu into <th> headers (excluding colspans and limiting .th-title to first multi-colspan row).
+    Injects a dropdown toggle menu into <th> headers (excluding colspans).
     """
-    tables_with_title = set()
-
+    assigned_table_title = False
     for row in soup.find_all("tr"):
         # Apply .row-divider class to <td> with colspan outside thead
         if not row.find_parent("thead"):
@@ -16,28 +15,32 @@ def annotate_table_columns(soup: BeautifulSoup):
                     if "row-divider" not in existing_classes:
                         cell["class"] = existing_classes + ["row-divider"]
 
+        if not assigned_table_title and row.find("th", colspan=True):
+            for cell in row.find_all("th"):
+                if cell.has_attr("colspan"):
+                    existing_classes = cell.get("class", [])
+                    if "table-title" not in existing_classes:
+                        cell["class"] = existing_classes + ["table-title"]
+            assigned_table_title = True
+
         cells = row.find_all(["td", "th"])
         for idx, cell in enumerate(cells):
             cell["data-col"] = str(idx)
 
-            if cell.name == "th":
-                colspan = int(cell.get("colspan", "1"))
-                if colspan == 1:
-                    continue  # skip single-column headers
-
-                parent_table = cell.find_parent("table")
-                table_id = id(parent_table)
-
-                # Only one th-title per table
-                if table_id in tables_with_title:
-                    continue
-                tables_with_title.add(table_id)
-
+            if cell.name == "th" and not cell.has_attr("colspan"):
                 clean_text = cell.get_text(strip=True)
                 cell.clear()
 
+                parent_table = cell.find_parent("table")
+                table_class = ""
+                if parent_table and parent_table.has_attr("class"):
+                    for cls in parent_table["class"]:
+                        if cls in {"table1", "table2", "table3"}:
+                            table_class = cls
+                            break
+
                 menu = soup.new_tag("div", **{"class": "th-menu-wrapper"})
-                label = soup.new_tag("span", **{"class": "th-title"})
+                label = soup.new_tag("span", **{"class": "col-title"})
                 label.string = clean_text
 
                 dropdown = soup.new_tag("div", **{"class": "th-dropdown", "display": "none"})
@@ -45,6 +48,7 @@ def annotate_table_columns(soup: BeautifulSoup):
                 action["class"] = "col-toggle"
                 action.string = "Hide Column"
                 dropdown.append(action)
+
 
                 menu.append(label)
                 menu.append(dropdown)
