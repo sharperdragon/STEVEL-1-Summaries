@@ -114,7 +114,8 @@ html {
   white-space: nowrap;
   display:none;
   top: 88%;
-  left: 37%;
+  left: 52%;
+  border-radius:6px;
 }
 
 .th-menu-wrapper:hover .th-dropdown {
