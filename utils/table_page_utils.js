@@ -44,6 +44,7 @@ function filterRowsByInput(inputId, rowSelector) {
   if (!input) return;
   const query = input.value.toLowerCase();
   document.querySelectorAll(rowSelector).forEach(row => {
+    if (row.closest("tfoot") || row.classList.contains("section-divider")) return;
     const text = row.textContent.toLowerCase();
     row.style.opacity = text.includes(query) ? "" : "0";
   });
@@ -57,7 +58,7 @@ function shuffleTableRows(table) {
   const tbodies = table.querySelectorAll("tbody");
   tbodies.forEach(tbody => {
     const rows = Array.from(tbody.querySelectorAll("tr"))
-      .filter(row => !row.classList.contains("section-divider"));
+      .filter(row => !row.classList.contains("section-divider") && !row.closest("tfoot"));
     const sectionRows = Array.from(tbody.querySelectorAll("tr.section-divider"));
 
     // Fisher-Yates shuffle
@@ -71,7 +72,7 @@ function shuffleTableRows(table) {
       row.style.display = "none";
     });
 
-    // Clear and re-append only shuffled rows
+    // Clear tbody and re-append only shuffled rows
     tbody.innerHTML = "";
     rows.forEach(row => tbody.appendChild(row));
   });
