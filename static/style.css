@@ -505,10 +505,12 @@ div#selection_buttons {
 
 .buzz-track {
   display: inline-block;
+    font-size: 1rem; /* or 18px, etc. */
   white-space: nowrap;
   min-width: 100%;
   animation: scroll-buzz var(--scroll-duration, 40s) linear infinite;
 }
+
 
 .buzz-track:hover {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);

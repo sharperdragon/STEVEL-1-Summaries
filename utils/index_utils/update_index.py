@@ -83,23 +83,40 @@ def build_index(build_json=True):
         "Metabolism": "Includes glycolysis, glycogen storage, and fatty acid oxidation disorders.",
         "Hemeonc": "Summarizes hematologic malignancies, anemias, and blood-related findings.",
         "Chromosomes": "Genetic disorders and syndromes organized by chromosome number.",
-        "Autoantibodies": "Autoimmune diseases and their associated antibodies for diagnosis.",
-        "Rapid Associations": "Rapid-fire 'most common' and high-yield Step 1 associations."
+        "Autoantibodies": "Autoimmune diseases and their associated antibodies.",
+        "Glossary": "Relevant terms across pathology, genetics, and neuro — clearly explained with examples.",
+        "Lab Tests": "High-yield lab tests for diagnosis and management, including tumor markers, infection assays, and metabolic workups.",
+        "Rapid Associations": "Rapid-fire 'most common' and high-yield exam associations.",
+        "Rapid Presentations": "Clinical buzzwords and presentation patterns linked to classic diagnoses — optimized for fast recall.",
+        "Rapid Findings": "Diagnostic clues and lab/physical findings tied to conditions, covering exam associations."
     }
+    from bs4 import BeautifulSoup
     for entry in manifest_sorted:
         try:
             label = entry["name"]
             href = f'pages/{entry["file"]}'
         except KeyError as e:
             raise ValueError(f"Malformed entry in manifest: {entry}") from e
+
         nav_links.append(f'<a href="{href}" class="home-nav-link">{label}</a>')
-        desc = card_descriptions.get(label, f"A high-yield summary table for {label.lower()}.")
-        summary_cards.append(
-            f'''<a class="summary-card" href="{href}">
+
+        # Check if table.html file explicitly includes summary-card meta
+        page_path = PROJECT_ROOT / href
+        include_card = False
+        if page_path.exists():
+            soup = BeautifulSoup(page_path.read_text(encoding="utf-8"), "html.parser")
+            meta = soup.find("meta", attrs={"name": "summary-card"})
+            if meta and meta.get("content", "").lower() == "true":
+                include_card = True
+
+        if include_card:
+            desc = card_descriptions.get(label, f"A high-yield summary table for {label.lower()}.")
+            summary_cards.append(
+                f'''<a class="summary-card" href="{href}">
   <div class="card-title">{label}</div>
   <div class="card-desc">{desc}</div>
 </a>'''
-        )
+            )
 
     nav_html = (
         '<nav style="margin: 20px 0 40px 0; text-align: center; font-size: 0.9em;">\n'

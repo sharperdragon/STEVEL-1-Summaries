@@ -106,27 +106,28 @@ function setupRapidCarousel() {
 
   rotate();
 
-  // Automatically show answer after 8 seconds if not hovered
-  let answerShown = false;
-  const currentItem = items[index];
-  const answerDiv = currentItem.querySelector(".answer");
+  // Automatically show answer after 8 seconds if not hovered, for all carousel items
+  items.forEach(item => {
+    const answer = item.querySelector(".answer");
+    if (!answer) return;
 
-  if (answerDiv) {
-    currentItem.addEventListener("mouseenter", () => {
-      answerShown = true;
-      answerDiv.style.opacity = "1";
+    let hovered = false;
+
+    item.addEventListener("mouseenter", () => {
+      hovered = true;
+      answer.style.opacity = "1";
     });
 
-    currentItem.addEventListener("mouseleave", () => {
-      answerShown = false;
+    item.addEventListener("mouseleave", () => {
+      hovered = false;
     });
 
     setTimeout(() => {
-      if (!answerShown) {
-        answerDiv.style.opacity = "1";
+      if (!hovered) {
+        answer.style.opacity = "1";
       }
     }, 8000);
-  }
+  });
 
   setInterval(rotate, 9600); // Rotate every 9 seconds
 }

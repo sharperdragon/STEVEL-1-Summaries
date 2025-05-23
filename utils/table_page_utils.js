@@ -1,3 +1,5 @@
+const originalTableState = new Map();
+
 /**
  * Toggle visibility of a given column index across all tables
  */
@@ -16,11 +18,24 @@ function toggleColumn(colIndex) {
 }
 
 /**
- * Show all columns by resetting inline styles
+ * Reset visibility styles and restore original row order for all tables.
  */
 function resetColumns() {
   document.querySelectorAll('td, th').forEach(cell => {
     cell.style.opacity = '';
+  });
+
+  document.querySelectorAll("table").forEach((table, tableIndex) => {
+    const tbodies = table.querySelectorAll("tbody");
+    const cachedRows = originalTableState.get(tableIndex);
+
+    if (!cachedRows) return;
+
+    tbodies.forEach((tbody, i) => {
+      if (!cachedRows[i]) return;
+      tbody.innerHTML = "";
+      cachedRows[i].forEach(row => tbody.appendChild(row.cloneNode(true)));
+    });
   });
 }
 
@@ -64,14 +79,27 @@ function shuffleTableRows(table) {
 
 // Add shuffle button listener for all tables on the page
 document.addEventListener("DOMContentLoaded", () => {
-  const shuffleBtn = document.getElementById("shuffleButton");
+  const shuffleBtn = document.getElementById("shuffle-button");
   if (shuffleBtn) {
     shuffleBtn.addEventListener("click", () => {
       document.querySelectorAll("table").forEach(table => shuffleTableRows(table));
     });
   }
 
-  const resetBtn = document.getElementById("resetButton");
+  // Cache original table row order at load time to support reset
+  document.querySelectorAll("table").forEach((table, tableIndex) => {
+    const tbodies = table.querySelectorAll("tbody");
+    const cachedTbodyRows = [];
+
+    tbodies.forEach(tbody => {
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      cachedTbodyRows.push(rows.map(row => row.cloneNode(true)));
+    });
+
+    originalTableState.set(tableIndex, cachedTbodyRows);
+  });
+
+  const resetBtn = document.getElementById("reset-button");
   if (resetBtn) {
     resetBtn.addEventListener("click", () => {
       resetColumns();
