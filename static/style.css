@@ -646,9 +646,9 @@ nav {
 }
 
 #page_nav_selector {
-  position: absolute;
+  position: fixed;
   top: 12px;
-  left: 12px;
+  right: 12px;
   width: 90px;
   height: 24px;
   background-color: #f9fbff;
@@ -677,76 +677,26 @@ nav {
   pointer-events: none;
 }
 
+
+/* Dropdown container initially hidden */
 .nav_dropdown_container {
-  display: show;
+  display: none;
   position: absolute;
-  top: -2px;
-  right: -10px;
+  top: 100%;
+  left: -240px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  padding: 4px;
+  padding: 6px 0;
   border-radius: 8px;
   z-index: 300;
   flex-direction: column;
-  gap: 0;
-    position: absolute;  /* Fixed positioning */
-    top: 2px;
-    right: 4px;
-    width: 90px;         /* 🔒 Lock width */
-    height: 20px;         /* 🔒 Lock height */
-    background-color: #f9fbff;
-    border: 2px solid #cee1fe;
-    border-radius: 8px;
-    padding: 4px 7px;
-    font-size: 95%;
-    opacity: 0.6;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 200;
-}
-.nav_dropdown_container:hover {
-    opacity: 1;
-    background-color: #e8f0ff;
-    border-top-left-radius:0px;
-    border-bottom-left-radius:0px;
-    border-left: none;
-}
-
-
-#page_nav_selector .nav_dropdown_container {
-  display: none;
-  border-top-right-radius: 0;
+  background-color: white;
   border: 1px solid #d0e3ff;
-  overflow: hidden;
-    display: show;
-    position: absolute;
-    top: -2px;  /* below the #mode_section */
-    right: 89px;
-    /* background-color: white; */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    padding: 0px;
-    border-radius: 8px;
-    z-index: 300;
-    flex-direction: column;
-    gap: 0;
-    object-fit:contain;
+  min-width: 260px;
 }
 
-
-#page_nav_selector:hover .nav_dropdown_container,
-#page_nav_selector .nav_dropdown_container:hover {
-    display: flex;
-    border-top-right-radius:0px;
-    border: 1px solid #d0e3ff;
-    overflow:hidden;
-}
-#page_nav_selector:hover .nav_dropdown_container .nav_category_group {
-    display: none;
-}
-#page_nav_selector .nav_dropdown_container:hover .nav_category_group,
-#page_nav_selector .nav_dropdown_container .nav_category_group.nav-tab:hover  {
-    display: flex;
+/* Reveal on hover of parent */
+#page_nav_selector:hover > .nav_dropdown_container {
+  display: flex;
 }
 
 
