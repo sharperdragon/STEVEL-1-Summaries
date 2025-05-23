@@ -6,6 +6,14 @@ def annotate_table_columns(soup: BeautifulSoup):
     Injects a dropdown toggle menu into <th> headers (excluding colspans).
     """
     for row in soup.find_all("tr"):
+        # Apply .row-divider class to <td> with colspan outside thead
+        if not row.find_parent("thead"):
+            for cell in row.find_all("td"):
+                if cell.has_attr("colspan"):
+                    existing_classes = cell.get("class", [])
+                    if "row-divider" not in existing_classes:
+                        cell["class"] = existing_classes + ["row-divider"]
+
         cells = row.find_all(["td", "th"])
         for idx, cell in enumerate(cells):
             cell["data-col"] = str(idx)
