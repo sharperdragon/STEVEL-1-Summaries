@@ -596,6 +596,6 @@ div#selection_buttons {
 }
 
 
-#RapidCarousel {
-  min-width: 40vw;
+#RapidCarousel #carousel-item {
+  min-width: 60vw;
 }
