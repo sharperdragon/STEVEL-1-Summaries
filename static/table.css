@@ -5,38 +5,43 @@
   --footer-note-bg: #f3f6f9;
   --text-color: #2a2a2a;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --base-font-size: 17px;
-  --header-font-size: 22px;
-  --small-head-font-size:19px;
+  --base-font-size: 18px;
+  --header-font-size: 21px;
+  --title-font-size: 25px;
+  --small-head-font-size:19.5px;
+  
   --table1-header-bg: #d0e5f5;
   --table1-row-bg: #ffffff;
   --table1-row-alt-bg: #f1f5f8;
   --table1-divider: #7dcafd;
   --table2-header-bg: #b8ffdc;
+  
   --table2-row-bg: #ffffff;
   --table2-row-alt-bg: #f1f8f4;
   --table2-divider: #9acbb6;
+  
   --table3-header-bg: #bf9ae4;
   --table3-row-bg: #ffffff;
   --table3-row-alt-bg: #f5f1fb;
-  --table3-divider-bg: #8b79a8;
+  --table3-divider-bg: #bfb5d1;
 
   --table4-header-bg: #ffe2cc;
   --table4-row-bg: #ffffff;
   --table4-row-alt-bg: #fdf4ee;
-  --table4-divider: #f0b487;
+  --table4-divider-bg: #f0b487;
 
   --table5-header-bg: #bde2ee;
   --table5-row-bg: #ffffff;
   --table5-row-alt-bg: #edf8fb;
-  --table5-divider: #8fc5d0;
+  --table5-divider-bg: #8fc5d0;
 
   --table6-header-bg: #fcd2d2;
   --table6-row-bg: #ffffff;
   --table6-row-alt-bg: #fdefef;
-  --table6-divider: #f08d8d;
+  --table6-divider-bg: #f08d8d;
 
   --inside-border: rgb(100, 100, 100, 0.2);
+  --strong-border: #232323;
 }
 
 /* Base / Global rules */
@@ -360,12 +365,13 @@ html {
 }
 
 .table-title {
-  font-size: var(--header-font-size);
+  font-size: var(--title-font-size);
   font-weight: 600;
   text-align: center;
   margin: 20px auto 10px auto;
   color: var(--text-color);
   font-family: var(--font);
+  border-bottom: 1px var(--strong-border);
 }
 
 /* For tables that want first column centered and nowrap */

@@ -6,9 +6,8 @@ from utils.index_utils.update_index import build_index
 from utils.html_utils import (
     annotate_table_columns,
     generate_nav_html,
-    normalize_name,
-    labelize_name,
 )
+from utils.helper_utils import generate_label_and_slug
 from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
 from datetime import datetime
 
@@ -70,19 +69,7 @@ def build_all():
 
     # Loop over each table file to build individual pages
     for table_file in table_files:
-        name = normalize_name(table_file.name)
-        # Force specific title formats for certain table types
-        filename = table_file.name
-        if "HLA" in filename:
-            label = labelize_name(filename).upper()
-        elif "CD-markers" in filename:
-            label = "CD Markers"
-        elif "Hemeonc" in filename:
-            label = "Heme-Onc"
-        elif filename.startswith("rapid_"):
-            label = labelize_name(filename.replace("rapid_", "", 1)).title()
-        else:
-            label = labelize_name(filename)
+        label, slug = generate_label_and_slug(table_file.name)
 
         # Load and parse table HTML content
         soup = BeautifulSoup(table_file.read_text(), "html.parser")
@@ -98,7 +85,7 @@ def build_all():
         nav_html = generate_nav_html(table_file, table_files)
 
         # Write navigation HTML to separate file for potential reuse
-        nav_path = NAV_DIR / f"nav_{label}.html"
+        nav_path = NAV_DIR / f"nav_{slug}.html"
         write_if_changed(nav_path, nav_html)
 
         # Compose final HTML by replacing placeholders in base template
@@ -110,19 +97,19 @@ def build_all():
         )
 
         # Write the generated HTML page to output directory
-        output_file = OUTPUT_DIR / f"{name}.html"
+        output_file = OUTPUT_DIR / f"{slug}.html"
         write_if_changed(output_file, final_html)
         print(f"📄 Built page: {output_file.name}")
 
         # Append page info to manifest list
         manifest.append({
             "name": label,
-            "file": f"{name}.html"
+            "file": f"{slug}.html"
         })
 
         card_manifest.append({
             "name": label,
-            "file": f"{name}.html",
+            "file": f"{slug}.html",
             "desc": f"A high-yield summary table for {label.lower()}."  # Placeholder, can be customized later
         })
 

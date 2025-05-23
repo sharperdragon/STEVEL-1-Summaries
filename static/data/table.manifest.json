@@ -37,14 +37,14 @@
   },
   {
     "name": "Associations",
-    "file": "rapid_associations.html"
+    "file": "associations.html"
   },
   {
     "name": "Findings",
-    "file": "rapid_findings.html"
+    "file": "findings.html"
   },
   {
     "name": "Presentations",
-    "file": "rapid_presentations.html"
+    "file": "presentations.html"
   }
 ]

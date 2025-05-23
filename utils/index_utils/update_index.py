@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from utils.helper_utils import generate_label_and_slug
 from pathlib import Path
 import json
 from datetime import datetime
@@ -86,28 +87,13 @@ def build_index(build_json=True):
         "Autoantibodies": "Autoimmune diseases and their associated antibodies.",
         "Glossary": "Relevant terms across pathology, genetics, and neuro — clearly explained with examples.",
         "Lab Tests": "High-yield lab tests for diagnosis and management, including tumor markers, infection assays, and metabolic workups.",
-        "Rapid Associations": "Rapid-fire 'most common' and high-yield exam associations.",
-        "Rapid Presentations": "Clinical buzzwords and presentation patterns linked to classic diagnoses — optimized for fast recall.",
-        "Rapid Findings": "Diagnostic clues and lab/physical findings tied to conditions, covering exam associations."
+        "Associations": "Rapid-fire 'most common' and high-yield exam associations.",
+        "Presentations": "Clinical buzzwords and presentation patterns linked to classic diagnoses — optimized for fast recall.",
+        "Findings": "Diagnostic clues and lab/physical findings tied to conditions, covering exam associations."
     }
-    from bs4 import BeautifulSoup
-    def labelize_name(name):
-        # Simple labelization: replace underscores with spaces and title-case
-        return name.replace("_", " ").title()
     for entry in manifest_sorted:
         try:
-            name = entry["name"]
-            # Special-case logic for label formatting
-            if "HLA" in name:
-                label = name.upper()
-            elif "CD-markers" in name:
-                label = "CD Markers"
-            elif "Hemeonc" in name:
-                label = "Heme-Onc"
-            elif name.startswith("rapid_"):
-                label = labelize_name(name.replace("rapid_", "", 1)).title()
-            else:
-                label = labelize_name(name)
+            label, slug = generate_label_and_slug(entry["name"])
             href = f'pages/{entry["file"]}'
         except KeyError as e:
             raise ValueError(f"Malformed entry in manifest: {entry}") from e

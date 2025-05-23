@@ -1,4 +1,6 @@
 from bs4 import BeautifulSoup
+from pathlib import Path
+from utils.helper_utils import generate_label_and_slug
 
 def annotate_table_columns(soup: BeautifulSoup):
     """
@@ -56,37 +58,18 @@ def annotate_table_columns(soup: BeautifulSoup):
 
 
 # Navigation HTML utilities
-from pathlib import Path
-
-def normalize_name(filename: str) -> str:
-    return filename.replace(".table.html", "").lower()
-
-def labelize_name(filename: str) -> str:
-    name = normalize_name(filename)
-    return name.replace("_", " ").title()
-
 def generate_nav_html(current_file: Path, table_files: list[Path]) -> str:
     """Generate navigation HTML with Home link and all other tables except the current one."""
     other_links = []
     for other in table_files:
         if other.name == current_file.name:
             continue
-        name = normalize_name(other.name)
-        # Custom labeling logic
-        if "HLA" in other.name:
-            label = labelize_name(other.name).upper()
-        elif "CD-markers" in other.name:
-            label = "CD Markers"
-        elif "Hemeonc" in other.name:
-            label = "Heme-Onc"
-        elif other.name.startswith("rapid_"):
-            trimmed_name = other.name.replace("rapid_", "", 1)
-            label = labelize_name(trimmed_name).title()
-        else:
-            label = labelize_name(other.name)
-        other_links.append(f'<a href="../pages/{name}.html" class="nav-link">{label}</a>')
+        label, slug = generate_label_and_slug(other.name)
+        other_links.append(f'<a href="../pages/{slug}.html" class="nav-link">{label}</a>')
     centered_links = '<div style="text-align: center;">' + ' | '.join(other_links) + '</div>'
     return f"<nav style='margin: 10px 0;'>\n{centered_links}\n</nav>\n"
+
+
 def remove_row_dividers(soup: BeautifulSoup):
     """
     Removes all <tr> elements with class 'row-divider' from the soup.
