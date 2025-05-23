@@ -798,3 +798,9 @@ nav#float-nav-container {
     top: 10px;
     right: 20px;
 }
+
+
+#float-nav-button-container > .nav_dropdown_container {
+    display: none;
+    position: absolute;
+    top: calc(100% - 24px);}

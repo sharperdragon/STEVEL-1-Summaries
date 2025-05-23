@@ -93,7 +93,7 @@ def build_index(build_json=True):
     }
     for entry in manifest_sorted:
         try:
-            label, slug = generate_label_and_slug(entry["name"])
+            label, slug = generate_label_and_slug(entry.get("label", entry["name"]))
             href = f'pages/{entry["file"]}'
         except KeyError as e:
             raise ValueError(f"Malformed entry in manifest: {entry}") from e
