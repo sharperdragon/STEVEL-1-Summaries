@@ -67,3 +67,9 @@ def generate_nav_html(current_file: Path, table_files: list[Path]) -> str:
         other_links.append(f'<a href="../pages/{name}.html" class="nav-link">{label}</a>')
     centered_links = '<div style="text-align: center;">' + ' | '.join(other_links) + '</div>'
     return f"<nav style='margin: 10px 0;'>\n{centered_links}\n</nav>\n"
+def remove_row_dividers(soup: BeautifulSoup):
+    """
+    Removes all <tr> elements with class 'row-divider' from the soup.
+    """
+    for tr in soup.find_all("tr", class_="row-divider"):
+        tr.decompose()
