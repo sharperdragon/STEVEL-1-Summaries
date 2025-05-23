@@ -91,9 +91,23 @@ def build_index(build_json=True):
         "Rapid Findings": "Diagnostic clues and lab/physical findings tied to conditions, covering exam associations."
     }
     from bs4 import BeautifulSoup
+    def labelize_name(name):
+        # Simple labelization: replace underscores with spaces and title-case
+        return name.replace("_", " ").title()
     for entry in manifest_sorted:
         try:
-            label = entry["name"]
+            name = entry["name"]
+            # Special-case logic for label formatting
+            if "HLA" in name:
+                label = name.upper()
+            elif "CD-markers" in name:
+                label = "CD Markers"
+            elif "Hemeonc" in name:
+                label = "Heme-Onc"
+            elif name.startswith("rapid_"):
+                label = labelize_name(name.replace("rapid_", "", 1)).title()
+            else:
+                label = labelize_name(name)
             href = f'pages/{entry["file"]}'
         except KeyError as e:
             raise ValueError(f"Malformed entry in manifest: {entry}") from e

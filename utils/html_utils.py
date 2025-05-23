@@ -72,7 +72,18 @@ def generate_nav_html(current_file: Path, table_files: list[Path]) -> str:
         if other.name == current_file.name:
             continue
         name = normalize_name(other.name)
-        label = labelize_name(other.name)
+        # Custom labeling logic
+        if "HLA" in other.name:
+            label = labelize_name(other.name).upper()
+        elif "CD-markers" in other.name:
+            label = "CD Markers"
+        elif "Hemeonc" in other.name:
+            label = "Heme-Onc"
+        elif other.name.startswith("rapid_"):
+            trimmed_name = other.name.replace("rapid_", "", 1)
+            label = labelize_name(trimmed_name).title()
+        else:
+            label = labelize_name(other.name)
         other_links.append(f'<a href="../pages/{name}.html" class="nav-link">{label}</a>')
     centered_links = '<div style="text-align: center;">' + ' | '.join(other_links) + '</div>'
     return f"<nav style='margin: 10px 0;'>\n{centered_links}\n</nav>\n"
