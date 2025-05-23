@@ -54,7 +54,9 @@ html {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-
+.utility-toolbar {
+  padding-left: 15vw;
+}
 
 /* Table Layout & Structure */
 .table1, .table2, .table3,
