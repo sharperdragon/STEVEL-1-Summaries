@@ -741,6 +741,16 @@ nav {
     border: 1px solid #d0e3ff;
     overflow:hidden;
 }
+#page_nav_selector:hover .nav_dropdown_container .nav_category_group {
+    display: none;
+}
+#page_nav_selector .nav_dropdown_container:hover .nav_category_group,
+#page_nav_selector .nav_dropdown_container .nav_category_group.nav-tab:hover  {
+    display: flex;
+}
+
+
+
 .nav_link_tab {
   position: relative;
   display: block;
