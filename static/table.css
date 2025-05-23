@@ -40,7 +40,10 @@
   --table6-row-alt-bg: #faf2f7;
   --table6-divider: #d48ab7;
 }
-
+.body {
+  all: unset;
+  all: revert;
+}
 .th-menu-wrapper {
   display: flex;
   flex-direction: column;
