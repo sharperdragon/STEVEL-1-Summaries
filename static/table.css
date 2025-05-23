@@ -445,6 +445,8 @@ html {
 
 td:first-child, th:first-child {
   border-left: none;
+  text-align:center;
+  vertical-align: center;
 }
 td:last-child, th:last-child {
   border-right: none;
