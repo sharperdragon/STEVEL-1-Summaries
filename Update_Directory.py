@@ -80,9 +80,9 @@ def build_all():
         elif "Hemeonc" in filename:
             label = "Heme-Onc"
         elif filename.startswith("rapid_"):
-            label = labelize_name(filename.replace("rapid_", "", 1))
+            label = labelize_name(filename.replace("rapid_", "", 1)).title()
         else:
-            label = labelize_name(filename)
+            label = labelize_name(filename).title()
 
         # Load and parse table HTML content
         soup = BeautifulSoup(table_file.read_text(), "html.parser")
