@@ -20,8 +20,9 @@
   </div>
 
   <div style="text-align: center; margin-top: 30px;">
-    <input type="text" id="searchInput" aria-label="Search summaries or table content" placeholder="Search summaries..." 
+    <input type="text" id="searchInput" list="tableSuggestions" aria-label="Search summaries or table content" placeholder="Search summaries..." 
            style="padding: 10px; width: 60%; max-width: 400px; border: 1px solid #ccc; border-radius: 6px;">
+    <datalist id="tableSuggestions"></datalist>
   </div>
   <!-- 🔁 Navigation links injected from Python script -->
   {{NAV_CONTENT}}

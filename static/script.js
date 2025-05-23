@@ -152,13 +152,36 @@ function filterCards() {
 
 function enableTableSearch() {
   const input = document.getElementById("searchInput");
-  if (!input) return;
+  const datalist = document.getElementById("tableSuggestions");
+  if (!input || !datalist) return;
+
+  const suggestions = new Set();
+  document.querySelectorAll("td").forEach(cell => {
+    const words = cell.textContent.match(/\b\w+\b/g); // Only full words
+    if (words) {
+      words.forEach(word => {
+        if (word.length > 2) suggestions.add(word.toLowerCase());
+      });
+    }
+  });
+
+  datalist.innerHTML = [...suggestions].sort().map(word =>
+    `<option value="${word}">`
+  ).join("");
 
   input.addEventListener("input", () => {
     const query = input.value.toLowerCase();
     document.querySelectorAll("td").forEach(cell => {
-      const text = cell.textContent.toLowerCase();
-      cell.style.opacity = text.includes(query) ? "" : "0.2";
+      const originalText = cell.textContent;
+      const text = originalText.toLowerCase();
+      if (query && text.includes(query)) {
+        const regex = new RegExp(`(${query})`, "gi");
+        cell.innerHTML = originalText.replace(regex, `<mark>$1</mark>`);
+        cell.style.opacity = "";
+      } else {
+        cell.innerHTML = originalText;
+        cell.style.opacity = query ? "0.2" : "";
+      }
     });
   });
 }
@@ -167,9 +190,7 @@ function initSearchBinding() {
   const searchInput = document.getElementById("searchInput");
   if (!searchInput) return;
 
-  if (document.querySelector(".summary-card")) {
-    searchInput.addEventListener("input", filterCards);
-  } else if (document.querySelector("td")) {
+  if (document.querySelector("td")) {
     enableTableSearch();
   }
 }
