@@ -50,9 +50,14 @@ html {
 }
 
 .responsive-container {
-  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.table-container {
+  margin: 0 auto;
+  max-width: 100%;
 }
 .utility-toolbar {
   padding-left: 15vw;
