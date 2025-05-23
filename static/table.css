@@ -422,12 +422,14 @@ html {
   color: #1d4e89;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
+
+
 @media screen and (min-width: 768px) {
   body:not(.mobile) table td {
-    padding-left: 5px;
+    padding-left: 6px;
     padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
@@ -450,4 +452,9 @@ td:first-child, th:first-child {
 }
 td:last-child, th:last-child {
   border-right: none;
+}
+
+#glossary td:first-child{
+  font-size: 115%;
+  font-weight: 550;
 }
