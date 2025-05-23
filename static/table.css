@@ -20,7 +20,7 @@
   --table2-row-bg: #ffffff;
   --table2-row-alt-bg: #f1f8f4;
   --table2-divider: #9acbb6;
-  --table3-header-bg: #e3d7ff;
+  --table3-header-bg: #bf9ae4;
   --table3-row-bg: #ffffff;
   --table3-row-alt-bg: #f5f1fb;
   --table3-divider-bg: #8b79a8;
@@ -30,15 +30,15 @@
   --table4-row-alt-bg: #fdf4ee;
   --table4-divider: #f0b487;
 
-  --table5-header-bg: #d6f5ff;
+  --table5-header-bg: #bde2ee;
   --table5-row-bg: #ffffff;
   --table5-row-alt-bg: #edf8fb;
-  --table5-divider: #8bd4e3;
+  --table5-divider: #8fc5d0;
 
-  --table6-header-bg: #f9e0f0;
+  --table6-header-bg: #fcd2d2;
   --table6-row-bg: #ffffff;
-  --table6-row-alt-bg: #faf2f7;
-  --table6-divider: #d48ab7;
+  --table6-row-alt-bg: #fdefef;
+  --table6-divider: #f08d8d;
 }
 .body {
   all: unset;
