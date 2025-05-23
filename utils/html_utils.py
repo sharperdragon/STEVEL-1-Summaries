@@ -7,8 +7,8 @@ def annotate_table_columns(soup: BeautifulSoup):
     """
     assigned_table_title = False
     for row in soup.find_all("tr"):
-        # Apply .row-divider class to <td> with colspan outside thead
-        if not row.find_parent("thead"):
+        # Apply .row-divider class to <td> with colspan outside thead and tfoot
+        if not row.find_parent("thead") and not row.find_parent("tfoot"):
             for cell in row.find_all("td"):
                 if cell.has_attr("colspan"):
                     existing_classes = cell.get("class", [])
