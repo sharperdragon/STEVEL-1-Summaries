@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .carousel-item .answer {
       display: inline-block;
       opacity: 0;
-      transform: translateX(-20px);
+      transform: translateX(1px);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
     .carousel-item .answer.revealed {
