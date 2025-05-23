@@ -792,3 +792,8 @@ nav {
 .nav_category:hover > .nav_submenu {
   display: flex;
 }
+nav#float-nav-container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
