@@ -184,8 +184,8 @@ button {
     gap: 10px;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 15px;
+    padding: 6px 12px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 105%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -804,3 +804,14 @@ nav#float-nav-container {
     display: none;
     position: absolute;
     top: calc(100% - 24px);}
+
+#float-nav-button-container { padding:7px 4px}
+
+button #shuffle-button {
+
+
+}
+button #shuffle-button {
+
+
+}
