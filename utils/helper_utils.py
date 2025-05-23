@@ -69,23 +69,22 @@ def generate_drop_nav_html():
 
         # Build HTML
         nav_html = f'''
-<div id="page_nav_selector">
+<nav id="float-nav-container">
     <span>Navigate</span>
     <div class="nav_dropdown_container">
 '''
 
         for category, links in sorted(category_map.items()):
             if category == "Glossary":
-                # Render glossary link flat
                 for label, link_slug in sorted(links):
                     nav_html += f'''      <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
             else:
-                nav_html += f'''      <div class="nav_category_group"><div class="nav_category_title">{category}</div>\n'''
+                nav_html += f'''      <div class="nav_dropdown_container nav_category_title">{category}\n'''
                 for label, link_slug in sorted(links):
                     nav_html += f'''        <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'''
                 nav_html += "      </div>\n"
         nav_html += '''    </div>
-</div>
+</nav>
 '''
 
         output_path = drop_nav_dir / f"drop_nav_{slug}.html"
