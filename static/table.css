@@ -99,12 +99,13 @@ html {
   justify-content: flex-end;
   position: relative;
   height: 100%;
+  overflow: visible;
 }
 
 .th-dropdown {
   position: absolute;
   z-index: 20;
-  min-width: 50%;
+  min-width: 20%;
   max-width: 80%;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -112,10 +113,13 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
   display:none;
+  top: 88%;
+  left: 37%;
 }
 
 .th-menu-wrapper:hover .th-dropdown {
-  display: block;
+  display: float;
+
 }
 
 .col-title {
