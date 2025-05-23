@@ -1,3 +1,7 @@
+.row1-center {
+  /* Use with tables where first column should be centered and nowrap */
+}
+
 :root {
   --subheader-bg-1: #f7f9fa;
   --border-color: #ccd9e0;
@@ -398,4 +402,10 @@ html {
   margin: 20px auto 10px auto;
   color: var(--text-color);
   font-family: var(--font);
+}
+
+/* For tables that want first column centered and nowrap */
+.row1-center td:first-child {
+  text-align: center;
+  white-space: nowrap;
 }
