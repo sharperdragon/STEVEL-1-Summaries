@@ -20,7 +20,7 @@ def generate_label_and_slug(filename: str) -> tuple[str, str]:
     base = filename.replace(".table.html", "")
     if "HLA" in base:
         label = base.upper()
-    elif "CD-markers" in base:
+    elif any(x in base for x in ["markers", "cd"]):
         label = "CD Markers"
     elif "Hemeonc" in base:
         label = "Heme-Onc"

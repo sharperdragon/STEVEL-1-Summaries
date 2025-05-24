@@ -159,8 +159,15 @@ document.querySelectorAll(".th-menu-wrapper").forEach(wrapper => {
   dropdown.addEventListener("mouseleave", hideDropdown);
 });
 (function () {
-  const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  if (isMobile) {
+  const isReallyMobile = () => {
+    const ua = navigator.userAgent;
+    const isMobileUA = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+    const isSmallScreen = window.innerWidth <= 768;
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 1;
+    return isMobileUA && isSmallScreen && isTouch;
+  };
+
+  if (isReallyMobile()) {
     document.body.classList.add("mobile-compact");
   }
 })();
