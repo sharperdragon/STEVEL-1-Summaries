@@ -72,7 +72,7 @@ def generate_drop_nav_html():
 
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
-            nav_html += f'  <div class="nav_category" id="{category_id}">{category} ▾\n'
+            nav_html += f'  <div class="nav_category" id="{category_id}">‹{category}\n'
             nav_html += '    <div class="nav_submenu">\n'
             for label, link_slug in sorted(links):
                 nav_html += f'      <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'
