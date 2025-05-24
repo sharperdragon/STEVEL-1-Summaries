@@ -703,6 +703,7 @@ nav {
 /* Submenus fly out to the left */
 .nav_submenu {
   position: absolute;
+  font-size: 100%;
   top: 0;
   right: calc(100% + 10px);
   background: #e9eff9;
