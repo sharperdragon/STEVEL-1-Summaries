@@ -52,23 +52,31 @@ def generate_drop_nav_html():
             other_category = categorize(other_slug)
             category_map.setdefault(other_category, []).append((other_label, other_slug))
 
-        # Build HTML with nested submenus
-        nav_html = '<div class="nav_dropdown_container">\n'
+        # Build HTML with new structure
+        nav_html = '<div id="float-nav-container">\n'
+        nav_html += '  <div id="float-nav-button-container">\n'
+        nav_html += '    Navigate\n'
+        nav_html += '    <div class="nav_dropdown_container" id="nav-dropdown">\n'
 
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
-            # 🧭 Glossary is a direct nav link (no submenu)
             if category.lower() == "glossary":
-                nav_html += f'  <div class="nav_category" id="{category_id}">\n'
-                nav_html += f'    <a class="nav_link_tab" href="../pages/glossary.html">{category}</a>\n'
-                nav_html += f'  </div>\n'
-                continue
-            nav_html += f'  <div class="nav_category" id="{category_id}">‹{category}\n'
-            nav_html += '    <div class="nav_submenu">\n'
-            for label, link_slug in sorted(links):
-                nav_html += f'      <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'
-            nav_html += '    </div>\n'
-            nav_html += '  </div>\n'
+                nav_html += f'      <!-- {category}: label (no direct link) -->\n'
+                nav_html += f'      <div class="nav_category" id="{category_id}">\n'
+                nav_html += f'        <span href="../pages/glossary.html">{category}</span>\n'
+                nav_html += f'      </div>\n'
+            else:
+                nav_html += f'      <!-- {category}: submenu -->\n'
+                nav_html += f'      <div class="nav_category has-children" id="{category_id}">\n'
+                nav_html += f'        <span>{category}</span>\n'
+                nav_html += f'        <div class="nav_submenu">\n'
+                for label, link_slug in sorted(links):
+                    nav_html += f'          <a class="nav_link_tab" href="../pages/{link_slug}.html">{label}</a>\n'
+                nav_html += f'        </div>\n'
+                nav_html += f'      </div>\n'
+
+        nav_html += '    </div>\n'
+        nav_html += '  </div>\n'
         nav_html += '</div>\n'
 
         output_path = drop_nav_dir / f"drop_nav_{slug}.html"

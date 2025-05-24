@@ -214,20 +214,32 @@ if (button) {
 }
 
 
-const navButton = document.getElementById("float-nav-button-container");
-const navDropdown = document.querySelector(".nav_dropdown_container");
-
-if (navButton && navDropdown) {
-  let navVisible = false;
-
-  navButton.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent bubbling
-    navVisible = !navVisible;
-    navDropdown.style.display = navVisible ? "block" : "none";
+// Toggle main dropdown
+document.getElementById("float-nav-button-container")
+  .addEventListener("click", function () {
+    const dd = document.getElementById("nav-dropdown");
+    dd.style.display = dd.style.display === "block" ? "none" : "block";
   });
 
-  document.addEventListener("click", () => {
-    navDropdown.style.display = "none";
-    navVisible = false;
+// Close dropdown on outside click
+document.addEventListener("click", function (e) {
+  const dd = document.getElementById("nav-dropdown");
+  const btn = document.getElementById("float-nav-button-container");
+  if (!dd.contains(e.target) && !btn.contains(e.target)) {
+    dd.style.display = "none";
+  }
+});
+
+// Wire up submenu hover handlers once DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.nav_category.has-children').forEach(cat => {
+    const sub = cat.querySelector('.nav_submenu');
+    if (!sub) return;
+    cat.addEventListener('mouseover',  () => sub.style.display = 'block');
+    cat.addEventListener('mouseleave', () => sub.style.display = 'none');
   });
-}
+});
+  const dropdownElem = document.getElementById("nav-dropdown");
+  dropdownElem.addEventListener('mouseleave', () => {
+    dropdownElem.style.display = 'none';
+  });
