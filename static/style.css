@@ -735,13 +735,14 @@ nav {
 /* ===========================
    Floating Navigation Dropdown (Refactored)
 =========================== */
+/* Container */
 #float-nav-container {
   position: relative;
   font-family: sans-serif;
   z-index: 999;
 }
 
-/* Main button style */
+/* Nav button */
 #float-nav-button-container {
   background: #5078A2;
   color: white;
@@ -749,13 +750,14 @@ nav {
   cursor: pointer;
   border-radius: 6px;
   width: fit-content;
+  position: relative;
 }
 
-/* Container holding all dropdowns */
+/* Dropdown (root layer) */
 .nav_dropdown_container {
   position: absolute;
   top: 100%;
-  right: 0; /* Appear to the left */
+  right: 0;
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -764,39 +766,42 @@ nav {
   min-width: 220px;
 }
 
-/* Show dropdown on button hover */
+/* Show dropdown on hover of main container */
 #float-nav-button-container:hover .nav_dropdown_container {
   display: block;
 }
 
+/* Each main category item */
 .nav_category {
   position: relative;
   padding: 8px 12px;
   background: #f0f4fa;
   margin-bottom: 6px;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: default;
+  white-space: nowrap;
 }
 
-/* Submenu */
+/* Submenus fly out to the left */
 .nav_submenu {
   position: absolute;
   top: 0;
-  right: 100%; /* Left-branching */
+  right: 100%;
   background: #e9eff9;
   border: 1px solid #bbb;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   padding: 8px;
-  max-width: max-content;
+  min-width: 200px;
   display: none;
   z-index: 100;
 }
 
+/* Show submenu on category hover */
 .nav_category:hover .nav_submenu {
   display: block;
 }
 
-/* Link style */
+/* Links inside submenus */
 .nav_link_tab {
   display: block;
   padding: 6px 10px;
