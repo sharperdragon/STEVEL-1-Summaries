@@ -834,7 +834,10 @@ nav#float-nav-container:hover {
     object-fit:contain;
     /* min-width: 120px; */
 }
+.nav_dropdown_container:hover .nav_category {
+  display: flexbox;
 
+}
 
 /*
 #float-nav-button-container > .nav_dropdown_container {
