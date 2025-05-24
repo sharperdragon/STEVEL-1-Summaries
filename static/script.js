@@ -280,3 +280,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+(function () {
+  const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    document.body.classList.add("mobile-compact");
+  }
+})();
