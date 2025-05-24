@@ -424,7 +424,12 @@ thead th {
   max-width: 100%;
 }
 }
-
+  .table-container {
+  margin: 0 auto;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+  max-width: 100%;
+  }
 .table1 td, .table1 th,
 .table2 td, .table2 th,
 .table3 td, .table3 th,
