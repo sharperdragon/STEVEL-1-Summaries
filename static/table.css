@@ -367,8 +367,7 @@ thead th {
 .table1, .table2, .table3, 
 .table4, .table5, .table6 {
   width: 100vw;
-  margin-left: -2vw;
-  margin-right: -2vw;
+  margin: auto;
   padding-left: 0;
   padding-right: 0;
   box-sizing: border-box;
