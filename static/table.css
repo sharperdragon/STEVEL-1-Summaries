@@ -486,3 +486,15 @@ th.table-title {
   padding-right: 0;
   box-sizing: border-box;
 }
+
+td, th {
+  vertical-align: middle !important;
+}
+.table1 td, .table1 th,
+.table2 td, .table2 th,
+.table3 td, .table3 th,
+.table4 td, .table4 th,
+.table5 td, .table5 th,
+.table6 td, .table6 th {
+  vertical-align: middle !important;
+}
