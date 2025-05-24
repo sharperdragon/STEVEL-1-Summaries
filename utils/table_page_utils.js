@@ -205,18 +205,10 @@ document.querySelectorAll(".th-menu-wrapper").forEach(wrapper => {
 const button = document.getElementById("float-nav-button-container");
 
 if (button) {
-  const rect = button.getBoundingClientRect();
-  const viewportWidth = window.innerWidth;
-
-  // Distance from right edge of viewport to left edge of the element
-  const distance = viewportWidth - rect.left;
-
-  // Align the right border of .nav_dropdown_container with the left edge of #float-nav-button-container
   const dropdown = document.querySelector(".nav_dropdown_container");
   if (dropdown) {
-    dropdown.style.right = `${distance}px`;
+    dropdown.style.top = "0";
+    dropdown.style.right = "100%";
     dropdown.style.left = "auto";
   }
-
-  console.log("Distance from right of viewport to left of button:", distance, "px");
 }

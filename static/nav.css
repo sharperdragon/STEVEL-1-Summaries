@@ -23,7 +23,7 @@
 /* Dropdown (root layer) */
 .nav_dropdown_container {
   position: absolute;
-  top: 100%;
+  top: 0;
   right: 100%;        /* Align right edge of dropdown to left edge of button */
   left: auto;
   background: white;
