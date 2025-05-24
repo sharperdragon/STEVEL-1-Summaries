@@ -677,7 +677,8 @@ nav {
   background: white;
   border: 1px solid gainsboro;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 10px;
+  padding: 0;
+  overflow:hidden;
   display: none;
   /* min-width: 220px; */
 }
@@ -691,9 +692,9 @@ nav {
 .nav_category {
   position: relative;
   color: rgb(5, 42, 134);
-  padding:0;
+  padding:2px 4px;
   background: #ffffff1c;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
   border-radius: 5px;
   cursor: default;
   white-space: nowrap;
