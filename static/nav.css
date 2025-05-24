@@ -71,11 +71,15 @@
   /* min-width: 220px; */
   pointer-events: auto;
   z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 /* Show dropdown on hover of main container */
-#float-nav-button-container:hover + .nav_dropdown_container,
-.nav_dropdown_container:hover {
+#float-nav-container:hover .nav_dropdown_container {
+  visibility: visible;
+  opacity: 1;
   display: block;
 }
 
