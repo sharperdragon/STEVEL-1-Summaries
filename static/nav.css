@@ -43,13 +43,14 @@
 /* Each main category item */
 .nav_category {
     position: relative;
-    padding: 8px 12px;
-    background: #f0f4fa;
-    margin-bottom: 6px;
-    border-radius: 5px;
+    padding:  0;
+    border-radius: 0;
     cursor: default;
     white-space: nowrap;
     color: navy;
+}
+.nav_category:hover {
+    background: #f0f4fa;
 }
 
 /* Submenus fly out to the left */
