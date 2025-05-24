@@ -467,3 +467,6 @@ body.mobile-compact .table6 {
   border-left: none;
   border-right: none;
 }
+th.table-title {
+    border-bottom: 2px solid gainsboro;
+}
