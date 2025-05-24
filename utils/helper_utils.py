@@ -69,12 +69,10 @@ def generate_drop_nav_html():
 
         # Build HTML with nested submenus
         nav_html = '<div class="nav_dropdown_container">\n'
-
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
             if category.lower() == "glossary":
-                nav_html += f'  <div class="nav_category" id="{category_id}">'
-                nav_html += f'<a class="nav_link_tab" href="../pages/glossary.html">{category}</a></div>\n'
+                nav_html += f'  <div class="nav_category" id="{category_id}" href="../pages/glossary.html">'
                 continue
             nav_html += f'  <div class="nav_category" id="{category_id}">‹{category}\n'
             nav_html += '    <div class="nav_submenu">\n'
