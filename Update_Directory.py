@@ -99,7 +99,7 @@ def build_all():
         final_html = (
             base_html
             .replace("{{PAGE_TITLE}}", label)
-            .replace("{{NAV_CONTENT}}", nav_html)
+            # .replace("{{NAV_CONTENT}}", nav_html) 
             .replace("{{TABLE_CONTENT}}", table_html)
             .replace("{{DROP_NAV_CONTENT}}", drop_nav_html)
         )

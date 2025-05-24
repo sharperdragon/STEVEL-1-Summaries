@@ -60,12 +60,12 @@ def generate_drop_nav_html():
 
         # Build category → links map
         category_map = {}
+        category = categorize(slug)
+        category_map.setdefault(category, [])
         for other_file in table_files:
             other_label, other_slug = generate_label_and_slug(other_file.name)
-            if other_slug == slug:
-                continue  # Skip the current page
-            category = categorize(other_slug)
-            category_map.setdefault(category, []).append((other_label, other_slug))
+            other_category = categorize(other_slug)
+            category_map.setdefault(other_category, []).append((other_label, other_slug))
 
         # Build HTML with nested submenus
         nav_html = '<div class="nav_dropdown_container">\n'
