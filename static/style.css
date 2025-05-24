@@ -834,9 +834,9 @@ nav#float-nav-container:hover {
     object-fit:contain;
     /* min-width: 120px; */
 }
-.nav_dropdown_container:hover .nav_category {
-  display: flexbox;
-
+.nav_dropdown_container:hover .nav_dropdown_container, 
+.nav_dropdown_container .nav_category:hover .nav_submenu {
+  display: show;
 }
 
 /*
