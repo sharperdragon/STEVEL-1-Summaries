@@ -158,3 +158,9 @@ document.querySelectorAll(".th-menu-wrapper").forEach(wrapper => {
   dropdown.addEventListener("mouseenter", showDropdown);
   dropdown.addEventListener("mouseleave", hideDropdown);
 });
+(function () {
+  const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    document.body.classList.add("mobile-compact");
+  }
+})();
