@@ -24,7 +24,7 @@
 .nav_dropdown_container {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 100%;        /* Align right edge of dropdown to left edge of button */
   left: auto;
   background: white;
   border: 1px solid #ccc;
@@ -50,6 +50,7 @@
     cursor: default;
     white-space: nowrap;
     color: navy;
+}
 
 /* Submenus fly out to the left */
 .nav_submenu {
