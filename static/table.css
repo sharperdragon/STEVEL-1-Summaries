@@ -361,6 +361,19 @@ thead th {
   .th-dropdown a {
     padding: 10px 12px;
   }
+
+}
+.table1, .table2, .table3, 
+.table4, .table5, .table6 {
+  width: 100vw;
+  margin-left: -2vw;
+  margin-right: -2vw;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  border-left: none;
+  border-right: none;
+}
 }
 
 /* Section Navigation */
@@ -437,4 +450,20 @@ td:last-child, th:last-child {
 #HLA-table td:first-child, #Cytokine-table td:first-child{
   font-size: 115%;
   font-weight: 550;
+}
+# Mobile compact table full width override
+body.mobile-compact .table1,
+body.mobile-compact .table2,
+body.mobile-compact .table3,
+body.mobile-compact .table4,
+body.mobile-compact .table5,
+body.mobile-compact .table6 {
+  width: 100vw;
+  margin-left: -2vw;
+  margin-right: -2vw;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  border-left: none;
+  border-right: none;
 }
