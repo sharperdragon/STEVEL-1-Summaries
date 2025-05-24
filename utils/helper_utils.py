@@ -17,33 +17,26 @@ table_files_all = sorted(TABLE_DIR.glob("*"))
 table_files = [f for f in table_files_all if f.name.endswith(TABLE_SUFFIX)]
 
 def generate_label_and_slug(filename: str) -> tuple[str, str]:
-    base = filename.replace(".table.html", "")
-    base_lower = base.lower()
-
-    # Manual overrides for acronyms and known formatting needs
+    base = filename.replace(".table.html", "").lower()
     label_overrides = {
         "cd markers": "CD Markers",
         "hla": "HLA",
-        "hemeonc": "Heme-Onc",
-        "lab tests": "Lab-Tests",
-        "autoantibodies": "Autoantibodies",
-        "cytokines": "Cytokines",
-        "chromosomes": "Chromosomes",
-        "glossary": "Glossary",
-        "presentations": "Presentations",
-        "associations": "Associations",
-        "findings": "Findings",
-        "metabolism": "Metabolism"
     }
+    label = label_overrides.get(base)
+    if not label:
+        if "hemeonc" in base:
+            label = "Heme-Onc"
+        elif base.startswith("rapid_"):
+            label = base.replace("rapid_", "", 1).replace("_", " ").title()
+        else:
+            label = base.replace("_", " ").title()
 
-    # Clean base name to match keys in override dict
-    base_key = base_lower.replace("_", " ").replace("-", " ")
-
-    label = label_overrides.get(base_key, base.replace("_", " ").title())
     slug = label.lower().replace(" ", "-")
-
     return label, slug
-
+# slug = label.lower().replace(" ", "-")
+# is safe, but if someone hardcoded label = "CD Markers" without sanitizing the input, 
+# it could mismatch during category checks. You’re fine as-is given the current flow, 
+# but be aware if you ever decouple slug from label generation.
 
 def generate_drop_nav_html():
     """
@@ -82,11 +75,12 @@ def generate_drop_nav_html():
 
         # Build HTML with nested submenus
         nav_html = '<div class="nav_dropdown_container">\n'
+
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
             if category.lower() == "glossary":
                 nav_html += f'  <div class="nav_category" id="{category_id}">'
-                nav_html += f'<a href="../pages/glossary.html">{category}</a></div>\n'
+                nav_html += f'<a class="nav_link_tab" href="../pages/glossary.html">{category}</a></div>\n'
                 continue
             nav_html += f'  <div class="nav_category" id="{category_id}">‹{category}\n'
             nav_html += '    <div class="nav_submenu">\n'

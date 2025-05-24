@@ -1,18 +1,18 @@
 {
   "generated": "index.html",
-  "updated": "2025-05-24T10:09:36.937886",
+  "updated": "2025-05-24T10:19:07.478759",
   "included_tables": [
+    "Associations",
     "Autoantibodies",
-    "CD Markers",
+    "Cd-Markers",
     "Chromosomes",
     "Cytokines",
+    "Findings",
     "Glossary",
     "HLA",
     "Heme-Onc",
     "Lab-Tests",
     "Metabolism",
-    "Rapid Associations",
-    "Rapid Findings",
-    "Rapid Presentations"
+    "Presentations"
   ]
 }

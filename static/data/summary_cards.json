@@ -1,8 +1,8 @@
 [
   {
-    "name": "CD Markers",
+    "name": "Cd-Markers",
     "file": "cd-markers.html",
-    "desc": "A high-yield summary table for cd markers."
+    "desc": "A high-yield summary table for cd-markers."
   },
   {
     "name": "Glossary",
@@ -45,18 +45,18 @@
     "desc": "A high-yield summary table for metabolism."
   },
   {
-    "name": "Rapid Associations",
-    "file": "rapid-associations.html",
-    "desc": "A high-yield summary table for rapid associations."
+    "name": "Associations",
+    "file": "associations.html",
+    "desc": "A high-yield summary table for associations."
   },
   {
-    "name": "Rapid Findings",
-    "file": "rapid-findings.html",
-    "desc": "A high-yield summary table for rapid findings."
+    "name": "Findings",
+    "file": "findings.html",
+    "desc": "A high-yield summary table for findings."
   },
   {
-    "name": "Rapid Presentations",
-    "file": "rapid-presentations.html",
-    "desc": "A high-yield summary table for rapid presentations."
+    "name": "Presentations",
+    "file": "presentations.html",
+    "desc": "A high-yield summary table for presentations."
   }
 ]

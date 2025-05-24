@@ -1,6 +1,6 @@
 [
   {
-    "name": "CD Markers",
+    "name": "Cd-Markers",
     "file": "cd-markers.html"
   },
   {
@@ -36,15 +36,15 @@
     "file": "metabolism.html"
   },
   {
-    "name": "Rapid Associations",
-    "file": "rapid-associations.html"
+    "name": "Associations",
+    "file": "associations.html"
   },
   {
-    "name": "Rapid Findings",
-    "file": "rapid-findings.html"
+    "name": "Findings",
+    "file": "findings.html"
   },
   {
-    "name": "Rapid Presentations",
-    "file": "rapid-presentations.html"
+    "name": "Presentations",
+    "file": "presentations.html"
   }
 ]

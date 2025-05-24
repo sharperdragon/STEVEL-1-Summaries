@@ -47,14 +47,14 @@
 
 /* Each main category item */
 .nav_category {
-  position: relative;
-  padding: 8px 12px;
-  background: #f0f4fa;
-  margin-bottom: 6px;
-  border-radius: 5px;
-  cursor: default;
-  white-space: nowrap;
-}
+    position: relative;
+    padding: 8px 12px;
+    background: #f0f4fa;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    cursor: default;
+    white-space: nowrap;
+    color: navy;
 
 /* Submenus fly out to the left */
 .nav_submenu {
@@ -65,7 +65,7 @@
   border: 1px solid #bbb;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   padding: 8px;
-  min-width: 200px;
+  min-width: max-content;
   display: none;
   z-index: 100;
 }
