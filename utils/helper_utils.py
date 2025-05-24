@@ -35,8 +35,7 @@ def generate_label_and_slug(filename: str) -> tuple[str, str]:
     return label, slug
 # slug = label.lower().replace(" ", "-")
 # is safe, but if someone hardcoded label = "CD Markers" without sanitizing the input, 
-# it could mismatch during category checks. You’re fine as-is given the current flow, 
-# but be aware if you ever decouple slug from label generation.
+# it could mismatch during category checks. You’re fine as-is given the current flow, but be aware if you ever decouple slug from label generation.
 
 def generate_drop_nav_html():
     """
@@ -74,7 +73,7 @@ def generate_drop_nav_html():
             category_map.setdefault(other_category, []).append((other_label, other_slug))
 
         # Build HTML with nested submenus
-        nav_html = f'<div class="nav_dropdown_container" data-slug="{slug}">\n'
+        nav_html = '<div class="nav_dropdown_container">\n'
 
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
