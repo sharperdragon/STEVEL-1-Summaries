@@ -739,26 +739,7 @@ nav {
   position: relative;
 }
 
-#float-nav-button-container > .nav_dropdown_container {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  padding: 8px;
-  border: 1px solid #d0e3ff;
-  border-radius: 7px;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  max-width: max-content;
-}
 
-/* Reveal the dropdown on hover */
-#float-nav-button-container:hover > .nav_dropdown_container {
-  display: flex;
-}
 
 /* Each nav_category (Immune, Misc, etc.) */
 .nav_category {
@@ -872,5 +853,17 @@ nav#float-nav-container:hover {
     border-top-right-radius:0px;
     border: 1px solid #d0e3ff;
     overflow:hidden;
+}
+
+
+
+#float-nav-button-container:hover > .nav_dropdown_container {
+    display: flex;
+    position: absolute;
+    right: 75px;
+    top: calc(100% - 29px);
+    max-width: max-content;
+    flex-direction: column;
+  
 }
 
