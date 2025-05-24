@@ -272,14 +272,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  window.addEventListener('DOMContentLoaded', () => {
-    const currentPath = location.pathname.split('/').pop();
-    document.querySelectorAll('.nav_link_tab').forEach(link => {
-      if (link.href.includes(currentPath)) {
-        link.classList.add('selected_tab');
-      }
-    });
-  });
 
 (function () {
   const isReallyMobile = () => {

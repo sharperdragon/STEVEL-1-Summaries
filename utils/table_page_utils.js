@@ -212,3 +212,22 @@ if (button) {
     dropdown.style.left = "auto";
   }
 }
+
+
+const navButton = document.getElementById("float-nav-button-container");
+const navDropdown = document.querySelector(".nav_dropdown_container");
+
+if (navButton && navDropdown) {
+  let navVisible = false;
+
+  navButton.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent bubbling
+    navVisible = !navVisible;
+    navDropdown.style.display = navVisible ? "block" : "none";
+  });
+
+  document.addEventListener("click", () => {
+    navDropdown.style.display = "none";
+    navVisible = false;
+  });
+}
