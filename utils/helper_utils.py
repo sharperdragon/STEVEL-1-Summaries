@@ -72,7 +72,8 @@ def generate_drop_nav_html():
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
             if category.lower() == "glossary":
-                nav_html += f'  <div class="nav_category" id="{category_id}" href="../pages/glossary.html">'
+                nav_html += f'  <div class="nav_category" id="{category_id}">'
+                nav_html += f'<a href="../pages/glossary.html">{category}</a></div>\n'
                 continue
             nav_html += f'  <div class="nav_category" id="{category_id}">‹{category}\n'
             nav_html += '    <div class="nav_submenu">\n'
