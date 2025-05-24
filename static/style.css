@@ -827,9 +827,7 @@ nav#float-nav-container:hover {
     top: -2px;  /* below the #mode_section */
     right: 120px;
     /* background-color: white; */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     padding: 0px;
-    border-radius: 8px;
     z-index: 300;
     flex-direction: column;
     gap: 0;
