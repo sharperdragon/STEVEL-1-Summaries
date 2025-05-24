@@ -18,17 +18,30 @@ table_files = [f for f in table_files_all if f.name.endswith(TABLE_SUFFIX)]
 
 def generate_label_and_slug(filename: str) -> tuple[str, str]:
     base = filename.replace(".table.html", "")
-    if "HLA" in base:
-        label = base.upper()
-    elif any(x in base for x in ["markers", "cd"]):
-        label = "CD Markers"
-    elif "Hemeonc" in base:
-        label = "Heme-Onc"
-    elif base.startswith("rapid_"):
-        label = base.replace("rapid_", "", 1).replace("_", " ").title()
-    else:
-        label = base.replace("_", " ").title()
+    base_lower = base.lower()
+
+    # Manual overrides for acronyms and known formatting needs
+    label_overrides = {
+        "cd markers": "CD Markers",
+        "hla": "HLA",
+        "hemeonc": "Heme-Onc",
+        "lab tests": "Lab-Tests",
+        "autoantibodies": "Autoantibodies",
+        "cytokines": "Cytokines",
+        "chromosomes": "Chromosomes",
+        "glossary": "Glossary",
+        "presentations": "Presentations",
+        "associations": "Associations",
+        "findings": "Findings",
+        "metabolism": "Metabolism"
+    }
+
+    # Clean base name to match keys in override dict
+    base_key = base_lower.replace("_", " ").replace("-", " ")
+
+    label = label_overrides.get(base_key, base.replace("_", " ").title())
     slug = label.lower().replace(" ", "-")
+
     return label, slug
 
 

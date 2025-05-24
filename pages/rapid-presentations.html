@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rapid Presentations</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/table.css" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/nav.css" />
+</head>
+
+<body>
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 20px 0 10px 20px;">
+  <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
+    <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
+    Home
+  </a>
+  <nav style="display:show"id="float-nav-container">
+    <div id="float-nav-button-container"><span>Navigate</span>
+  <div class="nav_dropdown_container">
+  <div class="nav_category" id="category-glossary"><a href="../pages/glossary.html">Glossary</a></div>
+  <div class="nav_category" id="category-immune">‹Immune
+    <div class="nav_submenu">
+      <a class="nav_link_tab" href="../pages/autoantibodies.html">Autoantibodies</a>
+      <a class="nav_link_tab" href="../pages/cd-markers.html">CD Markers</a>
+      <a class="nav_link_tab" href="../pages/cytokines.html">Cytokines</a>
+      <a class="nav_link_tab" href="../pages/hla.html">HLA</a>
+    </div>
+  </div>
+  <div class="nav_category" id="category-misc">‹Misc
+    <div class="nav_submenu">
+      <a class="nav_link_tab" href="../pages/chromosomes.html">Chromosomes</a>
+      <a class="nav_link_tab" href="../pages/heme-onc.html">Heme-Onc</a>
+      <a class="nav_link_tab" href="../pages/lab-tests.html">Lab-Tests</a>
+      <a class="nav_link_tab" href="../pages/metabolism.html">Metabolism</a>
+    </div>
+  </div>
+  <div class="nav_category" id="category-rapid-review">‹Rapid Review
+    <div class="nav_submenu">
+      <a class="nav_link_tab" href="../pages/rapid-associations.html">Rapid Associations</a>
+      <a class="nav_link_tab" href="../pages/rapid-findings.html">Rapid Findings</a>
+      <a class="nav_link_tab" href="../pages/rapid-presentations.html">Rapid Presentations</a>
+    </div>
+  </div>
+</div>
+  </div>
+</nav>
+</div>
+<div>
+
+<main class="responsive-container" style="margin: 30px 40px auto;;">
+  <!-- Utility Toolbar -->
+  <div class="utility-toolbar" style="margin-bottom: 15px;">
+    <button id="reset-button">Reset</button>
+    <button id="shuffle-button">Shuffle Rows</button>
+  </div>
+  <meta content="true" name="summary-card"/>
+<style>
+  #rr-presentation thead th {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 2;
+  }
+</style>
+<div class="table-container" style="overflow-y: auto; max-height: 80vh;">
+<table class="table3" id="rr-presentation">
+<thead>
+<tr>
+<th data-col="0"><div class="th-menu-wrapper"><span class="col-title">Clinical Presentation</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Hide Column</a></div></div></th>
+<th data-col="1"><div class="th-menu-wrapper"><span class="col-title">Diagnosis / Disease</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Hide Column</a></div></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-col="0">Gout, intellectual disability, self-mutilating behavior in a boy</td>
+<td data-col="1">Lesch-Nyhan syndrome (HGPRT deficiency, X-linked recessive)</td>
+</tr>
+<tr>
+<td data-col="0">Situs inversus, chronic ear infections, sinusitis, bronchiectasis, infertility</td>
+<td data-col="1">Primary ciliary dyskinesia (Kartagener syndrome)</td>
+</tr>
+<tr>
+<td data-col="0">Blue sclera, multiple fractures, dental problems, conductive/mixed hearing loss</td>
+<td data-col="1">Osteogenesis imperfecta (type I collagen defect)</td>
+</tr>
+<tr>
+<td data-col="0">Elastic skin, joint hypermobility, bleeding tendency</td>
+<td data-col="1">Ehlers-Danlos syndrome (type V collagen defect, type III collagen defect seen in vascular subtype)</td>
+</tr>
+<tr>
+<td data-col="0">Arachnodactyly, lens dislocation (upward and temporal), aortic dissection, hyperflexible joints</td>
+<td data-col="1">Marfan syndrome (defective fibrillin-1)</td>
+</tr>
+<tr>
+<td data-col="0">Arachnodactyly, pectus deformity, lens dislocation (downward and nasal)</td>
+<td data-col="1">Homocystinuria (autosomal recessive cystathionine synthase deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">Café-au-lait spots (unilateral), polyostotic fibrous dysplasia, precocious puberty, multiple endocrine abnormalities</td>
+<td data-col="1">McCune-Albright syndrome (Gs-protein activating mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Meconium ileus in neonate, recurrent pulmonary infections, nasal polyps, pancreatic insufficiency, infertility/subfertility, malabsorption/vitamin deficiencies</td>
+<td data-col="1">Cystic fibrosis (CFTR gene defect, chromosome 7, ΔF508)</td>
+</tr>
+<tr>
+<td data-col="0">Calf pseudohypertrophy</td>
+<td data-col="1">Muscular dystrophy (most commonly Duchenne, due to X-linked recessive frameshift mutation of dystrophin gene)</td>
+</tr>
+<tr>
+<td data-col="0">Child uses arms to stand up from squat</td>
+<td data-col="1">Duchenne muscular dystrophy (Gowers sign)</td>
+</tr>
+<tr>
+<td data-col="0">Slow, progressive muscle weakness in boys</td>
+<td data-col="1">Becker muscular dystrophy (X-linked non-frameshift deletions in dystrophin; less severe than Duchenne)</td>
+</tr>
+<tr>
+<td data-col="0">Infant with cleft lip/palate, microcephaly or holoprosencephaly, polydactyly, cutis aplasia</td>
+<td data-col="1">Patau syndrome (trisomy 13)</td>
+</tr>
+<tr>
+<td data-col="0">Infant with microcephaly, rocker-bottom feet, clenched hands, structural heart defect</td>
+<td data-col="1">Edwards syndrome (trisomy 18)</td>
+</tr>
+<tr>
+<td data-col="0">Single palmar crease, flat facies, prominent epicanthal folds, congenital heart disease, intellectual disability</td>
+<td data-col="1">Down syndrome (trisomy 21)</td>
+</tr>
+<tr>
+<td data-col="0">Microcephaly, high-pitched cry, intellectual disability</td>
+<td data-col="1">Cri-du-chat (cry of the cat) syndrome; congenital deletion on short arm of chromosome 5</td>
+</tr>
+<tr>
+<td data-col="0">Confusion, ophthalmoplegia/nystagmus, ataxia</td>
+<td data-col="1">Wernicke encephalopathy (add confabulation/memory loss and personality changes for Korsakoff syndrome)</td>
+</tr>
+<tr>
+<td data-col="0">Dilated cardiomyopathy/high-output heart failure, edema, alcoholism or malnutrition</td>
+<td data-col="1">Wet beriberi (thiamine [vitamin B1] deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">Dermatitis, dementia, diarrhea</td>
+<td data-col="1">Pellagra (niacin [vitamin B3] deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">“Burning feet syndrome,” dermatitis, enteritis, alopecia</td>
+<td data-col="1">Pantothenic acid (vitamin B5) deficiency</td>
+</tr>
+<tr>
+<td data-col="0">Megaloblastic anemia, subacute combined degeneration, paresthesias, cognitive changes</td>
+<td data-col="1">Cobalamin (vitamin B12) deficiency; malabsorption, decreased intrinsic factor, absent terminal ileum</td>
+</tr>
+<tr>
+<td data-col="0">Swollen gums, mucosal bleeding, poor wound healing, petechiae, corkscrew hairs, perifollicular hemorrhages</td>
+<td data-col="1">Scurvy (vitamin C deficiency: inability to hydroxylate proline/lysine for collagen synthesis); tea and toast diet</td>
+</tr>
+<tr>
+<td data-col="0">Bowlegs (children), bone pain, and muscle weakness</td>
+<td data-col="1">Vitamin D deficiency: rickets (children), osteomalacia (adults); sun exposure, chronic kidney disease</td>
+</tr>
+<tr>
+<td data-col="0">Hemorrhagic disease of newborn with ↑aPTT, normal bleeding time</td>
+<td data-col="1">Vitamin K deficiency</td>
+</tr>
+<tr>
+<td data-col="0">Intellectual disability, musty body odor, hypopigmented skin, eczema</td>
+<td data-col="1">Phenylketonuria (tetrahydrobiopterin [BH4] deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">Bluish-black connective tissue, ear cartilage, sclerae; severe arthralgias; urine turns black on prolonged exposure to air</td>
+<td data-col="1">Alkaptonuria (homogentisate oxidase deficiency; ochronosis)</td>
+</tr>
+<tr>
+<td data-col="0">Infant with hypoglycemia, hepatomegaly, cardiomyopathy</td>
+<td data-col="1">Cori disease (debranching enzyme deficiency) or von Gierke disease (glucose-6-phosphatase deficiency, more severe)</td>
+</tr>
+<tr>
+<td data-col="0">Chronic exercise intolerance with myalgia, fatigue, painful cramps, myoglobinuria</td>
+<td data-col="1">McArdle disease (skeletal muscle glycogen phosphorylase deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">“Cherry-red spot” on macula</td>
+<td data-col="1">Tay-Sachs (no hepatosplenomegaly); Niemann-Pick (with hepatosplenomegaly); or central retinal artery occlusion</td>
+</tr>
+<tr>
+<td data-col="0">Hepatosplenomegaly, pancytopenia, osteoporosis, avascular necrosis of femoral head, bone crises</td>
+<td data-col="1">Gaucher disease (glucocerebrosidase [β-glucosidase] deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">Achilles tendon xanthoma, corneal arcus</td>
+<td data-col="1">Familial hypercholesterolemia (↓LDL receptor signaling)</td>
+</tr>
+<tr>
+<td data-col="0">Male child, recurrent infections, no mature B cells</td>
+<td data-col="1">Bruton disease (X-linked agammaglobulinemia [BTK gene defect])</td>
+</tr>
+<tr>
+<td data-col="0">Anaphylaxis following blood transfusion, atopy, airway/GI infections, autoimmune disease</td>
+<td data-col="1">Selective IgA deficiency</td>
+</tr>
+<tr>
+<td data-col="0">Recurrent cold (noninflamed) abscesses, eczema, ↑serum IgE, eosinophils</td>
+<td data-col="1">Hyper-IgE syndrome (Job syndrome: neutrophil chemotaxis abnormality; STAT3 mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Late separation (&gt; 30 days) of umbilical cord, no pus, recurrent skin and mucosal bacterial infections</td>
+<td data-col="1">Leukocyte adhesion deficiency (type 1; defective LFA-1 [CD18] integrin)</td>
+</tr>
+<tr>
+<td data-col="0">Recurrent infections and granulomas with catalase ⊕ organisms</td>
+<td data-col="1">Chronic granulomatous disease (defective NADPH oxidase)</td>
+</tr>
+<tr>
+<td data-col="0">Fever, vomiting, diarrhea, desquamating rash after prolonged use of nasal pack or tampon</td>
+<td data-col="1">Staphylococcal toxic shock syndrome</td>
+</tr>
+<tr>
+<td data-col="0">“Strawberry tongue”</td>
+<td data-col="1">Scarlet fever (sandpaper rash); Kawasaki disease (lymphadenopathy, high fever for 5 days)</td>
+</tr>
+<tr>
+<td data-col="0">Colon cancer associated with infective endocarditis</td>
+<td data-col="1">Streptococcus gallolyticus (formerly S. bovis)</td>
+</tr>
+<tr>
+<td data-col="0">Descending flaccid paralysis in newborn after honey ingestion</td>
+<td data-col="1">Clostridium botulinum infection (“floppy baby syndrome”)</td>
+</tr>
+<tr>
+<td data-col="0">Abdominal pain, diarrhea, leukocytosis, recent antibiotic use</td>
+<td data-col="1">Clostridioides difficile infection</td>
+</tr>
+<tr>
+<td data-col="0">Grayish-white pseudomembranous pharyngitis with “bull’s neck” appearance</td>
+<td data-col="1">Corynebacterium diphtheriae infection</td>
+</tr>
+<tr>
+<td data-col="0">Back pain, fever, night sweats</td>
+<td data-col="1">Pott disease (vertebral TB)</td>
+</tr>
+<tr>
+<td data-col="0">Acute adrenal insufficiency, fever, bilateral adrenal hemorrhage</td>
+<td data-col="1">Waterhouse-Friderichsen syndrome (meningococcemia)</td>
+</tr>
+<tr>
+<td data-col="0">Red “currant jelly” sputum in patients with alcohol overuse or diabetes</td>
+<td data-col="1">Klebsiella pneumoniae</td>
+</tr>
+<tr>
+<td data-col="0">Fever, chills, headache, myalgia following antibiotic treatment for syphilis</td>
+<td data-col="1">Jarisch-Herxheimer reaction (host response to sudden release of bacterial antigens)</td>
+</tr>
+<tr>
+<td data-col="0">Large rash with bull’s-eye appearance, flu-like symptoms</td>
+<td data-col="1">Erythema migrans from Ixodes tick bite (Lyme disease: Borrelia bacteria)</td>
+</tr>
+<tr>
+<td data-col="0">Ulcerated genital lesion</td>
+<td data-col="1">Nonpainful, indurated: chancre (1° syphilis, Treponema pallidum); Painful, with exudate: chancroid (Haemophilus ducreyi)</td>
+</tr>
+<tr>
+<td data-col="0">Smooth, moist, painless, wartlike white lesions on genitals</td>
+<td data-col="1">Condylomata lata (2° syphilis)</td>
+</tr>
+<tr>
+<td data-col="0">Pupil accommodates but doesn’t react to light</td>
+<td data-col="1">Argyll Robertson pupil (3° syphilis/neurosyphilis)</td>
+</tr>
+<tr>
+<td data-col="0">Dog or cat bite resulting in infection (cellulitis, osteomyelitis)</td>
+<td data-col="1">Pasteurella multocida (cellulitis at inoculation site)</td>
+</tr>
+<tr>
+<td data-col="0">Atypical “walking pneumonia” with x-ray looking worse than the patient</td>
+<td data-col="1">Mycoplasma pneumoniae infection</td>
+</tr>
+<tr>
+<td data-col="0">Rash on palms and soles</td>
+<td data-col="1">Coxsackie A infection, Rocky Mountain spotted fever, 2° syphilis</td>
+</tr>
+<tr>
+<td data-col="0">Black eschar on face of patient with diabetic ketoacidosis and/or neutropenia</td>
+<td data-col="1">Mucor or Rhizopus fungal infection</td>
+</tr>
+<tr>
+<td data-col="0">Chorioretinitis, hydrocephalus, intracranial calcifications, ± blueberry muffin rash</td>
+<td data-col="1">Congenital toxoplasmosis</td>
+</tr>
+<tr>
+<td data-col="0">Pruritus, serpiginous rash after walking barefoot, microcytic anemia</td>
+<td data-col="1">Hookworm (Ancylostoma spp, Necator americanus)</td>
+</tr>
+<tr>
+<td data-col="0">Febrile child later develops red facial rash with subsequent spread to body</td>
+<td data-col="1">Erythema infectiosum/fifth disease (“slapped cheeks” appearance, caused by parvovirus B19)</td>
+</tr>
+<tr>
+<td data-col="0">Fever, cough, conjunctivitis, coryza, diffuse rash, Koplik spots</td>
+<td data-col="1">Measles (rubeola) virus</td>
+</tr>
+<tr>
+<td data-col="0">Systolic ejection murmur (crescendo-decrescendo), “pulsus parvus et tardus,” syncope, angina, dyspnea on exertion</td>
+<td data-col="1">Aortic stenosis</td>
+</tr>
+<tr>
+<td data-col="0">Hyperdynamic pulses, wide pulse pressure, early diastolic murmur (decrescendo), head bobbing</td>
+<td data-col="1">Aortic regurgitation</td>
+</tr>
+<tr>
+<td data-col="0">Continuous “machinelike” murmur</td>
+<td data-col="1">PDA (close with indomethacin; keep open with PGE1 and PGE2 analogs)</td>
+</tr>
+<tr>
+<td data-col="0">Chest pain on exertion</td>
+<td data-col="1">Angina (stable: with moderate exertion; unstable: with minimal exertion or at rest)</td>
+</tr>
+<tr>
+<td data-col="0">Chest pain with ST depressions on ECG</td>
+<td data-col="1">Angina (− troponins) or NSTEMI (+ troponins)</td>
+</tr>
+<tr>
+<td data-col="0">Chest pain, pericardial effusion/friction rub, persistent fever following MI</td>
+<td data-col="1">Postcardiac injury syndrome (autoimmune-mediated post-MI pericarditis, weeks to several months after acute episode)</td>
+</tr>
+<tr>
+<td data-col="0">Distant heart sounds, distended neck veins, hypotension</td>
+<td data-col="1">Beck triad of cardiac tamponade</td>
+</tr>
+<tr>
+<td data-col="0">Painful, raised red/purple lesions on pads of fingers/toes</td>
+<td data-col="1">Osler nodes (immune complex deposition in infective endocarditis)</td>
+</tr>
+<tr>
+<td data-col="0">Painless erythematous lesions on palms and soles</td>
+<td data-col="1">Janeway lesions (septic emboli/microabscesses in infective endocarditis)</td>
+</tr>
+<tr>
+<td data-col="0">Splinter hemorrhages in fingernails</td>
+<td data-col="1">Infective endocarditis</td>
+</tr>
+<tr>
+<td data-col="0">Retinal hemorrhages with pale centers</td>
+<td data-col="1">Roth spots (infective endocarditis)</td>
+</tr>
+<tr>
+<td data-col="0">Telangiectasias, recurrent epistaxis, skin discoloration, arteriovenous malformations, GI bleeding, hematuria</td>
+<td data-col="1">Hereditary hemorrhagic telangiectasia (Osler-Weber-Rendu syndrome)</td>
+</tr>
+<tr>
+<td data-col="0">Polyuria, polydipsia</td>
+<td data-col="1">Primary polydipsia, diabetes mellitus (type 1 or 2), diabetes insipidus (central, nephrogenic)</td>
+</tr>
+<tr>
+<td data-col="0">Infant with vomiting, lethargy, jaundice, hepatomegaly after breastfeeding</td>
+<td data-col="1">Classic galactosemia (GALT deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">Hypoglycemia, hepatomegaly, seizures, lactic acidosis in infant</td>
+<td data-col="1">Von Gierke disease (glucose-6-phosphatase deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">Hyperextensible skin, joint hypermobility, bleeding tendency</td>
+<td data-col="1">Ehlers-Danlos syndrome</td>
+</tr>
+<tr>
+<td data-col="0">Fair skin, light hair and eyes, intellectual disability, musty odor</td>
+<td data-col="1">Phenylketonuria (phenylalanine hydroxylase or BH4 deficiency)</td>
+</tr>
+<tr>
+<td data-col="0">Weak cry, hypotonia, tongue protrusion, umbilical hernia</td>
+<td data-col="1">Congenital hypothyroidism</td>
+</tr>
+<tr>
+<td data-col="0">Infant with abdominal distension, no meconium, family history of thyroid disease</td>
+<td data-col="1">Hirschsprung disease</td>
+</tr>
+<tr>
+<td data-col="0">Vomiting, polyhydramnios, gasless abdomen on x-ray in newborn</td>
+<td data-col="1">Esophageal atresia with/without tracheoesophageal fistula</td>
+</tr>
+<tr>
+<td data-col="0">Downward lens dislocation, thrombosis, Marfanoid habitus</td>
+<td data-col="1">Homocystinuria</td>
+</tr>
+<tr>
+<td data-col="0">Hypoglycemia, hepatomegaly, hypotonia after fasting in infant</td>
+<td data-col="1">Cori disease</td>
+</tr>
+<tr>
+<td data-col="0">High fever, seizures, diffuse rash that starts on trunk then spreads</td>
+<td data-col="1">Roseola (HHV-6/7)</td>
+</tr>
+<tr>
+<td data-col="0">Recurrent otitis media, sinopulmonary infections, low IgG/IgA/IgE</td>
+<td data-col="1">Common variable immunodeficiency (CVID)</td>
+</tr>
+<tr>
+<td data-col="0">Failure to thrive, recurrent infections, chronic diarrhea</td>
+<td data-col="1">Severe combined immunodeficiency (SCID)</td>
+</tr>
+<tr>
+<td data-col="0">Infant with cleft palate, micrognathia, wide-spaced eyes, absent thymic shadow</td>
+<td data-col="1">DiGeorge syndrome (22q11 deletion)</td>
+</tr>
+<tr>
+<td data-col="0">Persistent fever, splenomegaly, pancytopenia, intracellular amastigotes</td>
+<td data-col="1">Visceral leishmaniasis</td>
+</tr>
+<tr>
+<td data-col="0">Child with sore throat, sandpaper rash, strawberry tongue</td>
+<td data-col="1">Scarlet fever (Group A Strep pyogenes)</td>
+</tr>
+<tr>
+<td data-col="0">Fever, conjunctivitis, pharyngitis, preauricular lymphadenopathy</td>
+<td data-col="1">Adenovirus (pharyngoconjunctival fever)</td>
+</tr>
+<tr>
+<td data-col="0">Sudden cessation of inspiration during RUQ palpation</td>
+<td data-col="1">Murphy sign (cholecystitis)</td>
+</tr>
+<tr>
+<td data-col="0">Increased creatinine after starting ACE inhibitor</td>
+<td data-col="1">Bilateral renal artery stenosis</td>
+</tr>
+<tr>
+<td data-col="0">Sudden flank pain, hematuria, no stones on imaging</td>
+<td data-col="1">Renal papillary necrosis (e.g., sickle cell, NSAIDs, diabetes)</td>
+</tr>
+<tr>
+<td data-col="0">Hematuria, sensorineural hearing loss, lens abnormalities</td>
+<td data-col="1">Alport syndrome</td>
+</tr>
+<tr>
+<td data-col="0">Tea-colored urine, recent sore throat, facial edema</td>
+<td data-col="1">Poststreptococcal glomerulonephritis</td>
+</tr>
+<tr>
+<td data-col="0">Child with hematuria, abdominal pain, palpable purpura</td>
+<td data-col="1">IgA vasculitis (Henoch-Schönlein purpura)</td>
+</tr>
+<tr>
+<td data-col="0">Hematuria, flank pain, abdominal mass in adult</td>
+<td data-col="1">Renal cell carcinoma</td>
+</tr>
+<tr>
+<td data-col="0">Post-transplant fever, biopsy with dense lymphocyte infiltrate</td>
+<td data-col="1">Acute transplant rejection (cell-mediated)</td>
+</tr>
+<tr>
+<td data-col="0">Post-transplant hypertension, gradual loss of function, fibrosis on biopsy</td>
+<td data-col="1">Chronic transplant rejection</td>
+</tr>
+</tbody>
+<tr>
+<td data-col="0">Golden brown rings around peripheral cornea</td>
+<td data-col="1">Wilson disease (Kayser-Fleischer rings due to copper accumulation)</td>
+</tr>
+<tr>
+<td data-col="0">Female, fat (obese), fertile (multiparity), forty, fair, feeds (TPN), fasting (rapid weight loss)</td>
+<td data-col="1">Cholelithiasis (gallstones)</td>
+</tr>
+<tr>
+<td data-col="0">Bluish line on gingiva</td>
+<td data-col="1">Burton line (lead poisoning)</td>
+</tr>
+<tr>
+<td data-col="0">Short stature, café-au-lait spots, thumb/radial defects, ↑incidence of tumors/leukemia, aplastic anemia (pancytopenia)</td>
+<td data-col="1">Fanconi anemia (genetic defect in DNA crosslink repair; often progresses to AML)</td>
+</tr>
+<tr>
+<td data-col="0">Red/pink urine in the morning, pancytopenia, venous thrombosis</td>
+<td data-col="1">Paroxysmal nocturnal hemoglobinuria</td>
+</tr>
+<tr>
+<td data-col="0">Painful blue fingers/toes, hemolytic anemia</td>
+<td data-col="1">Cold autoimmune hemolytic anemia (caused by Mycoplasma pneumoniae, infectious mononucleosis, CLL)</td>
+</tr>
+<tr>
+<td data-col="0">Petechiae, mucosal bleeding, ↑bleeding time</td>
+<td data-col="1">Platelet disorders (e.g., Glanzmann thrombasthenia, Bernard-Soulier, HUS, TTP, ITP, uremic platelet dysfunction)</td>
+</tr>
+<tr>
+<td data-col="0">Low-grade fever, night sweats, weight loss</td>
+<td data-col="1">“B” symptoms of malignancy</td>
+</tr>
+<tr>
+<td data-col="0">Erythematous patches → plaques → tumors</td>
+<td data-col="1">Mycosis fungoides (cutaneous T-cell lymphoma)</td>
+</tr>
+<tr>
+<td data-col="0">Neonate with arm in “waiter’s tip” position following difficult birth</td>
+<td data-col="1">Erb palsy (superior trunk [C5-C6] brachial plexus injury)</td>
+</tr>
+<tr>
+<td data-col="0">Anterior drawer sign ⊕ (tibia glides anteriorly with respect to femur when knee is at 90° angle)</td>
+<td data-col="1">Anterior cruciate ligament (ACL) injury</td>
+</tr>
+<tr>
+<td data-col="0">Mosaic pattern of bone, long bone chalk-stick fractures, skull thickening, hearing loss</td>
+<td data-col="1">Osteitis deformans (Paget disease of bone, ↑osteoblastic and osteoclastic activity)</td>
+</tr>
+<tr>
+<td data-col="0">Swollen, hard, painful finger joints in an elderly individual, pain worse with activity</td>
+<td data-col="1">Osteoarthritis (osteophytes on PIP [Bouchard nodes], DIP [Heberden nodes])</td>
+</tr>
+<tr>
+<td data-col="0">Sudden swollen/painful big toe joint, tophi</td>
+<td data-col="1">Gout/podagra (hyperuricemia)</td>
+</tr>
+<tr>
+<td data-col="0">Dry eyes and mouth, arthritis, parotid enlargement</td>
+<td data-col="1">Sjögren syndrome (autoimmune destruction of exocrine glands)</td>
+</tr>
+<tr>
+<td data-col="0">Urethritis, conjunctivitis, arthritis</td>
+<td data-col="1">Reactive arthritis associated with HLA-B27</td>
+</tr>
+<tr>
+<td data-col="0">“Butterfly” facial rash, arthritis, cytopenia, and fever in a female of reproductive age</td>
+<td data-col="1">Systemic lupus erythematosus</td>
+</tr>
+<tr>
+<td data-col="0">Cervical lymphadenopathy, desquamating rash, coronary aneurysms, red conjunctivae and tongue, hand-foot changes (edema, erythema), fever ≥ 5 days</td>
+<td data-col="1">Kawasaki disease (mucocutaneous lymph node syndrome, treat with IVIG and aspirin)</td>
+</tr>
+<tr>
+<td data-col="0">Palpable purpura on buttocks/legs, joint pain, abdominal pain, hematuria in a child</td>
+<td data-col="1">IgA vasculitis (Henoch-Schönlein purpura, affects skin and kidneys)</td>
+</tr>
+<tr>
+<td data-col="0">Painful fingers/toes changing color from white to blue to red with cold or stress</td>
+<td data-col="1">Raynaud phenomenon (vasospasm in extremities)</td>
+</tr>
+<tr>
+<td data-col="0">Dark purple skin/mouth nodules in a patient with AIDS</td>
+<td data-col="1">Kaposi sarcoma, associated with HHV-8</td>
+</tr>
+<tr>
+<td data-col="0">Pruritic, purple, polygonal planar papules and plaques (6 Ps)</td>
+<td data-col="1">Lichen planus</td>
+</tr>
+<tr>
+<td data-col="0">Dorsiflexion of large toe with fanning of other toes upon plantar scrape</td>
+<td data-col="1">Babinski sign (UMN lesion)</td>
+</tr>
+<tr>
+<td data-col="0">Intention tremor, limb ataxia, loss of balance (fall toward injured side)</td>
+<td data-col="1">Cerebellar lesion (hemispheric affects voluntary movement of extremities; vermis affects axial and proximal movement)</td>
+</tr>
+<tr>
+<td data-col="0">Hyperphagia, hypersexuality, hyperorality</td>
+<td data-col="1">Klüver-Bucy syndrome (bilateral amygdala lesion; HSV-1 encephalitis)</td>
+</tr>
+<tr>
+<td data-col="0">No lactation postpartum, absent menstruation, cold intolerance</td>
+<td data-col="1">Sheehan syndrome (severe postpartum hemorrhage → pituitary infarction)</td>
+</tr>
+<tr>
+<td data-col="0">Heat intolerance, weight loss, palpitations, fine tremor, hyperreflexia</td>
+<td data-col="1">Hyperthyroidism</td>
+</tr>
+<tr>
+<td data-col="0">Cold intolerance, weight gain, brittle hair, depressed mood, hyporeflexia</td>
+<td data-col="1">Hypothyroidism</td>
+</tr>
+<tr>
+<td data-col="0">Cutaneous/dermal edema due to deposition of mucopolysaccharides in connective tissue</td>
+<td data-col="1">Myxedema (caused by hypothyroidism or hyperthyroidism [Graves disease])</td>
+</tr>
+<tr>
+<td data-col="0">Facial muscle spasm upon tapping</td>
+<td data-col="1">Chvostek sign (hypocalcemia)</td>
+</tr>
+<tr>
+<td data-col="0">Carpal spasm upon BP cuff inflation</td>
+<td data-col="1">Trousseau sign (hypocalcemia)</td>
+</tr>
+<tr>
+<td data-col="0">Rapid, deep, labored breathing/hyperventilation</td>
+<td data-col="1">Diabetic ketoacidosis (Kussmaul respirations)</td>
+</tr>
+<tr>
+<td data-col="0">Skin hyperpigmentation, orthostatic hypotension, fatigue, weakness, muscle aches, weight loss, GI disturbances</td>
+<td data-col="1">Chronic 1° adrenal insufficiency (Addison disease) ↑ACTH, ↑MSH</td>
+</tr>
+<tr>
+<td data-col="0">Shock, altered mental status, vomiting, abdominal pain, weakness, fatigue in patient on glucocorticoid therapy</td>
+<td data-col="1">Acute adrenal insufficiency (adrenal crisis)</td>
+</tr>
+<tr>
+<td data-col="0">Pancreatic, pituitary, parathyroid tumors</td>
+<td data-col="1">MEN1 (autosomal dominant MEN1 mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Medullary thyroid carcinoma, parathyroid hyperplasia, pheochromocytoma</td>
+<td data-col="1">MEN2A (autosomal dominant RET mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Medullary thyroid carcinoma, pheochromocytoma, mucosal neuromas, marfanoid habitus</td>
+<td data-col="1">MEN2B (autosomal dominant RET mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Cutaneous flushing, diarrhea, bronchospasm, right-sided heart murmur</td>
+<td data-col="1">Carcinoid syndrome (urinary 5-HIAA); indicates systemic dissemination (e.g., post–liver metastases)</td>
+</tr>
+<tr>
+<td data-col="0">Jaundice, palpable distended nontender gallbladder</td>
+<td data-col="1">Courvoisier sign (distal obstruction of common bile duct by pancreatic head malignancy)</td>
+</tr>
+<tr>
+<td data-col="0">Hematemesis ± abdominal/back pain</td>
+<td data-col="1">Mallory-Weiss syndrome (partial thickness esophageal lacerations in alcohol use disorder, bulimia nervosa)</td>
+</tr>
+<tr>
+<td data-col="0">Dysphagia (esophageal webs), glossitis, iron deficiency anemia</td>
+<td data-col="1">Plummer-Vinson syndrome (may progress to esophageal squamous cell carcinoma)</td>
+</tr>
+<tr>
+<td data-col="0">Enlarged, firm left supraclavicular node</td>
+<td data-col="1">Virchow node (metastasis from stomach malignancy)</td>
+</tr>
+<tr>
+<td data-col="0">Hematemesis, melena</td>
+<td data-col="1">Upper GI bleed (e.g., peptic ulcer disease)</td>
+</tr>
+<tr>
+<td data-col="0">Hematochezia</td>
+<td data-col="1">Lower GI bleed (e.g., colonic diverticulosis)</td>
+</tr>
+<tr>
+<td data-col="0">Arthralgias, cardiac and neurological symptoms, diarrhea</td>
+<td data-col="1">Whipple disease (Tropheryma whipplei)</td>
+</tr>
+<tr>
+<td data-col="0">Severe RLQ pain with palpation of LLQ</td>
+<td data-col="1">Rovsing sign (acute appendicitis)</td>
+</tr>
+<tr>
+<td data-col="0">Severe RLQ pain with deep palpation</td>
+<td data-col="1">McBurney sign (acute appendicitis)</td>
+</tr>
+<tr>
+<td data-col="0">Hamartomatous GI polyps, hyperpigmented macules on mouth, lips, hands, genitalia</td>
+<td data-col="1">Peutz-Jeghers syndrome (autosomal dominant, benign polyposis; breast/GI cancer risk)</td>
+</tr>
+<tr>
+<td data-col="0">Thousands of colon polyps, osteomas/soft tissue tumors, impacted/supernumerary teeth</td>
+<td data-col="1">Gardner syndrome (subtype of familial adenomatous polyposis)</td>
+</tr>
+<tr>
+<td data-col="0">Severe jaundice, kernicterus (neurological changes) in neonate</td>
+<td data-col="1">Crigler-Najjar syndrome, type I (congenital unconjugated hyperbilirubinemia)</td>
+</tr>
+<tr>
+<td data-col="0">Green/yellow rings around peripheral cornea + movement disorder</td>
+<td data-col="1">Wilson disease (Kayser-Fleischer rings, hepatolenticular degeneration)</td>
+</tr>
+<tr>
+<td data-col="0">Painful hepatomegaly, ↑α-fetoprotein</td>
+<td data-col="1">Hepatocellular carcinoma</td>
+</tr>
+<tr>
+<td data-col="0">Abdominal pain, ascites, hepatomegaly</td>
+<td data-col="1">Budd-Chiari syndrome (posthepatic venous thrombosis)</td>
+</tr>
+<tr>
+<td data-col="0">Infant with vomiting, lethargy, seizures, ↑ammonia</td>
+<td data-col="1">Ornithine transcarbamylase deficiency (urea cycle disorder)</td>
+</tr>
+<tr>
+<td data-col="0">Elevated conjugated bilirubin, black liver</td>
+<td data-col="1">Dubin-Johnson syndrome (benign defect in hepatic excretion)</td>
+</tr>
+<tr>
+<td data-col="0">Elevated unconjugated bilirubin without overt hemolysis</td>
+<td data-col="1">Gilbert syndrome (benign congenital bilirubin uptake defect)</td>
+</tr>
+<tr>
+<td data-col="0">Kayser-Fleischer rings, low ceruloplasmin, liver and neuro symptoms</td>
+<td data-col="1">Wilson disease (AR ATP7B mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Fatigue, pruritus, hepatomegaly, antimitochondrial antibodies</td>
+<td data-col="1">Primary biliary cholangitis (autoimmune destruction of bile ducts)</td>
+</tr>
+<tr>
+<td data-col="0">Fat-soluble vitamin deficiency, biliary fibrosis, associated with IBD</td>
+<td data-col="1">Primary sclerosing cholangitis (associated with ulcerative colitis, p-ANCA ⊕)</td>
+</tr>
+<tr>
+<td data-col="0">RUQ pain, fever, jaundice</td>
+<td data-col="1">Cholangitis (Charcot triad; often due to ascending infection)</td>
+</tr>
+<tr>
+<td data-col="0">RUQ pain, jaundice, fever, hypotension, altered mental status</td>
+<td data-col="1">Reynolds pentad (suppurative ascending cholangitis)</td>
+</tr>
+<tr>
+<td data-col="0">RUQ pain after fatty meal, positive Murphy sign</td>
+<td data-col="1">Cholecystitis</td>
+</tr>
+<tr>
+<td data-col="0">Weight loss, abdominal pain radiating to back, obstructive jaundice with palpable gallbladder</td>
+<td data-col="1">Pancreatic adenocarcinoma (often in pancreatic head)</td>
+</tr>
+<tr>
+<td data-col="0">Sudden epigastric pain, ↑amylase/lipase</td>
+<td data-col="1">Acute pancreatitis</td>
+</tr>
+<tr>
+<td data-col="0">Steatorrhea, ADEK deficiency, weight loss</td>
+<td data-col="1">Chronic pancreatitis</td>
+</tr>
+<tr>
+<td data-col="0">Burns, trauma, sepsis, curled up patient with ulcers</td>
+<td data-col="1">Curling ulcer (acute gastric ulcer associated with severe stress)</td>
+</tr>
+<tr>
+<td data-col="0">Head trauma, Cushing reflex, gastric ulcers</td>
+<td data-col="1">Cushing ulcer (↑vagal stimulation after CNS injury)</td>
+</tr>
+<tr>
+<td data-col="0">Increased urine 5-HIAA, diarrhea, bronchospasm, right-sided heart lesions</td>
+<td data-col="1">Carcinoid syndrome (neuroendocrine tumor metastasis to liver)</td>
+</tr>
+<tr>
+<td data-col="0">Gastric/duodenal ulcers, high gastrin</td>
+<td data-col="1">Zollinger-Ellison syndrome (gastrinoma)</td>
+</tr>
+<tr>
+<td data-col="0">Postprandial epigastric pain, food aversion/weight loss</td>
+<td data-col="1">Chronic mesenteric ischemia (“intestinal angina”)</td>
+</tr>
+<tr>
+<td data-col="0">Bright red blood per rectum in elderly</td>
+<td data-col="1">Diverticulosis (often sigmoid colon)</td>
+</tr>
+<tr>
+<td data-col="0">Sudden onset LLQ pain, fever, leukocytosis</td>
+<td data-col="1">Diverticulitis</td>
+</tr>
+<tr>
+<td data-col="0">Melena, pain relieved by meals</td>
+<td data-col="1">Duodenal ulcer (↓ with food, H. pylori associated)</td>
+</tr>
+<tr>
+<td data-col="0">Melena, pain worse with meals</td>
+<td data-col="1">Gastric ulcer (↑ with food, often due to NSAIDs)</td>
+</tr>
+<tr>
+<td data-col="0">Intestinal biopsy: villous atrophy, crypt hyperplasia, intraepithelial lymphocytosis</td>
+<td data-col="1">Celiac disease (gluten sensitivity; anti-tTG/EMA antibodies)</td>
+</tr>
+<tr>
+<td data-col="0">Postprandial bloating, flatulence, osmotic diarrhea</td>
+<td data-col="1">Lactose intolerance (low lactase levels in brush border)</td>
+</tr>
+<tr>
+<td data-col="0">Infant with bilious vomiting, “double bubble” sign on x-ray</td>
+<td data-col="1">Duodenal atresia (associated with Down syndrome)</td>
+</tr>
+<tr>
+<td data-col="0">Projectile vomiting in infant, visible peristalsis, palpable mass</td>
+<td data-col="1">Pyloric stenosis (firstborn males)</td>
+</tr>
+<tr>
+<td data-col="0">3–5 day old with failure to pass meconium</td>
+<td data-col="1">Hirschsprung disease (congenital aganglionosis of colon)</td>
+</tr>
+<tr>
+<td data-col="0">Meconium ileus</td>
+<td data-col="1">Cystic fibrosis</td>
+</tr>
+<tr>
+<td data-col="0">Red currant jelly stools, sausage-shaped mass in abdomen, sudden episodic abdominal pain</td>
+<td data-col="1">Intussusception (often idiopathic or associated with rotavirus, Meckel diverticulum)</td>
+</tr>
+<tr>
+<td data-col="0">Abdominal pain, bloody diarrhea after recent travel</td>
+<td data-col="1">Enterohemorrhagic E. coli, Shigella, Campylobacter, or Entamoeba histolytica</td>
+</tr>
+<tr>
+<td data-col="0">Lead pipe appearance of colon on imaging</td>
+<td data-col="1">Ulcerative colitis</td>
+</tr>
+<tr>
+<td data-col="0">Transmural inflammation, fistulas, noncaseating granulomas</td>
+<td data-col="1">Crohn disease (skip lesions, any GI site)</td>
+</tr>
+<tr>
+<td data-col="0">Male child with abdominal pain, currant jelly stools, palpable mass</td>
+<td data-col="1">Intussusception</td>
+</tr>
+<tr>
+<td data-col="0">GI bleeding with painless bright red rectal blood in toddler</td>
+<td data-col="1">Meckel diverticulum (ectopic gastric tissue)</td>
+</tr>
+<tr>
+<td data-col="0">Currant jelly stool + failure to pass meconium</td>
+<td data-col="1">Intussusception vs Hirschsprung (distinguish by onset, air enema diagnostic and therapeutic)</td>
+</tr>
+<tr>
+<td data-col="0">Abdominal pain out of proportion to exam</td>
+<td data-col="1">Acute mesenteric ischemia</td>
+</tr>
+<tr>
+<td data-col="0">Severe abdominal pain after meals in older adult</td>
+<td data-col="1">Chronic mesenteric ischemia (intestinal angina)</td>
+</tr>
+<tr>
+<td data-col="0">Colonoscopic biopsy showing pseudopolyps, crypt abscesses</td>
+<td data-col="1">Ulcerative colitis</td>
+</tr>
+<tr>
+<td data-col="0">Terminal ileum involvement, skip lesions, cobblestoning, fistulas</td>
+<td data-col="1">Crohn disease</td>
+</tr>
+<tr>
+<td data-col="0">Young female with RLQ pain, ovarian mass on imaging</td>
+<td data-col="1">Ovarian torsion (twisting of infundibulopelvic ligament)</td>
+</tr>
+<tr>
+<td data-col="0">Pelvic pain, adnexal tenderness, fever, cervical motion tenderness</td>
+<td data-col="1">Pelvic inflammatory disease (usually from N. gonorrhoeae or C. trachomatis)</td>
+</tr>
+<tr>
+<td data-col="0">Pelvic mass + ascites + high CA-125</td>
+<td data-col="1">Ovarian cancer</td>
+</tr>
+<tr>
+<td data-col="0">Vaginal bleeding, enlarged uterus, snowstorm on ultrasound</td>
+<td data-col="1">Hydatidiform mole</td>
+</tr>
+<tr>
+<td data-col="0">Uterine bleeding + markedly ↑β-hCG + early pregnancy symptoms</td>
+<td data-col="1">Complete mole (46,XX or XY, no fetal parts)</td>
+</tr>
+<tr>
+<td data-col="0">Postpartum hemorrhage unresponsive to uterotonics</td>
+<td data-col="1">Retained placental tissue</td>
+</tr>
+<tr>
+<td data-col="0">Postpartum hemorrhage with failure to lactate</td>
+<td data-col="1">Sheehan syndrome (pituitary infarct)</td>
+</tr>
+<tr>
+<td data-col="0">Postpartum fever, uterine tenderness, foul lochia</td>
+<td data-col="1">Endometritis (polymicrobial infection)</td>
+</tr>
+<tr>
+<td data-col="0">Uterine enlargement, menorrhagia, pelvic pressure, reproductive-age woman</td>
+<td data-col="1">Leiomyoma (fibroid)</td>
+</tr>
+<tr>
+<td data-col="0">Pelvic pain, dysmenorrhea, dyspareunia, infertility</td>
+<td data-col="1">Endometriosis (ectopic endometrial glands/stroma)</td>
+</tr>
+<tr>
+<td data-col="0">Postmenopausal bleeding, endometrial hyperplasia</td>
+<td data-col="1">Endometrial carcinoma (often preceded by hyperplasia)</td>
+</tr>
+<tr>
+<td data-col="0">Breast mass + skin tethering or dimpling</td>
+<td data-col="1">Invasive breast cancer (e.g., invasive ductal carcinoma)</td>
+</tr>
+<tr>
+<td data-col="0">Multiple bilateral breast masses that fluctuate with hormones</td>
+<td data-col="1">Fibrocystic changes (most common benign breast condition)</td>
+</tr>
+<tr>
+<td data-col="0">Painless breast lump in a young woman</td>
+<td data-col="1">Fibroadenoma (benign, estrogen-sensitive)</td>
+</tr>
+<tr>
+<td data-col="0">Painful breast mass after trauma or surgery</td>
+<td data-col="1">Fat necrosis</td>
+</tr>
+<tr>
+<td data-col="0">Painless breast lump + serous/bloody nipple discharge + skin changes (eczema)</td>
+<td data-col="1">Paget disease of the breast (DCIS or invasive cancer)</td>
+</tr>
+<tr>
+<td data-col="0">Nipple discharge + central papilloma on histology</td>
+<td data-col="1">Intraductal papilloma</td>
+</tr>
+<tr>
+<td data-col="0">Painful swelling of breast tissue in a male</td>
+<td data-col="1">Gynecomastia (↑estrogen:circulating androgen ratio)</td>
+</tr>
+<tr>
+<td data-col="0">Menorrhagia, dysmenorrhea, enlarged tender uterus</td>
+<td data-col="1">Adenomyosis (endometrial tissue in myometrium)</td>
+</tr>
+<tr>
+<td data-col="0">Primary amenorrhea with normal secondary sex characteristics + no uterus</td>
+<td data-col="1">Müllerian agenesis (Mayer-Rokitansky-Küster-Hauser syndrome)</td>
+</tr>
+<tr>
+<td data-col="0">Primary amenorrhea, uterus present, breasts absent</td>
+<td data-col="1">Gonadal dysgenesis (e.g., Turner syndrome)</td>
+</tr>
+<tr>
+<td data-col="0">Short stature, webbed neck, widely spaced nipples, primary amenorrhea</td>
+<td data-col="1">Turner syndrome (45,XO)</td>
+</tr>
+<tr>
+<td data-col="0">Primary amenorrhea, normal ovaries and uterus, no pubic/axillary hair</td>
+<td data-col="1">Androgen insensitivity syndrome (46,XY, complete resistance)</td>
+</tr>
+<tr>
+<td data-col="0">Hypotension, tachycardia, pulsatile bleeding from uterus after delivery</td>
+<td data-col="1">Uterine atony</td>
+</tr>
+<tr>
+<td data-col="0">Abnormal bleeding, history of uterine surgery, placenta attaches to myometrium</td>
+<td data-col="1">Placenta accreta</td>
+</tr>
+<tr>
+<td data-col="0">Sudden onset intense uterine pain, loss of fetal station, history of C-section</td>
+<td data-col="1">Uterine rupture</td>
+</tr>
+<tr>
+<td data-col="0">Painful third-trimester bleeding</td>
+<td data-col="1">Placental abruption</td>
+</tr>
+<tr>
+<td data-col="0">Painless third-trimester bleeding</td>
+<td data-col="1">Placenta previa</td>
+</tr>
+<tr>
+<td data-col="0">Severe hypertension + proteinuria + seizures during pregnancy</td>
+<td data-col="1">Eclampsia</td>
+</tr>
+<tr>
+<td data-col="0">Hypertension, proteinuria, edema in pregnant woman after 20 weeks</td>
+<td data-col="1">Preeclampsia</td>
+</tr>
+<tr>
+<td data-col="0">Premature cervical dilation in second trimester</td>
+<td data-col="1">Cervical insufficiency</td>
+</tr>
+<tr>
+<td data-col="0">Low AFP, estriol; high β-hCG, inhibin A</td>
+<td data-col="1">Down syndrome (second trimester quad screen)</td>
+</tr>
+<tr>
+<td data-col="0">Low β-hCG, low PAPP-A, nuchal translucency</td>
+<td data-col="1">Trisomy 13 or 18 (first trimester screen)</td>
+</tr>
+<tr>
+<td data-col="0">Elevated maternal serum AFP</td>
+<td data-col="1">Neural tube defects, abdominal wall defects (e.g., omphalocele, gastroschisis)</td>
+</tr>
+<tr>
+<td data-col="0">Fetal bradycardia, sinusoidal pattern on fetal heart tracing</td>
+<td data-col="1">Fetal anemia (e.g., Rh isoimmunization, fetomaternal hemorrhage)</td>
+</tr>
+<tr>
+<td data-col="0">Postcoital bleeding, irregular vaginal discharge, cervical friability</td>
+<td data-col="1">Cervical cancer (HPV-associated)</td>
+</tr>
+<tr>
+<td data-col="0">Postmenopausal woman with adnexal mass + estrogen symptoms</td>
+<td data-col="1">Granulosa cell tumor (↑inhibin, ↑estrogen, Call-Exner bodies)</td>
+</tr>
+<tr>
+<td data-col="0">Young girl with precocious puberty, adnexal mass</td>
+<td data-col="1">Juvenile granulosa cell tumor</td>
+</tr>
+<tr>
+<td data-col="0">β-hCG–secreting tumor in men or women; may present with gynecomastia or early puberty</td>
+<td data-col="1">Choriocarcinoma (malignant trophoblastic tumor)</td>
+</tr>
+<tr>
+<td data-col="0">Elevated β-hCG, normal AFP, testicular mass</td>
+<td data-col="1">Seminoma (germ cell tumor)</td>
+</tr>
+<tr>
+<td data-col="0">Elevated AFP, testicular mass in male child</td>
+<td data-col="1">Yolk sac (endodermal sinus) tumor (Schiller-Duval bodies)</td>
+</tr>
+<tr>
+<td data-col="0">Painless scrotal mass that transilluminates</td>
+<td data-col="1">Hydrocele (tunica vaginalis fluid collection)</td>
+</tr>
+<tr>
+<td data-col="0">Painless scrotal swelling that does not transilluminate</td>
+<td data-col="1">Varicocele (bag of worms, dilated pampiniform plexus)</td>
+</tr>
+<tr>
+<td data-col="0">Severe testicular pain, absent cremasteric reflex</td>
+<td data-col="1">Testicular torsion</td>
+</tr>
+<tr>
+<td data-col="0">Testicular pain, relief with elevation</td>
+<td data-col="1">Epididymitis (e.g., C. trachomatis, N. gonorrhoeae, E. coli)</td>
+</tr>
+<tr>
+<td data-col="0">Gynecomastia, small testes, long limbs, infertility</td>
+<td data-col="1">Klinefelter syndrome (47,XXY)</td>
+</tr>
+<tr>
+<td data-col="0">Ambiguous genitalia in newborn + hyponatremia, hyperkalemia, hypotension</td>
+<td data-col="1">21-hydroxylase deficiency (congenital adrenal hyperplasia)</td>
+</tr>
+<tr>
+<td data-col="0">Precocious puberty, hypertension, low renin</td>
+<td data-col="1">11β-hydroxylase deficiency (congenital adrenal hyperplasia)</td>
+</tr>
+<tr>
+<td data-col="0">Hypertension, hypokalemia, metabolic alkalosis, low aldosterone, low renin</td>
+<td data-col="1">Apparent mineralocorticoid excess (11β-HSD2 deficiency or glycyrrhetinic acid from licorice)</td>
+</tr>
+<tr>
+<td data-col="0">Testicular mass, elevated β-hCG and AFP</td>
+<td data-col="1">Nonseminomatous germ cell tumor (e.g., embryonal carcinoma, yolk sac tumor, choriocarcinoma, teratoma)</td>
+</tr>
+<tr>
+<td data-col="0">Back pain, impotence, urinary symptoms, osteoblastic lesions on imaging</td>
+<td data-col="1">Prostate cancer with metastasis to bone</td>
+</tr>
+<tr>
+<td data-col="0">Night sweats, weight loss, painless lymphadenopathy</td>
+<td data-col="1">Hodgkin lymphoma (Reed-Sternberg cells)</td>
+</tr>
+<tr>
+<td data-col="0">Sudden onset chest pain, dyspnea, tachycardia in patient with recent immobilization or surgery</td>
+<td data-col="1">Pulmonary embolism</td>
+</tr>
+<tr>
+<td data-col="0">Sharp chest pain worse with inspiration, friction rub</td>
+<td data-col="1">Pleuritis or pericarditis</td>
+</tr>
+<tr>
+<td data-col="0">Sudden onset dyspnea, decreased breath sounds, hyperresonance to percussion</td>
+<td data-col="1">Pneumothorax</td>
+</tr>
+<tr>
+<td data-col="0">Progressive dyspnea, dry cough, clubbing, crackles</td>
+<td data-col="1">Idiopathic pulmonary fibrosis</td>
+</tr>
+<tr>
+<td data-col="0">Fever, cough, pleuritic chest pain, hemoptysis, cavitary lesion on imaging</td>
+<td data-col="1">Aspergillus infection (e.g., aspergilloma)</td>
+</tr>
+<tr>
+<td data-col="0">Granulomatous inflammation of lung, kidney, and nasopharynx; hematuria, sinusitis</td>
+<td data-col="1">Granulomatosis with polyangiitis (Wegener, c-ANCA+)</td>
+</tr>
+<tr>
+<td data-col="0">Upper respiratory tract symptoms, asthma, eosinophilia</td>
+<td data-col="1">Eosinophilic granulomatosis with polyangiitis (Churg-Strauss, p-ANCA+)</td>
+</tr>
+<tr>
+<td data-col="0">Dyspnea, chest pain, hemorrhagic pleural effusion, pleural thickening</td>
+<td data-col="1">Mesothelioma (asbestos exposure)</td>
+</tr>
+<tr>
+<td data-col="0">Post-URI cough &gt; 3 weeks with clear CXR</td>
+<td data-col="1">Postviral cough (bronchial hyperreactivity)</td>
+</tr>
+<tr>
+<td data-col="0">Fever, night sweats, weight loss, cavitary lung lesion, immigrant</td>
+<td data-col="1">Tuberculosis (Mycobacterium tuberculosis)</td>
+</tr>
+<tr>
+<td data-col="0">Hemoptysis, cough, fever, weight loss; acid-fast bacilli in sputum</td>
+<td data-col="1">Active TB (pulmonary or disseminated)</td>
+</tr>
+<tr>
+<td data-col="0">Posttransplant pneumonia + elevated LDH + bilateral infiltrates</td>
+<td data-col="1">Pneumocystis jirovecii pneumonia (opportunistic fungus)</td>
+</tr>
+<tr>
+<td data-col="0">Bone pain, anemia, renal failure, hypercalcemia</td>
+<td data-col="1">Multiple myeloma (plasma cell dyscrasia)</td>
+</tr>
+<tr>
+<td data-col="0">Upper lobe cavitary lesion, hemoptysis, chronic cough, smoking history</td>
+<td data-col="1">Squamous cell carcinoma of lung</td>
+</tr>
+<tr>
+<td data-col="0">Hyponatremia, confusion, lung mass on x-ray</td>
+<td data-col="1">Small cell lung carcinoma (SIADH paraneoplastic syndrome)</td>
+</tr>
+<tr>
+<td data-col="0">Gynecomastia, galactorrhea, impotence in man with lung mass</td>
+<td data-col="1">Large cell carcinoma (produces β-hCG)</td>
+</tr>
+<tr>
+<td data-col="0">Lung nodule with carcinoid histology, wheezing, flushing, diarrhea</td>
+<td data-col="1">Bronchial carcinoid tumor (serotonin-secreting)</td>
+</tr>
+<tr>
+<td data-col="0">Child with inspiratory stridor, barking cough</td>
+<td data-col="1">Croup (parainfluenza virus)</td>
+</tr>
+<tr>
+<td data-col="0">Drooling, dysphagia, thumbprint sign on x-ray</td>
+<td data-col="1">Epiglottitis (H. influenzae type B)</td>
+</tr>
+<tr>
+<td data-col="0">Child with nasal polyps, meconium ileus, steatorrhea, recurrent infections</td>
+<td data-col="1">Cystic fibrosis</td>
+</tr>
+<tr>
+<td data-col="0">Unilateral renal mass in child, abdominal distension, hematuria, HTN</td>
+<td data-col="1">Wilms tumor (WT1/WT2 gene mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Diuretic use, hyperaldosteronism, vomiting</td>
+<td data-col="1">Metabolic alkalosis</td>
+</tr>
+<tr>
+<td data-col="0">Severe diarrhea, RTA, carbonic anhydrase inhibitors</td>
+<td data-col="1">Normal anion gap metabolic acidosis</td>
+</tr>
+<tr>
+<td data-col="0">Diabetic ketoacidosis, methanol ingestion, salicylate toxicity</td>
+<td data-col="1">High anion gap metabolic acidosis</td>
+</tr>
+<tr>
+<td data-col="0">Dark urine, pale stools, jaundice, pruritus</td>
+<td data-col="1">Cholestasis (e.g., obstructive or intrahepatic)</td>
+</tr>
+<tr>
+<td data-col="0">Hyperphagia, obesity, intellectual disability, hypogonadism, hypotonia</td>
+<td data-col="1">Prader-Willi syndrome (loss of paternal allele on chromosome 15)</td>
+</tr>
+<tr>
+<td data-col="0">Seizures, facial angiofibromas, cardiac rhabdomyoma, ash leaf spots</td>
+<td data-col="1">Tuberous sclerosis (TSC1/TSC2 mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Port-wine stain, leptomeningeal angioma, seizures, intellectual disability</td>
+<td data-col="1">Sturge-Weber syndrome (somatic mosaic GNAQ mutation)</td>
+</tr>
+<tr>
+<td data-col="0">Hematuria, hearing loss, ocular disturbances</td>
+<td data-col="1">Alport syndrome (type IV collagen defect)</td>
+</tr>
+<tr>
+<td data-col="0">Swelling in newborn scalp that crosses suture lines</td>
+<td data-col="1">Caput succedaneum</td>
+</tr>
+<tr>
+<td data-col="0">Swelling in newborn scalp that does not cross suture lines</td>
+<td data-col="1">Cephalohematoma</td>
+</tr>
+<tr>
+<td data-col="0">Newborn with cyanosis relieved by squatting</td>
+<td data-col="1">Tetralogy of Fallot (RVOT obstruction, VSD, overriding aorta, RVH)</td>
+</tr>
+</table></div>
+</main>
+
+  <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+  <form id="suggestionForm" style="margin-top: 1em;">
+    <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
+          style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
+    <button type="submit" style="padding: 6px 12px;">Send</button>
+  </form>
+  <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
+</footer>
+</body>
+
+<script src="/STEVEL-1-Summaries/utils/table_page_utils.js"></script>
+</html>

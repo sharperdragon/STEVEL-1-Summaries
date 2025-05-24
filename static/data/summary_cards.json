@@ -35,9 +35,9 @@
     "desc": "A high-yield summary table for cytokines."
   },
   {
-    "name": "Hemeonc",
-    "file": "hemeonc.html",
-    "desc": "A high-yield summary table for hemeonc."
+    "name": "Heme-Onc",
+    "file": "heme-onc.html",
+    "desc": "A high-yield summary table for heme-onc."
   },
   {
     "name": "Metabolism",
@@ -45,18 +45,18 @@
     "desc": "A high-yield summary table for metabolism."
   },
   {
-    "name": "Associations",
-    "file": "associations.html",
-    "desc": "A high-yield summary table for associations."
+    "name": "Rapid Associations",
+    "file": "rapid-associations.html",
+    "desc": "A high-yield summary table for rapid associations."
   },
   {
-    "name": "Findings",
-    "file": "findings.html",
-    "desc": "A high-yield summary table for findings."
+    "name": "Rapid Findings",
+    "file": "rapid-findings.html",
+    "desc": "A high-yield summary table for rapid findings."
   },
   {
-    "name": "Presentations",
-    "file": "presentations.html",
-    "desc": "A high-yield summary table for presentations."
+    "name": "Rapid Presentations",
+    "file": "rapid-presentations.html",
+    "desc": "A high-yield summary table for rapid presentations."
   }
 ]

@@ -28,23 +28,23 @@
     "file": "cytokines.html"
   },
   {
-    "name": "Hemeonc",
-    "file": "hemeonc.html"
+    "name": "Heme-Onc",
+    "file": "heme-onc.html"
   },
   {
     "name": "Metabolism",
     "file": "metabolism.html"
   },
   {
-    "name": "Associations",
-    "file": "associations.html"
+    "name": "Rapid Associations",
+    "file": "rapid-associations.html"
   },
   {
-    "name": "Findings",
-    "file": "findings.html"
+    "name": "Rapid Findings",
+    "file": "rapid-findings.html"
   },
   {
-    "name": "Presentations",
-    "file": "presentations.html"
+    "name": "Rapid Presentations",
+    "file": "rapid-presentations.html"
   }
 ]
