@@ -24,8 +24,8 @@
 .nav_dropdown_container {
   position: absolute;
   top: 0;
-  right: 100%;        /* Align right edge of dropdown to left edge of button */
-  left: auto;
+  right: 0;
+  transform: translateX(-100%);
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -33,10 +33,11 @@
   display: none;
   min-width: 220px;
   box-sizing: border-box;
+  z-index: 998;
 }
 
 /* Show dropdown on hover of main container */
-#float-nav-button-container:hover .nav_dropdown_container {
+#float-nav-container:hover .nav_dropdown_container {
   display: block;
 }
 

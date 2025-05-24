@@ -74,7 +74,7 @@ def generate_drop_nav_html():
             category_map.setdefault(other_category, []).append((other_label, other_slug))
 
         # Build HTML with nested submenus
-        nav_html = '<div class="nav_dropdown_container">\n'
+        nav_html = f'<div class="nav_dropdown_container" data-slug="{slug}">\n'
 
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
