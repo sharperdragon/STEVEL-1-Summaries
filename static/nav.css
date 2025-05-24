@@ -36,10 +36,7 @@
   z-index: 998;
 }
 
-/* Show dropdown on hover of main container */
-#float-nav-container:hover .nav_dropdown_container {
-  display: block;
-}
+
 
 /* Each main category item */
 .nav_category {
