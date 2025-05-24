@@ -25,12 +25,14 @@
   position: absolute;
   top: 100%;
   right: 0;
+  left: auto;
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 10px;
   display: none;
   min-width: 220px;
+  box-sizing: border-box;
 }
 
 /* Show dropdown on hover of main container */
