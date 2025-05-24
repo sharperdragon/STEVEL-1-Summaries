@@ -9,13 +9,6 @@
   width: 100%;
 }
 
-/* Container */
-#float-nav-container {
-  position: relative;
-  font-family: sans-serif;
-  z-index: 999;
-}
-
 /* Nav button */
 #float-nav-button-container {
   background: #5078A2;
@@ -82,11 +75,9 @@
   color: #333;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .nav_link_tab:hover {
-  background-color: #cfdff4;
+    background-color: #cfdff4;
 }
-
-
