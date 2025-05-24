@@ -440,6 +440,7 @@ thead th {
   border-right: 0.7px solid var(--inside-border);
   border-top: none;
   border-bottom: none;
+  max: width 450px;
 }
 
 td:first-child, th:first-child {
