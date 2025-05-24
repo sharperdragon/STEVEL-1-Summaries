@@ -1,3 +1,14 @@
+#float-nav-container {
+  position: relative;
+  font-family: sans-serif;
+  z-index: 999;
+
+  /* ✅ Right-align container */
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 /* Container */
 #float-nav-container {
   position: relative;
@@ -77,3 +88,5 @@
 .nav_link_tab:hover {
   background-color: #cfdff4;
 }
+
+
