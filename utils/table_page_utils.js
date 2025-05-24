@@ -84,7 +84,19 @@ function shuffleTableRows(table) {
 
     // Clear tbody and re-append only shuffled rows
     tbody.innerHTML = "";
-    rows.forEach(row => tbody.appendChild(row));
+
+    // Remove row-specific borders or table-specific styles
+    rows.forEach(row => {
+      row.removeAttribute("style");
+      row.querySelectorAll("td").forEach(td => td.removeAttribute("style"));
+    });
+
+    tbody.innerHTML = "";
+    rows.forEach(row => {
+      row.classList.remove("row-divider");
+      row.querySelectorAll("td").forEach(td => td.style.borderBottom = "none");
+      tbody.appendChild(row);
+    });
   });
   attachCellClickListeners();
 }
