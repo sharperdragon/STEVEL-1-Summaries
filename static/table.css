@@ -119,6 +119,7 @@ html {
   position: relative;
   height: 100%;
   overflow: visible;
+  padding: 10px 0;
 }
 
 .th-dropdown {
@@ -374,7 +375,7 @@ thead th {
   border-left: none;
   border-right: none;
 }
-}
+
 
 /* Section Navigation */
 .section-nav {
@@ -451,7 +452,7 @@ td:last-child, th:last-child {
   font-size: 115%;
   font-weight: 550;
 }
-# Mobile compact table full width override
+/* Mobile compact table full width override*/
 body.mobile-compact .table1,
 body.mobile-compact .table2,
 body.mobile-compact .table3,
