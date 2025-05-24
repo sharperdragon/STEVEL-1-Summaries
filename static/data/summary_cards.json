@@ -1,8 +1,8 @@
 [
   {
-    "name": "Cd-Markers",
+    "name": "CD Markers",
     "file": "cd-markers.html",
-    "desc": "A high-yield summary table for cd-markers."
+    "desc": "A high-yield summary table for cd markers."
   },
   {
     "name": "Glossary",
@@ -15,9 +15,9 @@
     "desc": "A high-yield summary table for hla."
   },
   {
-    "name": "Lab-Tests",
-    "file": "lab-tests.html",
-    "desc": "A high-yield summary table for lab-tests."
+    "name": "Labs",
+    "file": "labs.html",
+    "desc": "A high-yield summary table for labs."
   },
   {
     "name": "Autoantibodies",

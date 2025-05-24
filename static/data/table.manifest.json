@@ -1,6 +1,6 @@
 [
   {
-    "name": "Cd-Markers",
+    "name": "CD Markers",
     "file": "cd-markers.html"
   },
   {
@@ -12,8 +12,8 @@
     "file": "hla.html"
   },
   {
-    "name": "Lab-Tests",
-    "file": "lab-tests.html"
+    "name": "Labs",
+    "file": "labs.html"
   },
   {
     "name": "Autoantibodies",

@@ -24,7 +24,7 @@
 =========================== */
 body {
     font-family: "Rubik", -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    margin: 20px;
+    margin: 0 auto;
     padding: 1px;
     max-width: -webkit-fill-available;
     background-color: #f4f3ee;
@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-    max-width: 98vw;
+    max-width: 100%;
     margin: 3% auto;
     padding: 2%;
     background: #ffffff;

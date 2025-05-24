@@ -19,8 +19,9 @@ table_files = [f for f in table_files_all if f.name.endswith(TABLE_SUFFIX)]
 def generate_label_and_slug(filename: str) -> tuple[str, str]:
     base = filename.replace(".table.html", "").lower()
     label_overrides = {
-        "cd markers": "CD Markers",
+        "cd-markers": "CD Markers",
         "hla": "HLA",
+        "lab-tests": "Labs", 
     }
     label = label_overrides.get(base)
     if not label:

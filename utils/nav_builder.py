@@ -28,7 +28,7 @@ def generate_drop_nav_html():
     def categorize(slug: str) -> str:
         if slug == "glossary":
             return "Glossary"
-        elif "rapid" in slug:
+        elif any(x in slug for x in ["presentation", "finding", "associa"]):
             return "Rapid Review"
         elif any(x in slug for x in ["hla", "cytokine", "autoantibodies", "cd"]):
             return "Immune"
