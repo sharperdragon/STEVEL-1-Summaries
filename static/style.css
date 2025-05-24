@@ -640,12 +640,7 @@ body.mobile-compact #question_list label {
   font-size: 0.8em;
   padding: 4px 6px;
 }
-body.mobile-compact button {
-  font-size: 0.9em;
-  padding: 3px 6px;
-  margin: 4px auto;
-  display: block;
-}
+
 
 body.mobile-compact .nav-link,
 body.mobile-compact .home-nav-link {
