@@ -652,6 +652,8 @@ nav {
 /* Container */
 #float-nav-container {
   position: relative;
+  top: 1px;
+  right: 1px;
   font-family: sans-serif;
   z-index: 999;
 }
@@ -671,7 +673,7 @@ nav {
 .nav_dropdown_container {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 90px;
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -681,14 +683,15 @@ nav {
 }
 
 /* Show dropdown on hover of main container */
-#float-nav-button-container:hover .nav_dropdown_container {
+#float-nav-container:hover .nav_dropdown_container {
   display: block;
 }
 
 /* Each main category item */
 .nav_category {
   position: relative;
-  padding: 8px 12px;
+  color: black;
+  padding:0
   background: #f0f4fa;
   margin-bottom: 6px;
   border-radius: 5px;
