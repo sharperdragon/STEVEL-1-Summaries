@@ -121,6 +121,13 @@ nav {
   font-size: 1rem;
 }
 
+
+div #category-glossary:hover {
+  background-color: #cfdff4;
+}
+
+
+
 /* Ensure .nav_link_tab inside .nav_category matches container height and removes padding */
 .nav_category > .nav_link_tab {
   padding: 0 6px;
