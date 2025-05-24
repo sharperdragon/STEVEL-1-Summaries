@@ -126,6 +126,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   attachCellClickListeners();
+
+  // Enable click-to-toggle submenu for nav categories, and normal link for those without submenu
+  document.querySelectorAll('.nav_category').forEach(cat => {
+    const submenu = cat.querySelector('.nav_submenu');
+    const anchor = cat.querySelector('a');
+
+    cat.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent bubbling
+      if (!submenu) {
+        if (anchor && anchor.href) {
+          window.location.href = anchor.href;
+        }
+        return;
+      }
+
+      const isVisible = submenu.style.display === 'block';
+      document.querySelectorAll('.nav_submenu').forEach(sm => sm.style.display = 'none'); // close others
+      submenu.style.display = isVisible ? 'none' : 'block'; // toggle this one
+    });
+  });
+
+  // Close all submenus if clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav_submenu').forEach(sm => sm.style.display = 'none');
+  });
 });
 
 document.querySelectorAll(".th-dropdown a").forEach(link => {
@@ -158,6 +183,10 @@ document.querySelectorAll(".th-menu-wrapper").forEach(wrapper => {
   dropdown.addEventListener("mouseenter", showDropdown);
   dropdown.addEventListener("mouseleave", hideDropdown);
 });
+
+
+
+
 (function () {
   const isReallyMobile = () => {
     const ua = navigator.userAgent;
