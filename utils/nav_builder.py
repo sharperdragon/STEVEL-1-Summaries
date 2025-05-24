@@ -52,11 +52,8 @@ def generate_drop_nav_html():
             other_category = categorize(other_slug)
             category_map.setdefault(other_category, []).append((other_label, other_slug))
 
-        # Build HTML with new structure
-        nav_html = '<div id="float-nav-container">\n'
-        nav_html += '  <div id="float-nav-button-container">\n'
-        nav_html += '    Navigate\n'
-        nav_html += '    <div class="nav_dropdown_container" id="nav-dropdown">\n'
+        # Build HTML with just the dropdown contents (not the outer nav wrapper)
+        nav_html = '    <div class="nav_dropdown_container" id="nav-dropdown">\n'
 
         for category, links in sorted(category_map.items()):
             category_id = f"category-{category.lower().replace(' ', '-')}"
@@ -76,8 +73,6 @@ def generate_drop_nav_html():
                 nav_html += f'      </div>\n'
 
         nav_html += '    </div>\n'
-        nav_html += '  </div>\n'
-        nav_html += '</div>\n'
 
         output_path = drop_nav_dir / f"drop_nav_{slug}.html"
         with open(output_path, "w", encoding="utf-8") as f:
@@ -116,37 +111,3 @@ def generate_drop_nav_html():
 #            .replace("{{DROP_NAV_CONTENT}}", drop_nav_html)
 #        )
 ################################################################################
-
-
-# const button = document.getElementById("float-nav-button-container");
-
-# if (button) {
-#   const dropdown = document.querySelector(".nav_dropdown_container");
-#   if (dropdown) {
-#     dropdown.style.top = "0";
-#     dropdown.style.right = "100%";
-#     dropdown.style.left = "auto";
-#   }
-# }
-################################################################################
-################ 'table_page_utils.js' contains:
-
-
-
-# const navButton = document.getElementById("float-nav-button-container");
-# const navDropdown = document.querySelector(".nav_dropdown_container");
-
-# if (navButton && navDropdown) {
-#   let navVisible = false;
-
-#   navButton.addEventListener("click", (e) => {
-#     e.stopPropagation(); // prevent bubbling
-#     navVisible = !navVisible;
-#     navDropdown.style.display = navVisible ? "block" : "none";
-#   });
-
-#   document.addEventListener("click", () => {
-#     navDropdown.style.display = "none";
-#     navVisible = false;
-#   });
-# }
