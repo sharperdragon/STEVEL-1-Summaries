@@ -612,7 +612,6 @@ nav {
 
 
 body.mobile-compact .table-container {
-  width: 96vw;
   padding: 2vw;
   font-size: 0.95em;
 }
@@ -631,14 +630,12 @@ body.mobile-compact .container {
 body.mobile-compact textarea,
 body.mobile-compact input,
 body.mobile-compact select {
-  width: 100%;
   font-size: 0.90em;
   padding: 3px 6px;
   border-radius: 4px;
 }
 body.mobile-compact #question_list label {
   min-width: unset;
-  width: 100%;
   max-width: 100%;
   font-size: 0.8em;
   padding: 4px 6px;
@@ -648,7 +645,6 @@ body.mobile-compact button {
   padding: 3px 6px;
   margin: 4px auto;
   display: block;
-  width: 94%;
 }
 
 body.mobile-compact .nav-link,
@@ -657,7 +653,6 @@ body.mobile-compact .home-nav-link {
   padding: 0.6em 1em;
   margin: 5px auto;
   display: block;
-  width: 94%;
 }
 body.mobile-compact .carousel-item {
   width: 94%;
