@@ -616,11 +616,6 @@ body.mobile-compact .table-container {
   font-size: 0.95em;
 }
 
-body.mobile-compact .section-nav {
-  padding: 10px 4vw;
-  gap: 10px;
-  font-size: 0.95em;
-}
 body.mobile-compact .container {
   margin: 1% auto;
   padding: 0.5vw;
@@ -663,8 +658,4 @@ body.mobile-compact .summary-card {
   padding: 14px;
   font-size: 0.9em;
   margin-bottom: 12px;
-}
-body.mobile-compact * {
-  transition: none !important;
-  box-shadow: none !important;
 }
