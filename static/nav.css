@@ -20,12 +20,12 @@
   position: relative;
 }
 
-/* Dropdown (root layer) */
+/* ⬅️ Main dropdown aligned with right edge of button, submenu opens left */
 .nav_dropdown_container {
   position: absolute;
-  top: 0;
+  top: 100%;
   right: 0;
-  transform: translateX(-100%);
+  transform: translateX(0); /* Aligns right edge to button */
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -36,19 +36,30 @@
   z-index: 998;
 }
 
+/* Hide all submenus unless parent is hovered */
+.nav_dropdown_container .nav_submenu {
+  display: none;
+}
 
+.nav_category:hover > .nav_submenu {
+  display: block;
+}
 
-/* Each main category item */
+/* Optional: prevent submenu from overlapping other hovers */
 .nav_category {
-    position: relative;
-    padding:  0;
-    border-radius: 0;
-    cursor: default;
-    white-space: nowrap;
-    color: navy;
+  pointer-events: auto;
+  position: relative;
+  padding:  0;
+  border-radius: 0;
+  cursor: default;
+  white-space: nowrap;
+  color: navy;
+}
+.nav_dropdown_container:hover .nav_category:not(:hover) > .nav_submenu {
+  display: none;
 }
 .nav_category:hover {
-    background: #f0f4fa;
+  background: #f0f4fa;
 }
 
 /* Submenus fly out to the left */
@@ -61,13 +72,7 @@
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   padding: 8px;
   min-width: max-content;
-  display: none;
   z-index: 100;
-}
-
-/* Show submenu on category hover */
-.nav_category:hover .nav_submenu {
-  display: block;
 }
 
 /* Links inside submenus */
@@ -81,5 +86,5 @@
 }
 
 .nav_link_tab:hover {
-    background-color: #cfdff4;
+  background-color: #cfdff4;
 }

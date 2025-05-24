@@ -272,7 +272,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 (function () {
   const isReallyMobile = () => {
     const ua = navigator.userAgent;

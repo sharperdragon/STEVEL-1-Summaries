@@ -7,7 +7,8 @@ from utils.html_utils import (
     annotate_table_columns,
     generate_nav_html,
 )
-from utils.helper_utils import generate_label_and_slug, generate_drop_nav_html
+from utils.helper_utils import generate_label_and_slug
+from utils.nav_builder import generate_drop_nav_html
 from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
 from datetime import datetime
 
