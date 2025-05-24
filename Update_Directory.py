@@ -58,7 +58,8 @@ def build_all():
     card_manifest = []
     base_html = BASE_HTML_PATH.read_text()
     # The base HTML must include {{PAGE_TITLE}}, {{NAV_CONTENT}}, and {{TABLE_CONTENT}} placeholders
-    required_placeholders = ["{{PAGE_TITLE}}", "{{NAV_CONTENT}}", "{{TABLE_CONTENT}}"]
+    #required_placeholders = ["{{PAGE_TITLE}}", "{{NAV_CONTENT}}", "{{TABLE_CONTENT}}"]
+    required_placeholders = ["{{PAGE_TITLE}}", "{{TABLE_CONTENT}}", "{{DROP_NAV_CONTENT}}"]
     missing = [ph for ph in required_placeholders if ph not in base_html]
     if missing:
         raise ValueError(f"❌ Missing required placeholder(s) in BASE.html: {', '.join(missing)}")
