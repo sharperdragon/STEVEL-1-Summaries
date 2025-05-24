@@ -672,14 +672,14 @@ nav {
 /* Dropdown (root layer) */
 .nav_dropdown_container {
   position: absolute;
-  top: 100%;
+  top: calc(100% - 37px);
   right: 90px;
   background: white;
-  border: 1px solid #ccc;
+  border: 1px solid gainsboro;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 10px;
   display: none;
-  min-width: 220px;
+  /* min-width: 220px; */
 }
 
 /* Show dropdown on hover of main container */
@@ -690,10 +690,10 @@ nav {
 /* Each main category item */
 .nav_category {
   position: relative;
-  color: black;
-  padding:0
+  color: rgb(5, 42, 134);
+  padding:0;
   background: #f0f4fa;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   border-radius: 5px;
   cursor: default;
   white-space: nowrap;
@@ -703,12 +703,13 @@ nav {
 .nav_submenu {
   position: absolute;
   top: 0;
-  right: 100%;
+  right: calc(100% + 10px);
   background: #e9eff9;
   border: 1px solid #bbb;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   padding: 8px;
   min-width: 200px;
+  border-radius: 2px;
   display: none;
   z-index: 100;
 }
