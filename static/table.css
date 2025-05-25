@@ -304,3 +304,7 @@ thead tr:nth-of-type(2) th {
   background-color: var(--table5-header-bg); /* or inherit */
   z-index: 3;
 }
+
+.utility-toolbar {
+  display: inline-flex;
+  }
