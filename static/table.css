@@ -241,12 +241,15 @@ td, th {
   text-decoration: none;
   color: #333;
   font-size: 0.70em;
+  border-radius: 6px;
 }
 
 .th-dropdown a:hover {
   background-color: #f0f0f0;
 }
-
+.col-toggle {
+  border-adius: 6px;
+}
 thead th {
   font-weight: 600;
   font-size: var(--header-font-size);
