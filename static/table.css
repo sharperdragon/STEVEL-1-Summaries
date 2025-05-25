@@ -342,31 +342,33 @@ thead th {
 }
 
 /* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .table1, .table2, .table3, .table4, .table5, .table6 {
-    font-size: 15px;
-  }
 
-  .table1 th, .table1 td,
-  .table2 th, .table2 td,
-  .table3 th, .table3 td {
-    padding: 6px 10px;
-  }
-
-  .table1 thead th,
-  .table2 thead th,
-  .table3 thead th {
-    font-size: 18px;
-  }
-
-  .th-dropdown a {
-    padding: 10px 12px;
-  }
-
+body.mobile .table1, body.mobile .table2, body.mobile .table3,
+body.mobile .table4, body.mobile .table5, body.mobile .table6 {
+  font-size: 15px;
 }
+
+body.mobile .table1 th, .table1 td,
+body.mobile .table2 th, .table2 td,
+body.mobile .table3 th, .table3 td {
+  padding: 6px 10px;
+}
+
+body.mobile .table1 thead th,
+body.mobile .table2 thead th,
+body.mobile .table3 thead th {
+  font-size: 18px;
+}
+
+body.mobile .th-dropdown a {
+  padding: 10px 12px;
+}
+
+
+
 .table1, .table2, .table3, 
 .table4, .table5, .table6 {
-  width: 100vw;
+  width: 100%;
   margin: auto;
   padding-left: 0;
   padding-right: 0;
