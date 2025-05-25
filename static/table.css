@@ -215,6 +215,7 @@ td, th {
   align-items: center;
   white-space: nowrap;
   gap: 0.5vw;
+  padding: 4px 1vw;
 }
 
 .col-title::after {
