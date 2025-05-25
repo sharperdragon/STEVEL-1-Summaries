@@ -110,6 +110,17 @@ function shuffleTableRows(table) {
 
 // Add shuffle button listener for all tables on the page
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Inject sticky header CSS dynamically
+  const style = document.createElement('style');
+  style.textContent = `
+    thead tr.sticky-header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 2;
+    }
+  `;
+  document.head.appendChild(style);
   const shuffleBtn = document.getElementById("shuffle-button");
   if (shuffleBtn) {
     shuffleBtn.addEventListener("click", () => {
@@ -155,6 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   attachCellClickListeners();
+
+  // 2. Make the header row containing .th-menu-wrapper sticky
+  const menuWrapperRow = document.querySelector("thead tr");
+  if (menuWrapperRow && menuWrapperRow.querySelector(".th-menu-wrapper")) {
+    menuWrapperRow.classList.add("sticky-header");
+  }
 
   // Enable click-to-toggle submenu for nav categories, and normal link for those without submenu
   document.querySelectorAll('.nav_category').forEach(cat => {
