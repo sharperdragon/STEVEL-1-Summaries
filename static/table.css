@@ -93,7 +93,7 @@ table, .table1, .table2, .table3, .table4, .table5, .table6 {
   max-width: 450px;
 }
 
-thead th {
+thead th:not(.table-title) {
   font-weight: 600;
   font-size: var(--header-font-size);
   text-align: center;
@@ -262,4 +262,11 @@ td {
   padding-right: 3px !important;
   padding-top: 4px !important;
   padding-bottom: 3px !important;
+}
+
+th.table-title {
+  border-bottom: 2px solid gainsboro;
+  padding: 2px 0 !important;
+  line-height: 0.9 !important;
+  font-size: var(--title-font-size); /* Keep this if needed */
 }
