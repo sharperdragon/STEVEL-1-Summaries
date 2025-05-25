@@ -204,3 +204,29 @@ td, th {
   color: #0a3c66;
   border-color: #7bb7e3;
 }
+
+
+.col-title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.5vw;
+}
+
+.col-title::after {
+  content: " ▶";
+  display: inline-block;
+  font-size:70%;
+  width: 1em;
+  text-align: center;
+  margin-left: 5px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.th-menu-wrapper:hover .col-title::after {
+  content: "▼";
+  opacity: 1;
+  font-size:70%;
+}
