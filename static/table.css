@@ -341,7 +341,6 @@ thead th {
   font-size: var(--title-font-size);
   font-weight: 600;
   text-align: center;
-  margin: 20px auto 10px auto;
   color: var(--text-color);
   font-family: var(--font);
   border-bottom: 1px var(--strong-border);
@@ -458,9 +457,8 @@ body.mobile-compact .table3,
 body.mobile-compact .table4,
 body.mobile-compact .table5,
 body.mobile-compact .table6 {
-  width: 100vw;
-  margin-left: -2vw;
-  margin-right: -2vw;
+  width: auto;
+  max-width: max-content;
   padding-left: 0;
   padding-right: 0;
   box-sizing: border-box;
@@ -471,8 +469,6 @@ th.table-title {
     border-bottom: 2px solid gainsboro;
     padding: 11px 0;
 }
-
-
 
 td, th {
   vertical-align: middle !important;
