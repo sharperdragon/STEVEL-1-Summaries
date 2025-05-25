@@ -195,6 +195,7 @@ button {
     box-sizing: border-box; /* Ensure padding and border don't affect size */
     z-index: 1; /* Ensure hover effects stay above other elements */
     margin: 10px;
+    min-width: fit-content;
 }
 
 /* Hover effect without shifting elements */
