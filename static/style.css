@@ -560,76 +560,76 @@ nav {
   font-weight: 700;
   color: #2165ad;
 }
-
-@media screen and (max-width: 600px) {
-  .nav-link {
-    display: block;
-    width: 90%;
-    margin: 6px auto;
-    padding: 0.8em 1.2em;
-    font-size: 1rem;
-  }
-
-  .carousel-wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .carousel-item {
-    width: 90%;
-    margin: 8px 0;
-  }
-
-  .summary-card {
-    width: 90%;
-    padding: 16px;
-    font-size: 0.95em;
-  }
-  .summary-card .card-title {
-  font-size:1.5em;
-  font-weight:600;
-  }
-
-  #mode_section {
-    top: 5px;
-    right: 5px;
-    width: 65px;
-    height: 22px;
-    font-size: 85%;
-  }
-
-  #question_list {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
+/*================================================================================*/
+/*================ MOBILE STYLINGS ====================================*/
+body.mobile .nav-link {
+  display: block;
+  width: 90%;
+  margin: 6px auto;
+  padding: 0.8em 1.2em;
+  font-size: 1rem;
 }
+
+body.mobile .carousel-wrapper {
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+body.mobile .carousel-item {
+  width: 90%;
+  margin: 8px 0;
+}
+
+body.mobile .summary-card {
+  width: 90%;
+  padding: 16px;
+  font-size: 0.95em;
+}
+body.mobile .summary-card .card-title {
+font-size:1.5em;
+font-weight:600;
+}
+
+body.mobile #mode_section {
+  top: 5px;
+  right: 5px;
+  width: 65px;
+  height: 22px;
+  font-size: 85%;
+}
+
+body.mobile #question_list {
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* =================END MOBILE ===============*/
 
 
 #RapidCarousel #carousel-item {
   min-width: 60vw;
 }
 
-
 body.mobile-compact .table-container {
   padding: 2vw;
   font-size: 0.95em;
 }
 
-body.mobile-compact .container {
+body.mobile .container {
   margin: 1% auto;
   padding: 0.5vw;
   box-shadow: none;
   border-radius: 4px;
 }
-body.mobile-compact textarea,
-body.mobile-compact input,
-body.mobile-compact select {
+body.mobile  textarea,
+body.mobile  input,
+body.mobile  select {
   font-size: 0.90em;
   padding: 3px 6px;
   border-radius: 4px;
 }
-body.mobile-compact #question_list label {
+body.mobile  #question_list label {
   min-width: unset;
   max-width: 100%;
   font-size: 0.8em;
@@ -637,22 +637,22 @@ body.mobile-compact #question_list label {
 }
 
 
-body.mobile-compact .home-nav-link {
+body.mobile  .home-nav-link {
   font-size: 0.90em;
   padding: 0.6em 1em;
   margin: 5px auto;
   display: block;
 }
-body.mobile-compact .carousel-item {
+body.mobile .carousel-item {
   width: 94%;
   padding: 12px;
   font-size: 0.95em;
 }
 
-body.mobile-compact .carousel-item .question {
+body.mobile .carousel-item .question {
   font-size: 1em;
 }
-body.mobile-compact .summary-card {
+body.mobile .summary-card {
   width: 95%;
   padding: 14px;
   font-size: 0.9em;
