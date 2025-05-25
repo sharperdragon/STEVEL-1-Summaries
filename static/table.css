@@ -283,3 +283,10 @@ thead th.th-menu-wrapper {
   background-color: inherit;
   z-index: 3;
 }
+
+thead th:has(.th-menu-wrapper) {
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  z-index: 3;
+}
