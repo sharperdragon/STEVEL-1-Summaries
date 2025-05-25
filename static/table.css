@@ -290,3 +290,17 @@ thead th:has(.th-menu-wrapper) {
   background-color: inherit;
   z-index: 3;
 }
+
+thead th:has(.th-menu-wrapper) {
+  position: sticky;
+  top: 0;
+  background-color: var(--table5-header-bg);
+  z-index: 3;
+}
+
+thead tr:nth-of-type(2) th {
+  position: sticky;
+  top: 0;
+  background-color: var(--table5-header-bg); /* or inherit */
+  z-index: 3;
+}
