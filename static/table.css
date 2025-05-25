@@ -176,7 +176,7 @@ td:last-child, th:last-child {
 td, th {
   vertical-align: middle !important;
 }
-
+/*
 .col-toggle {
   display: inline-flex;
   align-items: center;
@@ -204,7 +204,7 @@ td, th {
   color: #0a3c66;
   border-color: #7bb7e3;
 }
-
+*/
 
 .col-title {
   position: relative;
