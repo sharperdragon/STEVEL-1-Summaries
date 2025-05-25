@@ -96,6 +96,7 @@ table,
   padding: 0;
   box-sizing: border-box;
   border-radius: 15px;
+  border: 1px solid var(--border-color);
 }
 
 
@@ -113,10 +114,7 @@ table,
   hyphens: auto;
 }
 
-.table1, .table2, .table3,
-.table4, .table5, .table6{
-  border: 1px solid var(--border-color);
-}
+
 
 /* Dropdown / Header Column Logic */
 .th-menu-wrapper {
@@ -352,17 +350,11 @@ thead th {
   white-space: nowrap;
 }
 
-/* Responsive Adjustments */
+/*============= Responsive Adjustments ===================*/
 
 body.mobile .table1, body.mobile .table2, body.mobile .table3,
 body.mobile .table4, body.mobile .table5, body.mobile .table6 {
   font-size: 15px;
-}
-
-body.mobile .table1 th, .table1 td,
-body.mobile .table2 th, .table2 td,
-body.mobile .table3 th, .table3 td {
-  padding: 6px 10px;
 }
 
 body.mobile .table1 thead th,
