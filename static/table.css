@@ -273,7 +273,7 @@ td {
 
 th.table-title {
   border-bottom: 2px solid gainsboro;
-  padding: 2px 0 !important;
+  padding: 0 auto auto auto !important;
   line-height: 0.9 !important;
   font-size: var(--title-font-size); /* Keep this if needed */
 }
