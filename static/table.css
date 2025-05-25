@@ -70,7 +70,7 @@ table, .table1, .table2, .table3, .table4, .table5, .table6 {
 .table1 th, .table1 td,
 .table2 th, .table2 td,
 .table3 th, .table3 td {
-  padding: clamp(6px, 1.2vw, 12px) clamp(10px, 2vw, 18px);
+  padding: clamp(1px, 1.2vw, 3px) clamp(1px, 2vw, 6px);
   vertical-align: top;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
