@@ -277,3 +277,9 @@ th.table-title {
   line-height: 0.9 !important;
   font-size: var(--title-font-size); /* Keep this if needed */
 }
+thead th.th-menu-wrapper {
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  z-index: 3;
+}
