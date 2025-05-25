@@ -129,7 +129,7 @@ html {
   position: relative;
   height: 100%;
   overflow: visible;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .th-dropdown {
@@ -476,6 +476,7 @@ body.mobile-compact .table6 {
 }
 th.table-title {
     border-bottom: 2px solid gainsboro;
+    padding: 11px 0;
 }
 
 .table1, .table2, .table3, 
