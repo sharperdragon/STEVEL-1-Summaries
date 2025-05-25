@@ -97,6 +97,13 @@ function shuffleTableRows(table) {
       row.querySelectorAll("td").forEach(td => td.style.borderBottom = "none");
       tbody.appendChild(row);
     });
+
+    // Reapply hidden column visibility after shuffle
+    document.querySelectorAll("td[data-col]").forEach(td => {
+      if (td.dataset.hidden === "true") {
+        td.style.opacity = "0";
+      }
+    });
   });
   attachCellClickListeners();
 }
@@ -127,6 +134,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (resetBtn) {
     resetBtn.addEventListener("click", () => {
       resetColumns();
+    });
+  }
+
+  const hideAllBtn = document.getElementById("hide-all-button");
+  if (hideAllBtn) {
+    hideAllBtn.addEventListener("click", () => {
+      document.querySelectorAll("td[data-col]").forEach(td => {
+        td.style.opacity = "0";
+        td.dataset.hidden = "true";
+      });
     });
   }
 

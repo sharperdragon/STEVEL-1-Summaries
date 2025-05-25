@@ -247,9 +247,11 @@ td, th {
 .th-dropdown a:hover {
   background-color: #f0f0f0;
 }
+
 .col-toggle {
-  border-adius: 6px;
+  border-radius: 6px;
 }
+
 thead th {
   font-weight: 600;
   font-size: var(--header-font-size);
