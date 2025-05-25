@@ -74,11 +74,9 @@ html {
   padding-left: 2vw;
 }
 
-/* Table Layout & Structure */
-.table1, .table2, .table3,
-.table4, .table5, .table6 {
-  width: 96%;
-  margin: 2vh auto;
+/* Shared Table Styles */
+.table {
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   font-family: var(--font);
@@ -89,6 +87,18 @@ html {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   table-layout: auto;
   word-wrap: break-word;
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-left: none;
+  border-right: none;
+  min-width: 100%;
+}
+
+/* Table Layout & Structure */
+.table1, .table2, .table3,
+.table4, .table5, .table6 {
+  /* Removed duplicated styles consolidated in .table */
 }
 
 .table1 th, .table1 td,
@@ -138,7 +148,7 @@ html {
 }
 
 .th-menu-wrapper:hover .th-dropdown {
-  display: float;
+  display: block;
 
 }
 
@@ -183,6 +193,10 @@ thead th {
   font-weight: 600;
   font-size: var(--header-font-size);
   text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  z-index: 2;
 }
 
 /* Table Variants */
@@ -368,13 +382,7 @@ body.mobile .th-dropdown a {
 
 .table1, .table2, .table3, 
 .table4, .table5, .table6 {
-  width: 100%;
-  margin: auto;
-  padding-left: 0;
-  padding-right: 0;
-  box-sizing: border-box;
-  border-left: none;
-  border-right: none;
+  /* Removed duplicated styles consolidated in .table */
 }
 
 
@@ -413,36 +421,27 @@ body.mobile .th-dropdown a {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
-
-@media screen and (min-width: 768px) {
-  body:not(.mobile) table td {
-    padding-left: 6px;
-    padding-right: 4px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .table-container {
-  margin: 0 auto;
-  max-width: 100%;
-}
-}
-  .table-container {
+.table-container {
   margin: 0 auto;
   padding-left: 0.7vw;
   padding-right: 0.7vw;
   max-width: 100%;
-  }
-.table1 td, .table1 th,
-.table2 td, .table2 th,
-.table3 td, .table3 th,
-.table4 td, .table4 th,
-.table5 td, .table5 th,
-.table6 td, .table6 th {
+  overflow-x: auto;
+  width: 100%;
+}
+
+
+[class^="table"] td,
+[class^="table"] th {
   border-left: 0.7px solid var(--inside-border);
   border-right: 0.7px solid var(--inside-border);
   border-top: none;
   border-bottom: none;
-  max: width 450px;
+  max-width: 450px;
+  vertical-align: middle !important;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 td:first-child, th:first-child {
@@ -479,11 +478,6 @@ th.table-title {
     border-bottom: 2px solid gainsboro;
 }
 
-.table-container {
-  overflow-x: auto;
-  width: 100%;
-}
-
 .table1, .table2, .table3, 
 .table4, .table5, .table6 {
   width: auto;
@@ -496,13 +490,5 @@ th.table-title {
 }
 
 td, th {
-  vertical-align: middle !important;
-}
-.table1 td, .table1 th,
-.table2 td, .table2 th,
-.table3 td, .table3 th,
-.table4 td, .table4 th,
-.table5 td, .table5 th,
-.table6 td, .table6 th {
   vertical-align: middle !important;
 }
