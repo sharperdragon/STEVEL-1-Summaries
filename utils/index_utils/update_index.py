@@ -81,15 +81,16 @@ def build_index(build_json=True):
     nav_links = []
     summary_cards = []
     card_descriptions = {
-        "Metabolism": "Includes glycolysis, glycogen storage, and fatty acid oxidation disorders.",
-        "Hemeonc": "Summarizes hematologic malignancies, anemias, and blood-related findings.",
-        "Chromosomes": "Genetic disorders and syndromes organized by chromosome number.",
-        "Autoantibodies": "Autoimmune diseases and their associated antibodies.",
-        "Glossary": "Relevant terms across pathology, genetics, and neuro — clearly explained with examples.",
-        "Lab Tests": "High-yield lab tests for diagnosis and management, including tumor markers, infection assays, and metabolic workups.",
-        "Associations": "Rapid-fire 'most common' and high-yield exam associations.",
-        "Presentations": "Clinical buzzwords and presentation patterns linked to classic diagnoses — optimized for fast recall.",
-        "Findings": "Diagnostic clues and lab/physical findings tied to conditions, covering exam associations."
+        "Metabolism": "Includes glycolysis, glycogen storage, and fatty acid oxidation disorders",
+        "Hemeonc": "Summarizes hematologic malignancies, anemias, and blood-related findings",
+        "Chromosomes": "Genetic disorders and syndromes organized by chromosome number",
+        "Autoantibodies": "Autoimmune diseases and their associated antibodies",
+        "Glossary": "Relevant terms across pathology, genetics, and neuro — clearly explained with examples",
+        "Lab Tests": "High-yield lab tests for diagnosis and management, including tumor markers, infection assays, and metabolic workups",
+        "Associations": "Rapid-fire 'most common' and high-yield exam associations",
+        "Presentations": "Clinical buzzwords and presentation patterns linked to classic diagnoses — optimized for fast recall",
+        "Findings": "Diagnostic clues and lab/physical findings tied to conditions, covering exam associations",
+        "Pharm": "Work in progress, but go crazy with these Antibiotics and Immunologics"
     }
     for entry in manifest_sorted:
         try:

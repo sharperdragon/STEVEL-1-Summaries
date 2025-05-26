@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharm</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/styles/style.css" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/styles/table.css" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/styles/nav.css" />
+</head>
+
+<body>
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 15px auto 18px;">
+  <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
+    <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
+    Home
+  </a>
+    <div class="utility-toolbar" style="margin-bottom: 15px;">
+        <button id="reset-button">Reset</button>
+    <button id="hide-all-button">Hide All</button>
+    <button id="shuffle-button">Shuffle Rows</button>
+    </div>
+  <nav style="display:show" id="float-nav-container">
+    <div id="float-nav-button-container">
+      <span>Navigate</span>
+    <div class="nav_dropdown_container" id="nav-dropdown">
+      <!-- Glossary: label (no direct link) -->
+      <div class="nav_category" id="category-glossary">
+        <a class="nav_category_link" href="../pages/glossary.html">Glossary</a>
+      </div>
+      <!-- Immune: submenu -->
+      <div class="nav_category has-children" id="category-immune">
+        <span>Immune</span>
+        <div class="nav_submenu">
+          <a class="nav_link_tab" href="../pages/autoantibodies.html">Autoantibodies</a>
+          <a class="nav_link_tab" href="../pages/cd-markers.html">CD Markers</a>
+          <a class="nav_link_tab" href="../pages/cytokines.html">Cytokines</a>
+          <a class="nav_link_tab" href="../pages/hla.html">HLA</a>
+        </div>
+      </div>
+      <!-- Misc: submenu -->
+      <div class="nav_category has-children" id="category-misc">
+        <span>Misc</span>
+        <div class="nav_submenu">
+          <a class="nav_link_tab" href="../pages/chromosomes.html">Chromosomes</a>
+          <a class="nav_link_tab" href="../pages/heme-onc.html">Heme-Onc</a>
+          <a class="nav_link_tab" href="../pages/labs.html">Labs</a>
+          <a class="nav_link_tab" href="../pages/metabolism.html">Metabolism</a>
+          <a class="nav_link_tab" href="../pages/triads.html">Triads</a>
+        </div>
+      </div>
+      <!-- Rapid Review: submenu -->
+      <div class="nav_category has-children" id="category-rapid-review">
+        <span>Rapid Review</span>
+        <div class="nav_submenu">
+          <a class="nav_link_tab" href="../pages/associations.html">Associations</a>
+          <a class="nav_link_tab" href="../pages/findings.html">Findings</a>
+          <a class="nav_link_tab" href="../pages/presentations.html">Presentations</a>
+        </div>
+      </div>
+      <!-- Reference: submenu -->
+      <div class="nav_category has-children" id="category-reference">
+        <span>Reference</span>
+        <div class="nav_submenu">
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+  </div>
+</div>
+
+
+
+<div>
+<main class="responsive-container">
+  <!-- Utility Toolbar -->
+
+
+  </div>
+  <meta content="True" name="summary-card"/>
+<div class="table-container">
+<table class="table5 row1-center" id="Pharm">
+<thead>
+<tr>
+<th data-col="0"><div class="th-menu-wrapper"><span class="col-title">Drug</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Toggle Hide</a></div></div></th>
+<th data-col="1"><div class="th-menu-wrapper"><span class="col-title">Class</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Toggle Hide</a></div></div></th>
+<th data-col="2"><div class="th-menu-wrapper"><span class="col-title">Indication</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Toggle Hide</a></div></div></th>
+<th data-col="3"><div class="th-menu-wrapper"><span class="col-title">ADRs</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(3); return false;">Toggle Hide</a></div></div></th>
+<th data-col="4"><div class="th-menu-wrapper"><span class="col-title">Notes</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(4); return false;">Toggle Hide</a></div></div></th>
+</tr>
+</thead>
+<tbody>
+<tr id="section-mAb"><td class="row-divider" colspan="4" data-col="0">Antibodies</td></tr>
+<tr>
+<td data-col="0">Alemtuzumab</td>
+<td data-col="1">anti-CD52 mAb</td>
+<td data-col="2">CLL, MS</td>
+<td data-col="3">“52 cards in a deck → drink Ale”</td>
+</tr>
+<tr>
+<td data-col="0">Bevacizumab</td>
+<td data-col="1">anti-VEGF mAb</td>
+<td data-col="2">Metastatic CRC, NSCLC, RCC</td>
+<td data-col="3">“Vacuum packing vegetables down your butt”</td>
+</tr>
+<tr>
+<td data-col="0">Cetuximab</td>
+<td data-col="1">anti-EGFR mAb</td>
+<td data-col="2">Colon and head &amp; neck cancers</td>
+<td data-col="3">“CET = <u>C</u>olon, <u>E</u>GFR, <u>T</u>hroat”</td>
+</tr>
+<tr>
+<td data-col="0">Rituximab</td>
+<td data-col="1">anti-CD20 mAb</td>
+<td data-col="2">Non-Hodgkin lymphoma, CLL</td>
+<td data-col="3">“NHL <u>20</u> cover = guy in <u>TUX</u>edo</td>
+</tr>
+<tr>
+<td data-col="0">Trastuzumab</td>
+<td data-col="1">anti-HER2 mAb</td>
+<td data-col="2">HER2+ breast cancer</td>
+<td data-col="3">“Tras-2-zumab → Hurts you”</td>
+</tr>
+<tr>
+<td data-col="0">Infliximab</td>
+<td data-col="1">anti-TNF-α mAb</td>
+<td data-col="2">Autoimmune diseases (RA, Crohn's, UC)</td>
+<td data-col="3">“INFLIX damage during inflammation”</td>
+</tr>
+<tr>
+<td data-col="0">Daclizumab</td>
+<td data-col="1">anti-CD25 mAb</td>
+<td data-col="2">Multiple sclerosis</td>
+<td data-col="3">“#25 Ben Simmons MONSTER SMASH (DAC)”</td>
+</tr>
+<tr>
+<td data-col="0">Eculizumab</td>
+<td data-col="1">anti-C5 complement mAb</td>
+<td data-col="2">Paroxysmal nocturnal hemoglobinuria</td>
+<td data-col="3">“E-cul car w/ Pretty Nice Head”</td>
+</tr>
+<tr>
+<td data-col="0">Natalizumab</td>
+<td data-col="1">anti-α4-integrin mAb</td>
+<td data-col="2">MS, Crohn’s</td>
+<td data-col="3">“TAILs &amp; 4 legs → Multiple Species”</td>
+</tr>
+<tr>
+<td data-col="0">Ustekinumab</td>
+<td data-col="1">anti–IL-12/IL-23 mAb</td>
+<td data-col="2">Psoriasis</td>
+<td data-col="3">“Used to be 12, now 23”</td>
+</tr>
+<tr>
+<td data-col="0">Abciximab</td>
+<td data-col="1">anti–GPIIb/IIIa mAb</td>
+<td data-col="2">Antiplatelet (PCI)</td>
+<td data-col="3">“ABC = IIb/IIIa = 2×3 = 6”</td>
+</tr>
+<tr>
+<td data-col="0">Denosumab</td>
+<td data-col="1">anti-RANKL mAb</td>
+<td data-col="2">Osteoporosis</td>
+<td data-col="3">"<u>Deno</u> socks on your r<u>ANK</u>Le”</td>
+</tr>
+<tr>
+<td data-col="0">Omalizumab</td>
+<td data-col="1">anti-IgE mAb</td>
+<td data-col="2">Allergic asthma</td>
+<td data-col="3">“Ig8 = #18 = Peyton Manning = Omaha”</td>
+</tr>
+<tr>
+<td data-col="0">Palivizumab</td>
+<td data-col="1">anti–RSV F protein mAb</td>
+<td data-col="2">RSV prophylaxis</td>
+<td data-col="3">“Pali-o diet → <u>R</u>eally <u>S</u>imple <u>V</u>egetarians”</td>
+</tr>
+<tr>
+<td data-col="0">Tocilizumab</td>
+<td data-col="1">anti–IL-6 receptor mAb</td>
+<td data-col="2">RA, cytokine release syndrome</td>
+<td data-col="3">“Silly 6 yr olds”</td>
+</tr>
+<tr id="section-misc-biologics"><td class="row-divider" colspan="5" data-col="0">Biologics &amp; Fusion Proteins</td></tr>
+<tr>
+<td data-col="0">Abatacept</td>
+<td data-col="1">CD80/86 fusion protein</td>
+<td data-col="2">RA, autoimmune conditions</td>
+<td data-col="3">—</td>
+<td data-col="4">“aBaTacept intercepts B-cell activation by T-cells”</td>
+</tr>
+<tr>
+<td data-col="0">Vemu<u>raf</u>enib<br/>Dab<u>raf</u>enib<br/>Enco<u>raf</u>enib</td>
+<td data-col="1"><u>BRAF</u> V600E kinase inhibitors</td>
+<td data-col="2">Late-stage melanoma (BRAF V600E+)</td>
+<td data-col="3">—</td>
+<td data-col="4">“vemuRAFenib”</td>
+</tr>
+<tr>
+<td data-col="0">Palbociclib</td>
+<td data-col="1">CDK4/6 inhibitor</td>
+<td data-col="2">Metastatic breast cancer</td>
+<td data-col="3">—</td>
+<td data-col="4">“Pablo rode his biCYCLE from 4-6 most (mets) days”</td>
+<tr id="section"><td class="row-divider" colspan="5" data-col="0">Antibiotics</td></tr>
+<tr><td class="row-subdivider row-divider" colspan="5" data-col="0">Cell Wall</td></tr>
+<tr>
+<td data-col="0">Cefazolin</td>
+<td data-col="1">1st gen Cephalosporin</td>
+<td data-col="2">Surgical prophylaxis</td>
+<td data-col="3">Hypersensitivity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Cefuroxime</td>
+<td data-col="1">2nd gen Cephalosporins</td>
+<td data-col="2">Gram-negative infections</td>
+<td data-col="3">Disulfiram rxn (cefotetan)</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Cefotetan</td>
+<td data-col="1">2nd gen Cephalosporins</td>
+<td data-col="2">Gram-negative infections</td>
+<td data-col="3">Disulfiram rxn (cefotetan)</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Cefoxitin</td>
+<td data-col="1">2nd gen Cephalosporins</td>
+<td data-col="2">Gram-negative infections</td>
+<td data-col="3">Disulfiram rxn (cefotetan)</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Cefotaxime</td>
+<td data-col="1">3rd gen Cephalosporins</td>
+<td data-col="2">Severe Gram– infections</td>
+<td data-col="3">Hypersensitivity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Ceftazidime</td>
+<td data-col="1">3rd gen Cephalosporins</td>
+<td data-col="2">Severe Gram– infections</td>
+<td data-col="3">Hypersensitivity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Cefepime</td>
+<td data-col="1">4th gen Cephalosporin</td>
+<td data-col="2">Pseudomonas, broad Gram– coverage</td>
+<td data-col="3">Seizures (high dose)</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Clavulanate</td>
+<td data-col="1">Beta-lactamase inhibitors</td>
+<td data-col="2">Combined with penicillins</td>
+<td data-col="3">GI upset</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Tazobactam</td>
+<td data-col="1">Beta-lactamase inhibitors</td>
+<td data-col="2">Combined with penicillins</td>
+<td data-col="3">GI upset</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Sulbactam</td>
+<td data-col="1">Beta-lactamase inhibitors</td>
+<td data-col="2">Combined with penicillins</td>
+<td data-col="3">GI upset</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Bacitracin</td>
+<td data-col="1">Cell wall inhibitor</td>
+<td data-col="2">Topical Gram+ skin infections</td>
+<td data-col="3">Nephrotoxicity (if systemic)</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Oxacillin</td>
+<td data-col="1">Penicillinase-resistant Penicillins</td>
+<td data-col="2">Staphylococcus aureus (non-MRSA)</td>
+<td data-col="3">Interstitial nephritis</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Nafcillin</td>
+<td data-col="1">Penicillinase-resistant Penicillins</td>
+<td data-col="2">Staphylococcus aureus (non-MRSA)</td>
+<td data-col="3">Interstitial nephritis</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Amoxicillin</td>
+<td data-col="1">Aminopenicillins</td>
+<td data-col="2">Broad-spectrum (HELPSS organisms)</td>
+<td data-col="3">Rash with EBV, diarrhea</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Ampicillin</td>
+<td data-col="1">Aminopenicillins</td>
+<td data-col="2">Broad-spectrum (HELPSS organisms)</td>
+<td data-col="3">Rash with EBV, diarrhea</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Piperacillin / Ticarcillin</td>
+<td data-col="1">Antipseudomonal Penicillins</td>
+<td data-col="2">Pseudomonas, Gram– rods</td>
+<td data-col="3">Same as penicillin</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Aztreonam</td>
+<td data-col="1">Monobactam</td>
+<td data-col="2">Gram– rods only</td>
+<td data-col="3">Generally safe</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Daptomycin</td>
+<td data-col="1">Lipopeptide</td>
+<td data-col="2">MRSA, VRE</td>
+<td data-col="3">Myopathy, CPK elevation</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Penicillin</td>
+<td data-col="1">Beta-lactam</td>
+<td data-col="2">Gram-positive infections</td>
+<td data-col="3">Allergic reactions</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Cephalexin / Ceftriaxone</td>
+<td data-col="1">Cephalosporins</td>
+<td data-col="2">Broad spectrum</td>
+<td data-col="3">Hypersensitivity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Carbapenems</td>
+<td data-col="1">Beta-lactam</td>
+<td data-col="2">Serious infections</td>
+<td data-col="3">Seizures (rare)</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Vancomycin</td>
+<td data-col="1">Glycopeptide</td>
+<td data-col="2">MRSA</td>
+<td data-col="3">Red man syndrome</td>
+<td data-col="4"></td>
+</tr>
+<tr><td class="row-subdivider row-divider" colspan="5" data-col="0">Protein Synthesis</td></tr>
+<tr>
+<td data-col="0">Tobramycin</td>
+<td data-col="1">Aminoglycosides</td>
+<td data-col="2">Gram– rods, bowel prep</td>
+<td data-col="3">Ototoxicity, nephrotoxicity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Neomycin</td>
+<td data-col="1">Aminoglycosides</td>
+<td data-col="2">Gram– rods, bowel prep</td>
+<td data-col="3">Ototoxicity, nephrotoxicity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Erythromycin</td>
+<td data-col="1">Macrolides</td>
+<td data-col="2">Respiratory infections, MAC</td>
+<td data-col="3">QT prolongation, GI upset</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Clarithromycin</td>
+<td data-col="1">Macrolides</td>
+<td data-col="2">Respiratory infections, MAC</td>
+<td data-col="3">QT prolongation, GI upset</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Minocycline</td>
+<td data-col="1">Tetracyclines</td>
+<td data-col="2">Acne, SIADH (demeclocycline)</td>
+<td data-col="3">Photosensitivity, teeth staining</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Demeclocycline</td>
+<td data-col="1">Tetracyclines</td>
+<td data-col="2">Acne, SIADH (demeclocycline)</td>
+<td data-col="3">Photosensitivity, teeth staining</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Tigecycline</td>
+<td data-col="1">Glycylcycline</td>
+<td data-col="2">Complicated infections (MRSA, VRE)</td>
+<td data-col="3">GI upset, hepatotoxicity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Quinupristin/Dalfopristin</td>
+<td data-col="1">Streptogramins</td>
+<td data-col="2">VRE, resistant Gram+ cocci</td>
+<td data-col="3">Myalgias, arthralgias</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Linezolid</td>
+<td data-col="1">Oxazolidinone</td>
+<td data-col="2">MRSA, VRE</td>
+<td data-col="3">Thrombocytopenia, serotonin syndrome</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Chloramphenicol</td>
+<td data-col="1">Protein synthesis inhibitor (50S)</td>
+<td data-col="2">Rickettsia, meningitis backup</td>
+<td data-col="3">Aplastic anemia, gray baby</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Gentamicin</td>
+<td data-col="1">Aminoglycoside</td>
+<td data-col="2">Gram-negatives</td>
+<td data-col="3">Nephrotoxicity, ototoxicity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Doxycycline</td>
+<td data-col="1">Tetracycline</td>
+<td data-col="2">Broad spectrum</td>
+<td data-col="3">Photosensitivity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Azithromycin</td>
+<td data-col="1">Macrolide</td>
+<td data-col="2">Respiratory infections</td>
+<td data-col="3">GI upset</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Clindamycin</td>
+<td data-col="1">Lincosamide</td>
+<td data-col="2">Anaerobic infections</td>
+<td data-col="3">C. difficile colitis</td>
+<td data-col="4"></td>
+</tr>
+<tr><td class="row-subdivider row-divider" colspan="5" data-col="0">DNA Inhibitors</td></tr>
+<tr>
+<td data-col="0">Rifabutin</td>
+<td data-col="1">Rifamycin</td>
+<td data-col="2">MAC prophylaxis (HIV)</td>
+<td data-col="3">Less CYP induction than rifampin</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Nitrofurantoin</td>
+<td data-col="1">DNA-damaging agent</td>
+<td data-col="2">Uncomplicated UTIs</td>
+<td data-col="3">Pulmonary fibrosis, GI upset</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">TMP-SMX</td>
+<td data-col="1">Folate inhibitor combo</td>
+<td data-col="2">UTIs, PCP pneumonia</td>
+<td data-col="3">Hyperkalemia, sulfa allergy</td>
+<td data-col="4"></td>
+</tr>
+<tr><td class="row-subdivider row-divider" colspan="5" data-col="0">Antimycobacterial Agents</td></tr>
+<tr>
+<td data-col="0">Isoniazid (INH)</td>
+<td data-col="1">Mycolic acid synthesis inhibitor</td>
+<td data-col="2">TB treatment</td>
+<td data-col="3">Hepatotoxicity, neuropathy (B6 def)</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Ethambutol</td>
+<td data-col="1">Arabinogalactan synthesis inhibitor</td>
+<td data-col="2">TB treatment</td>
+<td data-col="3">Optic neuritis, red-green blindness</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Clofazimine</td>
+<td data-col="1">Unknown (leprosy agent)</td>
+<td data-col="2">Multibacillary leprosy</td>
+<td data-col="3">Skin discoloration</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Streptomycin</td>
+<td data-col="1">Aminoglycoside (30S)</td>
+<td data-col="2">2nd line TB, plague</td>
+<td data-col="3">Ototoxicity, nephrotoxicity</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Ciprofloxacin</td>
+<td data-col="1">Fluoroquinolone</td>
+<td data-col="2">UTIs, GI infections</td>
+<td data-col="3">Tendon rupture</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Metronidazole</td>
+<td data-col="1">Nitroimidazole</td>
+<td data-col="2">Anaerobic infections</td>
+<td data-col="3">Disulfiram-like reaction</td>
+<td data-col="4"></td>
+</tr>
+<tr>
+<td data-col="0">Rifampin</td>
+<td data-col="1">Rifamycin</td>
+<td data-col="2">Tuberculosis</td>
+<td data-col="3">Orange body fluids</td>
+<td data-col="4"></td>
+</tr>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+
+  <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+  <form id="suggestionForm" style="margin-top: 1em;">
+    <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
+          style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
+    <button type="submit" style="padding: 6px 12px;">Send</button>
+  </form>
+  <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
+</footer>
+</body>
+
+<script src="/STEVEL-1-Summaries/utils/table_page_utils.js"></script>
+</html>

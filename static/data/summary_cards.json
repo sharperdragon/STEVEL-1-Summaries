@@ -20,6 +20,11 @@
     "desc": "A high-yield summary table for labs."
   },
   {
+    "name": "Pharm",
+    "file": "pharm.html",
+    "desc": "A high-yield summary table for pharm."
+  },
+  {
     "name": "Triads",
     "file": "triads.html",
     "desc": "A high-yield summary table for triads."

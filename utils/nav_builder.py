@@ -34,6 +34,8 @@ def generate_drop_nav_html():
             return "Immune"
         elif any(x in slug for x in ["cardio", "respiratory", "embryo"]):
             return "System"
+        elif any(x in slug for x in ["pharm"]):
+            return "Reference"
         else:
             return "Misc"
 

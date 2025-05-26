@@ -45,6 +45,13 @@
   --table6-row-bg: #ffffff;
   --table6-row-alt-bg: #e9e9e9;
   --table6-divider-bg: #e6a3a3;
+
+  --table1-subdivider-bg: #dab9ff;
+  --table2-subdivider-bg: #bcdafd;
+  --table3-subdivider-bg: #fcb7de;
+  --table4-subdivider-bg: #f7b6aa;
+  --table5-subdivider-bg: #a8ede5;
+  --table6-subdivider-bg: #fbffb5;
 }
 
 table, .table1, .table2, .table3, .table4, .table5, .table6 {
@@ -139,6 +146,24 @@ thead th:not(.table-title) {
 .table4 .row-divider { background-color: var(--table4-divider-bg); }
 .table5 .row-divider { background-color: var(--table5-divider-bg); }
 .table6 .row-divider { background-color: var(--table6-divider-bg); }
+
+.row-subdivider {
+  border-top: 1.5px solid var(--strong-divider);
+  border-bottom: 1.5px solid var(--strong-divider);
+  font-size: var(--small-head-font-size);
+  font-weight: 540;
+  text-align: left;
+  padding: 6px 10px;
+  background-color: #e9f1f5; /* slightly lighter neutral bg */
+  font-style: italic;
+}
+
+.table1 .row-subdivider { background-color: var(--table1-row-alt-bg); }
+.table2 .row-subdivider { background-color: var(--table2-row-alt-bg); }
+.table3 .row-subdivider { background-color: var(--table3-row-alt-bg); }
+.table4 .row-subdivider { background-color: var(--table4-row-alt-bg); }
+.table5 .row-subdivider { background-color: var(--table5-row-alt-bg); }
+.table6 .row-subdivider { background-color: var(--table6-row-alt-bg); }
 
 .table-title {
   font-size: var(--title-font-size);

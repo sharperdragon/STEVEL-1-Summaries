@@ -1,6 +1,6 @@
 {
   "generated": "index.html",
-  "updated": "2025-05-26T16:20:20.223992",
+  "updated": "2025-05-26T18:58:44.800076",
   "included_tables": [
     "Associations",
     "Autoantibodies",
@@ -13,6 +13,7 @@
     "Heme-Onc",
     "Labs",
     "Metabolism",
+    "Pharm",
     "Presentations",
     "Triads"
   ]
