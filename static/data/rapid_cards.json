@@ -20,7 +20,7 @@
     "source": "finding"
   },
   {
-    "question": "Anti-histone antibodies",
+    "question": "Anti-histone",
     "answer": "Drug-induced lupus",
     "source": "finding"
   },
@@ -50,7 +50,7 @@
     "source": "finding"
   },
   {
-    "question": "Atypical lymphocytes, heterophile antibodies",
+    "question": "Atypical lymphocytes, heterophile",
     "answer": "Infectious mononucleosis (EBV infection)",
     "source": "finding"
   },
@@ -85,7 +85,7 @@
     "source": "finding"
   },
   {
-    "question": "Electrical alternans (alternating amplitude of R waves on ECG)",
+    "question": "Electrical alternans(alternating amplitude of R waves on ECG)",
     "answer": "Cardiac tamponade",
     "source": "finding"
   },
@@ -101,12 +101,12 @@
   },
   {
     "question": "Empty-appearing nuclei with central clearing in thyroid cells",
-    "answer": "“Orphan Annie” eyes (papillary thyroid carcinoma)",
+    "answer": "papillary thyroid carcinoma (“Orphan Annie” eyes)",
     "source": "finding"
   },
   {
     "question": "“Brown” tumor of bone",
-    "answer": "Hyperparathyroidism or osteitis fibrosa cystica",
+    "answer": "Hyperparathyroidism or Osteitis fibrosa cystica",
     "source": "finding"
   },
   {
@@ -120,7 +120,7 @@
     "source": "finding"
   },
   {
-    "question": "Anti-transglutaminase/anti-deamidated gliadin/anti-endomysial antibodies",
+    "question": "Anti-transglutaminase/anti-deamidated gliadin/anti-endomysial",
     "answer": "Celiac disease (diarrhea, weight loss)",
     "source": "finding"
   },
@@ -160,17 +160,17 @@
     "source": "finding"
   },
   {
-    "question": "Anti-smooth muscle antibodies (ASMAs), anti-LKM1 antibodies",
+    "question": "Anti-smooth muscle antibodies (ASMAs), anti-LKM1",
     "answer": "Autoimmune hepatitis",
     "source": "finding"
   },
   {
     "question": "Antimitochondrial antibodies (AMAs)",
-    "answer": "Primary biliary cholangitis (female, cholestasis, portal hypertension)",
+    "answer": "Primary biliary cholangitis(female, cholestasis, portal hypertension)",
     "source": "finding"
   },
   {
-    "question": "↓ serum ceruloplasmin",
+    "question": "Low serum ceruloplasmin",
     "answer": "Wilson disease",
     "source": "finding"
   },
@@ -180,8 +180,8 @@
     "source": "finding"
   },
   {
-    "question": "Basophilic stippling of RBCs",
-    "answer": "Sideroblastic anemia, thalassemias",
+    "question": "RBC Basophilic stipplings",
+    "answer": "Sideroblastic anemia, Thalassemias",
     "source": "finding"
   },
   {
@@ -191,21 +191,21 @@
   },
   {
     "question": "Hypochromic, microcytic anemia",
-    "answer": "Iron deficiency, lead poisoning, thalassemia, sideroblastic anemia",
+    "answer": "Iron deficiency, lead poisoning,thalassemia, sideroblastic anemia",
     "source": "finding"
   },
   {
     "question": "“Hair on end” (crew cut) appearance on skull x-ray",
-    "answer": "β-thalassemia, sickle cell anemia (marrow expansion)",
+    "answer": "β-thalassemia, sickle cell anemia(marrow expansion)",
     "source": "finding"
   },
   {
     "question": "Hypersegmented neutrophils",
-    "answer": "Megaloblastic anemia (B12 or folate deficiency)",
+    "answer": "Megaloblastic anemia (B12orfolatedeficiency)",
     "source": "finding"
   },
   {
-    "question": "Anti-GpIIb/IIIa antibodies",
+    "question": "Anti-GpIIb/IIIa",
     "answer": "Immune thrombocytopenia",
     "source": "finding"
   },
@@ -231,7 +231,7 @@
   },
   {
     "question": "Stacks of RBCs",
-    "answer": "Rouleaux formation (↑ ESR, multiple myeloma)",
+    "answer": "Rouleaux formation(↑ ESR,multiple myeloma)",
     "source": "finding"
   },
   {
@@ -246,7 +246,7 @@
   },
   {
     "question": "“Tennis racket”-shaped cytoplasmic organelles",
-    "answer": "Birbeck granules (Langerhans cell histiocytosis)",
+    "answer": "Langerhans cell histiocytosis (Birbeck granules)",
     "source": "finding"
   },
   {
@@ -270,7 +270,7 @@
     "source": "finding"
   },
   {
-    "question": "Needle-shaped, negatively birefringent crystals",
+    "question": "Needle-shaped,negativelybirefringent crystals",
     "answer": "Gout (monosodium urate)",
     "source": "finding"
   },
@@ -280,7 +280,7 @@
     "source": "finding"
   },
   {
-    "question": "Rhomboid, positively birefringent crystals",
+    "question": "Rhomboid,positivelybirefringent crystals",
     "answer": "Pseudogout (calcium pyrophosphate)",
     "source": "finding"
   },
@@ -290,7 +290,7 @@
     "source": "finding"
   },
   {
-    "question": "Antinuclear, anti-dsDNA, anti-Sm, antiphospholipid antibodies",
+    "question": "Antinuclear, anti-dsDNA, anti-Smith, antiphospholipid",
     "answer": "Systemic lupus erythematosus (SLE)",
     "source": "finding"
   },
@@ -305,17 +305,17 @@
     "source": "finding"
   },
   {
-    "question": "Anti-centromere antibodies",
+    "question": "Anti-centromere",
     "answer": "Limited scleroderma (CREST)",
     "source": "finding"
   },
   {
-    "question": "Anti-desmoglein 1/3 antibodies",
+    "question": "Anti-desmoglein",
     "answer": "Pemphigus vulgaris",
     "source": "finding"
   },
   {
-    "question": "Anti-hemidesmosome antibodies",
+    "question": "Anti-hemidesmosome",
     "answer": "Bullous pemphigoid",
     "source": "finding"
   },
@@ -325,8 +325,8 @@
     "source": "finding"
   },
   {
-    "question": "↑ AFP in maternal serum",
-    "answer": "Dating error, open neural tube defects",
+    "question": "High AFP in maternal serum",
+    "answer": "Dating error, Open neural tube defects",
     "source": "finding"
   },
   {
@@ -495,7 +495,7 @@
     "source": "finding"
   },
   {
-    "question": "Golden-brown fusiform rods (dumbbell-shaped) in alveoli (Prussian blue stain)",
+    "question": "Golden-brown dumbbell-shaped (fusiform) rods in alveoli (Prussian blue stain)",
     "answer": "Asbestos (ferruginous) bodies",
     "source": "finding"
   },
@@ -526,17 +526,17 @@
   },
   {
     "question": "HLA-DR3",
-    "answer": "Type 1 DMSLEGravesHashimoto thyroiditisAddison",
+    "answer": "Type 1 DM, SLEGraves, Addison<Hashimoto thyroiditis",
     "source": "association"
   },
   {
     "question": "HLA-DR4",
-    "answer": "Rheumatoid arthritistype I DiabetesAddison disease",
+    "answer": "Rheumatoid arthritisType I DMAddison disease",
     "source": "association"
   },
   {
     "question": "H. pylori",
-    "answer": "Gastritispeptic ulcersgastric adenocarcinomaMALToma",
+    "answer": "Gastritis, peptic ulcersgastric adenocarcinomaMALToma",
     "source": "association"
   },
   {
@@ -561,7 +561,7 @@
   },
   {
     "question": "Healthcare-associated pneumonia",
-    "answer": "S. aureusPseudomonasother gram ⊕ rods",
+    "answer": "S. aureusPseudomonasother gram positive rods",
     "source": "association"
   },
   {
@@ -576,12 +576,12 @@
   },
   {
     "question": "Osteomyelitis",
-    "answer": "S. aureus (most common overall)",
+    "answer": "S. aureus(most common overall)",
     "source": "association"
   },
   {
     "question": "Osteomyelitis in sickle cell",
-    "answer": "SalmonellaS. aureus",
+    "answer": "1) Salmonella2)S. aureus",
     "source": "association"
   },
   {
@@ -606,12 +606,12 @@
   },
   {
     "question": "Metastases to bone",
-    "answer": "Prostatebreast >> lung > kidneycolon",
+    "answer": "Prostate,Breast>> lung > kidney, colon",
     "source": "association"
   },
   {
     "question": "Metastases to liver",
-    "answer": "Colon > breast >> pancreaslungprostate",
+    "answer": "Colon> breast >> pancreas, lung, prostate",
     "source": "association"
   },
   {
@@ -621,12 +621,12 @@
   },
   {
     "question": "S3 heart sound",
-    "answer": "↑ ventricular filling pressure (eg, MRARHFthyrotoxicosis); common in dilated ventricles",
+    "answer": "↑ ventricular filling pressure(eg, MR, AR, HF, thyrotoxicosis)common in dilated ventricles",
     "source": "association"
   },
   {
     "question": "S4 heart sound",
-    "answer": "Stiff/hypertrophic ventricle (eg, aortic stenosisrestrictive cardiomyopathy)",
+    "answer": "Stiff/hypertrophic ventricleeg, aortic stenosis, restrictive cardiomyopathy)",
     "source": "association"
   },
   {
@@ -656,12 +656,12 @@
   },
   {
     "question": "Cyanotic heart disease (early)",
-    "answer": "Tetralogy of Fallot (most common)D-TGAPTATAPVRtricuspid atresia",
+    "answer": "Tetralogy of Fallot (most common,)D-TGA, PTA, TAPVR,tricuspid atresia",
     "source": "association"
   },
   {
     "question": "Left-to-right shunts (congenital)",
-    "answer": "VSD > ASD > PDA",
+    "answer": "VSD> ASD > PDA",
     "source": "association"
   },
   {
@@ -685,7 +685,7 @@
     "source": "association"
   },
   {
-    "question": "Abdominal aortic aneurysm",
+    "question": "Abdominal aortic aneurysm risks",
     "answer": "Atherosclerosistobacco use",
     "source": "association"
   },
@@ -701,7 +701,7 @@
   },
   {
     "question": "Cor pulmonale",
-    "answer": "Right heart failure due to pulmonary cause",
+    "answer": "Right heart failure due topulmonarycause",
     "source": "association"
   },
   {
@@ -711,17 +711,17 @@
   },
   {
     "question": "Infective endocarditis organism",
-    "answer": "S. aureus (acute)viridans strep (subacute)gallolyticus (colon cancer)HACEKBartonella",
+    "answer": "S. aureus (acute)viridans strep (subacute)gallolyticus (colon cancer)HACEK, Bartonella",
     "source": "association"
   },
   {
     "question": "Cardiac tumor (adults)",
-    "answer": "Metastasismyxoma",
+    "answer": "MetastasisMyxoma (if 1°)",
     "source": "association"
   },
   {
     "question": "Cardiac 1° tumor (children)",
-    "answer": "Rhabdomyoma (assoc. with tuberous sclerosis)",
+    "answer": "Rhabdomyoma(assoc. with tuberous sclerosis)",
     "source": "association"
   },
   {
