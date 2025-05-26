@@ -44,7 +44,8 @@ nav {
   z-index: 999;
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: auto;
+  margin: auto 2px auto auto;
 }
 
 /* Nav button */

@@ -60,7 +60,7 @@ def generate_drop_nav_html():
             if category.lower() == "glossary":
                 nav_html += f'      <!-- {category}: label (no direct link) -->\n'
                 nav_html += f'      <div class="nav_category" id="{category_id}">\n'
-                nav_html += f'        <span href="../pages/glossary.html">{category}</span>\n'
+                nav_html += f'        <a class="nav_category_link" href="../pages/glossary.html">{category}</a>\n'
                 nav_html += f'      </div>\n'
             else:
                 nav_html += f'      <!-- {category}: submenu -->\n'

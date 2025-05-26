@@ -659,3 +659,17 @@ body.mobile .summary-card {
   font-size: 0.9em;
   margin-bottom: 12px;
 }
+
+/* Match layout and hover of category titles */
+.nav_category_link {
+  display: block;
+  padding: 8px 12px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav_category_link:hover {
+  background-color: var(--nav-hover-bg, #eef2f5);
+}
