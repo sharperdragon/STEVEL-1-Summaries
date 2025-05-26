@@ -13,7 +13,7 @@ from utils.helper_utils import generate_label_and_slug
 BASE_PATH = Path(__file__).parent
 PROJECT_ROOT = BASE_PATH.parent.parent
 MANIFEST_PATH = PROJECT_ROOT / "static/data/table.manifest.json"
-BASE_HTML_PATH = BASE_PATH / "index_base.html"
+INDEX_BASE_HTML_PATH = BASE_PATH / "index_base.html"
 OUTPUT_PATH = PROJECT_ROOT / "index.html"
 
 # Example inputs to test label generation

@@ -8,7 +8,7 @@ from time import time
 BASE_PATH = Path(__file__).parent
 PROJECT_ROOT = BASE_PATH.parent.parent
 MANIFEST_PATH = PROJECT_ROOT / "static/data/table.manifest.json"
-BASE_HTML_PATH = BASE_PATH / "index_base.html"
+INDEX_BASE_HTML_PATH = BASE_PATH / "index_base.html"
 OUTPUT_PATH = PROJECT_ROOT / "index.html"
 
 def write_rapid_cards_json():
@@ -69,7 +69,7 @@ def write_rapid_cards_json():
 
 def build_index(build_json=True):
     """Generate index.html from base template and manifest"""
-    with BASE_HTML_PATH.open("r", encoding="utf-8") as f:
+    with INDEX_BASE_HTML_PATH.open("r", encoding="utf-8") as f:
         base_html = f.read()
 
     with MANIFEST_PATH.open("r", encoding="utf-8") as f:

@@ -12,7 +12,7 @@ from utils.nav_builder import generate_drop_nav_html
 from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
 from datetime import datetime
 
-BASE_HTML_PATH = Path("pages/BASE.html")
+BASE_HTML_PATH = Path("static/BASE.html")
 TABLE_DIR = Path("subdex/")
 NAV_DIR = Path("utils/navs/")
 OUTPUT_DIR = Path("pages/")

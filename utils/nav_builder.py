@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from utils.helper_utils import generate_label_and_slug
 
 
-BASE_HTML_PATH = Path("pages/BASE.html")
+BASE_HTML_PATH = Path("static/BASE.html")
 TABLE_DIR = Path("subdex/")
 NAV_DIR = Path("utils/navs/")
 OUTPUT_DIR = Path("pages/")
