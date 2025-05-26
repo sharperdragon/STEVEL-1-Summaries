@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<div style="display: flex; justify-content: flex-start; align-items: center; margin: 20px 0 10px 20px;">
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 15px auto 18px;">
   <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
     <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
     Home
@@ -27,7 +27,7 @@
     <div class="nav_dropdown_container" id="nav-dropdown">
       <!-- Glossary: label (no direct link) -->
       <div class="nav_category" id="category-glossary">
-        <span href="../pages/glossary.html">Glossary</span>
+        <a class="nav_category_link" href="../pages/glossary.html">Glossary</a>
       </div>
       <!-- Immune: submenu -->
       <div class="nav_category has-children" id="category-immune">
@@ -46,6 +46,7 @@
           <a class="nav_link_tab" href="../pages/chromosomes.html">Chromosomes</a>
           <a class="nav_link_tab" href="../pages/heme-onc.html">Heme-Onc</a>
           <a class="nav_link_tab" href="../pages/metabolism.html">Metabolism</a>
+          <a class="nav_link_tab" href="../pages/triads.html">Triads</a>
         </div>
       </div>
       <!-- Rapid Review: submenu -->
@@ -106,57 +107,57 @@
 <tr>
 <td data-col="0">CA-125</td>
 <td data-col="1">Ovarian cancer marker</td>
-<td data-col="2">Non-specific; elevated in endometriosis, menstruation, peritonitis</td>
+<td data-col="2"><b>Non-specific</b><br/>High in endometriosis, menstruation, peritonitis</td>
 </tr>
 <tr>
 <td data-col="0">AFP (Alpha-Fetoprotein)</td>
 <td data-col="1">Hepatocellular carcinoma, yolk sac tumor, NTDs</td>
-<td data-col="2">↑ in HCC, ↓ in Down syndrome; also elevated in twin pregnancy</td>
+<td data-col="2">↑ in HCC, ↓ in Down syndrome<br/>also elevated in twin pregnancy</td>
 </tr>
 <tr>
 <td data-col="0">CEA (Carcinoembryonic Antigen)</td>
 <td data-col="1">Colon cancer marker</td>
-<td data-col="2">Low specificity; used to monitor recurrence not for screening</td>
+<td data-col="2"><b>Low specificity</b><br/>used to monitor recurrence not for screening</td>
 </tr>
 <tr>
 <td data-col="0">CA 19-9</td>
 <td data-col="1">Pancreatic adenocarcinoma marker</td>
-<td data-col="2">Elevated in biliary disease too; low sensitivity in early disease</td>
+<td data-col="2">Elevated in biliary disease too<br/>low sensitivity in early disease</td>
 </tr>
 <tr>
 <td data-col="0">GGT (Gamma-glutamyl transferase)</td>
 <td data-col="1">Hepatic enzyme</td>
-<td data-col="2">↑ in alcohol use and cholestasis; distinguishes hepatic ALP from bone</td>
+<td data-col="2">↑ in <b>alcohol use</b> and<b> cholestasis</b><br/>distinguishes <i>hepatic</i> ALP from <i>bone</i></td>
 </tr>
 <tr>
 <td data-col="0">Haptoglobin</td>
 <td data-col="1">Marker of intravascular hemolysis</td>
-<td data-col="2">↓ in intravascular hemolysis; normal in extravascular</td>
+<td data-col="2"><b>Low</b> in <u><b>intravascular</b></u> hemolysis<br/>normal in <b>extravascular</b></td>
 </tr>
 <tr>
 <td data-col="0">Reticulocyte Count</td>
 <td data-col="1">Bone marrow response to anemia</td>
-<td data-col="2">↑ in hemolysis or blood loss; ↓ in aplastic anemia or marrow failure</td>
+<td data-col="2">↑ in hemolysis or blood loss<br/>↓ in aplastic anemia or marrow failure</td>
 </tr>
 <tr>
 <td data-col="0">Schilling Test</td>
-<td data-col="1">Evaluates B12 absorption</td>
-<td data-col="2">Used to distinguish dietary deficiency vs. pernicious anemia vs. malabsorption</td>
+<td data-col="1">Evaluates <b>B12</b> absorption</td>
+<td data-col="2">Used to distinguish dietary <b>deficiency</b> vs. <b>pernicious anemia</b> vs. <b>malabsorption</b></td>
 </tr>
 <tr>
 <td data-col="0">Fractional Excretion of Sodium (FENa)</td>
-<td data-col="1">Differentiates causes of AKI</td>
-<td data-col="2">&lt;1% suggests prerenal; &gt;2% suggests intrinsic renal damage</td>
+<td data-col="1">Differentiates causes of <b>AKI</b></td>
+<td data-col="2"><b>&lt;1%</b> suggests <u>prerenal</u><br/><b>&gt;2%</b> suggests <u>intrinsic</u> renal damage</td>
 </tr>
 <tr>
 <td data-col="0">Urine Anion Gap</td>
-<td data-col="1">Assesses cause of non-anion gap acidosis</td>
-<td data-col="2">Positive in renal tubular acidosis; negative in GI bicarb loss</td>
+<td data-col="1">Assesses cause of <u>non-anion</u> gap acidosis</td>
+<td data-col="2">Positive in renal tubular acidosis<br/>negative in GI bicarb loss</td>
 </tr>
 <tr>
 <td data-col="0">Urinary Cyanide-Nitroprusside Test</td>
-<td data-col="1">Screens for cystinuria</td>
-<td data-col="2">Turns purple with cystine; confirms aminoaciduria</td>
+<td data-col="1">Screens for <b>cystinuria</b></td>
+<td data-col="2">Turns <b style="color:purple">purple</b> with cystine<br/>confirms aminoaciduria</td>
 </tr>
 <tr>
 <td data-col="0">Urine osmolality vs. serum osmolality</td>
@@ -211,7 +212,7 @@
 <tr>
 <td data-col="0">CSF albuminocytologic dissociation</td>
 <td data-col="1">Guillain-Barré syndrome</td>
-<td data-col="2">↑ protein with normal WBC count in CSF</td>
+<td data-col="2"><span style="">↑</span> protein with normal WBC count in CSF</td>
 </tr>
 <tr>
 <td data-col="0">Edrophonium (Tensilon) Test</td>
@@ -285,8 +286,8 @@
 </tr>
 <tr>
 <td data-col="0">VDRL (Venereal Disease Research Laboratory)</td>
-<td data-col="1">Screening test for syphilis</td>
-<td data-col="2">Non-treponemal; false positives (e.g., SLE, pregnancy); confirm with FTA-ABS</td>
+<td data-col="1"><b>Syphilis</b> screening</td>
+<td data-col="2">Non-treponemal; false positives (e.g., SLE, pregnancy); confirm with <b>FTA-ABS</b></td>
 </tr>
 <tr>
 <td data-col="0">Direct Coombs Test</td>
@@ -295,8 +296,8 @@
 </tr>
 <tr>
 <td data-col="0">Indirect Coombs Test</td>
-<td data-col="1">Detects anti-RBC antibodies in serum</td>
-<td data-col="2">Used in prenatal testing and blood transfusion compatibility</td>
+<td data-col="1">Detects <b>anti-RBC antibodies</b></td>
+<td data-col="2">Prenatal testing<br/>blood transfusion compatibility</td>
 </tr>
 </tbody></thead></table></div>
 </main>

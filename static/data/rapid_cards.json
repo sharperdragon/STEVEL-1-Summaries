@@ -511,7 +511,7 @@
   },
   {
     "question": "Intellectual disability",
-    "answer": "Down syndrome (sporadic), fragile X syndrome (inherited)",
+    "answer": "Down syndrome (sporadic)fragile X syndrome (inherited)",
     "source": "association"
   },
   {
@@ -526,17 +526,17 @@
   },
   {
     "question": "HLA-DR3",
-    "answer": "Type 1 DM, SLE, Graves, Hashimoto thyroiditis, Addison",
+    "answer": "Type 1 DMSLEGravesHashimoto thyroiditisAddison",
     "source": "association"
   },
   {
     "question": "HLA-DR4",
-    "answer": "Rheumatoid arthritis, type I DM, Addison disease",
+    "answer": "Rheumatoid arthritistype I DiabetesAddison disease",
     "source": "association"
   },
   {
     "question": "H. pylori",
-    "answer": "Gastritis, peptic ulcers, gastric adenocarcinoma, MALToma",
+    "answer": "Gastritispeptic ulcersgastric adenocarcinomaMALToma",
     "source": "association"
   },
   {
@@ -556,17 +556,17 @@
   },
   {
     "question": "Food poisoning (exotoxin-mediated)",
-    "answer": "S. aureus, B. cereus",
+    "answer": "S. aureusB. cereus",
     "source": "association"
   },
   {
     "question": "Healthcare-associated pneumonia",
-    "answer": "S. aureus, Pseudomonas, other gram ⊕ rods",
+    "answer": "S. aureusPseudomonasother gram ⊕ rods",
     "source": "association"
   },
   {
     "question": "Bacterial meningitis (0–6 months)",
-    "answer": "Group B Strep, E. coli, Listeria",
+    "answer": "Group B StrepE. coliListeria",
     "source": "association"
   },
   {
@@ -581,17 +581,17 @@
   },
   {
     "question": "Osteomyelitis in sickle cell",
-    "answer": "Salmonella, S. aureus",
+    "answer": "SalmonellaS. aureus",
     "source": "association"
   },
   {
     "question": "Osteomyelitis in IVDU",
-    "answer": "S. aureus, Pseudomonas, Candida",
+    "answer": "S. aureusPseudomonasCandida",
     "source": "association"
   },
   {
     "question": "UTI",
-    "answer": "E. coli, Staph. saprophyticus",
+    "answer": "E. coliStaph. saprophyticus",
     "source": "association"
   },
   {
@@ -601,37 +601,37 @@
   },
   {
     "question": "PID",
-    "answer": "C. trachomatis (subacute), N. gonorrhoeae (acute)",
+    "answer": "C. trachomatis (subacute)N. gonorrhoeae (acute)",
     "source": "association"
   },
   {
     "question": "Metastases to bone",
-    "answer": "Prostate, breast >> lung > kidney, colon",
+    "answer": "Prostatebreast >> lung > kidneycolon",
     "source": "association"
   },
   {
     "question": "Metastases to liver",
-    "answer": "Colon > breast >> pancreas, lung, prostate",
+    "answer": "Colon > breast >> pancreaslungprostate",
     "source": "association"
   },
   {
     "question": "Metastases to brain",
-    "answer": "Lung > breast >> melanoma > colon, prostate",
+    "answer": "Lung > breast >> melanoma > colonprostate",
     "source": "association"
   },
   {
     "question": "S3 heart sound",
-    "answer": "↑ ventricular filling pressure (eg, MR, AR, HF, thyrotoxicosis); common in dilated ventricles",
+    "answer": "↑ ventricular filling pressure (eg, MRARHFthyrotoxicosis); common in dilated ventricles",
     "source": "association"
   },
   {
     "question": "S4 heart sound",
-    "answer": "Stiff/hypertrophic ventricle (eg, aortic stenosis, restrictive cardiomyopathy)",
+    "answer": "Stiff/hypertrophic ventricle (eg, aortic stenosisrestrictive cardiomyopathy)",
     "source": "association"
   },
   {
     "question": "Holosystolic murmur",
-    "answer": "VSD, tricuspid regurgitation, mitral regurgitation",
+    "answer": "VSDTricuspid regurgitationMitral regurgitation",
     "source": "association"
   },
   {
@@ -656,7 +656,7 @@
   },
   {
     "question": "Cyanotic heart disease (early)",
-    "answer": "Tetralogy of Fallot (most common), D-TGA, PTA, TAPVR, tricuspid atresia",
+    "answer": "Tetralogy of Fallot (most common)D-TGAPTATAPVRtricuspid atresia",
     "source": "association"
   },
   {
@@ -671,7 +671,7 @@
   },
   {
     "question": "Secondary hypertension",
-    "answer": "Renal/renovascular disease, 1° hyperaldosteronism, OSA",
+    "answer": "Renal/renovascular disease1° hyperaldosteronismOSA",
     "source": "association"
   },
   {
@@ -681,12 +681,12 @@
   },
   {
     "question": "Thoracic aortic aneurysm",
-    "answer": "Marfan syndrome, 3° syphilis",
+    "answer": "Marfan syndrome3° syphilis",
     "source": "association"
   },
   {
     "question": "Abdominal aortic aneurysm",
-    "answer": "Atherosclerosis, tobacco use",
+    "answer": "Atherosclerosistobacco use",
     "source": "association"
   },
   {
@@ -696,7 +696,7 @@
   },
   {
     "question": "Atrial fibrillation",
-    "answer": "Irregularly irregular rhythm, ↑ risk of emboli",
+    "answer": "Irregularly irregular rhythm↑ risk of emboli",
     "source": "association"
   },
   {
@@ -711,12 +711,12 @@
   },
   {
     "question": "Infective endocarditis organism",
-    "answer": "S. aureus (acute), viridans strep (subacute), gallolyticus (colon cancer), HACEK, Bartonella",
+    "answer": "S. aureus (acute)viridans strep (subacute)gallolyticus (colon cancer)HACEKBartonella",
     "source": "association"
   },
   {
     "question": "Cardiac tumor (adults)",
-    "answer": "Metastasis, myxoma",
+    "answer": "Metastasismyxoma",
     "source": "association"
   },
   {
@@ -741,7 +741,7 @@
   },
   {
     "question": "Congenital hypothyroidism",
-    "answer": "Thyroid dysgenesis, iodine deficiency",
+    "answer": "Thyroid dysgenesisiodine deficiency",
     "source": "association"
   },
   {
@@ -761,12 +761,12 @@
   },
   {
     "question": "2° hyperparathyroidism",
-    "answer": "Hypocalcemia of chronic kidney disease",
+    "answer": "Hypocalcemia of CKD",
     "source": "association"
   },
   {
     "question": "Cushing syndrome",
-    "answer": "Exogenous steroids, adenoma, Cushing disease, paraneoplastic ACTH",
+    "answer": "Exogenous steroidsAdenomaCushing diseaseParaneoplastic ACTH (sclc)",
     "source": "association"
   },
   {
@@ -785,13 +785,13 @@
     "source": "association"
   },
   {
-    "question": "Refractory peptic ulcers and ↑ gastrin",
+    "question": "Refractory peptic ulcers + high gastrin",
     "answer": "Zollinger-Ellison syndrome (MEN1)",
     "source": "association"
   },
   {
     "question": "Esophageal cancer",
-    "answer": "SCC (world), adenocarcinoma (US)",
+    "answer": "SCC (world)Adenocarcinoma (US)",
     "source": "association"
   },
   {
@@ -806,7 +806,7 @@
   },
   {
     "question": "Chronic atrophic gastritis",
-    "answer": "↑ gastric cancer, pernicious anemia",
+    "answer": "↑ gastric cancer riskPernicious anemia",
     "source": "association"
   },
   {
@@ -836,16 +836,16 @@
   },
   {
     "question": "Testicular tumor (children)",
-    "answer": "Yolk sac tumor (Schiller-Duval bodies, ↑ AFP)",
+    "answer": "Yolk sac tumor (Schiller-Duval bodies)(↑ AFP)",
     "source": "association"
   },
   {
-    "question": "Benign ovarian tumor",
+    "question": "BenignOvarian tumor",
     "answer": "Serous cystadenoma",
     "source": "association"
   },
   {
-    "question": "Ovarian tumor (malignant)",
+    "question": "MalignantOvarian tumor",
     "answer": "Serous cystadenocarcinoma",
     "source": "association"
   },
@@ -876,17 +876,17 @@
   },
   {
     "question": "Gynecomastia",
-    "answer": "Cirrhosis, hypogonadism, testicular tumors, drugs (e.g., spironolactone)",
+    "answer": "Cirrhosishypogonadismtesticular tumorsdrugs (e.g., spironolactone)",
     "source": "association"
   },
   {
     "question": "Sexually transmitted infection",
-    "answer": "C. trachomatis (D–K), N. gonorrhoeae",
+    "answer": "C. trachomatis (D–K)N. gonorrhoeae",
     "source": "association"
   },
   {
     "question": "Pelvic inflammatory disease",
-    "answer": "C. trachomatis, N. gonorrhoeae",
+    "answer": "C. trachomatisN. gonorrhoeae",
     "source": "association"
   },
   {
@@ -926,7 +926,7 @@
   },
   {
     "question": "Meningitis (neonates)",
-    "answer": "Group B Strep, E. coli, Listeria",
+    "answer": "Group B StrepE. coliListeria",
     "source": "association"
   },
   {
@@ -945,27 +945,27 @@
     "source": "association"
   },
   {
-    "question": "Atypical pneumonia in young adults",
+    "question": "Atypical pneumonia inyoung adults",
     "answer": "Mycoplasma pneumoniae",
     "source": "association"
   },
   {
-    "question": "Infective endocarditis with prosthetic valve",
+    "question": "Infective endocarditis withprosthetic valve",
     "answer": "S. epidermidis",
     "source": "association"
   },
   {
-    "question": "Infective endocarditis in IVDU",
+    "question": "Infective endocarditis inIVDU",
     "answer": "S. aureus",
     "source": "association"
   },
   {
     "question": "Infective endocarditis after dental procedure",
-    "answer": "Streptococcus viridans",
+    "answer": "Streptococcusviridans",
     "source": "association"
   },
   {
-    "question": "Osteomyelitis in children",
+    "question": "Osteomyelitis inchildren",
     "answer": "S. aureus",
     "source": "association"
   },
@@ -986,17 +986,17 @@
   },
   {
     "question": "Early-onset dementia",
-    "answer": "Frontotemporal dementia, early-onset Alzheimer, CJD",
+    "answer": "Frontotemporal dementiaEarly-onset AlzheimerCJD",
     "source": "association"
   },
   {
     "question": "Chorea",
-    "answer": "Huntington disease (AD CAG repeat on chromosome 4)",
+    "answer": "Huntington disease (A-Dominant, CAG repeat on chromosome 4)",
     "source": "association"
   },
   {
-    "question": "Dementia + hallucinations + parkinsonism",
-    "answer": "Dementia with Lewy bodies",
+    "question": "Dementia + Hallucinations + Parkinsonism",
+    "answer": "Lewy body Dementia",
     "source": "association"
   },
   {
@@ -1041,12 +1041,12 @@
   },
   {
     "question": "Epidural hematoma",
-    "answer": "Rupture of middle meningeal artery",
+    "answer": "Rupture ofmiddle meningeal artery",
     "source": "association"
   },
   {
     "question": "Subdural hematoma",
-    "answer": "Rupture of bridging veins",
+    "answer": "Rupture ofbridging veins",
     "source": "association"
   },
   {
@@ -1061,7 +1061,7 @@
   },
   {
     "question": "Bone tumor in elderly",
-    "answer": "Multiple myeloma or metastasis",
+    "answer": "Multiple myeloma or Metastasis",
     "source": "association"
   },
   {
@@ -1071,12 +1071,12 @@
   },
   {
     "question": "Hepatocellular carcinoma",
-    "answer": "HBV (± cirrhosis), HCV, alcohol, aflatoxins",
+    "answer": "HBV (± cirrhosis)HCValcoholaflatoxins",
     "source": "association"
   },
   {
     "question": "Conjugated hyperbilirubinemia (inherited)",
-    "answer": "Dubin-Johnson (black liver), Rotor syndrome",
+    "answer": "Dubin-Johnson (black liver)Rotor syndrome",
     "source": "association"
   },
   {
@@ -1086,52 +1086,52 @@
   },
   {
     "question": "Wilson disease",
-    "answer": "ATP7B mutation → copper buildup in liver, brain, cornea",
+    "answer": "ATP7B mutationCopper buildup in liver, brain,cornea(name for corneal deposits?)",
     "source": "association"
   },
   {
     "question": "Hemochromatosis",
-    "answer": "HFE mutation or transfusion overload → heart failure, bronze diabetes",
+    "answer": "HFE mutation or Transfusion overload → heart failurebronze diabetes",
     "source": "association"
   },
   {
     "question": "Acute pancreatitis",
-    "answer": "Gallstones, alcohol",
+    "answer": "Gallstonesalcohol",
     "source": "association"
   },
   {
     "question": "Chronic pancreatitis",
-    "answer": "Alcohol (adults), cystic fibrosis (children)",
+    "answer": "Alcohol (adults)cystic fibrosis (children)",
     "source": "association"
   },
   {
     "question": "Microcytic anemia",
-    "answer": "Iron deficiency, thalassemia, lead poisoning, sideroblastic anemia",
+    "answer": "Iron deficiencyThalassemiaLead poisoningsideroblastic anemia",
     "source": "association"
   },
   {
     "question": "Autosplenectomy",
-    "answer": "Sickle cell anemia (also Howell-Jolly bodies)",
+    "answer": "Sickle cell anemia(also Howell-Jolly bodies)",
     "source": "association"
   },
   {
     "question": "GpIb deficiency",
-    "answer": "Bernard-Soulier syndrome (↓ platelet-vWF adhesion)",
+    "answer": "Bernard-Soulier syndrome(↓ platelet-vWFadhesion)",
     "source": "association"
   },
   {
     "question": "GpIIb/IIIa deficiency",
-    "answer": "Glanzmann thrombasthenia (↓ platelet aggregation)",
+    "answer": "Glanzmann thrombasthenia(↓ plateletaggregation)",
     "source": "association"
   },
   {
     "question": "Thrombophilia with pregnancy loss",
-    "answer": "Factor V Leiden (resistant to degradation)",
+    "answer": "Factor V Leiden(resistant to degradation)",
     "source": "association"
   },
   {
     "question": "DIC triggers",
-    "answer": "Sepsis, trauma, malignancy, obstetrics, heat stroke, pancreatitis",
+    "answer": "Sepsis, trauma,malignancy, obstetricsheat stroke, pancreatitis",
     "source": "association"
   },
   {
@@ -1146,12 +1146,12 @@
   },
   {
     "question": "t(14;18)",
-    "answer": "Follicular lymphoma (↑ BCL-2, anti-apoptotic)",
+    "answer": "Follicular lymphoma(↑ BCL-2, anti-apoptotic)",
     "source": "association"
   },
   {
     "question": "t(8;14)",
-    "answer": "Burkitt lymphoma (c-MYC activation)",
+    "answer": "Burkitt lymphoma(c-MYC activation)",
     "source": "association"
   },
   {
@@ -1161,12 +1161,12 @@
   },
   {
     "question": "Leukemia by age",
-    "answer": "ALL: children; CLL: >60; AML: ~65; CML: 45–85",
+    "answer": "ALL: childrenCLL: >60AML: ~65CML: 45–85",
     "source": "association"
   },
   {
     "question": "t(9;22)",
-    "answer": "Philadelphia chromosome → CML (BCR-ABL), also seen in ALL",
+    "answer": "Philadelphia chromosome → CML (BCR-ABL)also in ALL",
     "source": "association"
   }
 ]

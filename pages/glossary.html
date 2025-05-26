@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<div style="display: flex; justify-content: flex-start; align-items: center; margin: 20px 0 10px 20px;">
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 15px auto 18px;">
   <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
     <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
     Home
@@ -27,7 +27,7 @@
     <div class="nav_dropdown_container" id="nav-dropdown">
       <!-- Glossary: label (no direct link) -->
       <div class="nav_category" id="category-glossary">
-        <span href="../pages/glossary.html">Glossary</span>
+        <a class="nav_category_link" href="../pages/glossary.html">Glossary</a>
       </div>
       <!-- Immune: submenu -->
       <div class="nav_category has-children" id="category-immune">
@@ -47,6 +47,7 @@
           <a class="nav_link_tab" href="../pages/heme-onc.html">Heme-Onc</a>
           <a class="nav_link_tab" href="../pages/labs.html">Labs</a>
           <a class="nav_link_tab" href="../pages/metabolism.html">Metabolism</a>
+          <a class="nav_link_tab" href="../pages/triads.html">Triads</a>
         </div>
       </div>
       <!-- Rapid Review: submenu -->
@@ -78,7 +79,7 @@
 <thead>
 <tr>
 <th data-col="0"><div class="th-menu-wrapper"><span class="col-title">Term</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Toggle Hide</a></div></div></th>
-<th data-col="1"><div class="th-menu-wrapper"><span class="col-title">Definition</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Toggle Hide</a></div></div></th>
+<th data-col="1" style="min-width:600px"><div class="th-menu-wrapper"><span class="col-title">Definition</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Toggle Hide</a></div></div></th>
 </tr>
 </thead>
 <tbody>

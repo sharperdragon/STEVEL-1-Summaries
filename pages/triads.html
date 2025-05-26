@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triads</title>
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/style.css" />
+  <link rel="icon" href="/STEVEL-1-Summaries/static/stevel_icon.png" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/table.css" />
+  <link rel="stylesheet" href="/STEVEL-1-Summaries/static/nav.css" />
+</head>
+
+<body>
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 15px auto 18px;">
+  <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
+    <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
+    Home
+  </a>
+    <div class="utility-toolbar" style="margin-bottom: 15px;">
+        <button id="reset-button">Reset</button>
+    <button id="hide-all-button">Hide All</button>
+    <button id="shuffle-button">Shuffle Rows</button>
+    </div>
+  <nav style="display:show" id="float-nav-container">
+    <div id="float-nav-button-container">
+      <span>Navigate</span>
+    <div class="nav_dropdown_container" id="nav-dropdown">
+      <!-- Glossary: label (no direct link) -->
+      <div class="nav_category" id="category-glossary">
+        <a class="nav_category_link" href="../pages/glossary.html">Glossary</a>
+      </div>
+      <!-- Immune: submenu -->
+      <div class="nav_category has-children" id="category-immune">
+        <span>Immune</span>
+        <div class="nav_submenu">
+          <a class="nav_link_tab" href="../pages/autoantibodies.html">Autoantibodies</a>
+          <a class="nav_link_tab" href="../pages/cd-markers.html">CD Markers</a>
+          <a class="nav_link_tab" href="../pages/cytokines.html">Cytokines</a>
+          <a class="nav_link_tab" href="../pages/hla.html">HLA</a>
+        </div>
+      </div>
+      <!-- Misc: submenu -->
+      <div class="nav_category has-children" id="category-misc">
+        <span>Misc</span>
+        <div class="nav_submenu">
+          <a class="nav_link_tab" href="../pages/chromosomes.html">Chromosomes</a>
+          <a class="nav_link_tab" href="../pages/heme-onc.html">Heme-Onc</a>
+          <a class="nav_link_tab" href="../pages/labs.html">Labs</a>
+          <a class="nav_link_tab" href="../pages/metabolism.html">Metabolism</a>
+        </div>
+      </div>
+      <!-- Rapid Review: submenu -->
+      <div class="nav_category has-children" id="category-rapid-review">
+        <span>Rapid Review</span>
+        <div class="nav_submenu">
+          <a class="nav_link_tab" href="../pages/associations.html">Associations</a>
+          <a class="nav_link_tab" href="../pages/findings.html">Findings</a>
+          <a class="nav_link_tab" href="../pages/presentations.html">Presentations</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+  </div>
+</div>
+
+
+
+<div>
+<main class="responsive-container">
+  <!-- Utility Toolbar -->
+
+
+  </div>
+  <meta content="true" name="summary-card"/>
+<div>
+<table id="triads">
+<thead>
+<tr>
+<th data-col="0"><div class="th-menu-wrapper"><span class="col-title">Triad</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(0); return false;">Toggle Hide</a></div></div></th>
+<th data-col="1"><div class="th-menu-wrapper"><span class="col-title">Condition</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(1); return false;">Toggle Hide</a></div></div></th>
+<th data-col="2"><div class="th-menu-wrapper"><span class="col-title">Notes</span><div class="th-dropdown"><a class="col-toggle" href="#" onclick="toggleColumn(2); return false;">Toggle Hide</a></div></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-col="0">
+<ul>
+<li>Ataxia</li>
+<li>Confusion</li>
+<li>Ophthalmoplegia</li>
+</ul>
+</td>
+<td data-col="1">Wernicke encephalopathy</td>
+<td data-col="2"></td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Fever</li>
+<li>Rash</li>
+<li>Eosinophilia</li>
+</ul>
+</td>
+<td data-col="1">DRESS syndrome</td>
+<td data-col="2"></td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Hypotension</li>
+<li>JVD</li>
+<li>Muffled heart sounds</li>
+</ul>
+</td>
+<td data-col="1">Cardiac tamponade (Beck’s triad)</td>
+<td data-col="2"></td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Joint pain</li>
+<li>Oral ulcers</li>
+<li>Photosensitivity</li>
+</ul>
+</td>
+<td data-col="1">Systemic lupus erythematosus</td>
+<td data-col="2"></td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Pneumonia</li>
+<li>Rash</li>
+<li>Elevated liver enzymes</li>
+</ul>
+</td>
+<td data-col="1">Mycoplasma pneumoniae infection</td>
+<td data-col="2"></td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Recurrent ulcers</li>
+<li>Genital ulcers</li>
+<li>Uveitis</li>
+</ul>
+</td>
+<td data-col="1">Behçet disease</td>
+<td data-col="2"></td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Endothelial injury</li>
+<li>Hypercoagulability</li>
+<li>Venous stasis</li>
+</ul>
+</td>
+<td data-col="1">Deep vein thrombosis, pulmonary embolism</td>
+<td data-col="2">Virchow's triad</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Fever</li>
+<li>Jaundice</li>
+<li>Right upper quadrant pain</li>
+</ul>
+</td>
+<td data-col="1">Acute cholangitis</td>
+<td data-col="2">Charcot’s triad</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Fever</li>
+<li>Jaundice</li>
+<li>Right upper quadrant pain</li>
+<li>Hypotension</li>
+<li>Altered mental status</li>
+</ul>
+</td>
+<td data-col="1">Suppurative cholangitis</td>
+<td data-col="2">Reynolds’ pentad</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Hypertension</li>
+<li>Bradycardia</li>
+<li>Irregular respirations</li>
+</ul>
+</td>
+<td data-col="1">Elevated intracranial pressure</td>
+<td data-col="2">Cushing’s triad</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Hypoglycemic symptoms</li>
+<li>Low plasma glucose</li>
+<li>Symptom relief with glucose</li>
+</ul>
+</td>
+<td data-col="1">Insulinoma</td>
+<td data-col="2">Whipple’s triad</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Tinnitus</li>
+<li>Hearing loss</li>
+<li>Vertigo</li>
+</ul>
+</td>
+<td data-col="1">Meniere’s disease</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Interstitial keratitis</li>
+<li>Notched teeth</li>
+<li>Deafness</li>
+</ul>
+</td>
+<td data-col="1">Congenital syphilis</td>
+<td data-col="2">Hutchinson’s triad</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Wilms tumor</li>
+<li>Early nephropathy</li>
+<li>Male pseudohermaphroditism</li>
+</ul>
+</td>
+<td data-col="1">Denys-Drash syndrome</td>
+<td data-col="2">WT1 mutation; gonadal dysgenesis; risk of Wilms tumor</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Mitochondrial myopathy</li>
+<li>Encephalopathy</li>
+<li>Lactic acidosis</li>
+</ul>
+</td>
+<td data-col="1">MELAS syndrome</td>
+<td data-col="2">Mitochondrial inheritance; stroke-like episodes; lactic acidosis</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Thrombocytopenia</li>
+<li>Hemolytic anemia</li>
+<li>Neurologic symptoms</li>
+</ul>
+</td>
+<td data-col="1">Thrombotic thrombocytopenic purpura (TTP)</td>
+<td data-col="2">↓ ADAMTS13; hemolytic anemia + thrombocytopenia + neuro</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Cataracts</li>
+<li>Deafness</li>
+<li>Patent ductus arteriosus</li>
+</ul>
+</td>
+<td data-col="1">Congenital rubella</td>
+<td data-col="2">Sensorineural deafness</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Urinary incontinence</li>
+<li>Gait disturbance</li>
+<li>Dementia</li>
+</ul>
+</td>
+<td data-col="1">Normal pressure hydrocephalus</td>
+<td data-col="2">"<i>wet, wobbly, wacky</i>"</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Chorioretinitis</li>
+<li>Hydrocephalus</li>
+<li>Intracranial calcifications</li>
+</ul>
+</td>
+<td data-col="1">Congenital toxoplasmosis</td>
+<td data-col="2">Calcifications are diffuse (cortical &amp; subcortical)<br/>
+<span style="opacity: 0.7; font-style: italic;">
+        vs CMV that is <b>periventricular</b>
+</span></td>
+
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Palpable purpura</li>
+<li>Arthralgia</li>
+<li>Abdominal pain</li>
+<li>Renal involvement</li>
+</ul>
+</td>
+<td data-col="1">Henoch-Schönlein Purpura<br/>(IgA vasculitis)</td>
+<td data-col="2">IgA nephropathy (Berger disease) association
+      </td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Hypercalcemia</li>
+<li>Renal failure</li>
+<li>Anemia</li>
+<li>Bone lesions</li>
+</ul>
+</td>
+<td data-col="1">Multiple myeloma</td>
+<td data-col="2">CRAB</td>
+</tr>
+<tr>
+<td data-col="0">
+<ul>
+<li>Rheumatoid arthritis</li>
+<li>Splenomegaly</li>
+<li>Neutropenia</li>
+<li>Recurrent infections</li>
+</ul>
+</td>
+<td data-col="1">Felty’s syndrome</td>
+<td data-col="2"><u><i>Rare</i></u> complication of long-standing rheumatoid arthritis</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+
+  <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #aaa;">
+  <form id="suggestionForm" style="margin-top: 1em;">
+    <input type="text" id="suggestionInput" placeholder="Suggest a table or edit..." 
+          style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;" required>
+    <button type="submit" style="padding: 6px 12px;">Send</button>
+  </form>
+  <div id="suggestionStatus" style="margin-top: 6px; font-size: 0.8em;"></div>
+</footer>
+</body>
+
+<script src="/STEVEL-1-Summaries/utils/table_page_utils.js"></script>
+</html>

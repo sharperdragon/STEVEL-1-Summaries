@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<div style="display: flex; justify-content: flex-start; align-items: center; margin: 20px 0 10px 20px;">
+<div style="display: flex; justify-content: flex-start; align-items: center; margin: 15px auto 18px;">
   <a href="/STEVEL-1-Summaries/index.html" class="nav-link" style="display: inline-flex; align-items: center; gap: 8px; border:1px solid slate">
     <img src="/STEVEL-1-Summaries/static/stevel_icon.png" alt="Home" style="height: 24px;">
     Home
@@ -27,7 +27,7 @@
     <div class="nav_dropdown_container" id="nav-dropdown">
       <!-- Glossary: label (no direct link) -->
       <div class="nav_category" id="category-glossary">
-        <span href="../pages/glossary.html">Glossary</span>
+        <a class="nav_category_link" href="../pages/glossary.html">Glossary</a>
       </div>
       <!-- Immune: submenu -->
       <div class="nav_category has-children" id="category-immune">
@@ -46,6 +46,7 @@
           <a class="nav_link_tab" href="../pages/heme-onc.html">Heme-Onc</a>
           <a class="nav_link_tab" href="../pages/labs.html">Labs</a>
           <a class="nav_link_tab" href="../pages/metabolism.html">Metabolism</a>
+          <a class="nav_link_tab" href="../pages/triads.html">Triads</a>
         </div>
       </div>
       <!-- Rapid Review: submenu -->
@@ -87,35 +88,35 @@
 </tr>
 </thead>
 <tbody>
-<tr><td data-col="0">CD1a</td><td data-col="1">Langerhans cells</td><td data-col="2">Seen in Langerhans cell histiocytosis (Birbeck granules)</td></tr>
-<tr><td data-col="0">CD3</td><td data-col="1">All T cells (part of TCR complex)</td><td data-col="2">PAN-T cell marker (e.g., T-ALL)</td></tr>
+<tr><td data-col="0">CD1a</td><td data-col="1">Langerhans cells</td><td data-col="2">Seen in <b>Langerhans cell histiocytosis</b> (Birbeck granules)</td></tr>
+<tr><td data-col="0">CD3</td><td data-col="1">All T cells<br/>(part of TCR complex)</td><td data-col="2">PAN-T cell marker (e.g., T-ALL)</td></tr>
 <tr><td data-col="0">CD4</td><td data-col="1">Helper T cells</td><td data-col="2">HIV targets CD4+ cells</td></tr>
-<tr><td data-col="0">CD5</td><td data-col="1">T cells, subset of B cells</td><td data-col="2">Expressed in CLL/SLL (B-cell tumor with aberrant CD5)</td></tr>
+<tr><td data-col="0">CD5</td><td data-col="1">T cells<br/>some B cells</td><td data-col="2">Expressed in CLL/SLL (B-cell tumor with aberrant CD5)</td></tr>
 <tr><td data-col="0">CD8</td><td data-col="1">Cytotoxic T cells</td><td data-col="2">Viral immunity, MHC I restricted</td></tr>
-<tr><td data-col="0">CD10</td><td data-col="1">Pre-B cells, germinal center B cells</td><td data-col="2">Positive in ALL, follicular lymphoma</td></tr>
-<tr><td data-col="0">CD11b</td><td data-col="1">Myeloid, monocytes</td><td data-col="2">Adhesion and migration; ↑ in myelomonocytic leukemias</td></tr>
-<tr><td data-col="0">CD13</td><td data-col="1">Myeloid lineage</td><td data-col="2">Positive in AML (granulocytic marker)</td></tr>
+<tr><td data-col="0">CD10</td><td data-col="1">Pre-B cells<br/>germinal center B cells</td><td data-col="2">Positive in <b>ALL</b>, follicular lymphoma</td></tr>
+<tr><td data-col="0">CD11b</td><td data-col="1">Myeloid, monocytes</td><td data-col="2">Adhesion and migration<br/>↑ in myelomonocytic leukemias</td></tr>
+<tr><td data-col="0">CD13</td><td data-col="1">Myeloid lineage</td><td data-col="2">Positive in <b>AML</b> (granulocytic marker)</td></tr>
 <tr><td data-col="0">CD14</td><td data-col="1">Macrophages</td><td data-col="2">Binds LPS (endotoxin receptor)</td></tr>
-<tr><td data-col="0">CD15</td><td data-col="1">Granulocytes</td><td data-col="2">Also positive in Hodgkin lymphoma</td></tr>
-<tr><td data-col="0">CD16</td><td data-col="1">NK cells, neutrophils</td><td data-col="2">Fc receptor for ADCC</td></tr>
-<tr><td data-col="0">CD18</td><td data-col="1">Integrin (leukocytes)</td><td data-col="2">Deficient in LAD type 1 (leukocyte adhesion deficiency)</td></tr>
-<tr><td data-col="0">CD19</td><td data-col="1">B cells</td><td data-col="2">Used in B cell lineage cancers (e.g., B-ALL)</td></tr>
-<tr><td data-col="0">CD20</td><td data-col="1">B cells (mature)</td><td data-col="2">Target of rituximab (e.g., lymphomas)</td></tr>
-<tr><td data-col="0">CD21</td><td data-col="1">B cells, EBV receptor</td><td data-col="2">EBV entry point (mono, Burkitt)</td></tr>
-<tr><td data-col="0">CD23</td><td data-col="1">Mature B cells</td><td data-col="2">Distinguishes CLL (CD5+CD23+) from mantle cell (CD5+CD23−)</td></tr>
-<tr><td data-col="0">CD25</td><td data-col="1">Tregs, activated T cells</td><td data-col="2">IL-2 receptor, dysregulation in autoimmunity</td></tr>
-<tr><td data-col="0">CD28</td><td data-col="1">T cells</td><td data-col="2">Binds B7 for costimulation</td></tr>
-<tr><td data-col="0">CD30</td><td data-col="1">Activated B and T cells</td><td data-col="2">Positive in Reed-Sternberg cells (Hodgkin lymphoma)</td></tr>
-<tr><td data-col="0">CD31</td><td data-col="1">Endothelial cells</td><td data-col="2">Marker for angiosarcoma</td></tr>
-<tr><td data-col="0">CD33</td><td data-col="1">Myeloid precursor cells</td><td data-col="2">Target of gemtuzumab ozogamicin (AML therapy)</td></tr>
-<tr><td data-col="0">CD34</td><td data-col="1">Stem cells, endothelial precursors</td><td data-col="2">Used in stem cell markers</td></tr>
+<tr><td data-col="0">CD15</td><td data-col="1">Granulocytes</td><td data-col="2">Also positive in <b>Hodgkin lymphoma</b></td></tr>
+<tr><td data-col="0">CD16</td><td data-col="1">NK cells, neutrophils</td><td data-col="2">Fc receptor for <b>ADCC</b></td></tr>
+<tr><td data-col="0">CD18</td><td data-col="1">Integrin (leukocytes)</td><td data-col="2">Deficient in <b>LAD type 1</b> (leukocyte adhesion deficiency)</td></tr>
+<tr><td data-col="0">CD19</td><td data-col="1">B cells</td><td data-col="2">Used in <b>B cell</b> lineage cancers (e.g., B-ALL)</td></tr>
+<tr><td data-col="0">CD20</td><td data-col="1">B cells (mature)</td><td data-col="2">Target of <b>rituximab</b> (e.g., lymphomas)</td></tr>
+<tr><td data-col="0">CD21</td><td data-col="1">B cells, EBV receptor</td><td data-col="2"><b>EBV</b> entry point (mono, Burkitt)</td></tr>
+<tr><td data-col="0">CD23</td><td data-col="1">Mature B cells</td><td data-col="2"><b>CLL</b> (CD5+ CD23<b>+</b>)<br/><b>Mantle cell</b> (CD5+ CD23<b>−</b>)</td></tr>
+<tr><td data-col="0">CD25</td><td data-col="1">Tregs<br/>activated T cells</td><td data-col="2">IL-2 receptor<br/>dysregulation in autoimmunity</td></tr>
+<tr><td data-col="0">CD28</td><td data-col="1">T cells</td><td data-col="2">Binds B7 for <b>costimulation</b></td></tr>
+<tr><td data-col="0">CD30</td><td data-col="1">Activated B &amp; T cells</td><td data-col="2">Positive in <b>Reed-Sternberg cells</b> (Hodgkin lymphoma)</td></tr>
+<tr><td data-col="0">CD31</td><td data-col="1">Endothelial cells</td><td data-col="2">Marker for <b>angiosarcoma</b></td></tr>
+<tr><td data-col="0">CD33</td><td data-col="1">Myeloid precursor cells</td><td data-col="2">Target of <b>gemtuzumab</b>  (<b>AML</b> therapy)</td></tr>
+<tr><td data-col="0">CD34</td><td data-col="1">Stem cells<br/>Endothelial precursors</td><td data-col="2">Used in stem cell markers</td></tr>
 <tr><td data-col="0">CD34</td><td data-col="1">Hematopoietic stem cells</td><td data-col="2">Stem cell marker for bone marrow transplants</td></tr>
-<tr><td data-col="0">CD38</td><td data-col="1">Plasma cells</td><td data-col="2">Multiple myeloma marker</td></tr>
+<tr><td data-col="0">CD38</td><td data-col="1">Plasma cells</td><td data-col="2"><b>Multiple myeloma</b> marker</td></tr>
 <tr><td data-col="0">CD55/CD59</td><td data-col="1">Complement regulatory proteins</td><td data-col="2">Deficient in PNH</td></tr>
 <tr><td data-col="0">CD56</td><td data-col="1">NK cells</td><td data-col="2">Specific NK marker (CD16+/CD56+)</td></tr>
 <tr><td data-col="0">CD79a</td><td data-col="1">B cells</td><td data-col="2">Present in most B-cell neoplasms</td></tr>
-<tr><td data-col="0">CD117 (c-Kit)</td><td data-col="1">Stem cells, mast cells</td><td data-col="2">Seen in GIST (gastrointestinal stromal tumors)</td></tr>
-<tr><td data-col="0">CD138</td><td data-col="1">Plasma cells</td><td data-col="2">Multiple myeloma marker</td></tr>
+<tr><td data-col="0">CD117 (c-Kit)</td><td data-col="1">Stem cells, mast cells</td><td data-col="2">Seen in <b>GIST</b> (gastrointestinal stromal tumors)</td></tr>
+<tr><td data-col="0">CD138</td><td data-col="1">Plasma cells</td><td data-col="2"><b>Multiple myeloma</b> marker</td></tr>
 </tbody>
 </table>
 <br/><br/>
