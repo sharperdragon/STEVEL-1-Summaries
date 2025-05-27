@@ -4,6 +4,10 @@
     "file": "cd-markers.html"
   },
   {
+    "name": "Genetics",
+    "file": "genetics.html"
+  },
+  {
     "name": "Glossary",
     "file": "glossary.html"
   },
@@ -26,10 +30,6 @@
   {
     "name": "Autoantibodies",
     "file": "autoantibodies.html"
-  },
-  {
-    "name": "Chromosomes",
-    "file": "chromosomes.html"
   },
   {
     "name": "Cytokines",

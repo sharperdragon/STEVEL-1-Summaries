@@ -5,6 +5,11 @@
     "desc": "A high-yield summary table for cd markers."
   },
   {
+    "name": "Genetics",
+    "file": "genetics.html",
+    "desc": "A high-yield summary table for genetics."
+  },
+  {
     "name": "Glossary",
     "file": "glossary.html",
     "desc": "A high-yield summary table for glossary."
@@ -33,11 +38,6 @@
     "name": "Autoantibodies",
     "file": "autoantibodies.html",
     "desc": "A high-yield summary table for autoantibodies."
-  },
-  {
-    "name": "Chromosomes",
-    "file": "chromosomes.html",
-    "desc": "A high-yield summary table for chromosomes."
   },
   {
     "name": "Cytokines",

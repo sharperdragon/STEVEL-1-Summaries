@@ -1,13 +1,13 @@
 {
   "generated": "index.html",
-  "updated": "2025-05-26T18:58:44.800076",
+  "updated": "2025-05-27T16:59:23.637604",
   "included_tables": [
     "Associations",
     "Autoantibodies",
     "CD Markers",
-    "Chromosomes",
     "Cytokines",
     "Findings",
+    "Genetics",
     "Glossary",
     "HLA",
     "Heme-Onc",
