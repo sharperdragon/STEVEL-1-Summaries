@@ -673,3 +673,15 @@ body.mobile .summary-card {
 .nav_category_link:hover {
   background-color: var(--nav-hover-bg, #eef2f5);
 }
+
+span.text-green {
+  color: rgb(47, 132, 69)
+}
+
+span.text-blue {
+  color: rgb(11, 77, 170)
+}
+
+span.text-red {
+  color: rgb(153, 39, 39)
+}
