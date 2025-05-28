@@ -338,13 +338,12 @@ thead tr:nth-of-type(2) th {
 
 ul {
   display: block;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
   padding-inline-start: 20px;
 }
 
 li {
   display: list-item;
-  text-align: justify;
-  justify-self: left;
+  text-align: left;
 }
