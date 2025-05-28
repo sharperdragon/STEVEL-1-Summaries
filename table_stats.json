@@ -1,0 +1,119 @@
+{
+  "total_tables": 15,
+  "tables_with_sections": 0,
+  "tables_with_no_class": 0,
+  "tables_with_multiple_classes": 2,
+  "tables_with_deprecated_class": 0,
+  "class_counts": {
+    "row": {
+      "row1-center": {
+        "count": 2,
+        "files": [
+          "Pharm.table.html",
+          "metabolism.table.html"
+        ]
+      }
+    },
+    "table": {
+      "table1": {
+        "count": 3,
+        "files": [
+          "autoantibodies.table.html",
+          "cytokines.table.html",
+          "metabolism.table.html"
+        ]
+      },
+      "table2": {
+        "count": 2,
+        "files": [
+          "Genetics.table.html",
+          "Triads.table.html"
+        ]
+      },
+      "table3": {
+        "count": 2,
+        "files": [
+          "rapid_associations.table.html",
+          "rapid_presentations.table.html"
+        ]
+      },
+      "table4": {
+        "count": 2,
+        "files": [
+          "HLA.table.html",
+          "hemeonc.table.html"
+        ]
+      },
+      "table5": {
+        "count": 4,
+        "files": [
+          "CD-markers.table.html",
+          "Glossary.table.html",
+          "Pharm.table.html"
+        ]
+      },
+      "table6": {
+        "count": 2,
+        "files": [
+          "Lab-Tests.table.html",
+          "rapid_findings.table.html"
+        ]
+      }
+    }
+  },
+  "file_classes": {
+    "CD-markers.table.html": [
+      "table5"
+    ],
+    "Genetics.table.html": [
+      "table2"
+    ],
+    "Glossary.table.html": [
+      "table5"
+    ],
+    "HLA.table.html": [
+      "table4"
+    ],
+    "Lab-Tests.table.html": [
+      "table6"
+    ],
+    "Pharm.table.html": [
+      "row1-center",
+      "table5"
+    ],
+    "Triads.table.html": [
+      "table2"
+    ],
+    "autoantibodies.table.html": [
+      "table1"
+    ],
+    "cytokines.table.html": [
+      "table1"
+    ],
+    "hemeonc.table.html": [
+      "table4"
+    ],
+    "metabolism.table.html": [
+      "row1-center",
+      "table1"
+    ],
+    "rapid_associations.table.html": [
+      "table3"
+    ],
+    "rapid_findings.table.html": [
+      "table6"
+    ],
+    "rapid_presentations.table.html": [
+      "table3"
+    ]
+  },
+  "unique_classes": [
+    "row1-center",
+    "table1",
+    "table2",
+    "table3",
+    "table4",
+    "table5",
+    "table6"
+  ]
+}

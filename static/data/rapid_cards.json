@@ -506,7 +506,7 @@
   },
   {
     "question": "Mitochondrial inheritance",
-    "answer": "Occurs in all offspring of affected females; heteroplasmy",
+    "answer": "Occurs in all offspring of affectedfemales; heteroplasmy",
     "source": "association"
   },
   {
@@ -771,7 +771,7 @@
   },
   {
     "question": "1° hyperaldosteronism",
-    "answer": "Bilateral adrenal hyperplasia or adenoma (Conn syndrome)",
+    "answer": "Bilateral adrenal hyperplasiaAdenoma (Conn syndrome)",
     "source": "association"
   },
   {
@@ -856,7 +856,7 @@
   },
   {
     "question": "Ovarian metastases",
-    "answer": "Krukenberg tumor (gastric origin, mucin-secreting signet cells)",
+    "answer": "Krukenberg tumor(gastric origin, mucin-secreting signet cells)",
     "source": "association"
   },
   {
@@ -876,7 +876,7 @@
   },
   {
     "question": "Gynecomastia",
-    "answer": "Cirrhosishypogonadismtesticular tumorsdrugs (e.g., spironolactone)",
+    "answer": "Cirrhosishypogonadismtesticular tumorsDrugs (e.g., spironolactone)",
     "source": "association"
   },
   {
