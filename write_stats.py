@@ -31,7 +31,8 @@ def analyze_table_stats(table_files):
                 stats["tables_with_multiple_classes"] += 1
             if any(c in deprecated_classes for c in cls):
                 stats["tables_with_deprecated_class"] += 1
-            if "section" in (c.lower() for c in cls):
+            # Detect tables with section rows: at least one <td class="row-divider"> in the table
+            if any("row-divider" in td.get("class", []) for td in t.find_all("td")):
                 stats["tables_with_sections"] += 1
             for c in cls:
                 stats["class_counts"][c] += 1
