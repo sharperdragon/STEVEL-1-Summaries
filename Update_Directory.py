@@ -1,5 +1,6 @@
 import os
 import json
+import hashlib
 from pathlib import Path
 from bs4 import BeautifulSoup
 from utils.index_utils.update_index import build_index
@@ -14,7 +15,7 @@ from datetime import datetime
 from utils.write_stats import write_them_stats
 
 BASE_HTML_PATH = Path("static/BASE.html")
-BASE_MTIME_PATH = Path("static/data/.base_mtime.json")
+BASE_HASH_PATH = Path("static/data/.base_hash.json")
 TABLE_DIR = Path("subdex/")
 NAV_DIR = Path("utils/navs/")
 OUTPUT_DIR = Path("pages/")
@@ -67,12 +68,12 @@ def build_all():
     if missing:
         raise ValueError(f"❌ Missing required placeholder(s) in BASE.html: {', '.join(missing)}")
 
-    base_mtime = BASE_HTML_PATH.stat().st_mtime
+    base_hash = hashlib.sha256(BASE_HTML_PATH.read_bytes()).hexdigest()
     force_rebuild = False
 
-    if BASE_MTIME_PATH.exists():
-        old_mtime = json.loads(BASE_MTIME_PATH.read_text()).get("mtime", 0)
-        if base_mtime != old_mtime:
+    if BASE_HASH_PATH.exists():
+        old_hash = json.loads(BASE_HASH_PATH.read_text()).get("hash", "")
+        if base_hash != old_hash:
             print("🛠️  BASE.html changed — forcing rebuild of all pages.")
             force_rebuild = True
     else:
@@ -140,7 +141,7 @@ def build_all():
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     # Write the manifest JSON file with all pages info
     write_if_changed(MANIFEST_PATH, json.dumps(manifest, indent=2))
-    BASE_MTIME_PATH.write_text(json.dumps({"mtime": base_mtime}))
+    BASE_HASH_PATH.write_text(json.dumps({"hash": base_hash}))
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
     card_manifest_path = Path("static/data/summary_cards.json")
