@@ -740,3 +740,9 @@ span.text-red {
   padding: 6px 12px;
   border-bottom: 1px solid #eee;
 }
+
+
+.eg_word{
+  font-size:60%;
+  color: #747474
+}

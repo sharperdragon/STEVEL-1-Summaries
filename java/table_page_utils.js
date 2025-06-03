@@ -68,7 +68,7 @@ function shuffleTableRows(table) {
   const tbodies = table.querySelectorAll("tbody");
   tbodies.forEach(tbody => {
     const rows = Array.from(tbody.querySelectorAll("tr"))
-      .filter(row => !row.classList.contains("section-divider") && !row.closest("tfoot"));
+      .filter(row => !row.classList.contains("section-divider") && !row.closest("tfoot") && !row.closest("tfoot tr"));
     const sectionRows = Array.from(tbody.querySelectorAll("tr.section-divider"));
 
     // Fisher-Yates shuffle
@@ -196,6 +196,40 @@ document.addEventListener("DOMContentLoaded", () => {
   // Close all submenus if clicking outside
   document.addEventListener('click', () => {
     document.querySelectorAll('.nav_submenu').forEach(sm => sm.style.display = 'none');
+  });
+
+  // Inject fallback sticky style for 2nd thead row
+  const stickyStyle = document.createElement("style");
+  stickyStyle.textContent = `
+    thead tr.sticky-fallback {
+      position: sticky;
+      top: 0;
+      background: #f7f9fa;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  `;
+  document.head.appendChild(stickyStyle);
+
+  // Watch second thead row and apply sticky class on scroll
+  document.querySelectorAll("table").forEach(table => {
+    const thead = table.querySelector("thead");
+    if (!thead) return;
+    const rows = thead.querySelectorAll("tr");
+    if (rows.length < 2) return;
+
+    const labelRow = rows[1];
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          labelRow.classList.add("sticky-fallback");
+        } else {
+          labelRow.classList.remove("sticky-fallback");
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(labelRow);
   });
 });
 
