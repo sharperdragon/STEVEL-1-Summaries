@@ -8,7 +8,7 @@ const pageRank = {
 let searchIndex = [];
 
 async function loadSearchIndex() {
-  const res = await fetch("assets/search_index.json");
+  const res = await fetch("/STEVEL-1-Summaries/assets/search_index.json");
   searchIndex = await res.json();
 }
 
@@ -36,6 +36,7 @@ function filterSuggestions(query) {
 function setupSearch() {
   const input = document.getElementById("searchInput");
   const datalist = document.getElementById("tableSuggestions");
+  if (!input || !datalist) return;
 
   input.addEventListener("input", () => {
     const results = filterSuggestions(input.value);
