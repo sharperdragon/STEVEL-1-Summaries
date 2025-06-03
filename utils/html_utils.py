@@ -1,3 +1,5 @@
+TABLES_WITH_TOGGLE = {"table1", "table2", "table3"}
+
 from bs4 import BeautifulSoup
 from pathlib import Path
 from utils.helper_utils import generate_label_and_slug
@@ -9,6 +11,8 @@ def annotate_table_columns(soup: BeautifulSoup):
     """
     assigned_table_title = False
     for row in soup.find_all("tr"):
+        if row.find_parent("thead") or row.find_parent("tfoot"):
+            continue  # Skip header and footer rows
         # Apply .row-divider class to <td> with colspan outside thead and tfoot
         if not row.find_parent("thead") and not row.find_parent("tfoot"):
             for cell in row.find_all("td"):
@@ -31,23 +35,28 @@ def annotate_table_columns(soup: BeautifulSoup):
 
             if cell.name == "th" and not cell.has_attr("colspan"):
                 clean_text = cell.get_text(strip=True)
+                original_content = cell.decode_contents()
                 cell.clear()
 
                 parent_table = cell.find_parent("table")
                 table_class = ""
                 if parent_table and parent_table.has_attr("class"):
                     for cls in parent_table["class"]:
-                        if cls in {"table1", "table2", "table3"}:
+                        if cls in TABLES_WITH_TOGGLE:
                             table_class = cls
                             break
 
                 menu = soup.new_tag("div", **{"class": "th-menu-wrapper"})
                 label = soup.new_tag("span", **{"class": "col-title"})
-                label.string = clean_text
+                label["data-title"] = clean_text.lower()
+                label.append(BeautifulSoup(original_content, "html.parser"))
 
                 dropdown = soup.new_tag("div", **{"class": "th-dropdown"})
                 action = soup.new_tag("a", href="#", onclick=f"toggleColumn({idx}); return false;")
                 action["class"] = "col-toggle"
+                action["role"] = "button"
+                action["aria-label"] = "Toggle column visibility"
+                action["title"] = "Toggle this column"
                 action.string = "Toggle Hide"
                 dropdown.append(action)
 

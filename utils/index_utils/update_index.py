@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 from datetime import datetime
 from time import time
+from utils.static_search import generate_search_index
 
 BASE_PATH = Path(__file__).parent
 PROJECT_ROOT = BASE_PATH.parent.parent
@@ -69,6 +70,7 @@ def write_rapid_cards_json():
 
 def build_index(build_json=True):
     """Generate index.html from base template and manifest"""
+    generate_search_index()
     with INDEX_BASE_HTML_PATH.open("r", encoding="utf-8") as f:
         base_html = f.read()
 

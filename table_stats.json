@@ -115,5 +115,11 @@
     "table4",
     "table5",
     "table6"
-  ]
+  ],
+  "total_rows": 1145,
+  "total_cols": 25,
+  "tables_with_header_row": 15,
+  "tables_with_span": 13,
+  "avg_rows_per_table": 76.33,
+  "avg_cols_per_table": 1.67
 }

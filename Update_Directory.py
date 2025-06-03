@@ -11,7 +11,7 @@ from utils.helper_utils import generate_label_and_slug
 from utils.nav_builder import generate_drop_nav_html
 from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
 from datetime import datetime
-from write_stats import write_them_stats
+from utils.write_stats import write_them_stats
 
 BASE_HTML_PATH = Path("static/BASE.html")
 TABLE_DIR = Path("subdex/")
@@ -77,8 +77,8 @@ def build_all():
     for table_file in table_files:
         label, slug = generate_label_and_slug(table_file.name)
 
-        # Load and parse table HTML content
-        soup = BeautifulSoup(table_file.read_text(), "html.parser")
+        table_html_raw = table_file.read_text()
+        soup = BeautifulSoup(table_html_raw, "html.parser")
 
         # Annotate table columns and insert toggle buttons
         annotate_table_columns(soup)
@@ -135,35 +135,8 @@ def build_all():
     write_if_changed(card_manifest_path, json.dumps(card_manifest, indent=2))
     print(f"🧾 Summary cards written to: {card_manifest_path}")
 
-    # Analyze stats from soup
-    from collections import Counter, defaultdict
-
-    stats = {
-        "total_tables": 0,
-        "tables_with_sections": 0,
-        "class_counts": defaultdict(int),
-        "file_classes": {}
-    }
-
-    for table_file in table_files:
-        soup = BeautifulSoup(table_file.read_text(), "html.parser")
-        tables = soup.find_all("table")
-        stats["total_tables"] += len(tables)
-
-        for t in tables:
-            cls = t.get("class", [])
-            if "section" in (c.lower() for c in cls):
-                stats["tables_with_sections"] += 1
-            for c in cls:
-                stats["class_counts"][c] += 1
-
-            stats["file_classes"][table_file.name] = cls
-
-    # Write stats to file
-    stats_path = Path("table_stats.json")
-    stats_path.parent.mkdir(parents=True, exist_ok=True)
-    write_if_changed(stats_path, json.dumps(stats, indent=2))
-    print(f"📊 Stats file written to: {stats_path}")
+    # 🔁 Generate full stats (structure, spans, headers, etc.)
+    write_them_stats()
 
     summary = {
         "updated": datetime.now().isoformat(),

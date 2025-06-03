@@ -15,7 +15,11 @@ def analyze_table_stats(table_files):
         "class_counts": defaultdict(int),
         "file_classes": {},
         "class_usage_per_file": defaultdict(lambda: defaultdict(int)),
-        "unique_classes": []
+        "unique_classes": [],
+        "total_rows": 0,
+        "total_cols": 0,
+        "tables_with_header_row": 0,
+        "tables_with_span": 0,
     }
 
     for table_file in table_files:
@@ -24,6 +28,20 @@ def analyze_table_stats(table_files):
         stats["total_tables"] += len(tables)
 
         for t in tables:
+            rows = t.find_all("tr")
+            stats["total_rows"] += len(rows)
+
+            if any(cell.name == "th" for row in rows for cell in row.find_all(["th", "td"])):
+                stats["tables_with_header_row"] += 1
+
+            if any(cell.has_attr("colspan") or cell.has_attr("rowspan") for row in rows for cell in row.find_all(["td", "th"])):
+                stats["tables_with_span"] += 1
+
+            # estimate columns from the first row
+            if rows:
+                first_row_cells = rows[0].find_all(["td", "th"])
+                stats["total_cols"] += len(first_row_cells)
+
             cls = t.get("class", [])
             if not cls:
                 stats["tables_with_no_class"] += 1
@@ -73,6 +91,10 @@ def analyze_table_stats(table_files):
     # Remove unused key
     stats.pop("class_usage_per_file", None)
 
+    if stats["total_tables"] > 0:
+        stats["avg_rows_per_table"] = round(stats["total_rows"] / stats["total_tables"], 2)
+        stats["avg_cols_per_table"] = round(stats["total_cols"] / stats["total_tables"], 2)
+
     return stats
 
 def write_if_changed(path, content):
@@ -90,4 +112,4 @@ def write_them_stats():
     print(f"📊 Stats file written to: {stats_path}")
 
 if __name__ == "__main__":
-    main()
+    write_them_stats()
