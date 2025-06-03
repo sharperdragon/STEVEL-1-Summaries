@@ -190,7 +190,7 @@ function enableTableSearch() {
 
 function initSearchBinding() {
   const searchInput = document.getElementById("searchInput");
-  if (!searchInput) return;
+  if (!searchInput || document.getElementById("searchResults")) return;
 
   if (document.querySelector("td")) {
     enableTableSearch();
