@@ -14,6 +14,7 @@ from datetime import datetime
 from utils.write_stats import write_them_stats
 
 BASE_HTML_PATH = Path("static/BASE.html")
+BASE_MTIME_PATH = Path("static/data/.base_mtime.json")
 TABLE_DIR = Path("subdex/")
 NAV_DIR = Path("utils/navs/")
 OUTPUT_DIR = Path("pages/")
@@ -66,6 +67,17 @@ def build_all():
     if missing:
         raise ValueError(f"❌ Missing required placeholder(s) in BASE.html: {', '.join(missing)}")
 
+    base_mtime = BASE_HTML_PATH.stat().st_mtime
+    force_rebuild = False
+
+    if BASE_MTIME_PATH.exists():
+        old_mtime = json.loads(BASE_MTIME_PATH.read_text()).get("mtime", 0)
+        if base_mtime != old_mtime:
+            print("🛠️  BASE.html changed — forcing rebuild of all pages.")
+            force_rebuild = True
+    else:
+        force_rebuild = True
+
     # Gather all table files to process
     table_files_all = sorted(TABLE_DIR.glob("*"))
     table_files = [f for f in table_files_all if f.name.endswith(TABLE_SUFFIX)]
@@ -109,8 +121,8 @@ def build_all():
 
         # Write the generated HTML page to output directory
         output_file = OUTPUT_DIR / f"{slug}.html"
-        write_if_changed(output_file, final_html)
-        print(f"📄 Built page: {output_file.name}")
+        if force_rebuild or write_if_changed(output_file, final_html):
+            print(f"📄 Built page: {output_file.name}")
 
         # Append page info to manifest list
         manifest.append({
@@ -128,6 +140,7 @@ def build_all():
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     # Write the manifest JSON file with all pages info
     write_if_changed(MANIFEST_PATH, json.dumps(manifest, indent=2))
+    BASE_MTIME_PATH.write_text(json.dumps({"mtime": base_mtime}))
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
     card_manifest_path = Path("static/data/summary_cards.json")
