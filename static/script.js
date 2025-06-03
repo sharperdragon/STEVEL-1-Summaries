@@ -101,34 +101,35 @@ function setupRapidCarousel() {
       item.style.display = i === index ? "block" : "none";
     });
 
+    const currentItem = items[index];
+    const answer = currentItem.querySelector(".answer");
+    if (answer) {
+      answer.style.opacity = "0";
+      answer.classList.remove("revealed");
+
+      let hovered = false;
+
+      currentItem.addEventListener("mouseenter", () => {
+        hovered = true;
+        answer.style.opacity = "1";
+      });
+
+      currentItem.addEventListener("mouseleave", () => {
+        hovered = false;
+      });
+
+      setTimeout(() => {
+        if (!hovered) {
+          answer.style.opacity = "1";
+          answer.classList.add("revealed");
+        }
+      }, 8000);
+    }
+
     index = (index + 1) % items.length;
   };
 
   rotate();
-
-  // Automatically show answer after 8 seconds if not hovered, for all carousel items
-  items.forEach(item => {
-    const answer = item.querySelector(".answer");
-    if (!answer) return;
-
-    let hovered = false;
-
-    item.addEventListener("mouseenter", () => {
-      hovered = true;
-      answer.style.opacity = "1";
-    });
-
-    item.addEventListener("mouseleave", () => {
-      hovered = false;
-    });
-
-    setTimeout(() => {
-      if (!hovered) {
-        answer.style.opacity = "1";
-      }
-    }, 8000);
-  });
-
   setInterval(rotate, 9600); // Rotate every 9 seconds
 }
 

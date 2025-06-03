@@ -8,6 +8,10 @@
   --header-font-size: 22px;
 
   /* Colors – Text and Layout */
+  --text-h1: #5078A2;  /* calm blue */
+  --text-h2: #657c7b;  /* muted green-gray */
+  --text-h3: #7b6f97;  /* dusty violet */
+  --text-h4: #4a5670;  /* deeper slate blue */
   --text-color: #2a2a2a;
   --border-color: #ccd9e0;
   --strong-divider: #6c8ca3;
@@ -684,4 +688,55 @@ span.text-blue {
 
 span.text-red {
   color: rgb(153, 39, 39)
+}
+.nav-pinned a {
+  font-weight: bold;
+  color: var(--text-h1);
+}
+.nav-divider {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.highlight-temp {
+  background-color: rgba(76, 255, 21, 0.606);
+  transition: background-color 0.5s ease;
+}
+.search-results-container {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+  width: 60%;
+  max-width: 400px;
+  z-index: 1000;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-result {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.search-result:hover {
+  background: #f0f4f9;
+}
+
+.search-group-header {
+  font-weight: bold;
+  padding: 6px 12px;
+  background: #f8f9fb;
+  border-bottom: 1px solid #eee;
+}
+
+.search-group-header {
+  font-weight: bold;
+  background: #f4f6fa;
+  padding: 6px 12px;
+  border-bottom: 1px solid #eee;
 }

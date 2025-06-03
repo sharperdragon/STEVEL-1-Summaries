@@ -78,7 +78,10 @@ def build_index(build_json=True):
     # Sort manifest entries by name
     manifest_sorted = sorted(manifest, key=lambda x: x["name"])
 
-    nav_links = []
+    PINNED_LABELS = ["Glossary", "Associations", "Presentations", "Findings"]
+    pinned_links = []
+    regular_links = []
+
     summary_cards = []
     card_descriptions = {
         "Metabolism": "Includes glycolysis, glycogen storage, and fatty acid oxidation disorders",
@@ -99,7 +102,7 @@ def build_index(build_json=True):
         except KeyError as e:
             raise ValueError(f"Malformed entry in manifest: {entry}") from e
 
-        nav_links.append(f'<a href="{href}" class="home-nav-link">{label}</a>')
+        nav_html_snippet = f'<a href="{href}" class="home-nav-link">{label}</a>'
 
         # Check if table.html file explicitly includes summary-card meta
         page_path = PROJECT_ROOT / href
@@ -110,6 +113,11 @@ def build_index(build_json=True):
             if meta and meta.get("content", "").lower() == "true":
                 include_card = True
 
+        if label in PINNED_LABELS:
+            pinned_links.append(nav_html_snippet)
+        else:
+            regular_links.append(nav_html_snippet)
+
         if include_card:
             desc = card_descriptions.get(label, f"A high-yield summary table for {label.lower()}.")
             summary_cards.append(
@@ -119,6 +127,7 @@ def build_index(build_json=True):
 </a>'''
             )
 
+    nav_links = pinned_links + regular_links
     nav_html = (
         '<nav style="margin: 20px 0 40px 0; text-align: center; font-size: 0.9em;">\n'
         '<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">\n'
