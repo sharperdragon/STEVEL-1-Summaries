@@ -60,7 +60,15 @@ def build_all():
 
     manifest = []
     card_manifest = []
-    base_html = BASE_HTML_PATH.read_text()
+    base_inputs = {
+        "base_html": BASE_HTML_PATH.read_text(),
+        "style_css": Path("styles/style.css").read_text(),
+        "table_css": Path("styles/table.css").read_text(),
+        "nav_css": Path("styles/nav.css").read_text(),
+        "search_js": Path("java/static_search.js").read_text(),
+        "table_utils_js": Path("java/table_page_utils.js").read_text(),
+    }
+    base_html = base_inputs["base_html"]
     # The base HTML must include {{PAGE_TITLE}}, {{NAV_CONTENT}}, and {{TABLE_CONTENT}} placeholders
     #required_placeholders = ["{{PAGE_TITLE}}", "{{NAV_CONTENT}}", "{{TABLE_CONTENT}}"]
     required_placeholders = ["{{PAGE_TITLE}}", "{{TABLE_CONTENT}}", "{{DROP_NAV_CONTENT}}"]
@@ -68,13 +76,13 @@ def build_all():
     if missing:
         raise ValueError(f"❌ Missing required placeholder(s) in BASE.html: {', '.join(missing)}")
 
-    base_hash = hashlib.sha256(BASE_HTML_PATH.read_bytes()).hexdigest()
+    full_base_hash = hashlib.sha256("".join(base_inputs.values()).encode("utf-8")).hexdigest()
     force_rebuild = False
 
     if BASE_HASH_PATH.exists():
         old_hash = json.loads(BASE_HASH_PATH.read_text()).get("hash", "")
-        if base_hash != old_hash:
-            print("🛠️  BASE.html changed — forcing rebuild of all pages.")
+        if full_base_hash != old_hash:
+            print("🛠️  BASE.html or dependencies changed — forcing rebuild of all pages.")
             force_rebuild = True
     else:
         force_rebuild = True
@@ -141,7 +149,7 @@ def build_all():
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     # Write the manifest JSON file with all pages info
     write_if_changed(MANIFEST_PATH, json.dumps(manifest, indent=2))
-    BASE_HASH_PATH.write_text(json.dumps({"hash": base_hash}))
+    BASE_HASH_PATH.write_text(json.dumps({"hash": full_base_hash}))
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
     card_manifest_path = Path("static/data/summary_cards.json")
