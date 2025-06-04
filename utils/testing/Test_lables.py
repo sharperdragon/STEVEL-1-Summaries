@@ -7,7 +7,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 from bs4 import BeautifulSoup
 import json
 
-from utils.page_helpers.helper_utils import generate_label_and_slug
+from utils.page_helpers.html_utils import generate_label_and_slug
 
 
 BASE_PATH = Path(__file__).parent

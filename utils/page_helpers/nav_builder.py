@@ -2,7 +2,7 @@ import os
 import json
 from pathlib import Path
 from bs4 import BeautifulSoup
-from utils.page_helpers.helper_utils import generate_label_and_slug
+from utils.page_helpers.html_utils import generate_label_and_slug
 
 
 BASE_HTML_PATH = Path("static/BASE.html")
