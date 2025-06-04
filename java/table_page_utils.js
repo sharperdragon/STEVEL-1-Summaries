@@ -166,9 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const hideAllBtn = document.getElementById("hide-all-button");
   if (hideAllBtn) {
     hideAllBtn.addEventListener("click", () => {
-      document.querySelectorAll("td[data-col]").forEach(td => {
-        td.style.opacity = "0";
-        td.dataset.hidden = "true";
+      document.querySelectorAll("tbody tr").forEach(row => {
+        if (
+          row.closest("tfoot") ||
+          row.classList.contains("section-divider") ||
+          (row.id && row.id.startsWith("section-"))
+        ) return;
+        row.querySelectorAll("td").forEach(td => {
+          td.style.opacity = "0";
+          td.dataset.hidden = "true";
+        });
       });
     });
   }

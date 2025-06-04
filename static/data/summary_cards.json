@@ -25,6 +25,11 @@
     "desc": "A high-yield summary table for labs."
   },
   {
+    "name": "Omm",
+    "file": "omm.html",
+    "desc": "A high-yield summary table for omm."
+  },
+  {
     "name": "Pharm",
     "file": "pharm.html",
     "desc": "A high-yield summary table for pharm."

@@ -648,6 +648,546 @@
     "medical": false
   },
   {
+    "term": "1 inch lateral and 1 inch superior to the umbilicus",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "1 inch lateral and 2 inches superior to the umbilicus",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "1/3 from the midline",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "10th ics bilaterally",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "2 cm lateral to the symphysis",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "2nd ics",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "3rd ics",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "4th ics",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "5th ics on the left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "5th-6th ics on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "6th ics on the left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "6th ics on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "7th ics on the left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "7th ics on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "acidity",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "adrenals",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "anterior",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "appendix",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "bladder",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "bronchi",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "c1 posterior lateral pillar",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "cecum",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "esophagus",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "gallbladder",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "gonads",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "heart",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "ileum",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "ipsilateral",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "jejunum",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "kidneys",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "l2 tp bilaterally",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "l4 tp",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "l5 tp bilaterally",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "left 1/2 of the transverse colon",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "legs",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "liver",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "lower 1/5 of the left anterior thigh",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "lower 1/5 of the right anterior thigh",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "middle 3/5 of the left anterior thigh",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "middle 3/5 of the right anterior thigh",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "myocardium",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "pancreas",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "peristalsis",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "prostate",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "proximal two-thirds of the transverse colon. lower gi tract: distal one-third of the transverse colon",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "rectum",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "right 1/2 of the transverse colon",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "sacrum at the level of s2",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "sinuses",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "space",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "spleen",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "stomach",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t1-t4",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t1-t5",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t1-t5 left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t10-l2",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t10-t11",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t10-t12",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t11-l2",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t11-t12",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t11-t12 ipsilateral",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t11-t12 on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t12-l1",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t12-l1 ipsilateral",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t12-l2",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t2 bilaterally",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t2-t3 bilaterally",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t2-t7",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t2-t8",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t3 unilateral",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t4 unilateral",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t5 on the left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t5-t6 on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t5-t9",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t6 on the left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t6 on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t7 on the left",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t7 on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t8-t10 bilaterally",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "t9-t11",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": false
+  },
+  {
+    "term": "t9-t11 ipsilateral",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "thyroid",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "tip of 12th rib on the right",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "triangular area between l2 tp",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "unilateral",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "upper 1/5 of the right anterior thigh",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "urethra",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
+    "term": "uterus",
+    "page": "omm.html",
+    "section": "Omm",
+    "medical": true
+  },
+  {
     "term": "11p11.2",
     "page": "heme-onc.html",
     "section": "Heme Onc",
@@ -8400,6 +8940,18 @@
     "medical": true
   },
   {
+    "term": "5-ht 1b/1d agonist",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "5-ht 2 antagonist",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "50s",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8424,7 +8976,37 @@
     "medical": true
   },
   {
+    "term": "acyclovir",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "albuterol",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "alemtuzumab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "alendronate",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "alpha1 antagonist",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "alprazolam",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8448,6 +9030,18 @@
     "medical": true
   },
   {
+    "term": "amitriptyline",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "amlodipine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "amoxicillin",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8455,6 +9049,24 @@
   },
   {
     "term": "ampicillin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "anakinra",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "analgesic",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "anthracycline",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8502,6 +9114,24 @@
     "medical": false
   },
   {
+    "term": "anti-il-17a mab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": false
+  },
+  {
+    "term": "anti-il-1\u03b2 mab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": false
+  },
+  {
+    "term": "anti-il-4r\u03b1 mab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": false
+  },
+  {
     "term": "anti-il-6 receptor mab",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8520,6 +9150,12 @@
     "medical": false
   },
   {
+    "term": "antiarrhythmic",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "antibiotics",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8532,13 +9168,61 @@
     "medical": true
   },
   {
+    "term": "antiepileptic",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "antifungals",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "antihypertensive",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "antiplatelet",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
   },
   {
+    "term": "antipsychotic",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "antipyrine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "arthralgias",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "asthma",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "atorvastatin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "atracurium",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8568,13 +9252,49 @@
     "medical": true
   },
   {
+    "term": "barbiturate",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "benzodiazepine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "beta-lactamase inhibitors",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": false
   },
   {
+    "term": "beta2 agonist",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "bevacizumab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "bisphosphonate",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "bivalirudin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "bortezomib",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8610,7 +9330,19 @@
     "medical": true
   },
   {
+    "term": "canagliflozin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "carbapenems",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "carmustine",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8700,6 +9432,12 @@
     "medical": true
   },
   {
+    "term": "cisplatin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "clarithromycin",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8719,6 +9457,12 @@
   },
   {
     "term": "clofazimine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "corticosteroid",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8760,6 +9504,12 @@
     "medical": true
   },
   {
+    "term": "diazepam",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "disulfiram-like reaction",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8772,7 +9522,19 @@
     "medical": true
   },
   {
+    "term": "doxorubicin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "doxycycline",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "dpp-4 inhibitor",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8790,7 +9552,31 @@
     "medical": true
   },
   {
+    "term": "etanercept",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "ethambutol",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "ethosuximide",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "etoposide",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "flecainide",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8802,7 +9588,19 @@
     "medical": true
   },
   {
+    "term": "fluoxetine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "gentamicin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "glp-1 receptor agonist",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8832,6 +9630,30 @@
     "medical": true
   },
   {
+    "term": "haloperidol",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "halothane",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "helminths",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "hepatitis",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "hepatotoxicity",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8839,6 +9661,24 @@
   },
   {
     "term": "her2+ breast cancer",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "hmg-coa reductase inhibitor",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "hydralazine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "hydrochlorothiazide",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8856,13 +9696,67 @@
     "medical": true
   },
   {
+    "term": "ibuprofen",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "il-1 receptor antagonist",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "imatinib",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "imipramine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "infliximab",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
   },
   {
+    "term": "ipratropium",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "irinotecan",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "isoniazid",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "ketanserin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "ketoconazole",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "latanoprost",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8875,6 +9769,18 @@
   },
   {
     "term": "late-stage melanoma braf v600e+",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "levonorgestrel",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "lidocaine",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8898,6 +9804,18 @@
     "medical": true
   },
   {
+    "term": "lisinopril",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "losartan",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "macrolide",
     "page": "pharm.html",
     "section": "Pharm",
@@ -8905,6 +9823,24 @@
   },
   {
     "term": "macrolides",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "mebendazole",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "melphalan",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "metoclopramide",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8929,6 +9865,12 @@
   },
   {
     "term": "monobactam",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "montelukast",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8970,7 +9912,19 @@
     "medical": true
   },
   {
+    "term": "neostigmine",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "nephrotoxicity",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "neuroleptic",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -8994,6 +9948,12 @@
     "medical": true
   },
   {
+    "term": "nitrosourea",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "non-hodgkin lymphoma",
     "page": "pharm.html",
     "section": "Pharm",
@@ -9006,7 +9966,37 @@
     "medical": false
   },
   {
+    "term": "ns3/4a inhibitor",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "ns5a inhibitor",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "ns5b inhibitor",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "nsaid",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "nsclc",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "oseltamivir",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9030,7 +10020,25 @@
     "medical": true
   },
   {
+    "term": "paclitaxel",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "palivizumab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "pancuronium",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "pde-5 inhibitor",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9048,7 +10056,19 @@
     "medical": true
   },
   {
+    "term": "phenobarbital",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "photosensitivity",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "pioglitazone",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9066,7 +10086,43 @@
     "medical": true
   },
   {
+    "term": "prazosin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "prednisone",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "progestin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "prokinetic / antipsychotic",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "propranolol",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "protein synthesis inhibitor 50s",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "protozoa",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9085,6 +10141,12 @@
   },
   {
     "term": "rare",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "rasburicase",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9120,7 +10182,19 @@
     "medical": true
   },
   {
+    "term": "ritonavir",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "rituximab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "rivaroxaban",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9138,7 +10212,43 @@
     "medical": true
   },
   {
+    "term": "sglt2 inhibitor",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "siadh",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "sildenafil",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "sitagliptin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "spiperone",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "spironolactone",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "ssri",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9162,7 +10272,25 @@
     "medical": true
   },
   {
+    "term": "sumatriptan",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "taxane",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
     "term": "tazobactam",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "tetracosactide",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9175,6 +10303,18 @@
   },
   {
     "term": "tetracyclines",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "thiazolidinedione",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "thioridazine",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9199,6 +10339,12 @@
   },
   {
     "term": "tocilizumab",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "tolvaptan",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
@@ -9229,6 +10375,12 @@
   },
   {
     "term": "vancomycin",
+    "page": "pharm.html",
+    "section": "Pharm",
+    "medical": true
+  },
+  {
+    "term": "vecuronium",
     "page": "pharm.html",
     "section": "Pharm",
     "medical": true
