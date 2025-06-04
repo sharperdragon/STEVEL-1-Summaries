@@ -1,3 +1,4 @@
+import sys
 import json
 from pathlib import Path
 
@@ -7,8 +8,11 @@ THRESHOLDS = {
     "word_freq_min": 50,
 }
 
-STATS_PATH = Path("table_stats.json")
-OUTPUT_PATH = Path(__file__).parent / "data_banks.py"
+STATS_PATH = Path(__file__).resolve().parent.parent.parent / "assets/table_stats.json"
+OUTPUT_PATH = Path(__file__).resolve().parent / "data_banks.py"
+
+if __name__ == "__main__":
+    sys.path.append(str(Path(__file__).resolve().parent))
 
 with open(STATS_PATH, "r") as f:
     stats = json.load(f)
