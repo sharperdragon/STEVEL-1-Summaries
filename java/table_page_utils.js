@@ -76,6 +76,12 @@ function shuffleTableRows(table) {
       );
     const sectionRows = Array.from(tbody.querySelectorAll("tr.section-divider"));
 
+    // Preserve visibility state (row.style.display) before shuffling
+    const rowVisibilityMap = new Map();
+    rows.forEach(row => {
+      rowVisibilityMap.set(row, row.style.display);
+    });
+
     // Fisher-Yates shuffle
     for (let i = rows.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -101,6 +107,10 @@ function shuffleTableRows(table) {
       row.classList.remove("row-divider");
       row.querySelectorAll("td").forEach(td => td.style.borderBottom = "none");
       tbody.appendChild(row);
+      // Restore visibility state after shuffle
+      if (rowVisibilityMap.has(row)) {
+        row.style.display = rowVisibilityMap.get(row);
+      }
     });
 
     // Reapply hidden column visibility after shuffle
