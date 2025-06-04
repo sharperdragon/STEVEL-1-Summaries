@@ -8,7 +8,7 @@ THRESHOLDS = {
     "word_freq_min": 50,
 }
 
-STATS_PATH = Path(__file__).resolve().parent.parent.parent / "assets/table_stats.json"
+STATS_PATH = Path(__file__).resolve().parent.parent.parent / "table_stats.json"
 OUTPUT_PATH = Path(__file__).resolve().parent / "data_banks.py"
 
 if __name__ == "__main__":

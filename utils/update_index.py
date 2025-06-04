@@ -1,10 +1,9 @@
 from bs4 import BeautifulSoup
-from utils.page_helpers.helper_utils import generate_label_and_slug
 from pathlib import Path
 import json
 from datetime import datetime
 from time import time
-from utils.static_search import generate_search_index
+from utils.static_search import generate_search_index, generate_label_and_slug
 
 BASE_PATH = Path(__file__).parent
 PROJECT_ROOT = BASE_PATH.parent.parent

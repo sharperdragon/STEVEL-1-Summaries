@@ -7,6 +7,13 @@ from collections import defaultdict, Counter
 from utils.search_helpers.data_banks import OVERUSED_WORDS, SHARED_ROW_LABELS
 from utils.search_helpers.loader import is_medical_term, is_medical_phrase, get_all_medical_terms
 
+with open("assets/ontologies/hpo_terms.json", "r", encoding="utf-8") as f:
+    HPO_SYNONYMS = {
+        v["lbl"].lower(): set(s["val"].lower() for s in v.get("meta", {}).get("synonyms", []) if isinstance(s.get("val"), str))
+        for v in json.load(f)
+        if "lbl" in v and "meta" in v and "synonyms" in v["meta"]
+    }
+
 
 MEDICAL_TERMS = get_all_medical_terms()
 STOPWORDS = set(stopwords.words("english"))
@@ -20,7 +27,7 @@ def extract_terms_from_table(table):
         "syndrome", "disease", "disorder", "defect", "condition", "abnormality", "problem"
     }
 
-    def is_medical_phrase(phrase):
+    def _is_medical_phrase_local(phrase):
         if len(phrase.split()) > 8:
             return False
         if any(char.isdigit() for char in phrase) or re.search(r"(c\d+|q\d+|hba\d|t\d+)", phrase):
@@ -43,7 +50,7 @@ def extract_terms_from_table(table):
         stopword_ratio = sum(1 for w in words if w in STOPWORDS) / len(words)
         if stopword_ratio > 0.5:
             score -= 1
-        if is_medical_phrase(phrase):
+        if _is_medical_phrase_local(phrase):
             score += 2
         return max(score, 0)
 
@@ -70,15 +77,16 @@ def extract_terms_from_table(table):
                     if not phrase or len(phrase) < 4:
                         continue
 
+                    if phrase in OVERUSED_WORDS or phrase in SHARED_ROW_LABELS:
+                        continue
+
                     words = phrase.split()
                     if all(w in BAD_WORDS for w in words):
-                        continue
-                    if phrase in OVERUSED_WORDS:
                         continue
                     if len(words) == 1 and words[0] in OVERUSED_WORDS:
                         continue
 
-                    if (score_phrase(phrase) >= 3 or is_medical_phrase(phrase)) and not looks_like_junk(phrase):
+                    if (score_phrase(phrase) >= 3 or _is_medical_phrase_local(phrase)) and not looks_like_junk(phrase):
                         terms.add(phrase)
                     elif len(words) == 1 and is_medical_term(words[0]):
                         terms.add(phrase)
@@ -89,7 +97,9 @@ def extract_terms_from_table(table):
                 for i in range(len(subphrases) - 1):
                     combined = f"{subphrases[i].strip()} {subphrases[i+1].strip()}"
                     combined = combined.strip()
-                    if len(combined.split()) <= 6 and (score_phrase(combined) >= 3 or is_medical_phrase(combined)) and not looks_like_junk(combined):
+                    if combined in OVERUSED_WORDS or combined in SHARED_ROW_LABELS:
+                        continue
+                    if len(combined.split()) <= 6 and (score_phrase(combined) >= 3 or _is_medical_phrase_local(combined)) and not looks_like_junk(combined):
                         terms.add(combined)
     return terms
 
@@ -113,6 +123,7 @@ def generate_search_index():
             term_to_pages[term].add(html_file.name)
 
         section = html_file.stem.replace("-", " ").title()
+        page_text = soup.get_text(separator=" ", strip=True).lower()
         for term in sorted(all_terms):
             if global_term_count[term] > 5 and len(term_to_pages[term]) > 3:
                 continue  # Overused term
@@ -122,6 +133,15 @@ def generate_search_index():
                 "section": section,
                 "medical": is_medical_phrase(term)
             })
+            # Include synonym if present in page text and not globally overused
+            for synonym in HPO_SYNONYMS.get(term, set()):
+                if synonym in page_text and synonym not in global_term_count:
+                    index.append({
+                        "term": synonym,
+                        "page": html_file.name,
+                        "section": section,
+                        "medical": is_medical_phrase(synonym)
+                    })
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(index, indent=2))

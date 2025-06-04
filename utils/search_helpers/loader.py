@@ -4,28 +4,11 @@ from pathlib import Path
 from functools import lru_cache
 import logging
 
-HP_JSON_PATH = Path("assets/hp.json")
+HP_JSON_PATH = Path("assets/ontologies/hpo_terms.json")
 WORDLIST_PATH = Path("assets/wordlist.txt")
 SEARCH_INDEX_PATH = Path("assets/search_index.json")
 
-ONTOLOGY_PATHS = {
-    "mesh": Path("assets/ontologies/mesh_terms.json"),
-    "umls": Path("assets/ontologies/umls_terms.json"),
-    "rxnorm": Path("assets/ontologies/rxnorm_terms.json"),
-    "hpo": Path("assets/ontologies/hpo_terms.json"),
-}
-
 _all_terms = None
-
-def _load_flat_terms(path):
-    try:
-        if not path.exists():
-            logging.warning(f"Ontology path not found: {path}")
-            return set()
-        return set(json.loads(path.read_text(encoding="utf-8")))
-    except Exception as e:
-        logging.warning(f"Failed to load {path}: {e}")
-        return set()
 
 def load_hp_terms():
     try:
@@ -56,13 +39,6 @@ def get_all_medical_terms():
 
     _all_terms = set()
     try:
-        for name, path in ONTOLOGY_PATHS.items():
-            terms = _load_flat_terms(path)
-            _all_terms.update(term.lower() for term in terms)
-    except Exception as e:
-        logging.warning(f"Error loading ontology terms: {e}")
-
-    try:
         _all_terms.update(load_hp_terms())
     except Exception as e:
         logging.warning(f"Error loading HP terms: {e}")
@@ -74,27 +50,8 @@ def get_all_medical_terms():
 
     return _all_terms
 
-@lru_cache(maxsize=1024)
-def query_umls(term: str) -> bool:
-    # Placeholder — requires actual license key and ticket mechanism
-    return False
-
-@lru_cache(maxsize=1024)
-def query_rxnorm(term: str) -> bool:
-    try:
-        resp = requests.get(
-            f"https://rxnav.nlm.nih.gov/REST/approximateTerm.json",
-            params={"term": term}
-        )
-        return "candidate" in resp.json().get("approximateGroup", {})
-    except requests.RequestException:
-        return False
-
 def is_medical_term(word: str) -> bool:
-    word = word.lower()
-    if word in get_all_medical_terms():
-        return True
-    return query_rxnorm(word) or query_umls(word)
+    return word.lower() in get_all_medical_terms()
 
 def is_medical_phrase(phrase: str) -> bool:
     return any(is_medical_term(w) for w in phrase.split())

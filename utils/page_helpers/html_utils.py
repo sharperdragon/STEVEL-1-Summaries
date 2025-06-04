@@ -2,7 +2,67 @@ TABLES_WITH_TOGGLE = {"table1", "table2", "table3"}
 
 from bs4 import BeautifulSoup
 from pathlib import Path
-from utils.page_helpers.helper_utils import generate_label_and_slug
+
+
+BASE_HTML_PATH = Path("static/BASE.html")
+TABLE_DIR = Path("subdex/")
+NAV_DIR = Path("utils/navs/")
+OUTPUT_DIR = Path("pages/")
+MANIFEST_PATH = Path("static/data/table.manifest.json")
+
+TABLE_SUFFIX = ".table.html"
+
+table_files_all = sorted(TABLE_DIR.glob("*"))
+table_files = [f for f in table_files_all if f.name.endswith(TABLE_SUFFIX)]
+
+def generate_label_and_slug(filename: str) -> tuple[str, str]:
+    base = filename.replace(".table.html", "").lower()
+
+    # Primary hardcoded overrides
+    label_overrides = {
+        "cd-markers": "CD Markers",
+        "hla": "HLA",
+        "lab-tests": "Labs",
+        "hemeonc": "Heme-Onc"
+    }
+
+    if base in label_overrides:
+        label = label_overrides[base]
+    elif "cd" in base and "marker" in base:
+        label = "CD Markers"
+    elif "lab" in base and "test" in base:
+        label = "Labs"
+    elif base.startswith("rapid_"):
+        label = base.replace("rapid_", "", 1).replace("_", " ").title()
+    else:
+        label = base.replace("_", " ").title()
+
+    slug = label.lower().replace(" ", "-")
+    return label, slug
+
+# is safe, but if someone hardcoded label = "CD Markers" without sanitizing the input, 
+# it could mismatch during category checks. You’re fine as-is given the current flow, but be aware if you ever decouple slug from label generation.
+
+
+def extract_rr_associations_html(items):
+    """
+    Given a list of HTML strings representing rapid associations, returns
+    a carousel container where only the first item is visible on page load.
+    """
+    html = ['<div class="carousel-container">']
+    for i, item in enumerate(items):
+        if i == 0:
+            item_visible = item.replace('class="answer"', 'class="answer" style="display:none;"')
+            html.append(item_visible)
+        else:
+            item_hidden = item.replace('class="carousel-item"', 'class="carousel-item" style="display:none;"')
+            item_hidden = item_hidden.replace('class="answer"', 'class="answer" style="display:none;"')
+            html.append(item_hidden)
+    html.append("</div>")
+    return "\n".join(html)
+
+
+
 
 def annotate_table_columns(soup: BeautifulSoup):
     """
@@ -85,3 +145,8 @@ def remove_row_dividers(soup: BeautifulSoup):
     """
     for tr in soup.find_all("tr", class_="row-divider"):
         tr.decompose()
+
+
+
+
+

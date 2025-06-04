@@ -7,8 +7,7 @@ sys.path.insert(0, str(ROOT))
 from bs4 import BeautifulSoup
 from utils.write_stats import write_them_stats
 from utils.page_helpers.nav_builder import generate_drop_nav_html
-from utils.page_helpers.helper_utils import generate_label_and_slug
-from utils.page_helpers.html_utils import annotate_table_columns, generate_nav_html
+from utils.page_helpers.html_utils import annotate_table_columns, generate_nav_html, extract_rr_associations_html, generate_label_and_slug
 
 BASE_HTML_PATH = ROOT / "static" / "BASE.html"
 BASE_HASH_PATH = ROOT / "static" / "data" / ".base_hash.json"
@@ -26,6 +25,8 @@ def write_if_changed(path: Path, content: str):
         return False
     path.write_text(content, encoding="utf-8")
     return True
+
+
 
 def build_pages():
     """
@@ -82,6 +83,17 @@ def build_pages():
 
         # Annotate table columns and insert toggle buttons
         annotate_table_columns(soup)
+
+        # Remove row-divider rows and insert rapid review associations if present
+        for tr in soup.find_all("tr", class_="row-divider"):
+            tr.decompose()
+
+        rapid_associations = soup.find_all("div", class_="rr-assoc")
+        if rapid_associations:
+            html_snippets = [str(div) for div in rapid_associations]
+            rr_html = extract_rr_associations_html(html_snippets)
+            new_rr = BeautifulSoup(rr_html, "html.parser")
+            soup.body.insert(0, new_rr)
 
         table_html = str(soup)
 
