@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from bs4 import BeautifulSoup
 from utils.index_utils.update_index import build_index
-from utils.html_utils import (
+from utils.page_helpers.html_utils import (
     annotate_table_columns,
     generate_nav_html,
     normalize_name,
