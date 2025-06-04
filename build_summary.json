@@ -1,20 +1,20 @@
 {
-  "generated": "index.html",
-  "updated": "2025-06-03T21:52:32.708716",
-  "included_tables": [
-    "Associations",
-    "Autoantibodies",
-    "CD Markers",
-    "Cytokines",
-    "Findings",
-    "Genetics",
-    "Glossary",
-    "HLA",
-    "Heme-Onc",
-    "Labs",
-    "Metabolism",
-    "Pharm",
-    "Presentations",
-    "Triads"
-  ]
+  "updated": "2025-06-03T23:24:03.890738",
+  "pages_built": [
+    "CD-markers.table.html",
+    "Genetics.table.html",
+    "Glossary.table.html",
+    "HLA.table.html",
+    "Lab-Tests.table.html",
+    "Pharm.table.html",
+    "Triads.table.html",
+    "autoantibodies.table.html",
+    "cytokines.table.html",
+    "hemeonc.table.html",
+    "metabolism.table.html",
+    "rapid_associations.table.html",
+    "rapid_findings.table.html",
+    "rapid_presentations.table.html"
+  ],
+  "manifest_count": 14
 }

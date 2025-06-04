@@ -1,6 +1,7 @@
 import os
 import json
 from pathlib import Path
+from datetime import datetime
 from bs4 import BeautifulSoup
 from utils.page_builder import build_pages
 from utils.update_index import build_index

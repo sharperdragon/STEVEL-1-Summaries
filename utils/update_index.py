@@ -3,12 +3,13 @@ from pathlib import Path
 import json
 from datetime import datetime
 from time import time
-from utils.static_search import generate_search_index, generate_label_and_slug
+from utils.static_search import generate_search_index
+from utils.page_helpers.html_utils import generate_label_and_slug
 
 BASE_PATH = Path(__file__).parent
 PROJECT_ROOT = BASE_PATH.parent.parent
 MANIFEST_PATH = PROJECT_ROOT / "static/data/table.manifest.json"
-INDEX_BASE_HTML_PATH = BASE_PATH / "index_base.html"
+INDEX_BASE_HTML_PATH = BASE_PATH / "index_utils/index_base.html"
 OUTPUT_PATH = PROJECT_ROOT / "index.html"
 
 def write_rapid_cards_json():
