@@ -226,6 +226,15 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.head.appendChild(stickyStyle);
 
+  // Ensure table parent wrappers allow sticky headers in scrollable tables
+  document.querySelectorAll("table").forEach(table => {
+    const wrapper = table.parentElement;
+    if (wrapper && !wrapper.classList.contains("table-scroll-wrapper")) {
+      wrapper.style.overflowX = "auto";
+      wrapper.style.position = "relative";
+    }
+  });
+
   // Watch second thead row and apply sticky class on scroll
   document.querySelectorAll("table").forEach(table => {
     const thead = table.querySelector("thead");
