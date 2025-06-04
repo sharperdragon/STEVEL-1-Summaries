@@ -7,7 +7,7 @@ from utils.static_search import generate_search_index
 from utils.page_helpers.html_utils import generate_label_and_slug
 
 BASE_PATH = Path(__file__).parent
-PROJECT_ROOT = BASE_PATH.parent.parent
+PROJECT_ROOT = BASE_PATH.parent
 MANIFEST_PATH = PROJECT_ROOT / "static/data/table.manifest.json"
 INDEX_BASE_HTML_PATH = BASE_PATH / "index_utils/index_base.html"
 OUTPUT_PATH = PROJECT_ROOT / "index.html"
@@ -71,8 +71,11 @@ def write_rapid_cards_json():
 def build_index(build_json=True):
     """Generate index.html from base template and manifest"""
     generate_search_index()
-    with INDEX_BASE_HTML_PATH.open("r", encoding="utf-8") as f:
-        base_html = f.read()
+    try:
+        with INDEX_BASE_HTML_PATH.open("r", encoding="utf-8") as f:
+            base_html = f.read()
+    except FileNotFoundError:
+        raise FileNotFoundError(f"❌ index_base.html not found at {INDEX_BASE_HTML_PATH}. Double check the path or move the file back.")
 
     with MANIFEST_PATH.open("r", encoding="utf-8") as f:
         manifest = json.load(f)
