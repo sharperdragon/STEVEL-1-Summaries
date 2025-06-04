@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from utils.helper_utils import generate_label_and_slug
+from utils.page_helpers.helper_utils import generate_label_and_slug
 from pathlib import Path
 import json
 from datetime import datetime

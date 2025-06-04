@@ -2,7 +2,7 @@ TABLES_WITH_TOGGLE = {"table1", "table2", "table3"}
 
 from bs4 import BeautifulSoup
 from pathlib import Path
-from utils.helper_utils import generate_label_and_slug
+from utils.page_helpers.helper_utils import generate_label_and_slug
 
 def annotate_table_columns(soup: BeautifulSoup):
     """

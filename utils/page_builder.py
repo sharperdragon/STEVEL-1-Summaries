@@ -1,24 +1,21 @@
-import os
-import json
+import sys, datetime, json, hashlib
 from pathlib import Path
-from bs4 import BeautifulSoup
-from utils.page_builder import build_pages
-from utils.index_utils.update_index import build_index
-from utils.page_helpers.html_utils import (
-    annotate_table_columns,
-    generate_nav_html,
-)
-from utils.page_helpers.helper_utils import generate_label_and_slug
-from utils.page_helpers.nav_builder import generate_drop_nav_html
-from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
-from datetime import datetime
-from utils.write_stats import write_them_stats
 
-BASE_HTML_PATH = Path("static/BASE.html")
-TABLE_DIR = Path("subdex/")
-NAV_DIR = Path("utils/navs/")
-OUTPUT_DIR = Path("pages/")
-MANIFEST_PATH = Path("static/data/table.manifest.json")
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from bs4 import BeautifulSoup
+from utils.write_stats import write_them_stats
+from utils.page_helpers.nav_builder import generate_drop_nav_html
+from utils.page_helpers.helper_utils import generate_label_and_slug
+from utils.page_helpers.html_utils import annotate_table_columns, generate_nav_html
+
+BASE_HTML_PATH = ROOT / "static" / "BASE.html"
+BASE_HASH_PATH = ROOT / "static" / "data" / ".base_hash.json"
+TABLE_DIR = ROOT / "subdex"
+NAV_DIR = ROOT / "utils" / "navs"
+OUTPUT_DIR = ROOT / "pages"
+MANIFEST_PATH = ROOT / "static" / "data" / "table.manifest.json"
 
 TABLE_SUFFIX = ".table.html"
 
@@ -30,24 +27,7 @@ def write_if_changed(path: Path, content: str):
     path.write_text(content, encoding="utf-8")
     return True
 
-def extract_rr_associations_html(items):
-    """
-    Given a list of HTML strings representing rapid associations, returns
-    a carousel container where only the first item is visible on page load.
-    """
-    html = ['<div class="carousel-container">']
-    for i, item in enumerate(items):
-        if i == 0:
-            item_visible = item.replace('class="answer"', 'class="answer" style="display:none;"')
-            html.append(item_visible)
-        else:
-            item_hidden = item.replace('class="carousel-item"', 'class="carousel-item" style="display:none;"')
-            item_hidden = item_hidden.replace('class="answer"', 'class="answer" style="display:none;"')
-            html.append(item_hidden)
-    html.append("</div>")
-    return "\n".join(html)
-
-def build_all():
+def build_pages():
     """
     Main function to build all HTML pages from table files.
     Processes tables, annotates columns for toggling, generates navigation bars,
@@ -59,13 +39,32 @@ def build_all():
 
     manifest = []
     card_manifest = []
-    base_html = BASE_HTML_PATH.read_text()
+    base_inputs = {
+        "base_html": BASE_HTML_PATH.read_text(),
+        "style_css": Path("styles/style.css").read_text(),
+        "table_css": Path("styles/table.css").read_text(),
+        "nav_css": Path("styles/nav.css").read_text(),
+        "search_js": Path("java/static_search.js").read_text(),
+        "table_utils_js": Path("java/table_page_utils.js").read_text(),
+    }
+    base_html = base_inputs["base_html"]
     # The base HTML must include {{PAGE_TITLE}}, {{NAV_CONTENT}}, and {{TABLE_CONTENT}} placeholders
     #required_placeholders = ["{{PAGE_TITLE}}", "{{NAV_CONTENT}}", "{{TABLE_CONTENT}}"]
     required_placeholders = ["{{PAGE_TITLE}}", "{{TABLE_CONTENT}}", "{{DROP_NAV_CONTENT}}"]
     missing = [ph for ph in required_placeholders if ph not in base_html]
     if missing:
         raise ValueError(f"❌ Missing required placeholder(s) in BASE.html: {', '.join(missing)}")
+
+    full_base_hash = hashlib.sha256("".join(base_inputs.values()).encode("utf-8")).hexdigest()
+    force_rebuild = False
+
+    if BASE_HASH_PATH.exists():
+        old_hash = json.loads(BASE_HASH_PATH.read_text()).get("hash", "")
+        if full_base_hash != old_hash:
+            print("🛠️  BASE.html or dependencies changed — forcing rebuild of all pages.")
+            force_rebuild = True
+    else:
+        force_rebuild = True
 
     # Gather all table files to process
     table_files_all = sorted(TABLE_DIR.glob("*"))
@@ -96,22 +95,21 @@ def build_all():
         write_if_changed(nav_path, nav_html)
 
         # Load corresponding drop nav HTML
-        drop_nav_path = Path(f"utils/navs/drop_navs/drop_nav_{slug}.html")
+        drop_nav_path = NAV_DIR / "drop_navs" / f"drop_nav_{slug}.html"
         drop_nav_html = drop_nav_path.read_text() if drop_nav_path.exists() else ""
 
         # Compose final HTML by replacing placeholders in base template
         final_html = (
             base_html
             .replace("{{PAGE_TITLE}}", label)
-            # .replace("{{NAV_CONTENT}}", nav_html) 
             .replace("{{TABLE_CONTENT}}", table_html)
             .replace("{{DROP_NAV_CONTENT}}", drop_nav_html)
         )
 
         # Write the generated HTML page to output directory
         output_file = OUTPUT_DIR / f"{slug}.html"
-        write_if_changed(output_file, final_html)
-        print(f"📄 Built page: {output_file.name}")
+        if force_rebuild or write_if_changed(output_file, final_html):
+            print(f"📄 Built page: {output_file.name}")
 
         # Append page info to manifest list
         manifest.append({
@@ -129,6 +127,7 @@ def build_all():
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     # Write the manifest JSON file with all pages info
     write_if_changed(MANIFEST_PATH, json.dumps(manifest, indent=2))
+    BASE_HASH_PATH.write_text(json.dumps({"hash": full_base_hash}))
     print(f"\n🧾 Manifest updated: {MANIFEST_PATH}")
 
     card_manifest_path = Path("static/data/summary_cards.json")
@@ -145,9 +144,3 @@ def build_all():
         "manifest_count": len(manifest)
     }
     Path("build_summary.json").write_text(json.dumps(summary, indent=2))
-
-if __name__ == "__main__":
-    convert_buzzwords_to_json()
-    build_all()
-    build_index()
-    write_them_stats()
