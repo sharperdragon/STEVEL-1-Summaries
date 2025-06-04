@@ -68,7 +68,12 @@ function shuffleTableRows(table) {
   const tbodies = table.querySelectorAll("tbody");
   tbodies.forEach(tbody => {
     const rows = Array.from(tbody.querySelectorAll("tr"))
-      .filter(row => !row.classList.contains("section-divider") && !row.closest("tfoot") && !row.closest("tfoot tr"));
+      .filter(row =>
+        !row.classList.contains("section-divider") &&
+        !row.closest("tfoot") &&
+        !row.closest("tfoot tr") &&
+        !(row.id && row.id.startsWith("section-"))
+      );
     const sectionRows = Array.from(tbody.querySelectorAll("tr.section-divider"));
 
     // Fisher-Yates shuffle
