@@ -23,7 +23,8 @@ def generate_label_and_slug(filename: str) -> tuple[str, str]:
         "cd-markers": "CD Markers",
         "hla": "HLA",
         "lab-tests": "Labs",
-        "hemeonc": "Heme-Onc"
+        "hemeonc": "Heme-Onc",
+        "omm": "OMM"
     }
 
     if base in label_overrides:
