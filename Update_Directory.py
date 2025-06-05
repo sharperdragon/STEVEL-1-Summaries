@@ -1,12 +1,10 @@
 import os
 import json
 from pathlib import Path
-from datetime import datetime
 from bs4 import BeautifulSoup
 from utils.page_builder import build_pages
 from utils.update_index import build_index
 from utils.Texts.buzzword_json_builder import convert_buzzwords_to_json
-from datetime import datetime
 from utils.write_stats import write_them_stats
 from utils.static_search import generate_search_index, extract_terms_from_table
 

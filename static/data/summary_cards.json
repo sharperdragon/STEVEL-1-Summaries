@@ -5,6 +5,11 @@
     "desc": "A high-yield summary table for cd markers."
   },
   {
+    "name": "Clinical Tests",
+    "file": "clinical-tests.html",
+    "desc": "A high-yield summary table for clinical tests."
+  },
+  {
     "name": "Genetics",
     "file": "genetics.html",
     "desc": "A high-yield summary table for genetics."
@@ -18,11 +23,6 @@
     "name": "HLA",
     "file": "hla.html",
     "desc": "A high-yield summary table for hla."
-  },
-  {
-    "name": "Labs",
-    "file": "labs.html",
-    "desc": "A high-yield summary table for labs."
   },
   {
     "name": "OMM",

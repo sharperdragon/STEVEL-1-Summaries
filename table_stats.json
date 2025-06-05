@@ -54,7 +54,7 @@
       "table6": {
         "count": 2,
         "files": [
-          "Lab-Tests.table.html",
+          "Clinical_Tests.table.html",
           "rapid_findings.table.html"
         ]
       }
@@ -64,6 +64,9 @@
     "CD-markers.table.html": [
       "table5"
     ],
+    "Clinical_Tests.table.html": [
+      "table6"
+    ],
     "Genetics.table.html": [
       "table2"
     ],
@@ -72,9 +75,6 @@
     ],
     "HLA.table.html": [
       "table4"
-    ],
-    "Lab-Tests.table.html": [
-      "table6"
     ],
     "OMM.table.html": [],
     "Pharm.table.html": [
@@ -113,11 +113,11 @@
     "table5",
     "table6"
   ],
-  "total_rows": 1304,
+  "total_rows": 1293,
   "total_cols": 26,
   "tables_with_header_row": 15,
   "tables_with_span": 14,
-  "avg_rows_per_table": 81.5,
+  "avg_rows_per_table": 80.81,
   "avg_cols_per_table": 1.62,
   "common_column_headers": {
     "notes": 2,
@@ -202,11 +202,11 @@
     "tables_with_inconsistent_row_lengths": 14
   },
   "th_usage": {
-    "tables_with_no_th": 1279,
-    "tables_with_only_th_in_col1": 10,
+    "tables_with_no_th": 1266,
+    "tables_with_only_th_in_col1": 12,
     "th_cells_not_in_first_col": 15
   },
-  "avg_words_per_cell": 3.23,
+  "avg_words_per_cell": 3.21,
   "max_table_dimensions": {
     "rows": 271,
     "cols": 5
@@ -238,7 +238,6 @@
     "-vaptan": 2,
     "coming soon...": 7,
     "condition": 2,
-    "haptoglobin": 2,
     "hla-dr3": 2,
     "hla-dr4": 2,
     "s3 heart sound": 2,
@@ -250,6 +249,7 @@
     "esophagus": 2,
     "chapman\u2019s points": 2,
     "ant. lumbar tender points": 2,
+    "haptoglobin": 2,
     "chromosome 1": 3,
     "chromosome 2": 3,
     "chromosome 3": 2,
@@ -279,8 +279,8 @@
   },
   "frequent_non_header_words": {
     "with": 134,
-    "syndrome": 133,
-    "disease": 114,
+    "syndrome": 132,
+    "disease": 111,
     "chromosome": 99,
     "and": 77,
     "deficiency": 71,
@@ -292,17 +292,17 @@
     "dominant": 54,
     "protein": 50,
     "mutation": 48,
-    "tumor": 48,
+    "tumor": 47,
     "infections": 45,
     "pain": 45,
     "anemia": 40,
     "type": 38,
-    "inhibitor": 37,
+    "inhibitor": 36,
     "loss": 34,
-    "acid": 32,
-    "urine": 32,
     "fever": 31,
     "seen": 31,
+    "acid": 30,
+    "urine": 30,
     "gene": 29,
     "gram": 29,
     "linked": 28,
@@ -320,13 +320,13 @@
     "after": 23,
     "mass": 23,
     "carcinoma": 22,
-    "normal": 22,
     "colon": 21,
     "breast": 21,
-    "autoimmune": 21,
     "high": 21,
     "multiple": 20,
-    "low": 20,
-    "mab": 20
+    "mab": 20,
+    "autoimmune": 20,
+    "severe": 20,
+    "red": 20
   }
 }

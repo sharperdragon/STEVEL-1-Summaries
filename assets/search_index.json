@@ -6708,324 +6708,6 @@
     "medical": true
   },
   {
-    "term": "5-hiaa",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": false
-  },
-  {
-    "term": "5-hiaa 5-hydroxyindoleacetic acid",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "5-hydroxyindoleacetic acid",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "<1% suggests prerenal >2% suggests intrinsic renal damage",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "acid-fast bacilli",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "acid-fast bacilli stain",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "afb acid-fast bacilli",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "afp alpha-fetoprotein",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "alpha-fetoprotein",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "assesses cause of non-anion gap acidosis",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "avoid serotonin-rich foods before test",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "bradykinin-mediated swelling",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "c1 esterase inhibitor level",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "ca 19-9",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": false
-  },
-  {
-    "term": "ca-125",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": false
-  },
-  {
-    "term": "celiac",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "confirm with fta-abs",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "csf 14-3-3 protein",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "d-xylose absorption test",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "dark-field microscopy",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "detects anti-rbc antibodies",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "detects antibodies/complement on rbcs",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "detects bacterial dna/rna",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "edrophonium",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "elevated in creutzfeldt-jakob disease",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "evaluates b12 absorption",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "fena",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "gamma-glutamyl transferase",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "ggt gamma-glutamyl transferase",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "guillain-barr\u00e9 syndrome",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "high in bartter/gitelman or diuretic use",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "inr/pt = extrinsic",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "inr/pt = extrinsic vii",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "lead",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "menstruation",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "monospot",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "naat gonorrhea/chlamydia",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": false
-  },
-  {
-    "term": "non-specific high in endometriosis",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "ortolani / barlow maneuvers",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "peaks at 24-48h",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": false
-  },
-  {
-    "term": "peritonitis",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "physical exam clicks/clunks with hip instability",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "pregnancy",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "quantiferon-tb gold / igra",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "stain",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "stains tropheryma whipplei-laden macrophages",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "step 1 buzzword",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "tensilon",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "test",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "urinary cyanide-nitroprusside test",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "vdrl",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "viii",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
-    "term": "ziehl-neelsen stain highlights acid-fast organisms",
-    "page": "labs.html",
-    "section": "Labs",
-    "medical": true
-  },
-  {
     "term": "2 ld",
     "page": "metabolism.html",
     "section": "Metabolism",
@@ -8823,6 +8505,228 @@
     "term": "vgcc = voltage-gated calcium channel.",
     "page": "autoantibodies.html",
     "section": "Autoantibodies",
+    "medical": true
+  },
+  {
+    "term": "<1% suggests prerenal >2% suggests intrinsic renal damage",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "acid-fast bacilli",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "acid-fast bacilli stain",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "afb acid-fast bacilli",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "afp alpha-fetoprotein",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "alpha-fetoprotein",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "assesses cause of non-anion gap acidosis",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "ca 19-9",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": false
+  },
+  {
+    "term": "ca-125",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": false
+  },
+  {
+    "term": "csf 14-3-3 protein",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "dark-field microscopy",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "detects bacterial dna/rna",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "edrophonium",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "elevated in creutzfeldt-jakob disease",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "evaluates b12 absorption",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "fena",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "gamma-glutamyl transferase",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "ggt gamma-glutamyl transferase",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "guillain-barr\u00e9 syndrome",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "high in bartter/gitelman or diuretic use",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "inr/pt = extrinsic",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "inr/pt = extrinsic vii",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "menstruation",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "naat gonorrhea/chlamydia",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": false
+  },
+  {
+    "term": "non-specific high in endometriosis",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "ortolani / barlow maneuvers",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "peaks at 24-48h",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": false
+  },
+  {
+    "term": "peritonitis",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "physical exam clicks/clunks with hip instability",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "quantiferon-tb gold / igra",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "stain",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "stains tropheryma whipplei-laden macrophages",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "tensilon",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "test",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "urinary cyanide-nitroprusside test",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "viii",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "ziehl-neelsen stain highlights acid-fast organisms",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
     "medical": true
   },
   {
