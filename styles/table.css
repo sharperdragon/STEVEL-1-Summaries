@@ -1,11 +1,11 @@
 :root {
   --text-color: #2a2a2a;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --table-font: "Tinos", serif;
-  --base-font-size: 18px;
-  --header-font-size: 21px;
+  --table-font: "Source Serif 4", serif;
+  --base-font-size: 20px;
+  --header-font-size: 23px;
   --title-font-size: 25px;
-  --small-head-font-size: 19.5px;
+  --small-head-font-size: 21px;
   --border-color: #ccd9e0;
   --strong-divider: #6c8ca3;
   --strong-border: #232323;

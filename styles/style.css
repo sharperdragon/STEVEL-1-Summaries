@@ -4,8 +4,10 @@
 :root {
   /* Fonts */
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --base-font-size: 17px;
-  --header-font-size: 22px;
+    --base-font-size: 20px;
+    --header-font-size: 23px;
+    --title-font-size: 25px;
+    --small-head-font-size: 21px;
 
   /* Colors – Text and Layout */
   --text-h1: #5078A2;  /* calm blue */
@@ -516,7 +518,7 @@ nav {
 
 .buzz-track {
   display: inline-block;
-    font-size: 1rem; /* or 18px, etc. */
+  font-size: 1.25rem; 
   white-space: nowrap;
   min-width: 100%;
   animation: scroll-buzz var(--scroll-duration, 40s) linear infinite;

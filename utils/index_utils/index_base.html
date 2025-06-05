@@ -15,8 +15,9 @@
     <p style="color: #657c7b; font-size: 1.1em;">Quick Tables for High-yield review</p>
   </header>
 
-  <div class="buzz-banner">
-<div class="buzz-track">{{BUZZWORDS}}</div>
+<div class="buzz-banner">
+  <div class="buzz-track" id="buzzTrack"></div>
+</div>
   </div>
 
   <div style="text-align: center; margin-top: 30px; position: relative;">
@@ -52,5 +53,13 @@
   <script src="/STEVEL-1-Summaries/java/script.js"></script>
   <datalist id="tableSuggestions"></datalist>
   <script src="/STEVEL-1-Summaries/java/static_search.js" defer></script>
+<script>
+fetch('/STEVEL-1-Summaries/static/data/buzz_terms.json')
+  .then(response => response.json())
+  .then(data => {
+    const track = document.getElementById("buzzTrack");
+    track.innerText = data.terms.join('  ');  // Double em-space for spacing
+  });
+</script>
 </body>
 </html>

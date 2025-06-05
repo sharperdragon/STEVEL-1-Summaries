@@ -5016,12 +5016,6 @@
     "medical": true
   },
   {
-    "term": "peutz-jeghers syndrome autosomal dominant",
-    "page": "presentations.html",
-    "section": "Presentations",
-    "medical": true
-  },
-  {
     "term": "pharyngitis",
     "page": "presentations.html",
     "section": "Presentations",
@@ -5647,12 +5641,6 @@
   },
   {
     "term": "wilson disease ar atp7b mutation",
-    "page": "presentations.html",
-    "section": "Presentations",
-    "medical": true
-  },
-  {
-    "term": "wilson disease kayser-fleischer rings",
     "page": "presentations.html",
     "section": "Presentations",
     "medical": true
