@@ -1,6 +1,6 @@
 {
   "generated": "index.html",
-  "updated": "2025-06-05T07:46:58.002106",
+  "updated": "2025-06-05T08:22:41.602932",
   "included_tables": [
     "Associations",
     "Autoantibodies",
@@ -15,7 +15,6 @@
     "Metabolism",
     "OMM",
     "Pharm",
-    "Presentations",
-    "Triads"
+    "Presentations"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "total_tables": 17,
+  "total_tables": 16,
   "tables_with_sections": 5,
   "tables_with_no_class": 1,
   "tables_with_multiple_classes": 3,
@@ -24,10 +24,9 @@
         ]
       },
       "table2": {
-        "count": 2,
+        "count": 1,
         "files": [
-          "Genetics.table.html",
-          "Triads.table.html"
+          "Genetics.table.html"
         ]
       },
       "table3": {
@@ -82,9 +81,6 @@
       "row1-center",
       "table5"
     ],
-    "Triads.table.html": [
-      "table2"
-    ],
     "autoantibodies.table.html": [
       "table1"
     ],
@@ -117,14 +113,14 @@
     "table5",
     "table6"
   ],
-  "total_rows": 1327,
-  "total_cols": 29,
-  "tables_with_header_row": 16,
+  "total_rows": 1304,
+  "total_cols": 26,
+  "tables_with_header_row": 15,
   "tables_with_span": 14,
-  "avg_rows_per_table": 78.06,
-  "avg_cols_per_table": 1.71,
+  "avg_rows_per_table": 81.5,
+  "avg_cols_per_table": 1.62,
   "common_column_headers": {
-    "notes": 3,
+    "notes": 2,
     "diagnosis / disease": 2,
     "heme-onc gene mutations summary": 1,
     "suffix": 1,
@@ -142,8 +138,6 @@
     "posterior shoulder spaces": 1,
     "high-yield cytokines": 1,
     "enzyme disorders": 1,
-    "triad": 1,
-    "condition": 1,
     "term": 1,
     "definition": 1,
     "lab / clinical finding": 1,
@@ -203,21 +197,21 @@
     "condition": 2
   },
   "row_structure": {
-    "rows_with_exactly_2_cols": 403,
+    "rows_with_exactly_2_cols": 402,
     "rows_with_mixed_col_counts": 0,
-    "tables_with_inconsistent_row_lengths": 15
+    "tables_with_inconsistent_row_lengths": 14
   },
   "th_usage": {
-    "tables_with_no_th": 1301,
+    "tables_with_no_th": 1279,
     "tables_with_only_th_in_col1": 10,
-    "th_cells_not_in_first_col": 16
+    "th_cells_not_in_first_col": 15
   },
   "avg_words_per_cell": 3.23,
   "max_table_dimensions": {
     "rows": 271,
     "cols": 5
   },
-  "avg_row_dividers_per_table": 3.29,
+  "avg_row_dividers_per_table": 3.5,
   "row_labels_in_multiple_files": {
     "hemochromatosis": 2,
     "-anserin": 2,
@@ -284,9 +278,9 @@
     "\u2014": 27
   },
   "frequent_non_header_words": {
-    "syndrome": 137,
-    "with": 135,
-    "disease": 117,
+    "with": 134,
+    "syndrome": 133,
+    "disease": 114,
     "chromosome": 99,
     "and": 77,
     "deficiency": 71,
@@ -297,11 +291,11 @@
     "anti": 58,
     "dominant": 54,
     "protein": 50,
-    "mutation": 49,
-    "tumor": 49,
-    "infections": 46,
-    "pain": 46,
-    "anemia": 41,
+    "mutation": 48,
+    "tumor": 48,
+    "infections": 45,
+    "pain": 45,
+    "anemia": 40,
     "type": 38,
     "inhibitor": 37,
     "loss": 34,
@@ -312,27 +306,27 @@
     "gene": 29,
     "gram": 29,
     "linked": 28,
-    "infection": 28,
     "chronic": 27,
     "lymphoma": 27,
     "receptor": 27,
     "from": 27,
+    "infection": 27,
     "sign": 27,
-    "acute": 26,
     "cancer": 26,
+    "acute": 25,
     "bone": 25,
     "other": 24,
     "skin": 24,
-    "normal": 23,
     "after": 23,
     "mass": 23,
     "carcinoma": 22,
-    "multiple": 21,
+    "normal": 22,
     "colon": 21,
     "breast": 21,
     "autoimmune": 21,
     "high": 21,
-    "heart": 21,
-    "low": 20
+    "multiple": 20,
+    "low": 20,
+    "mab": 20
   }
 }

@@ -780,12 +780,6 @@
     "medical": true
   },
   {
-    "term": "esophagus",
-    "page": "omm.html",
-    "section": "Omm",
-    "medical": true
-  },
-  {
     "term": "gallbladder",
     "page": "omm.html",
     "section": "Omm",
@@ -2470,66 +2464,6 @@
     "page": "findings.html",
     "section": "Findings",
     "medical": true
-  },
-  {
-    "term": "association",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "crab",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "denys-drash syndrome",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "henoch-sch\u00f6nlein purpura",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "henoch-sch\u00f6nlein purpura iga vasculitis",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "insulinoma",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "rare complication of long-standing rheumatoid arthritis",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "stroke-like episodes",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": false
-  },
-  {
-    "term": "wt1 mutation",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": true
-  },
-  {
-    "term": "\u2193 adamts13",
-    "page": "triads.html",
-    "section": "Triads",
-    "medical": false
   },
   {
     "term": "0-6 months",

@@ -15,5 +15,5 @@ GENOMIC_KEYWORDS = {
 }
 
 POTENTIAL_TAG_ROOTS = {
-    "adrs", "category", "class", "clinical presentation", "condition", "definition", "diagnosis / disease", "disease-associated autoantibodies", "drug", "enzyme disorders", "example", "high-yield cd markers", "high-yield cytokines", "indication", "notes", "posterior shoulder spaces", "suffix", "term", "triad"
+    "adrs", "category", "class", "clinical presentation", "definition", "diagnosis / disease", "disease-associated autoantibodies", "drug", "enzyme disorders", "example", "high-yield cd markers", "high-yield cytokines", "indication", "notes", "posterior shoulder spaces", "suffix", "term"
 }

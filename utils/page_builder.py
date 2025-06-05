@@ -1,8 +1,8 @@
-import sys, json, hashlib
+import sys, json, hashlib, os
 from datetime import datetime
 from pathlib import Path
-from datetime import datetime
-
+from dotenv import load_dotenv
+load_dotenv()
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
@@ -11,13 +11,13 @@ from utils.write_stats import write_them_stats
 from utils.page_helpers.nav_builder import generate_drop_nav_html
 from utils.page_helpers.html_utils import annotate_table_columns, generate_nav_html, extract_rr_associations_html, generate_label_and_slug
 
-BASE_HTML_PATH = ROOT / "static" / "BASE.html"
-BASE_HASH_PATH = ROOT / "static" / "data" / ".base_hash.json"
-TABLE_DIR = ROOT / "subdex"
-NAV_DIR = ROOT / "utils" / "navs"
-OUTPUT_DIR = ROOT / "pages"
-MANIFEST_PATH = ROOT / "static" / "data" / "table.manifest.json"
+TABLE_DIR = ROOT / os.getenv("TABLE_DIR", "subdex")
+OUTPUT_DIR = ROOT / os.getenv("OUTPUT_DIR", "pages")
+NAV_DIR = ROOT / os.getenv("NAV_DIR", "utils/navs")
+BASE_HTML_PATH = ROOT / os.getenv("BASE_HTML", "static/BASE.html")
+MANIFEST_PATH = ROOT / os.getenv("MANIFEST_PATH", "static/data/table.manifest.json")
 
+BASE_HASH_PATH = ROOT / "static" / "data" / ".base_hash.json"
 TABLE_SUFFIX = ".table.html"
 
 """Module to update HTML pages by processing table files, annotating columns for toggling, generating navigation bars, and building a manifest."""
@@ -136,6 +136,14 @@ def build_pages():
             "file": f"{slug}.html",
             "desc": f"A high-yield summary table for {label.lower()}."  # Placeholder, can be customized later
         })
+
+    # Cleanup orphaned HTML files
+    expected_files = {f"{generate_label_and_slug(f.name)[1]}.html" for f in table_files}
+    actual_files = {f.name for f in OUTPUT_DIR.glob("*.html")}
+    for file in actual_files - expected_files:
+        orphan = OUTPUT_DIR / file
+        orphan.unlink()
+        print(f"🗑️ Removed stale page: {file}")
 
     # Ensure manifest parent directories exist
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)

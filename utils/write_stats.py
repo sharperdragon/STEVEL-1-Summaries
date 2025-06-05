@@ -1,9 +1,12 @@
-import json, re
+import sys
 from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+import json, re, sys
 from bs4 import BeautifulSoup
 from collections import defaultdict
 from collections import Counter
-from search_helpers.stats_build_data import build_data_banks
+from .search_helpers.stats_build_data import build_data_banks
+
 
 def analyze_table_stats(table_files):
     deprecated_classes = {"table_old", "unstyled", "legacy"}

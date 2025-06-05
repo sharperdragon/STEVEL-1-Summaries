@@ -35,11 +35,6 @@
     "desc": "A high-yield summary table for pharm."
   },
   {
-    "name": "Triads",
-    "file": "triads.html",
-    "desc": "A high-yield summary table for triads."
-  },
-  {
     "name": "Autoantibodies",
     "file": "autoantibodies.html",
     "desc": "A high-yield summary table for autoantibodies."
