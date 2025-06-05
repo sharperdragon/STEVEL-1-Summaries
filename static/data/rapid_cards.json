@@ -26,7 +26,7 @@
   },
   {
     "question": "↓ T cells, ↓ PTH, ↓ Ca²⁺, absent thymic shadow on CXR",
-    "answer": "Thymic aplasia (22q11 deletion: DiGeorge syndrome)",
+    "answer": "Thymic aplasia(22q11 deletion: DiGeorge syndrome)",
     "source": "finding"
   },
   {
@@ -981,7 +981,7 @@
   },
   {
     "question": "Neurodegenerative disorder",
-    "answer": "Alzheimer disease (↓ ACh; amyloid plaques, neurofibrillary tangles)",
+    "answer": "Alzheimer disease(↓ ACh; amyloid plaques, neurofibrillary tangles)",
     "source": "association"
   },
   {
@@ -991,7 +991,7 @@
   },
   {
     "question": "Chorea",
-    "answer": "Huntington disease (A-Dominant, CAG repeat on chromosome 4)",
+    "answer": "Huntington disease(A-Dominant, CAG repeat on chromosome 4)",
     "source": "association"
   },
   {

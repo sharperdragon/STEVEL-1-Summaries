@@ -1,6 +1,7 @@
 :root {
   --text-color: #2a2a2a;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --table-font: "Tinos", serif;
   --base-font-size: 18px;
   --header-font-size: 21px;
   --title-font-size: 25px;
@@ -58,7 +59,7 @@ table, .table1, .table2, .table3, .table4, .table5, .table6 {
   font-family: var(--font);
   font-size: var(--base-font-size);
   color: var(--text-color);
-  width: auto;
+  width: 99%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -294,6 +295,7 @@ td {
   padding-right: 3px !important;
   padding-top: 6px !important;
   padding-bottom: 4px !important;
+  font-family: var(--table-font);
 }
 
 th.table-title {
