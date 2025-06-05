@@ -124,7 +124,7 @@ def generate_search_index():
             term_to_pages[term].add(html_file.name)
 
         section = html_file.stem.replace("-", " ").title()
-        page_text = soup.get_text(separator=" ", strip=True).lower()
+        page_text = " ".join(t.get_text(separator=" ", strip=True).lower() for t in tables)
         for term in sorted(all_terms):
             if global_term_count[term] > 5 and len(term_to_pages[term]) > 3:
                 continue  # Overused term

@@ -10,7 +10,7 @@ SEARCH_INDEX_PATH = Path("assets/search_index.json")
 
 _all_terms = None
 
-def load_hp_terms():
+def load_hpo_terms():
     try:
         with open(HP_JSON_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -39,7 +39,7 @@ def get_all_medical_terms():
 
     _all_terms = set()
     try:
-        _all_terms.update(load_hp_terms())
+        _all_terms.update(load_hpo_terms())
     except Exception as e:
         logging.warning(f"Error loading HP terms: {e}")
 

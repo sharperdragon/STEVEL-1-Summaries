@@ -1,9 +1,9 @@
-import json
+import json, re
 from pathlib import Path
 from bs4 import BeautifulSoup
 from collections import defaultdict
 from collections import Counter
-import re
+from search_helpers.stats_build_data import build_data_banks
 
 def analyze_table_stats(table_files):
     deprecated_classes = {"table_old", "unstyled", "legacy"}
@@ -197,6 +197,7 @@ def write_them_stats():
     stats_path.parent.mkdir(parents=True, exist_ok=True)
     write_if_changed(stats_path, json.dumps(stats, indent=2))
     print(f"📊 Stats file written to: {stats_path}")
+    build_data_banks()
 
 if __name__ == "__main__":
     write_them_stats()
