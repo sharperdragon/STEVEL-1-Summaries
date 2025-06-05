@@ -70,6 +70,7 @@ function shuffleTableRows(table) {
     const rows = Array.from(tbody.querySelectorAll("tr"))
       .filter(row =>
         !row.classList.contains("section-divider") &&
+        !row.classList.contains("row-divider") &&
         !row.closest("tfoot") &&
         !row.closest("tfoot tr") &&
         !(row.id && row.id.startsWith("section-"))
