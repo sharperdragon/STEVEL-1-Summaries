@@ -113,11 +113,11 @@
     "table5",
     "table6"
   ],
-  "total_rows": 1293,
+  "total_rows": 1292,
   "total_cols": 26,
   "tables_with_header_row": 15,
   "tables_with_span": 14,
-  "avg_rows_per_table": 80.81,
+  "avg_rows_per_table": 80.75,
   "avg_cols_per_table": 1.62,
   "common_column_headers": {
     "notes": 2,
@@ -202,7 +202,7 @@
     "tables_with_inconsistent_row_lengths": 14
   },
   "th_usage": {
-    "tables_with_no_th": 1266,
+    "tables_with_no_th": 1265,
     "tables_with_only_th_in_col1": 12,
     "th_cells_not_in_first_col": 15
   },
@@ -278,11 +278,11 @@
     "\u2014": 27
   },
   "frequent_non_header_words": {
-    "with": 134,
+    "with": 133,
     "syndrome": 132,
     "disease": 111,
     "chromosome": 99,
-    "and": 77,
+    "and": 75,
     "deficiency": 71,
     "cell": 70,
     "cells": 69,
@@ -317,16 +317,16 @@
     "bone": 25,
     "other": 24,
     "skin": 24,
-    "after": 23,
     "mass": 23,
+    "after": 22,
     "carcinoma": 22,
     "colon": 21,
     "breast": 21,
-    "high": 21,
     "multiple": 20,
     "mab": 20,
     "autoimmune": 20,
     "severe": 20,
+    "high": 20,
     "red": 20
   }
 }
