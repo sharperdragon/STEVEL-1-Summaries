@@ -98,7 +98,6 @@ table, .table1, .table2, .table3, .table4, .table5, .table6 {
   word-break: break-word;
   overflow-wrap: break-word;
   vertical-align: middle !important;
-  max-width: 450px;
 }
 
 thead th:not(.table-title) {
