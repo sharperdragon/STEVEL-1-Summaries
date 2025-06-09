@@ -7,7 +7,7 @@ SHARED_ROW_LABELS = {
 }
 
 OVERUSED_WORDS = {
-    "anti", "cell", "cells", "chromosome", "deficiency", "disease", "dominant", "protein", "recessive", "syndrome", "with"
+    "anti", "cell", "cells", "chromosome", "deficiency", "disease", "dominant", "protein", "syndrome", "with"
 }
 
 GENOMIC_KEYWORDS = {

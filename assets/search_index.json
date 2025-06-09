@@ -8562,6 +8562,18 @@
     "medical": false
   },
   {
+    "term": "correlateed w/ metabolic encephalopathy",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "creutzfeldt-jakob disease",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
     "term": "csf 14-3-3 protein",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
@@ -8574,19 +8586,13 @@
     "medical": true
   },
   {
-    "term": "detects bacterial dna/rna",
+    "term": "detecting bacterial dna/rna",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
     "medical": true
   },
   {
     "term": "edrophonium",
-    "page": "clinical-tests.html",
-    "section": "Clinical Tests",
-    "medical": true
-  },
-  {
-    "term": "elevated in creutzfeldt-jakob disease",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
     "medical": true
@@ -8622,12 +8628,6 @@
     "medical": true
   },
   {
-    "term": "high in bartter/gitelman or diuretic use",
-    "page": "clinical-tests.html",
-    "section": "Clinical Tests",
-    "medical": true
-  },
-  {
     "term": "inr/pt = extrinsic",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
@@ -8640,16 +8640,16 @@
     "medical": true
   },
   {
-    "term": "menstruation",
+    "term": "low in vomiting high in bartter/gitelman or diuretic use",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
     "medical": true
   },
   {
-    "term": "naat gonorrhea/chlamydia",
+    "term": "menstruation",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
-    "medical": false
+    "medical": true
   },
   {
     "term": "non-specific high in endometriosis",
@@ -8700,6 +8700,12 @@
     "medical": true
   },
   {
+    "term": "sti diagnosis gonorrhea/chlamydia",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
     "term": "tensilon",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
@@ -8713,6 +8719,12 @@
   },
   {
     "term": "urinary cyanide-nitroprusside test",
+    "page": "clinical-tests.html",
+    "section": "Clinical Tests",
+    "medical": true
+  },
+  {
+    "term": "used for 1\u00b0 syphilis visualizes spirochetes",
     "page": "clinical-tests.html",
     "section": "Clinical Tests",
     "medical": true
