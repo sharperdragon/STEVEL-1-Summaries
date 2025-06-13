@@ -67,6 +67,16 @@ function filterRowsByInput(inputId, rowSelector) {
 function shuffleTableRows(table) {
   const tbodies = table.querySelectorAll("tbody");
   tbodies.forEach(tbody => {
+    // ❌ Remove rows that are 'row-divider' or contain 'row-divider' <td>
+    tbody.querySelectorAll("tr").forEach(row => {
+      if (
+        row.classList.contains("row-divider") ||
+        row.querySelector("td.row-divider")
+      ) {
+        row.remove();
+      }
+    });
+
     const rows = Array.from(tbody.querySelectorAll("tr"))
       .filter(row =>
         !row.classList.contains("section-divider") &&
@@ -105,7 +115,7 @@ function shuffleTableRows(table) {
 
     tbody.innerHTML = "";
     rows.forEach(row => {
-      row.classList.remove("row-divider");
+      // row.classList.remove("row-divider"); // removed as row-divider rows are already removed above
       row.querySelectorAll("td").forEach(td => td.style.borderBottom = "none");
       tbody.appendChild(row);
       // Restore visibility state after shuffle

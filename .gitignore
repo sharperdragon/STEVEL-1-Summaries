@@ -1,3 +1,4 @@
 .env
 .history/
 *.env*
+.DS_Store
